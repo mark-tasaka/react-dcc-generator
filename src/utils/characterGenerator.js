@@ -56,8 +56,8 @@ const styles = StyleSheet.create({
   },
   characterContainer: {
     position: 'absolute',
-    width: '48%',
-    height: '48%',
+    width: '50%',
+    height: '50%',
   },
   topLeft: { top: '2%', left: '2%' },
   topRight: { top: '2%', right: '2%' },
@@ -75,10 +75,10 @@ const styles = StyleSheet.create({
   },
   
   // Position styles for form fields
-  name: { position: 'absolute', top: 15, left: 20 },
-  gender: { position: 'absolute', top: 15, right: 30 },
-  alignment: { position: 'absolute', top: 35, left: 20 },
-  occupation: { position: 'absolute', top: 55, left: 20 },
+  name: { position: 'absolute', top: 12, left: 10 },
+  gender: { position: 'absolute', top: 12, left: 140 },
+  alignment: { position: 'absolute', top: 35, left: 10 },
+  occupation: { position: 'absolute', top: 60, left: 10 },
   critDie: { position: 'absolute', top: 35, left: 120 },
   fumble: { position: 'absolute', top: 35, right: 30 },
   xp: { position: 'absolute', top: 55, right: 30 },
