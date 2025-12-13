@@ -1,17 +1,19 @@
-import logo from './logo.svg';
+import React from 'react';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import './App.css';
+import HomePage from './HomePage';
+import ZeroLevelGenerator from './character/zeroLv';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <h1>DCC Generator</h1>
-        <p>This asdasis a placeholder for the DCC Generator application.</p>
-
-        <button>Generate PDF</button>
-
-      </header>
-    </div>
+    <Router>
+      <div className="App">
+        <Routes>
+          <Route path="/" element={<HomePage />} />
+          <Route path="/generator" element={<ZeroLevelGenerator />} />
+        </Routes>
+      </div>
+    </Router>
   );
 }
 
