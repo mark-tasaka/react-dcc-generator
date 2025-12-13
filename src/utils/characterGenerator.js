@@ -1,26 +1,115 @@
 import { Document, Page, Text, View, StyleSheet, Image } from '@react-pdf/renderer';
 import characterSheetBg from '../character/img/characterSheet.png';
 
-// Character generation data (move all the arrays from zeroLv.js here)
+// Character generation data
 const occupations = [
   'Alchemist', 'Animal trainer', 'Armorer', 'Astrologer', 'Barber', 'Beadle', 'Beekeeper', 'Blacksmith',
-  // ... rest of your occupations array
+  'Butcher', 'Caravan guard', 'Cheesemaker', 'Cobbler', 'Confidence artist', 'Cooper', 'Costermonger',
+  'Cutpurse', 'Ditch digger', 'Dwarven apothecarist', 'Dwarven blacksmith', 'Dwarven chest-maker',
+  'Dwarven herder', 'Dwarven miner', 'Dwarven mushroom-farmer', 'Dwarven rat-catcher', 'Dwarven stonemason',
+  'Elven artisan', 'Elven barrister', 'Elven chandler', 'Elven falconer', 'Elven forester', 'Elven glassblower',
+  'Elven navigator', 'Elven sage', 'Farmer', 'Fortune teller', 'Gambler', 'Gongfarmer', 'Grave digger',
+  'Guild beggar', 'Halfling chicken butcher', 'Halfling dyer', 'Halfling glovemaker', 'Halfling gypsy',
+  'Halfling haberdasher', 'Halfling healer', 'Halfling moneylender', 'Halfling trader', 'Healer',
+  'Herbalist', 'Herder', 'Hunter', 'Indentured servant', 'Jester', 'Jeweler', 'Locksmith', 'Mendicant',
+  'Merchant', 'Miller', 'Minstrel', 'Noble', 'Orphan', 'Ostler', 'Outlaw', 'Rope maker', 'Sailor',
+  'Scribe', 'Shaman', 'Slave', 'Smuggler', 'Soldier', 'Squire', 'Tax collector', 'Trapper', 'Urchin',
+  'Wainwright', 'Weaver', 'Wizard\'s apprentice', 'Woodcutter'
 ];
 
 const alignments = ['Lawful', 'Neutral', 'Chaotic'];
 const genders = ['Male', 'Female'];
 
 const names = {
-  male: ['Aelar', 'Aerdrom', 'Ahvak', 'Aramil', 'Aranear', 'Berris', 'Cithreth', 'Dayereth', 'Drannor', 'Eckhart'],
-  female: ['Adrie', 'Ahanna', 'Aramara', 'Aranea', 'Berris', 'Caelynn', 'Carric', 'Dayereth', 'Enna', 'Galinndan']
+  male: ['Aelar', 'Aerdrom', 'Ahvak', 'Aramil', 'Aranear', 'Berris', 'Cithreth', 'Dayereth', 'Drannor', 'Eckhart',
+         'Evendur', 'Galinndan', 'Hadarai', 'Halimath', 'Heian', 'Himo', 'Immeral', 'Ivellios', 'Korfel', 'Lamlis'],
+  female: ['Adrie', 'Ahanna', 'Aramara', 'Aranea', 'Berris', 'Caelynn', 'Carric', 'Dayereth', 'Enna', 'Galinndan',
+           'Hadarai', 'Halimath', 'Heian', 'Himo', 'Immeral', 'Ivellios', 'Korfel', 'Lada', 'Lamlis', 'Wade']
 };
 
 const birthAugurs = [
   'Harsh winter: All attack rolls', 'The bull: Melee attack rolls', 'Fortunate date: Missile attack rolls',
-  // ... rest of your birthAugurs array
+  'Raised by wolves: Unarmed attack rolls', 'Conceived on horseback: Mounted attack rolls',
+  'Born on the battlefield: Damage rolls', 'Path of the bear: Melee damage rolls',
+  'Hawkeye: Missile damage rolls', 'Pack hunter: Attack and damage rolls for 0-level starting weapon',
+  'Born under the loom: Skill checks (including thief skills)', 'Fox\'s cunning: Find/disable traps',
+  'Four-leafed clover: Find secret doors', 'Seventh son: Spell checks', 'The raging storm: Spell damage',
+  'Righteous heart: Turn unholy checks', 'Survived the plague: Magical healing',
+  'Lucky sign: Saving throws', 'Guardian angel: Turn unholy checks', 'Survived war: Initiative and attacks',
+  'Lucky bone: Find/disable traps and magical healing'
 ];
 
-// Generate random character function
+// Complete PDF Styles
+const styles = StyleSheet.create({
+  page: {
+    width: '100%',
+    height: '100%',
+    position: 'relative',
+  },
+  backgroundImage: {
+    position: 'absolute',
+    top: 0,
+    left: 0,
+    width: '100%',
+    height: '100%',
+    zIndex: -1,
+  },
+  characterContainer: {
+    position: 'absolute',
+    width: '48%',
+    height: '48%',
+  },
+  topLeft: { top: '2%', left: '2%' },
+  topRight: { top: '2%', right: '2%' },
+  bottomLeft: { top: '52%', left: '2%' },
+  bottomRight: { top: '52%', right: '2%' },
+  
+  text: {
+    fontSize: 10,
+    color: 'black',
+    fontWeight: 'bold',
+  },
+  smallText: {
+    fontSize: 8,
+    color: 'black',
+  },
+  
+  // Position styles for form fields
+  name: { position: 'absolute', top: 15, left: 20 },
+  gender: { position: 'absolute', top: 15, right: 30 },
+  alignment: { position: 'absolute', top: 35, left: 20 },
+  occupation: { position: 'absolute', top: 55, left: 20 },
+  critDie: { position: 'absolute', top: 35, left: 120 },
+  fumble: { position: 'absolute', top: 35, right: 30 },
+  xp: { position: 'absolute', top: 55, right: 30 },
+  
+  // Stats positioning
+  str: { position: 'absolute', top: 135, left: 8 },
+  agi: { position: 'absolute', top: 150, left: 8 },
+  sta: { position: 'absolute', top: 165, left: 8 },
+  per: { position: 'absolute', top: 180, left: 8 },
+  int: { position: 'absolute', top: 195, left: 8 },
+  luck: { position: 'absolute', top: 210, left: 8 },
+  
+  // Combat stats
+  ac: { position: 'absolute', top: 85, left: 45 },
+  hp: { position: 'absolute', top: 115, left: 45 },
+  init: { position: 'absolute', top: 85, right: 45 },
+  melee: { position: 'absolute', top: 115, right: 65 },
+  missile: { position: 'absolute', top: 115, right: 25 },
+  
+  // Saves
+  reflex: { position: 'absolute', top: 85, right: 85 },
+  fortitude: { position: 'absolute', top: 85, right: 65 },
+  will: { position: 'absolute', top: 85, right: 45 },
+  
+  // Other fields
+  wealth: { position: 'absolute', bottom: 65, left: 20 },
+  languages: { position: 'absolute', bottom: 35, left: 20 },
+  birthAugur: { position: 'absolute', top: 75, right: 20, width: 120 },
+});
+
+// Generate random character
 export const generateRandomCharacter = () => {
   const rollDice = (sides) => Math.floor(Math.random() * sides) + 1;
   const roll3d6 = () => rollDice(6) + rollDice(6) + rollDice(6);
@@ -70,19 +159,40 @@ export const generateRandomCharacter = () => {
   };
 };
 
-// PDF Styles (move from zeroLv.js)
-const styles = StyleSheet.create({
-  // ... all your existing styles
-});
-
-// Character component (move from zeroLv.js)
+// Character component for positioning data on the sheet
 const Character = ({ character, position }) => (
   <View style={[styles.characterContainer, position]}>
-    {/* ... all your existing Character JSX */}
+    <Text style={[styles.text, styles.name]}>{character.name}</Text>
+    <Text style={[styles.text, styles.gender]}>{character.gender}</Text>
+    <Text style={[styles.text, styles.alignment]}>{character.alignment}</Text>
+    <Text style={[styles.text, styles.occupation]}>{character.occupation}</Text>
+    <Text style={[styles.text, styles.critDie]}>{character.critDie}</Text>
+    <Text style={[styles.text, styles.fumble]}>{character.fumble}</Text>
+    <Text style={[styles.text, styles.xp]}>{character.xp}</Text>
+    
+    {/* Stats */}
+    <Text style={[styles.text, styles.str]}>{character.stats.str.value} {character.stats.str.modifier >= 0 ? '+' : ''}{character.stats.str.modifier}</Text>
+    <Text style={[styles.text, styles.agi]}>{character.stats.agi.value} {character.stats.agi.modifier >= 0 ? '+' : ''}{character.stats.agi.modifier}</Text>
+    <Text style={[styles.text, styles.sta]}>{character.stats.sta.value} {character.stats.sta.modifier >= 0 ? '+' : ''}{character.stats.sta.modifier}</Text>
+    <Text style={[styles.text, styles.per]}>{character.stats.per.value} {character.stats.per.modifier >= 0 ? '+' : ''}{character.stats.per.modifier}</Text>
+    <Text style={[styles.text, styles.int]}>{character.stats.int.value} {character.stats.int.modifier >= 0 ? '+' : ''}{character.stats.int.modifier}</Text>
+    <Text style={[styles.text, styles.luck]}>{character.stats.luck.value} {character.stats.luck.modifier >= 0 ? '+' : ''}{character.stats.luck.modifier}</Text>
+    
+    {/* Combat Stats */}
+    <Text style={[styles.text, styles.ac]}>{character.ac}</Text>
+    <Text style={[styles.text, styles.hp]}>{character.hp}</Text>
+    <Text style={[styles.text, styles.init]}>{character.init >= 0 ? '+' : ''}{character.init}</Text>
+    <Text style={[styles.text, styles.melee]}>{character.melee >= 0 ? '+' : ''}{character.melee}</Text>
+    <Text style={[styles.text, styles.missile]}>{character.missile >= 0 ? '+' : ''}{character.missile}</Text>
+    
+    {/* Other */}
+    <Text style={[styles.text, styles.wealth]}>{character.wealth} cp</Text>
+    <Text style={[styles.text, styles.languages]}>{character.languages}</Text>
+    <Text style={[styles.smallText, styles.birthAugur]}>{character.birthAugur}</Text>
   </View>
 );
 
-// PDF Document component (move from zeroLv.js)
+// PDF Document component
 export const CharacterSheetDocument = ({ characters }) => (
   <Document>
     <Page size="LETTER" style={styles.page}>

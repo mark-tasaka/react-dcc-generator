@@ -8,6 +8,7 @@ const HomePage = () => {
     try {
       // Generate 4 characters
       const characters = generateFourCharacters();
+      console.log('Generated characters:', characters); // Debug log
       
       // Create PDF
       const doc = <CharacterSheetDocument characters={characters} />;
