@@ -1,7 +1,20 @@
 import { Document, Page, Text, View, StyleSheet, Image } from '@react-pdf/renderer';
 import characterSheetBg from '../character/img/lvZeroCharacterSheet.png';
 import { occupations } from './dccOccupations.js';
-import { birthAugurs } from './dccBirthAugurs.js';
+import { 
+  getBirthAugur, 
+  getInit, 
+  getAC, 
+  getHitPointLuck, 
+  minHitPoints,
+  getRefLuckBonus,
+  getFortLuckBonus,
+  getWillLuckBonus,
+  meleeAttackLuckSign,
+  missileAttackLuckSign,
+  getCritMod,
+  getFumbleMod
+} from './dccBirthAugurs.js';
 
 // Character generation data
 const alignments = ['Lawful', 'Neutral', 'Chaotic'];
@@ -113,7 +126,33 @@ export const generateRandomCharacter = () => {
   const int = roll3d6();
   const luck = roll3d6();
 
-  const hp = Math.max(1, rollDice(4) + getModifier(sta));
+  // Get modifiers
+  const strMod = getModifier(str);
+  const agiMod = getModifier(agi);
+  const staMod = getModifier(sta);
+  const perMod = getModifier(per);
+  const intMod = getModifier(int);
+  const luckMod = getModifier(luck);
+
+  // Get birth augur
+  const birthAugur = getBirthAugur();
+  const luckySign = birthAugur.id;
+
+  // Calculate stats with luck bonuses
+  const baseHp = rollDice(4) + staMod + getHitPointLuck(luckMod, luckySign);
+  const hp = minHitPoints(baseHp);
+  
+  const ac = getAC(agiMod, luckMod, luckySign);
+  const init = getInit(agiMod, luckMod, luckySign);
+  const melee = strMod + meleeAttackLuckSign(luckMod, luckySign);
+  const missile = agiMod + missileAttackLuckSign(luckMod, luckySign);
+  
+  const reflex = agiMod + getRefLuckBonus(luckMod, luckySign);
+  const fortitude = staMod + getFortLuckBonus(luckMod, luckySign);
+  const will = perMod + getWillLuckBonus(luckMod, luckySign);
+
+  const critDie = 'd4';
+  const fumble = 'd4';
   
   return {
     name: nameList[Math.floor(Math.random() * nameList.length)] + ' ' + 
@@ -126,24 +165,25 @@ export const generateRandomCharacter = () => {
     weaponDamage: selectedOccupation.damage,
     tradeGood: selectedOccupation.tradeGood,
     stats: {
-      str: { value: str, modifier: getModifier(str) },
-      agi: { value: agi, modifier: getModifier(agi) },
-      sta: { value: sta, modifier: getModifier(sta) },
-      per: { value: per, modifier: getModifier(per) },
-      int: { value: int, modifier: getModifier(int) },
-      luck: { value: luck, modifier: getModifier(luck) }
+      str: { value: str, modifier: strMod },
+      agi: { value: agi, modifier: agiMod },
+      sta: { value: sta, modifier: staMod },
+      per: { value: per, modifier: perMod },
+      int: { value: int, modifier: intMod },
+      luck: { value: luck, modifier: luckMod }
     },
     hp: hp,
-    ac: 10 + getModifier(agi),
-    init: getModifier(agi),
-    melee: getModifier(str),
-    missile: getModifier(agi),
-    critDie: 'd4',
-    fumble: 'd4',
-    reflex: getModifier(agi),
-    fortitude: getModifier(sta),
-    will: getModifier(per),
-    birthAugur: birthAugurs[Math.floor(Math.random() * birthAugurs.length)],
+    ac: ac,
+    init: init,
+    melee: melee,
+    missile: missile,
+    critDie: critDie,
+    fumble: fumble,
+    reflex: reflex,
+    fortitude: fortitude,
+    will: will,
+    birthAugur: `${birthAugur.name}: ${birthAugur.effect}`,
+    birthAugurData: birthAugur,
     wealth: rollDice(12) + rollDice(12),
     languages: 'Common',
     xp: 0
@@ -175,6 +215,11 @@ const Character = ({ character, position }) => (
     <Text style={[styles.text, styles.init]}>{character.init >= 0 ? '+' : ''}{character.init}</Text>
     <Text style={[styles.text, styles.melee]}>{character.melee >= 0 ? '+' : ''}{character.melee}</Text>
     <Text style={[styles.text, styles.missile]}>{character.missile >= 0 ? '+' : ''}{character.missile}</Text>
+    
+    {/* Saves */}
+    <Text style={[styles.text, styles.reflex]}>{character.reflex >= 0 ? '+' : ''}{character.reflex}</Text>
+    <Text style={[styles.text, styles.fortitude]}>{character.fortitude >= 0 ? '+' : ''}{character.fortitude}</Text>
+    <Text style={[styles.text, styles.will]}>{character.will >= 0 ? '+' : ''}{character.will}</Text>
     
     {/* Other */}
     <Text style={[styles.text, styles.wealth]}>{character.wealth} cp</Text>
