@@ -84,12 +84,12 @@ const styles = StyleSheet.create({
   xp: { position: 'absolute', top: 55, right: 30 },
   
   // Stats positioning
-  str: { position: 'absolute', top: 135, left: 8 },
-  agi: { position: 'absolute', top: 150, left: 8 },
-  sta: { position: 'absolute', top: 165, left: 8 },
-  per: { position: 'absolute', top: 180, left: 8 },
-  int: { position: 'absolute', top: 195, left: 8 },
-  luck: { position: 'absolute', top: 210, left: 8 },
+  str: { position: 'absolute', top: 184, left: 55 },
+  agi: { position: 'absolute', top: 200, left: 55 },
+  sta: { position: 'absolute', top: 217, left: 55 },
+  per: { position: 'absolute', top: 233, left: 55 },
+  int: { position: 'absolute', top: 250, left: 55 },
+  luck: { position: 'absolute', top: 266, left: 55 },
   
   // Combat stats
   ac: { position: 'absolute', top: 85, left: 45 },

@@ -32,7 +32,7 @@ const HomePage = () => {
   return (
     <div className="App">
       <header className="App-header">
-        <h1>DCC Generator</h1>
+        <h1>DCC PDF CharacterGenerator</h1>
         <p>This is a placeholder for the DCC Generator application.</p>
 
         <button 
