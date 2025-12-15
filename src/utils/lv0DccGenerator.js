@@ -60,10 +60,9 @@ const styles = StyleSheet.create({
     height: '50%',
   },
   topLeft: { top: '2%', left: '2%' },
-  topRight: { top: '2%', right: '2%' },
+  topRight: { top: '2%', left: '52%' },
   bottomLeft: { top: '52%', left: '2%' },
-  bottomRight: { top: '52%', right: '2%' },
-  
+  bottomRight: { top: '52%', left: '52%' },
   text: {
     fontSize: 10,
     color: 'black',
