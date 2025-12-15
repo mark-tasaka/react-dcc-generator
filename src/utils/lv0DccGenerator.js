@@ -1,5 +1,5 @@
 import { Document, Page, Text, View, StyleSheet, Image } from '@react-pdf/renderer';
-import characterSheetBg from '../character/img/characterSheet.png';
+import characterSheetBg from '../character/img/lvZeroCharacterSheet.png';
 
 // Character generation data
 const occupations = [
@@ -8,7 +8,7 @@ const occupations = [
   'Cutpurse', 'Ditch digger', 'Dwarven apothecarist', 'Dwarven blacksmith', 'Dwarven chest-maker',
   'Dwarven herder', 'Dwarven miner', 'Dwarven mushroom-farmer', 'Dwarven rat-catcher', 'Dwarven stonemason',
   'Elven artisan', 'Elven barrister', 'Elven chandler', 'Elven falconer', 'Elven forester', 'Elven glassblower',
-  'Elven navigator', 'Elven sage', 'Farmer', 'Fortune teller', 'Gambler', 'Gongfarmer', 'Grave digger',
+  'Elven navigator', 'Elven sage', 'Farmer', 'Fortune teller', 'Gambler', 'Gong farmer', 'Grave digger',
   'Guild beggar', 'Halfling chicken butcher', 'Halfling dyer', 'Halfling glovemaker', 'Halfling gypsy',
   'Halfling haberdasher', 'Halfling healer', 'Halfling moneylender', 'Halfling trader', 'Healer',
   'Herbalist', 'Herder', 'Hunter', 'Indentured servant', 'Jester', 'Jeweler', 'Locksmith', 'Mendicant',
@@ -69,6 +69,16 @@ const styles = StyleSheet.create({
     color: 'black',
     fontWeight: 'bold',
   },
+  largeText: {
+    fontSize: 12,
+    color: 'black',
+    fontWeight: 'bold',
+  },
+  testText: {
+    fontSize: 10,
+    color: 'red',
+    fontWeight: 'bold',
+  },
   smallText: {
     fontSize: 8,
     color: 'black',
@@ -92,11 +102,11 @@ const styles = StyleSheet.create({
   luck: { position: 'absolute', top: 266, left: 55 },
   
   // Combat stats
-  ac: { position: 'absolute', top: 85, left: 45 },
-  hp: { position: 'absolute', top: 115, left: 45 },
-  init: { position: 'absolute', top: 85, right: 45 },
-  melee: { position: 'absolute', top: 115, right: 65 },
-  missile: { position: 'absolute', top: 115, right: 25 },
+  ac: { position: 'absolute', top: 103, left: 40 },
+  hp: { position: 'absolute', top: 138, left: 18 },
+  init: { position: 'absolute', top: 89, left: 125},
+  melee: { position: 'absolute', top: 112, left: 120 },
+  missile: { position: 'absolute', top: 125, left: 120 },
   
   // Saves
   reflex: { position: 'absolute', top: 85, right: 85 },
@@ -179,8 +189,8 @@ const Character = ({ character, position }) => (
     <Text style={[styles.text, styles.luck]}>{character.stats.luck.value} {character.stats.luck.modifier >= 0 ? '+' : ''}{character.stats.luck.modifier}</Text>
     
     {/* Combat Stats */}
-    <Text style={[styles.text, styles.ac]}>{character.ac}</Text>
-    <Text style={[styles.text, styles.hp]}>{character.hp}</Text>
+    <Text style={[styles.largeText, styles.ac]}>{character.ac}</Text>
+    <Text style={[styles.largeText, styles.hp]}>{character.hp}</Text>
     <Text style={[styles.text, styles.init]}>{character.init >= 0 ? '+' : ''}{character.init}</Text>
     <Text style={[styles.text, styles.melee]}>{character.melee >= 0 ? '+' : ''}{character.melee}</Text>
     <Text style={[styles.text, styles.missile]}>{character.missile >= 0 ? '+' : ''}{character.missile}</Text>

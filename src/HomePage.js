@@ -1,6 +1,6 @@
 import React from 'react';
 import { pdf } from '@react-pdf/renderer';
-import { generateFourCharacters, CharacterSheetDocument } from './utils/characterGenerator';
+import { generateFourCharacters, CharacterSheetDocument } from './utils/lv0DccGenerator';
 
 const HomePage = () => {
   
