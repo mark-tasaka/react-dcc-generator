@@ -102,6 +102,8 @@ const styles = StyleSheet.create({
   wealth: { position: 'absolute', bottom: 65, left: 20 },
   languages: { position: 'absolute', bottom: 35, left: 20 },
   birthAugur: { position: 'absolute', top: 75, right: 20, width: 120 },
+  weapon: { position: 'absolute', bottom: 95, left: 20 },
+  tradeGood: { position: 'absolute', bottom: 125, left: 20 },
 });
 
 // Generate random character
@@ -111,6 +113,7 @@ export const generateRandomCharacter = () => {
   
   const getModifier = (score) => Math.floor((score - 10) / 2);
 
+  const selectedOccupation = occupations[Math.floor(Math.random() * occupations.length)];
   const gender = genders[Math.floor(Math.random() * genders.length)];
   const nameList = gender.toLowerCase() === 'male' ? names.male : names.female;
   
@@ -128,7 +131,11 @@ export const generateRandomCharacter = () => {
           nameList[Math.floor(Math.random() * nameList.length)] + 'son',
     gender: gender,
     alignment: alignments[Math.floor(Math.random() * alignments.length)],
-    occupation: occupations[Math.floor(Math.random() * occupations.length)],
+    occupation: selectedOccupation.name,
+    race: selectedOccupation.race,
+    weapon: selectedOccupation.weapon,
+    weaponDamage: selectedOccupation.damage,
+    tradeGood: selectedOccupation.tradeGood,
     stats: {
       str: { value: str, modifier: getModifier(str) },
       agi: { value: agi, modifier: getModifier(agi) },
@@ -184,6 +191,8 @@ const Character = ({ character, position }) => (
     <Text style={[styles.text, styles.wealth]}>{character.wealth} cp</Text>
     <Text style={[styles.text, styles.languages]}>{character.languages}</Text>
     <Text style={[styles.smallText, styles.birthAugur]}>{character.birthAugur}</Text>
+    <Text style={[styles.smallText, styles.weapon]}>{character.weapon} ({character.weaponDamage})</Text>
+    <Text style={[styles.smallText, styles.tradeGood]}>{character.tradeGood}</Text>
   </View>
 );
 
