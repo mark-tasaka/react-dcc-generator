@@ -1,6 +1,6 @@
 import { Document, Page, Text, View, StyleSheet, Image } from '@react-pdf/renderer';
 import characterSheetBg from '../character/img/lvZeroCharacterSheet.jpg';
-import { occupations } from './dccOccupations.js';
+import { occupations, getACBonusArmour } from './dccOccupations.js';
 // Update your imports at the top of the file
 import { 
   getBirthAugur, 
@@ -101,7 +101,7 @@ const styles = StyleSheet.create({
   luckMod: { position: 'absolute', top: 266, left: 65 },
   
   // Combat stats
-  ac: { position: 'absolute', top: 103, left: 40 },
+  ac: { position: 'absolute', top: 103, right: 245 },
   hp: { position: 'absolute', top: 138, left: 18 },
   init: { position: 'absolute', top: 89, left: 125},
   melee: { position: 'absolute', top: 112, left: 120 },
@@ -185,7 +185,7 @@ export const generateRandomCharacter = () => {
       luck: { value: luck, modifier: luckMod }
     },
     hp: hp,
-    ac: ac,
+    ac: ac + getACBonusArmour(selectedOccupation) + ' (' + ac + ')',
     init: init,
     melee: melee,
     missile: missile,
@@ -196,7 +196,7 @@ export const generateRandomCharacter = () => {
     will: will,
     birthAugur: `${birthAugur.name}: ${birthAugur.effect}`,
     birthAugurData: birthAugur,
-    wealth: rollDice(12) + rollDice(12),
+    wealth: rollDice(12) + rollDice(12) + rollDice(12) + rollDice(12) + rollDice(12),
     languages: 'Common',
     xp: 0
   };

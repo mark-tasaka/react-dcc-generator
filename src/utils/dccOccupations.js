@@ -101,3 +101,38 @@ export const occupations = [
   { id: 99, name: "Outlaw", race: "Human", weapon: "Short Sword", damage: "1d6", tradeGood: "" },
   { id: 100, name: "Soldier", race: "Human", weapon: "Spear", damage: "1d8", tradeGood: "" }
 ];
+
+// Armor functions converted from PHP
+export const getArmour = (select) => {
+  if (select === 98) {
+    return 'Hide Armour';
+  } else if (select === 99) {
+    return 'Leather Armour';
+  } else if (select === 100) {
+    return 'Shield';
+  } else {
+    return '';
+  }
+};
+
+export const getACBonusArmour = (select) => {
+  if (select === 98) {
+    return 3;
+  } else if (select === 99) {
+    return 2;
+  } else if (select === 100) {
+    return 1;
+  } else {
+    return 0;
+  }
+};
+
+export const getOccupationFumbleDie = (select) => {
+  if (select === 98) {
+    return "d12";
+  } else if (select === 99 || select === 100) {
+    return "d8";
+  } else {
+    return "d4";
+  }
+};
