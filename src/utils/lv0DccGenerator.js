@@ -84,13 +84,21 @@ const styles = StyleSheet.create({
   fumble: { position: 'absolute', top: 35, right: 30 },
   xp: { position: 'absolute', top: 55, right: 30 },
   
-  // Stats positioning
-  str: { position: 'absolute', top: 184, left: 55 },
-  agi: { position: 'absolute', top: 200, left: 55 },
-  sta: { position: 'absolute', top: 217, left: 55 },
-  per: { position: 'absolute', top: 233, left: 55 },
-  int: { position: 'absolute', top: 250, left: 55 },
-  luck: { position: 'absolute', top: 266, left: 55 },
+  // Stats positioning - VALUES (left side)
+  str: { position: 'absolute', top: 184, left: 50 },
+  agi: { position: 'absolute', top: 200, left: 50 },
+  sta: { position: 'absolute', top: 217, left: 50 },
+  per: { position: 'absolute', top: 233, left: 50 },
+  int: { position: 'absolute', top: 250, left: 50 },
+  luck: { position: 'absolute', top: 266, left: 50 },
+  
+  // Stats positioning - MODIFIERS (right side)
+  strMod: { position: 'absolute', top: 184, left: 65 },
+  agiMod: { position: 'absolute', top: 200, left: 65 },
+  staMod: { position: 'absolute', top: 217, left: 65 },
+  perMod: { position: 'absolute', top: 233, left: 65 },
+  intMod: { position: 'absolute', top: 250, left: 65 },
+  luckMod: { position: 'absolute', top: 266, left: 65 },
   
   // Combat stats
   ac: { position: 'absolute', top: 103, left: 40 },
@@ -205,13 +213,24 @@ const Character = ({ character, position }) => (
     <Text style={[styles.text, styles.fumble]}>{character.fumble}</Text>
     <Text style={[styles.text, styles.xp]}>{character.xp}</Text>
     
-    {/* Stats */}
-    <Text style={[styles.text, styles.str]}>{character.stats.str.value} {character.stats.str.modifier >= 0 ? '+' : ''}{character.stats.str.modifier}</Text>
-    <Text style={[styles.text, styles.agi]}>{character.stats.agi.value} {character.stats.agi.modifier >= 0 ? '+' : ''}{character.stats.agi.modifier}</Text>
-    <Text style={[styles.text, styles.sta]}>{character.stats.sta.value} {character.stats.sta.modifier >= 0 ? '+' : ''}{character.stats.sta.modifier}</Text>
-    <Text style={[styles.text, styles.per]}>{character.stats.per.value} {character.stats.per.modifier >= 0 ? '+' : ''}{character.stats.per.modifier}</Text>
-    <Text style={[styles.text, styles.int]}>{character.stats.int.value} {character.stats.int.modifier >= 0 ? '+' : ''}{character.stats.int.modifier}</Text>
-    <Text style={[styles.text, styles.luck]}>{character.stats.luck.value} {character.stats.luck.modifier >= 0 ? '+' : ''}{character.stats.luck.modifier}</Text>
+    {/* Stats - Values and Modifiers separated */}
+    <Text style={[styles.text, styles.str]}>{character.stats.str.value}</Text>
+    <Text style={[styles.text, styles.strMod]}>({character.stats.str.modifier >= 0 ? '+' : ''}{character.stats.str.modifier})</Text>
+    
+    <Text style={[styles.text, styles.agi]}>{character.stats.agi.value}</Text>
+    <Text style={[styles.text, styles.agiMod]}>({character.stats.agi.modifier >= 0 ? '+' : ''}{character.stats.agi.modifier})</Text>
+    
+    <Text style={[styles.text, styles.sta]}>{character.stats.sta.value}</Text>
+    <Text style={[styles.text, styles.staMod]}>({character.stats.sta.modifier >= 0 ? '+' : ''}{character.stats.sta.modifier})</Text>
+    
+    <Text style={[styles.text, styles.per]}>{character.stats.per.value}</Text>
+    <Text style={[styles.text, styles.perMod]}>({character.stats.per.modifier >= 0 ? '+' : ''}{character.stats.per.modifier})</Text>
+    
+    <Text style={[styles.text, styles.int]}>{character.stats.int.value}</Text>
+    <Text style={[styles.text, styles.intMod]}>({character.stats.int.modifier >= 0 ? '+' : ''}{character.stats.int.modifier})</Text>
+    
+    <Text style={[styles.text, styles.luck]}>{character.stats.luck.value}</Text>
+    <Text style={[styles.text, styles.luckMod]}>({character.stats.luck.modifier >= 0 ? '+' : ''}{character.stats.luck.modifier})</Text>
     
     {/* Combat Stats */}
     <Text style={[styles.largeText, styles.ac]}>{character.ac}</Text>
@@ -233,7 +252,6 @@ const Character = ({ character, position }) => (
     <Text style={[styles.smallText, styles.tradeGood]}>{character.tradeGood}</Text>
   </View>
 );
-
 // PDF Document component
 export const CharacterSheetDocument = ({ characters }) => (
   <Document>
