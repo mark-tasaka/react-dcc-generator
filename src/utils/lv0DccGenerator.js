@@ -233,8 +233,8 @@ const Character = ({ character, position }) => (
     <Text style={[styles.text, styles.luckMod]}>({character.stats.luck.modifier >= 0 ? '+' : ''}{character.stats.luck.modifier})</Text>
     
     {/* Combat Stats */}
-    <Text style={[styles.largeText, styles.ac]}>{character.ac}</Text>
-    <Text style={[styles.largeText, styles.hp]}>{character.hp}</Text>
+    <Text style={[styles.text, styles.ac]}>{character.ac}</Text>
+    <Text style={[styles.text, styles.hp]}>{character.hp}</Text>
     <Text style={[styles.text, styles.init]}>{character.init >= 0 ? '+' : ''}{character.init}</Text>
     <Text style={[styles.text, styles.melee]}>{character.melee >= 0 ? '+' : ''}{character.melee}</Text>
     <Text style={[styles.text, styles.missile]}>{character.missile >= 0 ? '+' : ''}{character.missile}</Text>
