@@ -115,7 +115,8 @@ const styles = StyleSheet.create({
   wealth: { position: 'absolute', bottom: 65, left: 20 },
   languages: { position: 'absolute', bottom: 35, left: 20 },
   birthAugur: { position: 'absolute', top: 75, right: 20, width: 120 },
-  weapon: { position: 'absolute', bottom: 95, left: 20 },
+  weapon: { position: 'absolute', top: 168, left: 110 },
+  weaponDamage: { position: 'absolute', top: 168, right: 50 },
   tradeGood: { position: 'absolute', bottom: 125, left: 20 },
 });
 
@@ -188,7 +189,7 @@ export const generateRandomCharacter = () => {
     init: init,
     melee: melee,
     missile: missile,
-    critDie: critDie,
+    critDie: critDie + ' / I',
     fumble: fumble,
     reflex: reflex,
     fortitude: fortitude,
@@ -245,7 +246,8 @@ const Character = ({ character, position }) => (
     <Text style={[styles.text, styles.wealth]}>{character.wealth} cp</Text>
     <Text style={[styles.text, styles.languages]}>{character.languages}</Text>
     <Text style={[styles.smallText, styles.birthAugur]}>{character.birthAugur}</Text>
-    <Text style={[styles.smallText, styles.weapon]}>{character.weapon} ({character.weaponDamage})</Text>
+    <Text style={[styles.smallText, styles.weapon]}>{character.weapon}</Text>
+    <Text style={[styles.smallText, styles.weaponDamage]}>{character.weaponDamage}</Text>
     <Text style={[styles.smallText, styles.tradeGood]}>{character.tradeGood}</Text>
   </View>
 );
