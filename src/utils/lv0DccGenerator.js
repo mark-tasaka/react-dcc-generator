@@ -80,9 +80,8 @@ const styles = StyleSheet.create({
   gender: { position: 'absolute', top: 12, left: 140 },
   alignment: { position: 'absolute', top: 35, left: 10 },
   occupation: { position: 'absolute', top: 60, left: 10 },
-  critDie: { position: 'absolute', top: 35, left: 120 },
-  fumble: { position: 'absolute', top: 35, right: 30 },
-  xp: { position: 'absolute', top: 55, right: 30 },
+  critDie: { position: 'absolute', top: 35, left: 110 },
+  fumble: { position: 'absolute', top: 35, left: 165 },
   
   // Stats positioning - VALUES (left side)
   str: { position: 'absolute', top: 184, left: 50 },
@@ -197,8 +196,7 @@ export const generateRandomCharacter = () => {
     birthAugur: `${birthAugur.name}: ${birthAugur.effect}`,
     birthAugurData: birthAugur,
     wealth: rollDice(12) + rollDice(12) + rollDice(12) + rollDice(12) + rollDice(12),
-    languages: 'Common',
-    xp: 0
+    languages: 'Common'
   };
 };
 
@@ -211,7 +209,6 @@ const Character = ({ character, position }) => (
     <Text style={[styles.text, styles.occupation]}>{character.occupation}</Text>
     <Text style={[styles.text, styles.critDie]}>{character.critDie}</Text>
     <Text style={[styles.text, styles.fumble]}>{character.fumble}</Text>
-    <Text style={[styles.text, styles.xp]}>{character.xp}</Text>
     
     {/* Stats - Values and Modifiers separated */}
     <Text style={[styles.text, styles.str]}>{character.stats.str.value}</Text>
