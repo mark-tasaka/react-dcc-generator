@@ -104,10 +104,6 @@ export const getHitPointLuck = (luckMod, luckySign) => {
   return bonus;
 };
 
-export const minHitPoints = (hp) => {
-  return hp <= 0 ? 1 : hp;
-};
-
 export const getRefLuckBonus = (luckMod, luckySign) => {
   let bonus = 0;
 

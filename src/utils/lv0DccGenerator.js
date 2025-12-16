@@ -1,20 +1,24 @@
 import { Document, Page, Text, View, StyleSheet, Image } from '@react-pdf/renderer';
-import characterSheetBg from '../character/img/lvZeroCharacterSheet.png';
+import characterSheetBg from '../character/img/lvZeroCharacterSheet.jpg';
 import { occupations } from './dccOccupations.js';
+// Update your imports at the top of the file
 import { 
   getBirthAugur, 
   getInit, 
   getAC, 
   getHitPointLuck, 
-  minHitPoints,
   getRefLuckBonus,
   getFortLuckBonus,
   getWillLuckBonus,
   meleeAttackLuckSign,
   missileAttackLuckSign,
-  getCritMod,
-  getFumbleMod
 } from './dccBirthAugurs.js';
+
+import { 
+  minHitPoints, 
+  formatCritDie, 
+  formatFumbleDie 
+} from './statistics.js';
 
 // Character generation data
 const alignments = ['Lawful', 'Neutral', 'Chaotic'];
@@ -151,8 +155,8 @@ export const generateRandomCharacter = () => {
   const fortitude = staMod + getFortLuckBonus(luckMod, luckySign);
   const will = perMod + getWillLuckBonus(luckMod, luckySign);
 
-  const critDie = 'd4';
-  const fumble = 'd4';
+  const critDie = formatCritDie(luckMod, luckySign);
+  const fumble = formatFumbleDie(luckMod, luckySign);
   
   return {
     name: nameList[Math.floor(Math.random() * nameList.length)] + ' ' + 
