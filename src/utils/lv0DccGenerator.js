@@ -68,6 +68,11 @@ const styles = StyleSheet.create({
     color: 'black',
     fontWeight: 'bold',
   },
+  largeTextWhite: {
+    fontSize: 12,
+    color: 'white',
+    fontWeight: 'bold',
+  },
   testText: {
     fontSize: 10,
     color: 'red',
@@ -112,14 +117,14 @@ const styles = StyleSheet.create({
   missileDamage: { position: 'absolute', top: 125, left: 140 },
   
   // Saves
-  reflex: { position: 'absolute', top: 85, right: 85 },
-  fortitude: { position: 'absolute', top: 85, right: 65 },
+  reflex: { position: 'absolute', top: 13, right: 67 },
+  fortitude: { position: 'absolute', top: 13, right: 35 },
   will: { position: 'absolute', top: 85, right: 45 },
   
   // Other fields
   wealth: { position: 'absolute', bottom: 65, left: 20 },
   languages: { position: 'absolute', bottom: 35, left: 20 },
-  birthAugur: { position: 'absolute', top: 75, right: 20, width: 120 },
+  birthAugur: { position: 'absolute', top: 100, left: 195, width: 80 },
   weapon: { position: 'absolute', top: 168, left: 110 },
   weaponDamage: { position: 'absolute', top: 168, right: 58 },
   equipment: { position: 'absolute', top: 245, left: 110 },
@@ -247,8 +252,8 @@ const Character = ({ character, position }) => (
     <Text style={[styles.text, styles.missileDamage]}>{character.missileDamage >= 0 ? '+' : ''}{character.missileDamage}</Text>
     
     {/* Saves */}
-    <Text style={[styles.text, styles.reflex]}>{character.reflex >= 0 ? '+' : ''}{character.reflex}</Text>
-    <Text style={[styles.text, styles.fortitude]}>{character.fortitude >= 0 ? '+' : ''}{character.fortitude}</Text>
+    <Text style={[styles.largeText, styles.reflex]}>{character.reflex >= 0 ? '+' : ''}{character.reflex}</Text>
+    <Text style={[styles.largeTextWhite, styles.fortitude]}>{character.fortitude >= 0 ? '+' : ''}{character.fortitude}</Text>
     <Text style={[styles.text, styles.will]}>{character.will >= 0 ? '+' : ''}{character.will}</Text>
     
     {/* Other */}
