@@ -13,6 +13,8 @@ import {
   getWillLuckBonus,
   meleeAttackLuckSign,
   missileAttackLuckSign,
+  meleeDamageLuckSign,
+  missileDamageLuckSign,
 } from './dccBirthAugurs.js';
 
 import { 
@@ -106,6 +108,8 @@ const styles = StyleSheet.create({
   init: { position: 'absolute', top: 89, left: 125},
   melee: { position: 'absolute', top: 112, left: 120 },
   missile: { position: 'absolute', top: 125, left: 120 },
+  meleeDamage: { position: 'absolute', top: 112, left: 140 },
+  missileDamage: { position: 'absolute', top: 125, left: 140 },
   
   // Saves
   reflex: { position: 'absolute', top: 85, right: 85 },
@@ -189,7 +193,9 @@ export const generateRandomCharacter = () => {
     ac: ac + getACBonusArmour(selectedOccupation) + ' (' + ac + ')',
     init: init,
     melee: melee,
+    meleeDamage: strMod + meleeDamageLuckSign(luckMod, luckySign),
     missile: missile,
+    missileDamage: missileDamageLuckSign(luckMod, luckySign),
     critDie: critDie + ' / I',
     fumble: fumble,
     reflex: reflex,
@@ -237,6 +243,8 @@ const Character = ({ character, position }) => (
     <Text style={[styles.text, styles.init]}>{character.init >= 0 ? '+' : ''}{character.init}</Text>
     <Text style={[styles.text, styles.melee]}>{character.melee >= 0 ? '+' : ''}{character.melee}</Text>
     <Text style={[styles.text, styles.missile]}>{character.missile >= 0 ? '+' : ''}{character.missile}</Text>
+    <Text style={[styles.text, styles.meleeDamage]}>{character.meleeDamage >= 0 ? '+' : ''}{character.meleeDamage}</Text>
+    <Text style={[styles.text, styles.missileDamage]}>{character.missileDamage >= 0 ? '+' : ''}{character.missileDamage}</Text>
     
     {/* Saves */}
     <Text style={[styles.text, styles.reflex]}>{character.reflex >= 0 ? '+' : ''}{character.reflex}</Text>
