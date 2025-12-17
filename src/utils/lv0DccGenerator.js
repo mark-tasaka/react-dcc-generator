@@ -1,6 +1,7 @@
 import { Document, Page, Text, View, StyleSheet, Image } from '@react-pdf/renderer';
 import characterSheetBg from '../character/img/lvZeroCharacterSheet.jpg';
 import { occupations, getACBonusArmour } from './dccOccupations.js';
+import { getRandomEquipment } from './dccEquipment';
 // Update your imports at the top of the file
 import { 
   getBirthAugur, 
@@ -116,8 +117,8 @@ const styles = StyleSheet.create({
   languages: { position: 'absolute', bottom: 35, left: 20 },
   birthAugur: { position: 'absolute', top: 75, right: 20, width: 120 },
   weapon: { position: 'absolute', top: 168, left: 110 },
-  weaponDamage: { position: 'absolute', top: 168, right: 50 },
-  tradeGood: { position: 'absolute', bottom: 125, left: 20 },
+  weaponDamage: { position: 'absolute', top: 168, right: 58 },
+  equipment: { position: 'absolute', top: 245, left: 110 },
 });
 
 // Generate random character
@@ -175,7 +176,7 @@ export const generateRandomCharacter = () => {
     race: selectedOccupation.race,
     weapon: selectedOccupation.weapon,
     weaponDamage: selectedOccupation.damage,
-    tradeGood: selectedOccupation.tradeGood,
+    equipment: selectedOccupation.tradeGood + ', ' + getRandomEquipment(),
     stats: {
       str: { value: str, modifier: strMod },
       agi: { value: agi, modifier: agiMod },
@@ -248,7 +249,7 @@ const Character = ({ character, position }) => (
     <Text style={[styles.smallText, styles.birthAugur]}>{character.birthAugur}</Text>
     <Text style={[styles.smallText, styles.weapon]}>{character.weapon}</Text>
     <Text style={[styles.smallText, styles.weaponDamage]}>{character.weaponDamage}</Text>
-    <Text style={[styles.smallText, styles.tradeGood]}>{character.tradeGood}</Text>
+    <Text style={[styles.smallText, styles.equipment]}>{character.equipment}</Text>
   </View>
 );
 // PDF Document component
