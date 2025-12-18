@@ -20,7 +20,8 @@ import {
 import { 
   minHitPoints, 
   formatCritDie, 
-  formatFumbleDie 
+  formatFumbleDie,
+  getAbilityModifier,
 } from './statistics.js';
 
 // Character generation data
@@ -134,8 +135,6 @@ const styles = StyleSheet.create({
 export const generateRandomCharacter = () => {
   const rollDice = (sides) => Math.floor(Math.random() * sides) + 1;
   const roll3d6 = () => rollDice(6) + rollDice(6) + rollDice(6);
-  
-  const getModifier = (score) => Math.floor((score - 10) / 2);
 
   const selectedOccupation = occupations[Math.floor(Math.random() * occupations.length)];
   const gender = genders[Math.floor(Math.random() * genders.length)];
@@ -148,13 +147,13 @@ export const generateRandomCharacter = () => {
   const int = roll3d6();
   const luck = roll3d6();
 
-  // Get modifiers
-  const strMod = getModifier(str);
-  const agiMod = getModifier(agi);
-  const staMod = getModifier(sta);
-  const perMod = getModifier(per);
-  const intMod = getModifier(int);
-  const luckMod = getModifier(luck);
+  // Get modifiers using DCC rules
+  const strMod = getAbilityModifier(str);
+  const agiMod = getAbilityModifier(agi);
+  const staMod = getAbilityModifier(sta);
+  const perMod = getAbilityModifier(per);
+  const intMod = getAbilityModifier(int);
+  const luckMod = getAbilityModifier(luck);
 
   // Get birth augur
   const birthAugur = getBirthAugur();
@@ -200,7 +199,7 @@ export const generateRandomCharacter = () => {
     melee: melee,
     meleeDamage: strMod + meleeDamageLuckSign(luckMod, luckySign),
     missile: missile,
-    missileDamage: missileDamageLuckSign(luckMod, luckySign),
+    missileDamage: agiMod + missileDamageLuckSign(luckMod, luckySign),
     critDie: critDie + ' / I',
     fumble: fumble,
     reflex: reflex,

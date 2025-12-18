@@ -27,3 +27,24 @@ export const formatFumbleDie = (luckMod, luckySign) => {
     return `d4${fumbleMod}`; // negative values already include the minus sign
   }
 };
+
+// Converted PHP functions
+export const getAbilityModifier = (score) => {
+  if (score === 3) {
+    return -3;
+  } else if (score >= 4 && score <= 5) {
+    return -2;
+  } else if (score >= 6 && score <= 8) {
+    return -1;
+  } else if (score >= 9 && score <= 12) {
+    return 0;
+  } else if (score >= 13 && score <= 15) {
+    return 1;
+  } else if (score >= 16 && score <= 17) {
+    return 2;
+  } else if (score === 18) {
+    return 3;
+  }
+  
+  return 0; // fallback for unexpected values
+};
