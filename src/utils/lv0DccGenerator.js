@@ -1,7 +1,7 @@
 import { Document, Page, Text, View, StyleSheet, Image } from '@react-pdf/renderer';
 import characterSheetBg from '../character/img/lvZeroCharacterSheet.jpg';
 import { occupations, getACBonusArmour } from './dccOccupations.js';
-import { getRandomEquipment, generateEquipment } from './dccEquipment';
+import { generateEquipment, generateWealth } from './dccEquipment';
 import { 
   getBirthAugur, 
   getInit, 
@@ -206,7 +206,7 @@ export const generateRandomCharacter = () => {
     will: will,
     birthAugur: `${birthAugur.name}: ${birthAugur.effect}`,
     birthAugurData: birthAugur,
-    wealth: rollDice(12) + rollDice(12) + rollDice(12) + rollDice(12) + rollDice(12),
+    wealth: generateWealth(selectedOccupation), 
     languages: 'Common'
   };
 };
@@ -255,7 +255,7 @@ const Character = ({ character, position }) => (
     <Text style={[styles.text, styles.will]}>{character.will >= 0 ? '+' : ''}{character.will}</Text>
     
     {/* Other */}
-    <Text style={[styles.text, styles.wealth]}>{character.wealth} cp</Text>
+    <Text style={[styles.smallText, styles.wealth]}>{character.wealth}</Text>
     <Text style={[styles.text, styles.languages]}>{character.languages}</Text>
     <Text style={[styles.smallText, styles.birthAugur]}>{character.birthAugur}</Text>
     <Text style={[styles.smallText, styles.weapon]}>{character.weapon}</Text>

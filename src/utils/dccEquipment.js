@@ -31,7 +31,6 @@ export const getRandomEquipment = () => {
     return equipment[randomIndex];
 };
 
-// New function to generate complete equipment list
 export const generateEquipment = (selectedOccupation) => {
     const randomEquipment = getRandomEquipment();
     
@@ -41,6 +40,24 @@ export const generateEquipment = (selectedOccupation) => {
     } else {
         return selectedOccupation.tradeGood + '; ' + randomEquipment;
     }
+};
+
+
+export const generateWealth = (selectedOccupation) => {
+    const rollDice = (sides) => Math.floor(Math.random() * sides) + 1;
+    let copper = rollDice(12) + rollDice(12) + rollDice(12) + rollDice(12) + rollDice(12);
+
+    if(selectedOccupation.id === 28) {
+        return '5 gp, 10 sp, ' + (copper + 200) + ' cp';} 
+    else if(selectedOccupation.id === 29) {
+        return '20 sp, ' + copper + ' cp';} 
+    else if(selectedOccupation.id === 75) {
+        return '4 gp, 14 sp, ' + (copper + 27) + ' cp';} 
+    else if(selectedOccupation.id === 88) {
+        return (copper + 100) + ' cp';}
+    else {
+        return copper + ' cp';}  
+    
 };
 
 // Default export if you prefer
