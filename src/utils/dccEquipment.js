@@ -31,5 +31,17 @@ export const getRandomEquipment = () => {
     return equipment[randomIndex];
 };
 
+// New function to generate complete equipment list
+export const generateEquipment = (selectedOccupation) => {
+    const randomEquipment = getRandomEquipment();
+    
+    // Check if tradeGood is empty or null
+    if (!selectedOccupation.tradeGood || selectedOccupation.tradeGood === "") {
+        return randomEquipment;
+    } else {
+        return selectedOccupation.tradeGood + '; ' + randomEquipment;
+    }
+};
+
 // Default export if you prefer
 export default getRandomEquipment;

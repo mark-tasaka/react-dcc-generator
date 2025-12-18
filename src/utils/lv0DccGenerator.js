@@ -1,8 +1,7 @@
 import { Document, Page, Text, View, StyleSheet, Image } from '@react-pdf/renderer';
 import characterSheetBg from '../character/img/lvZeroCharacterSheet.jpg';
 import { occupations, getACBonusArmour } from './dccOccupations.js';
-import { getRandomEquipment } from './dccEquipment';
-// Update your imports at the top of the file
+import { getRandomEquipment, generateEquipment } from './dccEquipment';
 import { 
   getBirthAugur, 
   getInit, 
@@ -184,7 +183,7 @@ export const generateRandomCharacter = () => {
     race: selectedOccupation.race,
     weapon: selectedOccupation.weapon,
     weaponDamage: selectedOccupation.damage,
-    equipment: selectedOccupation.tradeGood + ', ' + getRandomEquipment(),
+    equipment: generateEquipment(selectedOccupation), // Updated line
     stats: {
       str: { value: str, modifier: strMod },
       agi: { value: agi, modifier: agiMod },
