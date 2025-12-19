@@ -123,8 +123,8 @@ const styles = StyleSheet.create({
   will: { position: 'absolute', top: 85, right: 45 },
   
   // Other fields
-  wealth: { position: 'absolute', bottom: 65, left: 20 },
-  languages: { position: 'absolute', bottom: 35, left: 20 },
+  wealth: { position: 'absolute', bottom: 80, left: 10 },
+  languages: { position: 'absolute', bottom: 55, left: 10, width: 80  },
   birthAugur: { position: 'absolute', top: 100, left: 195, width: 80 },
   weapon: { position: 'absolute', top: 168, left: 110 },
   weaponDamage: { position: 'absolute', top: 168, right: 58 },
@@ -166,7 +166,9 @@ export const generateRandomCharacter = () => {
   const ac = getAC(agiMod, luckMod, luckySign);
   const init = getInit(agiMod, luckMod, luckySign);
   const melee = strMod + meleeAttackLuckSign(luckMod, luckySign);
+  const meleeDamage = strMod + meleeDamageLuckSign(luckMod, luckySign);
   const missile = agiMod + missileAttackLuckSign(luckMod, luckySign);
+  const missileDamage = agiMod + missileDamageLuckSign(luckMod, luckySign);
   
   const reflex = agiMod + getRefLuckBonus(luckMod, luckySign);
   const fortitude = staMod + getFortLuckBonus(luckMod, luckySign);
@@ -199,9 +201,9 @@ export const generateRandomCharacter = () => {
     ac: ac + getACBonusArmour(selectedOccupation) + ' (' + ac + ')',
     init: init,
     melee: melee,
-    meleeDamage: strMod + meleeDamageLuckSign(luckMod, luckySign),
+    meleeDamage: meleeDamage,
     missile: missile,
-    missileDamage: agiMod + missileDamageLuckSign(luckMod, luckySign),
+    missileDamage: missileDamage,
     critDie: critDie + ' / I',
     fumble: fumble,
     reflex: reflex,
@@ -266,7 +268,7 @@ const Character = ({ character, position }) => (
     
     {/* Other */}
     <Text style={[styles.smallText, styles.wealth]}>{character.wealth}</Text>
-    <Text style={[styles.text, styles.languages]}>{character.languages}</Text>
+    <Text style={[styles.smallText, styles.languages]}>{character.languages}</Text>
     <Text style={[styles.smallText, styles.birthAugur]}>{character.birthAugur}</Text>
     <Text style={[styles.smallText, styles.weapon]}>{character.weapon}</Text>
     <Text style={[styles.smallText, styles.weaponDamage]}>{character.weaponDamage}</Text>
