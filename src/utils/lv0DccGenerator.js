@@ -24,6 +24,15 @@ import {
   formatFumbleDie,
   getAbilityModifier,
 } from './statistics.js';
+// At the top of lv0DccGenerator.js
+import {
+    roll3D6,
+    roll4D6,
+    roll5D6,
+    rollD5D6D7,
+    roll2D6Plus6,
+    rollAbilityScores,
+} from './abilityScoreGen.js';
 import { getNotes, dieRollMethodText, hitPointsMethodText } from './dccNotes.js';
 
 // Character generation data
@@ -138,18 +147,17 @@ const styles = StyleSheet.create({
 // Generate random character
 export const generateRandomCharacter = () => {
   const rollDice = (sides) => Math.floor(Math.random() * sides) + 1;
-  const roll3d6 = () => rollDice(6) + rollDice(6) + rollDice(6);
 
   const selectedOccupation = occupations[Math.floor(Math.random() * occupations.length)];
   const gender = genders[Math.floor(Math.random() * genders.length)];
   const nameList = gender.toLowerCase() === 'male' ? names.male : names.female;
   
-  const str = roll3d6();
-  const agi = roll3d6();
-  const sta = roll3d6();
-  const per = roll3d6();
-  const int = roll3d6();
-  const luck = roll3d6();
+  const str = roll3D6();
+  const agi = roll3D6();
+  const sta = roll3D6();
+  const per = roll3D6();
+  const int = roll3D6();
+  const luck = roll3D6();
 
   // Get modifiers using DCC rules
   const strMod = getAbilityModifier(str);
