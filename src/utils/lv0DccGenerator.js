@@ -4,7 +4,8 @@ import { occupations, getACBonusArmour } from './dccOccupations.js';
 import { generateEquipment, generateWealth } from './dccEquipment';
 import { getLanguages, formatLanguages } from './dccLanguages.js';
 import { 
-  getBirthAugur, 
+  getBirthAugur,
+  getSpeed, 
   getInit, 
   getAC, 
   getHitPointLuck, 
@@ -120,9 +121,10 @@ const styles = StyleSheet.create({
   // Saves
   reflex: { position: 'absolute', top: 13, right: 67 },
   fortitude: { position: 'absolute', top: 13, right: 35 },
-  will: { position: 'absolute', top: 85, right: 45 },
+  will: { position: 'absolute', top: 47, right: 67 },
   
   // Other fields
+  speed: { position: 'absolute', top: 47, right: 30 },
   wealth: { position: 'absolute', bottom: 80, left: 10 },
   languages: { position: 'absolute', bottom: 55, left: 10, width: 80  },
   birthAugur: { position: 'absolute', top: 100, left: 195, width: 80 },
@@ -173,6 +175,7 @@ export const generateRandomCharacter = () => {
   const reflex = agiMod + getRefLuckBonus(luckMod, luckySign);
   const fortitude = staMod + getFortLuckBonus(luckMod, luckySign);
   const will = perMod + getWillLuckBonus(luckMod, luckySign);
+  const speed = getSpeed(agiMod, luckySign);
 
   const critDie = formatCritDie(luckMod, luckySign);
   const fumble = formatFumbleDie(luckMod, luckySign);
@@ -209,6 +212,7 @@ export const generateRandomCharacter = () => {
     reflex: reflex,
     fortitude: fortitude,
     will: will,
+    speed: speed,
     birthAugur: `${birthAugur.name}: ${birthAugur.effect}`,
     birthAugurData: birthAugur,
     wealth: generateWealth(selectedOccupation), 
@@ -264,9 +268,10 @@ const Character = ({ character, position }) => (
     {/* Saves */}
     <Text style={[styles.largeText, styles.reflex]}>{character.reflex >= 0 ? '+' : ''}{character.reflex}</Text>
     <Text style={[styles.largeTextWhite, styles.fortitude]}>{character.fortitude >= 0 ? '+' : ''}{character.fortitude}</Text>
-    <Text style={[styles.text, styles.will]}>{character.will >= 0 ? '+' : ''}{character.will}</Text>
+    <Text style={[styles.largeTextWhite, styles.will]}>{character.will >= 0 ? '+' : ''}{character.will}</Text>
     
     {/* Other */}
+    <Text style={[styles.largeText, styles.speed]}>{character.speed + "'"}</Text>
     <Text style={[styles.smallText, styles.wealth]}>{character.wealth}</Text>
     <Text style={[styles.smallText, styles.languages]}>{character.languages}</Text>
     <Text style={[styles.smallText, styles.birthAugur]}>{character.birthAugur}</Text>
