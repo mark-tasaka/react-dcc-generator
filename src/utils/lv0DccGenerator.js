@@ -126,12 +126,12 @@ const styles = StyleSheet.create({
   
   // Other fields
   speed: { position: 'absolute', top: 47, right: 30 },
-  wealth: { position: 'absolute', bottom: 80, left: 10 },
-  languages: { position: 'absolute', bottom: 55, left: 10, width: 80  },
+  wealth: { position: 'absolute', top: 307, left: 10, width: 80 },
+  languages: { position: 'absolute', top: 335, left: 10, width: 80  },
   birthAugur: { position: 'absolute', top: 100, left: 195, width: 80 },
   weapon: { position: 'absolute', top: 168, left: 110 },
   weaponDamage: { position: 'absolute', top: 168, right: 58 },
-  equipment: { position: 'absolute', top: 245, left: 110 },
+  equipment: { position: 'absolute', top: 241, left: 110 },
   notes: { position: 'absolute', top: 292, left: 110 , width: 160},
 });
 
