@@ -24,6 +24,7 @@ import {
   formatFumbleDie,
   getAbilityModifier,
 } from './statistics.js';
+import { getNotes, dieRollMethodText, hitPointsMethodText } from './dccNotes.js';
 
 // Character generation data
 const alignments = ['Lawful', 'Neutral', 'Chaotic'];
@@ -131,6 +132,7 @@ const styles = StyleSheet.create({
   weapon: { position: 'absolute', top: 168, left: 110 },
   weaponDamage: { position: 'absolute', top: 168, right: 58 },
   equipment: { position: 'absolute', top: 245, left: 110 },
+  notes: { position: 'absolute', top: 292, left: 110 , width: 160},
 });
 
 // Generate random character
@@ -181,6 +183,7 @@ export const generateRandomCharacter = () => {
   const fumble = formatFumbleDie(luckMod, luckySign);
 
   const alignment = alignments[Math.floor(Math.random() * alignments.length)];
+  const notes = getNotes(selectedOccupation.id);
   
   return {
     name: nameList[Math.floor(Math.random() * nameList.length)] + ' ' + 
@@ -223,7 +226,8 @@ export const generateRandomCharacter = () => {
       selectedOccupation.race, 
       alignment, 
       int
-    ))
+    )),
+    notes: notes
   };
 };
 
@@ -278,6 +282,7 @@ const Character = ({ character, position }) => (
     <Text style={[styles.smallText, styles.weapon]}>{character.weapon}</Text>
     <Text style={[styles.smallText, styles.weaponDamage]}>{character.weaponDamage}</Text>
     <Text style={[styles.smallText, styles.equipment]}>{character.equipment}</Text>
+    <Text style={[styles.smallText, styles.notes]}>{character.notes}</Text>
   </View>
 );
 // PDF Document component
