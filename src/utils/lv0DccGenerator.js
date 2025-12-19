@@ -2,6 +2,7 @@ import { Document, Page, Text, View, StyleSheet, Image } from '@react-pdf/render
 import characterSheetBg from '../character/img/lvZeroCharacterSheet.jpg';
 import { occupations, getACBonusArmour } from './dccOccupations.js';
 import { generateEquipment, generateWealth } from './dccEquipment';
+import { getLanguages, formatLanguages } from './dccLanguages.js';
 import { 
   getBirthAugur, 
   getInit, 
@@ -173,12 +174,14 @@ export const generateRandomCharacter = () => {
 
   const critDie = formatCritDie(luckMod, luckySign);
   const fumble = formatFumbleDie(luckMod, luckySign);
+
+  const alignment = alignments[Math.floor(Math.random() * alignments.length)];
   
   return {
     name: nameList[Math.floor(Math.random() * nameList.length)] + ' ' + 
           nameList[Math.floor(Math.random() * nameList.length)] + 'son',
     gender: gender,
-    alignment: alignments[Math.floor(Math.random() * alignments.length)],
+    alignment: alignment,
     occupation: selectedOccupation.name,
     race: selectedOccupation.race,
     weapon: selectedOccupation.weapon,
@@ -207,7 +210,14 @@ export const generateRandomCharacter = () => {
     birthAugur: `${birthAugur.name}: ${birthAugur.effect}`,
     birthAugurData: birthAugur,
     wealth: generateWealth(selectedOccupation), 
-    languages: 'Common'
+    languages: formatLanguages(getLanguages(
+      intMod, 
+      luckMod, 
+      luckySign, 
+      selectedOccupation.race, 
+      alignment, 
+      int
+    ))
   };
 };
 
