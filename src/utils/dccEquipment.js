@@ -1,3 +1,17 @@
+const PUSHCART_ITEMS = [
+    "(containing tomatoes",
+    "(containing nothing)", 
+    "(containing dirt)",
+    "(containing straw)",
+    "(containing rocks)",
+    "(containing YOUR DEAD!!!)"
+];
+
+const FARM_ANIMALS = ["Hen", "Sheep", "Goat", "Cow", "Duck", "Goose", "Mule"];
+
+// Helper function to get random array element
+const getRandomElement = (array) => array[Math.floor(Math.random() * array.length)];
+
 export const getRandomEquipment = () => {
     const equipment = [
         "backpack",
@@ -34,14 +48,23 @@ export const getRandomEquipment = () => {
 export const generateEquipment = (selectedOccupation) => {
     const randomEquipment = getRandomEquipment();
     
-    // Check if tradeGood is empty or null
+    // Handle special cases for specific occupation IDs
+    if (selectedOccupation.id === 92) {
+        // Wainwright - (with special contents
+        return selectedOccupation.tradeGood + ' ' + getRandomElement(PUSHCART_ITEMS) + ', ' + randomEquipment;
+    }
+    else if (selectedOccupation.id >= 48 && selectedOccupation.id <= 56) {
+        // Farmers - Livestock (farm animals)
+        return selectedOccupation.tradeGood + ' ' + getRandomElement(FARM_ANIMALS) + ', ' + randomEquipment;
+    }
+    
+    // Handle regular trade goods
     if (!selectedOccupation.tradeGood || selectedOccupation.tradeGood === "") {
         return randomEquipment;
     } else {
-        return selectedOccupation.tradeGood + '; ' + randomEquipment;
+        return selectedOccupation.tradeGood + ', ' + randomEquipment;
     }
 };
-
 
 export const generateWealth = (selectedOccupation) => {
     const rollDice = (sides) => Math.floor(Math.random() * sides) + 1;
@@ -57,7 +80,6 @@ export const generateWealth = (selectedOccupation) => {
         return (copper + 100) + ' cp';}
     else {
         return copper + ' cp';}  
-    
 };
 
 // Default export if you prefer

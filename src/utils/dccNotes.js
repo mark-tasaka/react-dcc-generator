@@ -1,28 +1,7 @@
 // dccNotes.js
 
 export function getNotes(select) {
-    if (select === 92) {
-        const pushcart = [
-            "Push Cart containing tomatoes",
-            "Push Cart containing nothing",
-            "Push Cart containing dirt",
-            "Push Cart containing straw",
-            "Push Cart containing rocks",
-            "Push Cart containing YOUR DEAD!!!"
-        ];
-
-        // Shuffle array and return random element
-        const shuffled = [...pushcart].sort(() => Math.random() - 0.5);
-        return shuffled[0];
-    }
-    else if (select >= 48 && select <= 56) {
-        const farmAnimals = ["Hen", "Sheep", "Goat", "Cow", "Duck", "Goose", "Mule"];
-
-        // Shuffle array and return random element
-        const shuffled = [...farmAnimals].sort(() => Math.random() - 0.5);
-        return shuffled[0];
-    }
-    else if (select >= 0 && select <= 10) {
+    if (select >= 0 && select <= 10) {
         return "Special Abilities: Infravision (60'), smell gold and gems.";
     }
     else if (select >= 11 && select <= 20) {
