@@ -63,13 +63,15 @@ const styles = StyleSheet.create({
   },
   characterContainer: {
     position: 'absolute',
-    width: '50%',
-    height: '50%',
+    width: '48%',  // Slightly reduced to account for margins
+    height: '48%', // Slightly reduced to account for margins
   },
-  topLeft: { top: '2%', left: '2%' },
-  topRight: { top: '2%', left: '52%' },
-  bottomLeft: { top: '52%', left: '2%' },
-  bottomRight: { top: '52%', left: '52%' },
+  // Adjusted positioning to better align with the background
+  topLeft: { top: '1%', left: '1%' },
+  topRight: { top: '1%', left: '51%' },
+  bottomLeft: { top: '51%', left: '1%' },
+  bottomRight: { top: '51%', left: '51%' },
+  
   text: {
     fontSize: 10,
     color: 'black',
@@ -119,8 +121,8 @@ const styles = StyleSheet.create({
   intMod: { position: 'absolute', top: 253, left: 70 },
   luckMod: { position: 'absolute', top: 269, left: 70 },
   
-  // Combat stats
-  ac: { position: 'absolute', top: 109, right: 240 },
+  // Combat stats - Convert right positioning to left for container compatibility
+  ac: { position: 'absolute', top: 109, left: 45 },  // Converted from right: 240
   hp: { position: 'absolute', top: 143, left: 23 },
   init: { position: 'absolute', top: 95, left: 137},
   melee: { position: 'absolute', top: 117, left: 125 },
@@ -128,18 +130,18 @@ const styles = StyleSheet.create({
   meleeDamage: { position: 'absolute', top: 117, left: 145 },
   missileDamage: { position: 'absolute', top: 130, left: 145 },
   
-  // Saves
-  reflex: { position: 'absolute', top: 20, right: 65 },
-  fortitude: { position: 'absolute', top: 20, right: 35 },
-  will: { position: 'absolute', top: 54, right: 65 },
+  // Saves - Convert right positioning to left for container compatibility
+  reflex: { position: 'absolute', top: 20, left: 225 },    // Converted from right: 65
+  fortitude: { position: 'absolute', top: 20, left: 255 }, // Converted from right: 35
+  will: { position: 'absolute', top: 54, left: 225 },      // Converted from right: 65
   
-  // Other fields
-  speed: { position: 'absolute', top: 54, right: 30 },
+  // Other fields - Convert right positioning to left for container compatibility
+  speed: { position: 'absolute', top: 54, left: 260 },     // Converted from right: 30
   wealth: { position: 'absolute', top: 309, left: 10, width: 80 },
   languages: { position: 'absolute', top: 335, left: 10, width: 80  },
   birthAugur: { position: 'absolute', top: 105, left: 195, width: 80 },
   weapon: { position: 'absolute', top: 172, left: 115 },
-  weaponDamage: { position: 'absolute', top: 172, right: 56 },
+  weaponDamage: { position: 'absolute', top: 172, left: 235 }, // Converted from right: 5
   equipment: { position: 'absolute', top: 246, left: 115 },
   notes: { position: 'absolute', top: 295, left: 110 , width: 160},
 });
