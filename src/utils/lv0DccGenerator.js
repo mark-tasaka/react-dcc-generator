@@ -63,14 +63,14 @@ const styles = StyleSheet.create({
   },
   characterContainer: {
     position: 'absolute',
-    width: '48%',  // Slightly reduced to account for margins
-    height: '48%', // Slightly reduced to account for margins
+    width: '50%', 
+    height: '50%',
   },
   // Adjusted positioning to better align with the background
-  topLeft: { top: '1%', left: '1%' },
-  topRight: { top: '1%', left: '51%' },
-  bottomLeft: { top: '51%', left: '1%' },
-  bottomRight: { top: '51%', left: '51%' },
+  topLeft: { top: '0%', left: '0%' },
+  topRight: { top: '0%', left: '50%' },
+  bottomLeft: { top: '50%', left: '0%' },
+  bottomRight: { top: '50%', left: '50%' },
   
   text: {
     fontSize: 10,
