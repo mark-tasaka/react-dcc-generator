@@ -120,28 +120,28 @@ const styles = StyleSheet.create({
   luckMod: { position: 'absolute', top: 269, left: 70 },
   
   // Combat stats
-  ac: { position: 'absolute', top: 103, right: 245 },
-  hp: { position: 'absolute', top: 138, left: 18 },
-  init: { position: 'absolute', top: 89, left: 125},
-  melee: { position: 'absolute', top: 112, left: 120 },
-  missile: { position: 'absolute', top: 125, left: 120 },
-  meleeDamage: { position: 'absolute', top: 112, left: 140 },
-  missileDamage: { position: 'absolute', top: 125, left: 140 },
+  ac: { position: 'absolute', top: 109, right: 240 },
+  hp: { position: 'absolute', top: 143, left: 23 },
+  init: { position: 'absolute', top: 95, left: 137},
+  melee: { position: 'absolute', top: 117, left: 125 },
+  missile: { position: 'absolute', top: 130, left: 125 },
+  meleeDamage: { position: 'absolute', top: 117, left: 145 },
+  missileDamage: { position: 'absolute', top: 130, left: 145 },
   
   // Saves
-  reflex: { position: 'absolute', top: 13, right: 67 },
-  fortitude: { position: 'absolute', top: 13, right: 35 },
-  will: { position: 'absolute', top: 47, right: 67 },
+  reflex: { position: 'absolute', top: 20, right: 65 },
+  fortitude: { position: 'absolute', top: 20, right: 35 },
+  will: { position: 'absolute', top: 54, right: 65 },
   
   // Other fields
-  speed: { position: 'absolute', top: 47, right: 30 },
-  wealth: { position: 'absolute', top: 307, left: 10, width: 80 },
+  speed: { position: 'absolute', top: 54, right: 30 },
+  wealth: { position: 'absolute', top: 309, left: 10, width: 80 },
   languages: { position: 'absolute', top: 335, left: 10, width: 80  },
-  birthAugur: { position: 'absolute', top: 100, left: 195, width: 80 },
-  weapon: { position: 'absolute', top: 168, left: 110 },
-  weaponDamage: { position: 'absolute', top: 168, right: 58 },
-  equipment: { position: 'absolute', top: 241, left: 110 },
-  notes: { position: 'absolute', top: 292, left: 110 , width: 160},
+  birthAugur: { position: 'absolute', top: 105, left: 195, width: 80 },
+  weapon: { position: 'absolute', top: 172, left: 115 },
+  weaponDamage: { position: 'absolute', top: 172, right: 56 },
+  equipment: { position: 'absolute', top: 246, left: 115 },
+  notes: { position: 'absolute', top: 295, left: 110 , width: 160},
 });
 
 // Generate random character
