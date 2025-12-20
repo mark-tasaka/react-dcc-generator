@@ -96,28 +96,28 @@ const styles = StyleSheet.create({
   },
   
   // Position styles for form fields
-  name: { position: 'absolute', top: 12, left: 10 },
-  gender: { position: 'absolute', top: 12, left: 140 },
-  alignment: { position: 'absolute', top: 35, left: 10 },
-  occupation: { position: 'absolute', top: 60, left: 10 },
-  critDie: { position: 'absolute', top: 35, left: 110 },
-  fumble: { position: 'absolute', top: 35, left: 165 },
+  name: { position: 'absolute', top: 17, left: 15 },
+  gender: { position: 'absolute', top: 17, left: 145 },
+  alignment: { position: 'absolute', top: 42, left: 15 },
+  occupation: { position: 'absolute', top: 65, left: 15 },
+  critDie: { position: 'absolute', top: 42, left: 115 },
+  fumble: { position: 'absolute', top: 42, left: 170 },
   
   // Stats positioning - VALUES (left side)
-  str: { position: 'absolute', top: 184, left: 50 },
-  agi: { position: 'absolute', top: 200, left: 50 },
-  sta: { position: 'absolute', top: 217, left: 50 },
-  per: { position: 'absolute', top: 233, left: 50 },
-  int: { position: 'absolute', top: 250, left: 50 },
-  luck: { position: 'absolute', top: 266, left: 50 },
+  str: { position: 'absolute', top: 189, left: 55 },
+  agi: { position: 'absolute', top: 203, left: 55 },
+  sta: { position: 'absolute', top: 220, left: 55 },
+  per: { position: 'absolute', top: 236, left: 55 },
+  int: { position: 'absolute', top: 253, left: 55 },
+  luck: { position: 'absolute', top: 269, left: 55 },
   
   // Stats positioning - MODIFIERS (right side)
-  strMod: { position: 'absolute', top: 184, left: 65 },
-  agiMod: { position: 'absolute', top: 200, left: 65 },
-  staMod: { position: 'absolute', top: 217, left: 65 },
-  perMod: { position: 'absolute', top: 233, left: 65 },
-  intMod: { position: 'absolute', top: 250, left: 65 },
-  luckMod: { position: 'absolute', top: 266, left: 65 },
+  strMod: { position: 'absolute', top: 189, left: 70 },
+  agiMod: { position: 'absolute', top: 203, left: 70 },
+  staMod: { position: 'absolute', top: 220, left: 70 },
+  perMod: { position: 'absolute', top: 236, left: 70 },
+  intMod: { position: 'absolute', top: 253, left: 70 },
+  luckMod: { position: 'absolute', top: 269, left: 70 },
   
   // Combat stats
   ac: { position: 'absolute', top: 103, right: 245 },
