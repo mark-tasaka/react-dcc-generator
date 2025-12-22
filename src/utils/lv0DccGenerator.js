@@ -1,5 +1,6 @@
 import { Document, Page, Text, View, StyleSheet, Image } from '@react-pdf/renderer';
 import characterSheetBg from '../character/img/lvZeroCharacterSheet.jpg';
+import characterSheetLn from '../character/img/lvZeroCharacterSheetLandscape.jpg';
 import { occupations, getACBonusArmour, getOccupationNumber } from './dccOccupations.js';
 import { generateEquipment, generateWealth } from './dccEquipment';
 import { getLanguages, formatLanguages } from './dccLanguages.js';
@@ -144,6 +145,99 @@ const styles = StyleSheet.create({
   weaponDamage: { position: 'absolute', top: 183, left: 240 }, 
   equipment: { position: 'absolute', top: 256, left: 125 },
   notes: { position: 'absolute', top: 303, left: 125 , width: 155},
+});
+
+//landscape styles
+const landscapeStyles = StyleSheet.create({
+  page: {
+    width: '100%',
+    height: '100%',
+    position: 'relative',
+  },
+  backgroundImage: {
+    position: 'absolute',
+    top: 0,
+    left: 0,
+    width: '100%',
+    height: '100%',
+    zIndex: -1,
+  },
+  characterContainer: {
+    position: 'absolute',
+    width: '100%', 
+    height: '50%',
+  },
+  // Landscape positioning for 2 characters (top and bottom)
+  topHalf: { top: '0%', left: '0%' },
+  bottomHalf: { top: '50%', left: '0%' },
+  
+  text: {
+    fontSize: 10,
+    color: 'black',
+    fontWeight: 'bold',
+  },
+  largeText: {
+    fontSize: 12,
+    color: 'black',
+    fontWeight: 'bold',
+  },
+  largeTextWhite: {
+    fontSize: 12,
+    color: 'white',
+    fontWeight: 'bold',
+  },
+  smallText: {
+    fontSize: 8,
+    color: 'black',
+  },
+  
+  // Position styles for landscape layout (you'll need to adjust these based on your landscape background)
+  name: { position: 'absolute', top: 32, left: 30 },
+  gender: { position: 'absolute', top: 32, left: 155 },
+  alignment: { position: 'absolute', top: 57, left: 30 },
+  occupation: { position: 'absolute', top: 80, left: 30 },
+  critDie: { position: 'absolute', top: 57, left: 125 },
+  fumble: { position: 'absolute', top: 57, left: 180 },
+  
+  // Stats positioning - VALUES (left side)
+  str: { position: 'absolute', top: 199, left: 66 },
+  agi: { position: 'absolute', top: 215, left: 66 },
+  sta: { position: 'absolute', top: 231, left: 66 },
+  per: { position: 'absolute', top: 246, left: 66 },
+  int: { position: 'absolute', top: 263, left: 66 },
+  luck: { position: 'absolute', top: 279, left: 66 },
+  
+  // Stats positioning - MODIFIERS (right side)
+  strMod: { position: 'absolute', top: 199, left: 82 },
+  agiMod: { position: 'absolute', top: 215, left: 82 },
+  staMod: { position: 'absolute', top: 231, left: 82 },
+  perMod: { position: 'absolute', top: 246, left: 82 },
+  intMod: { position: 'absolute', top: 263, left: 82 },
+  luckMod: { position: 'absolute', top: 279, left: 82 },
+  
+  // Combat stats (adjust these for landscape layout)
+  ac: { position: 'absolute', top: 122, left: 235 }, 
+  hp: { position: 'absolute', top: 155, left: 32 },
+  init: { position: 'absolute', top: 110, left: 142 },
+  melee: { position: 'absolute', top: 130, left: 132 },
+  missile: { position: 'absolute', top: 142, left: 132 },
+  meleeDamage: { position: 'absolute', top: 130, left: 152 },
+  missileDamage: { position: 'absolute', top: 142, left: 152 },
+  
+  // Saves (adjust for landscape)
+  reflex: { position: 'absolute', top: 35, left: 235 },
+  fortitude: { position: 'absolute', top: 35, left: 265 },
+  will: { position: 'absolute', top: 69, left: 235 },
+  
+  // Other fields (adjust for landscape)
+  speed: { position: 'absolute', top: 69, left: 265 },
+  wealth: { position: 'absolute', top: 319, left: 25, width: 80 },
+  languages: { position: 'absolute', top: 345, left: 25, width: 80 },
+  birthAugur: { position: 'absolute', top: 120, left: 203, width: 80 },
+  weapon: { position: 'absolute', top: 183, left: 125 },
+  weaponDamage: { position: 'absolute', top: 183, left: 240 }, 
+  equipment: { position: 'absolute', top: 256, left: 125 },
+  notes: { position: 'absolute', top: 303, left: 125, width: 155 },
 });
 
 // Generate random character// Update the generateRandomCharacter function to accept options
@@ -313,6 +407,61 @@ const Character = ({ character, position }) => (
     <Text style={[styles.smallText, styles.notes]}>{character.notes}</Text>
   </View>
 );
+
+const LandscapeCharacter = ({ character, position }) => (
+  <View style={[landscapeStyles.characterContainer, position]}>
+    <Text style={[landscapeStyles.text, landscapeStyles.name]}>{character.name}</Text>
+    <Text style={[landscapeStyles.text, landscapeStyles.gender]}>{character.gender}</Text>
+    <Text style={[landscapeStyles.text, landscapeStyles.alignment]}>{character.alignment}</Text>
+    <Text style={[landscapeStyles.text, landscapeStyles.occupation]}>{character.occupation}</Text>
+    <Text style={[landscapeStyles.text, landscapeStyles.critDie]}>{character.critDie}</Text>
+    <Text style={[landscapeStyles.text, landscapeStyles.fumble]}>{character.fumble}</Text>
+    
+    {/* Stats - Values and Modifiers separated */}
+    <Text style={[landscapeStyles.text, landscapeStyles.str]}>{character.stats.str.value}</Text>
+    <Text style={[landscapeStyles.text, landscapeStyles.strMod]}>({character.stats.str.modifier >= 0 ? '+' : ''}{character.stats.str.modifier})</Text>
+    
+    <Text style={[landscapeStyles.text, landscapeStyles.agi]}>{character.stats.agi.value}</Text>
+    <Text style={[landscapeStyles.text, landscapeStyles.agiMod]}>({character.stats.agi.modifier >= 0 ? '+' : ''}{character.stats.agi.modifier})</Text>
+    
+    <Text style={[landscapeStyles.text, landscapeStyles.sta]}>{character.stats.sta.value}</Text>
+    <Text style={[landscapeStyles.text, landscapeStyles.staMod]}>({character.stats.sta.modifier >= 0 ? '+' : ''}{character.stats.sta.modifier})</Text>
+    
+    <Text style={[landscapeStyles.text, landscapeStyles.per]}>{character.stats.per.value}</Text>
+    <Text style={[landscapeStyles.text, landscapeStyles.perMod]}>({character.stats.per.modifier >= 0 ? '+' : ''}{character.stats.per.modifier})</Text>
+    
+    <Text style={[landscapeStyles.text, landscapeStyles.int]}>{character.stats.int.value}</Text>
+    <Text style={[landscapeStyles.text, landscapeStyles.intMod]}>({character.stats.int.modifier >= 0 ? '+' : ''}{character.stats.int.modifier})</Text>
+    
+    <Text style={[landscapeStyles.text, landscapeStyles.luck]}>{character.stats.luck.value}</Text>
+    <Text style={[landscapeStyles.text, landscapeStyles.luckMod]}>({character.stats.luck.modifier >= 0 ? '+' : ''}{character.stats.luck.modifier})</Text>
+    
+    {/* Combat Stats */}
+    <Text style={[landscapeStyles.text, landscapeStyles.ac]}>{character.ac}</Text>
+    <Text style={[landscapeStyles.text, landscapeStyles.hp]}>{character.hp}</Text>
+    <Text style={[landscapeStyles.text, landscapeStyles.init]}>{character.init >= 0 ? '+' : ''}{character.init}</Text>
+    <Text style={[landscapeStyles.text, landscapeStyles.melee]}>{character.melee >= 0 ? '+' : ''}{character.melee}</Text>
+    <Text style={[landscapeStyles.text, landscapeStyles.missile]}>{character.missile >= 0 ? '+' : ''}{character.missile}</Text>
+    <Text style={[landscapeStyles.text, landscapeStyles.meleeDamage]}>{character.meleeDamage >= 0 ? '+' : ''}{character.meleeDamage}</Text>
+    <Text style={[landscapeStyles.text, landscapeStyles.missileDamage]}>{character.missileDamage >= 0 ? '+' : ''}{character.missileDamage}</Text>
+    
+    {/* Saves */}
+    <Text style={[landscapeStyles.largeText, landscapeStyles.reflex]}>{character.reflex >= 0 ? '+' : ''}{character.reflex}</Text>
+    <Text style={[landscapeStyles.largeTextWhite, landscapeStyles.fortitude]}>{character.fortitude >= 0 ? '+' : ''}{character.fortitude}</Text>
+    <Text style={[landscapeStyles.largeTextWhite, landscapeStyles.will]}>{character.will >= 0 ? '+' : ''}{character.will}</Text>
+    
+    {/* Other */}
+    <Text style={[landscapeStyles.largeText, landscapeStyles.speed]}>{character.speed + "'"}</Text>
+    <Text style={[landscapeStyles.smallText, landscapeStyles.wealth]}>{character.wealth}</Text>
+    <Text style={[landscapeStyles.smallText, landscapeStyles.languages]}>{character.languages}</Text>
+    <Text style={[landscapeStyles.smallText, landscapeStyles.birthAugur]}>{character.birthAugur}</Text>
+    <Text style={[landscapeStyles.smallText, landscapeStyles.weapon]}>{character.weapon}</Text>
+    <Text style={[landscapeStyles.smallText, landscapeStyles.weaponDamage]}>{character.weaponDamage}</Text>
+    <Text style={[landscapeStyles.smallText, landscapeStyles.equipment]}>{character.equipment}</Text>
+    <Text style={[landscapeStyles.smallText, landscapeStyles.notes]}>{character.notes}</Text>
+  </View>
+);
+
 // PDF Document component
 export const CharacterSheetDocument = ({ characters }) => (
   <Document>
@@ -335,11 +484,32 @@ export const CharacterSheetDocument = ({ characters }) => (
   </Document>
 );
 
+export const CharacterSheetLandscapeDocument = ({ characters }) => (
+  <Document>
+    <Page size="LETTER" orientation="landscape" style={landscapeStyles.page}>
+      <Image style={landscapeStyles.backgroundImage} src={characterSheetLn} />
+      
+      {characters.length > 0 && (
+        <LandscapeCharacter character={characters[0]} position={landscapeStyles.topHalf} />
+      )}
+      {characters.length > 1 && (
+        <LandscapeCharacter character={characters[1]} position={landscapeStyles.bottomHalf} />
+      )}
+    </Page>
+  </Document>
+);
 
-// Update generateFourCharacters to accept options
 export const generateFourCharacters = (options = {}) => {
   const characters = [];
   for (let i = 0; i < 4; i++) {
+    characters.push(generateRandomCharacter(options));
+  }
+  return characters;
+};
+
+export const generateTwoCharacters = (options = {}) => {
+  const characters = [];
+  for (let i = 0; i < 2; i++) {
     characters.push(generateRandomCharacter(options));
   }
   return characters;
