@@ -24,7 +24,7 @@ export const occupations = [
   { id: 22, name: "Halfling Dyer", race: "Halfling", weapon: "Staff", damage: "1d4", tradeGood: "Fabric (3 yards)" },
   { id: 23, name: "Halfling Tailor", race: "Halfling", weapon: "Staff", damage: "1d4", tradeGood: "Fabric (3 yards)" },
   { id: 24, name: "Halfling Glovemaker", race: "Halfling", weapon: "Awl (as Dagger)", damage: "1d4", tradeGood: "Gloves (4 pairs)" },
-  { id: 25, name: "Halfling Gypsy", race: "Halfling", weapon: "Sling", damage: "1d4", tradeGood: "Hex Doll" },
+  { id: 25, name: "Halfling Roma", race: "Halfling", weapon: "Sling", damage: "1d4", tradeGood: "Hex Doll" },
   { id: 26, name: "Halfling Haberdasher", race: "Halfling", weapon: "Scissors (as Dagger)", damage: "1d4", tradeGood: "Fine suits (3 sets)" },
   { id: 27, name: "Halfling Mariner", race: "Halfling", weapon: "Knife (as Dagger)", damage: "1d4", tradeGood: "Sailcloth (2 yards)" },
   { id: 28, name: "Halfling Moneylender", race: "Halfling", weapon: "Short Sword", damage: "1d6", tradeGood: "" },

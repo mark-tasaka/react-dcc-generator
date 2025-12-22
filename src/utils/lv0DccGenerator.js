@@ -98,52 +98,52 @@ const styles = StyleSheet.create({
   },
   
   // Position styles for form fields
-  name: { position: 'absolute', top: 17, left: 15 },
-  gender: { position: 'absolute', top: 17, left: 145 },
-  alignment: { position: 'absolute', top: 42, left: 15 },
-  occupation: { position: 'absolute', top: 65, left: 15 },
-  critDie: { position: 'absolute', top: 42, left: 115 },
-  fumble: { position: 'absolute', top: 42, left: 170 },
+  name: { position: 'absolute', top: 32, left: 30 },
+  gender: { position: 'absolute', top: 32, left: 155 },
+  alignment: { position: 'absolute', top: 57, left: 30 },
+  occupation: { position: 'absolute', top: 80, left: 30 },
+  critDie: { position: 'absolute', top: 57, left: 125 },
+  fumble: { position: 'absolute', top: 57, left: 180 },
   
   // Stats positioning - VALUES (left side)
-  str: { position: 'absolute', top: 189, left: 55 },
-  agi: { position: 'absolute', top: 203, left: 55 },
-  sta: { position: 'absolute', top: 220, left: 55 },
-  per: { position: 'absolute', top: 236, left: 55 },
-  int: { position: 'absolute', top: 253, left: 55 },
-  luck: { position: 'absolute', top: 269, left: 55 },
+  str: { position: 'absolute', top: 199, left: 66 },
+  agi: { position: 'absolute', top: 215, left: 66 },
+  sta: { position: 'absolute', top: 231, left: 66 },
+  per: { position: 'absolute', top: 246, left: 66 },
+  int: { position: 'absolute', top: 263, left: 66 },
+  luck: { position: 'absolute', top: 279, left: 66 },
   
   // Stats positioning - MODIFIERS (right side)
-  strMod: { position: 'absolute', top: 189, left: 70 },
-  agiMod: { position: 'absolute', top: 203, left: 70 },
-  staMod: { position: 'absolute', top: 220, left: 70 },
-  perMod: { position: 'absolute', top: 236, left: 70 },
-  intMod: { position: 'absolute', top: 253, left: 70 },
-  luckMod: { position: 'absolute', top: 269, left: 70 },
+  strMod: { position: 'absolute', top: 199, left: 82 },
+  agiMod: { position: 'absolute', top: 215, left: 82 },
+  staMod: { position: 'absolute', top: 231, left: 82 },
+  perMod: { position: 'absolute', top: 246, left: 82 },
+  intMod: { position: 'absolute', top: 263, left: 82 },
+  luckMod: { position: 'absolute', top: 279, left: 82 },
   
   // Combat stats - Convert right positioning to left for container compatibility
-  ac: { position: 'absolute', top: 109, left: 45 },  // Converted from right: 240
-  hp: { position: 'absolute', top: 143, left: 23 },
-  init: { position: 'absolute', top: 95, left: 137},
-  melee: { position: 'absolute', top: 117, left: 125 },
-  missile: { position: 'absolute', top: 130, left: 125 },
-  meleeDamage: { position: 'absolute', top: 117, left: 145 },
-  missileDamage: { position: 'absolute', top: 130, left: 145 },
+  ac: { position: 'absolute', top: 122, right: 230}, 
+  hp: { position: 'absolute', top: 155, left: 32 },
+  init: { position: 'absolute', top: 110, left: 142},
+  melee: { position: 'absolute', top: 130, left: 132 },
+  missile: { position: 'absolute', top: 142, left: 132 },
+  meleeDamage: { position: 'absolute', top: 130, left: 152 },
+  missileDamage: { position: 'absolute', top: 142, left: 152 },
   
   // Saves - Convert right positioning to left for container compatibility
-  reflex: { position: 'absolute', top: 20, left: 225 },    // Converted from right: 65
-  fortitude: { position: 'absolute', top: 20, left: 255 }, // Converted from right: 35
-  will: { position: 'absolute', top: 54, left: 225 },      // Converted from right: 65
+  reflex: { position: 'absolute', top: 35, left: 235 },    // Converted from right: 65
+  fortitude: { position: 'absolute', top: 35, left: 265 }, // Converted from right: 35
+  will: { position: 'absolute', top: 69, left: 235 },      // Converted from right: 65
   
   // Other fields - Convert right positioning to left for container compatibility
-  speed: { position: 'absolute', top: 54, left: 260 },     // Converted from right: 30
-  wealth: { position: 'absolute', top: 309, left: 10, width: 80 },
-  languages: { position: 'absolute', top: 335, left: 10, width: 80  },
-  birthAugur: { position: 'absolute', top: 105, left: 195, width: 80 },
-  weapon: { position: 'absolute', top: 172, left: 115 },
-  weaponDamage: { position: 'absolute', top: 172, left: 235 }, // Converted from right: 5
-  equipment: { position: 'absolute', top: 246, left: 115 },
-  notes: { position: 'absolute', top: 295, left: 110 , width: 160},
+  speed: { position: 'absolute', top: 69, left: 265 },     // Converted from right: 30
+  wealth: { position: 'absolute', top: 319, left: 25, width: 80 },
+  languages: { position: 'absolute', top: 345, left: 25, width: 80  },
+  birthAugur: { position: 'absolute', top: 120, left: 203, width: 80 },
+  weapon: { position: 'absolute', top: 183, left: 125 },
+  weaponDamage: { position: 'absolute', top: 183, left: 240 }, 
+  equipment: { position: 'absolute', top: 256, left: 125 },
+  notes: { position: 'absolute', top: 303, left: 125 , width: 155},
 });
 
 // Generate random character
