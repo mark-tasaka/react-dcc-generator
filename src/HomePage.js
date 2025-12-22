@@ -69,7 +69,7 @@ const HomePage = () => {
   return (
     <div className="App">
       <header className="App-header">
-        <h1>DCC PDF CharacterGenerator</h1>
+        <h1>DCC PDF Character Generator</h1>
         <p>This is a placeholder for the DCC Generator application.</p>
 
         {/* Character Generation Options */}
@@ -153,7 +153,7 @@ const HomePage = () => {
           </div>
 
           <div className="form-group">
-            <span className="form-label">Sheet per Page:</span>
+            <span className="form-label">Sheets per Page:</span>
             <select 
               name="sheetLayout" 
               value={formValues.sheetLayout}

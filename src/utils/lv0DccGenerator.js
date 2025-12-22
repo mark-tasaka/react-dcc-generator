@@ -25,13 +25,7 @@ import {
   formatFumbleDie,
   getAbilityModifier,
 } from './statistics.js';
-// At the top of lv0DccGenerator.js
 import {
-    roll3D6,
-    roll4D6,
-    roll5D6,
-    rollD5D6D7,
-    roll2D6Plus6,
     rollAbilityScores,
 } from './abilityScoreGen.js';
 import { getNotes, dieRollMethodText, hitPointsMethodText } from './dccNotes.js';
