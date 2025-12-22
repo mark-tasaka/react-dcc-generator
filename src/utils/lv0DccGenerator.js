@@ -34,9 +34,8 @@ import {
     rollAbilityScores,
 } from './abilityScoreGen.js';
 import { getNotes, dieRollMethodText, hitPointsMethodText } from './dccNotes.js';
+import { getAlignment } from './alignment.js';
 
-// Character generation data
-const alignments = ['Lawful', 'Neutral', 'Chaotic'];
 const genders = ['Male', 'Female'];
 
 const names = {
@@ -192,7 +191,7 @@ export const generateRandomCharacter = () => {
   const critDie = formatCritDie(luckMod, luckySign);
   const fumble = formatFumbleDie(luckMod, luckySign);
 
-  const alignment = alignments[Math.floor(Math.random() * alignments.length)];
+  const alignment = getAlignment(1); // Random alignment
   const notes = getNotes(selectedOccupation.id);
   
   return {
