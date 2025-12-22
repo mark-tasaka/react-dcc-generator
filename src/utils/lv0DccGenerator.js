@@ -1,6 +1,6 @@
 import { Document, Page, Text, View, StyleSheet, Image } from '@react-pdf/renderer';
 import characterSheetBg from '../character/img/lvZeroCharacterSheet.jpg';
-import { occupations, getACBonusArmour } from './dccOccupations.js';
+import { occupations, getACBonusArmour, getOccupationNumber } from './dccOccupations.js';
 import { generateEquipment, generateWealth } from './dccEquipment';
 import { getLanguages, formatLanguages } from './dccLanguages.js';
 import { 
@@ -150,7 +150,7 @@ const styles = StyleSheet.create({
 export const generateRandomCharacter = () => {
   const rollDice = (sides) => Math.floor(Math.random() * sides) + 1;
 
-  const selectedOccupation = occupations[Math.floor(Math.random() * occupations.length)];
+  const selectedOccupation = occupations[getOccupationNumber(1)];
   const gender = getGender(1); // Random gender with weighted distribution
   const nameGenderIndex = getNameGender(gender);
   const nameList = nameGenderIndex === 0 ? names.male : names.female;

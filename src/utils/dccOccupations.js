@@ -102,6 +102,34 @@ export const occupations = [
   { id: 100, name: "Soldier", race: "Human", weapon: "Spear", damage: "1d8", tradeGood: "" }
 ];
 
+export const getOccupationNumber = (select) => {
+  let number;
+  
+  if (select === "1" || select === 1) {
+    number = Math.floor(Math.random() * 101); // 0-100
+  }
+  else if (select === "2" || select === 2) {
+    number = Math.floor(Math.random() * 70) + 31; // 31-100
+  }
+  else if (select === "3" || select === 3) {
+    number = Math.floor(Math.random() * 31); // 0-30
+  }
+  else if (select === "4" || select === 4) {
+    number = Math.floor(Math.random() * 11); // 0-10
+  }
+  else if (select === "5" || select === 5) {
+    number = Math.floor(Math.random() * 10) + 11; // 11-20
+  }
+  else if (select === "6" || select === 6) {
+    number = Math.floor(Math.random() * 10) + 21; // 21-30
+  }
+  else {
+    number = Math.floor(Math.random() * 3) + 98; // 98-100
+  }
+
+  return number;
+};
+
 // Armor functions converted from PHP
 export const getArmour = (select) => {
   if (select === 98) {
