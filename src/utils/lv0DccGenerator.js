@@ -35,6 +35,7 @@ import {
 } from './abilityScoreGen.js';
 import { getNotes, dieRollMethodText, hitPointsMethodText } from './dccNotes.js';
 import { getAlignment } from './alignment.js';
+import { getGender, getNameGender } from './characterGender.js';
 
 const genders = ['Male', 'Female'];
 
@@ -150,9 +151,10 @@ export const generateRandomCharacter = () => {
   const rollDice = (sides) => Math.floor(Math.random() * sides) + 1;
 
   const selectedOccupation = occupations[Math.floor(Math.random() * occupations.length)];
-  const gender = genders[Math.floor(Math.random() * genders.length)];
-  const nameList = gender.toLowerCase() === 'male' ? names.male : names.female;
-  
+  const gender = getGender(1); // Random gender with weighted distribution
+  const nameGenderIndex = getNameGender(gender);
+  const nameList = nameGenderIndex === 0 ? names.male : names.female;
+    
   const str = roll3D6();
   const agi = roll3D6();
   const sta = roll3D6();
