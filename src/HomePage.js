@@ -54,84 +54,68 @@ const HomePage = () => {
 
         {/* Character Generation Options */}
         <div className="character-options">
-          <div className="form-row">
-            <span className="formIputDescription1b">Alignment:</span>
-            <select 
-              name="alignment" 
-              value={formValues.alignment}
-              onChange={handleInputChange}
-            >
-              <option value={1}>Random</option>
-              <option value={2}>Lawful</option>
-              <option value={3}>Neutral</option>
-              <option value={4}>Chaotic</option>
-            </select>
-          </div>
+          <span className="formIputDescription1b">Alignment:</span>
+          <select 
+            name="alignment" 
+            value={formValues.alignment}
+            onChange={handleInputChange}
+          >
+            <option value={1}>Random</option>
+            <option value={2}>Lawful</option>
+            <option value={3}>Neutral</option>
+            <option value={4}>Chaotic</option>
+          </select>
 
-          <div className="form-row">
-            <span className="formIputDescription1b">Sex:</span>
-            <select 
-              name="sex" 
-              value={formValues.sex}
-              onChange={handleInputChange}
-            >
-              <option value={1}>Random</option>
-              <option value={2}>Female</option>
-              <option value={3}>Male</option>
-              <option value={4}>Other</option>
-              <option value={5}>Blank</option>
-            </select>
-          </div>
+          <span className="formIputDescription1b">Sex:</span>
+          <select 
+            name="sex" 
+            value={formValues.sex}
+            onChange={handleInputChange}
+          >
+            <option value={1}>Random</option>
+            <option value={2}>Female</option>
+            <option value={3}>Male</option>
+            <option value={4}>Other</option>
+            <option value={5}>Blank</option>
+          </select>
 
-          <br />
-          <br />
+          <span className="formIputDescription1b">Ability Score:</span>
+          <select 
+            name="abilityScore" 
+            value={formValues.abilityScore}
+            onChange={handleInputChange}
+          >
+            <option value={1}>3d6 (Old School)</option>
+            <option value={2}>4d6, drop the lowest</option>
+            <option value={3}>5d6, use the 3 highest</option>
+            <option value={4}>1d5 + 1d6 + 1d7</option>
+            <option value={5}>2d6 + 6</option>
+          </select>
 
-          <div className="form-row">
-            <span className="formIputDescription1b">Ability Score:</span>
-            <select 
-              name="abilityScore" 
-              value={formValues.abilityScore}
-              onChange={handleInputChange}
-            >
-              <option value={1}>3d6 (Old School)</option>
-              <option value={2}>4d6, drop the lowest</option>
-              <option value={3}>5d6, use the 3 highest</option>
-              <option value={4}>1d5 + 1d6 + 1d7</option>
-              <option value={5}>2d6 + 6</option>
-            </select>
-          </div>
+          <span className="formIputDescription1b">Hit Points:</span>
+          <select 
+            name="hitPoints" 
+            value={formValues.hitPoints}
+            onChange={handleInputChange}
+          >
+            <option value={1}>1d4</option>
+            <option value={2}>Max</option>
+          </select>
 
-          <br />
-          <br />
-
-          <div className="form-row">
-            <span className="formIputDescription1b">Hit Points:</span>
-            <select 
-              name="hitPoints" 
-              value={formValues.hitPoints}
-              onChange={handleInputChange}
-            >
-              <option value={1}>1d4</option>
-              <option value={2}>Max</option>
-            </select>
-          </div>
-
-          <div className="form-row">
-            <span className="formIputDescription1b">Occupations:</span>
-            <select 
-              name="occupations" 
-              value={formValues.occupations}
-              onChange={handleInputChange}
-            >
-              <option value={1}>All</option>
-              <option value={2}>Humans</option>
-              <option value={3}>Demi-Humans</option>
-              <option value={4}>Dwarves</option>
-              <option value={5}>Elves</option>
-              <option value={6}>Halflings</option>
-              <option value={7}>With Armour</option>
-            </select>
-          </div>
+          <span className="formIputDescription1b">Occupations:</span>
+          <select 
+            name="occupations" 
+            value={formValues.occupations}
+            onChange={handleInputChange}
+          >
+            <option value={1}>All</option>
+            <option value={2}>Humans</option>
+            <option value={3}>Demi-Humans</option>
+            <option value={4}>Dwarves</option>
+            <option value={5}>Elves</option>
+            <option value={6}>Halflings</option>
+            <option value={7}>With Armour</option>
+          </select>
         </div>
 
         <button 
