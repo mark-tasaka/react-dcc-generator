@@ -1,4 +1,4 @@
-.App-button-gen {
+.App-button-gen, .App-button-reset {
   background-color: #4CAF50;
   border: none;
   color: white;
@@ -13,8 +13,16 @@
   transition: background-color 0.3s;
 }
 
-.App-button-gen:hover {
+.App-button-gen:hover, .App-button-reset:hover {
   background-color: #45a049;
+}
+
+
+.button-container {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  flex-wrap: wrap;
 }
 
 .App {
@@ -60,10 +68,10 @@
 
 .form-group {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   align-items: center;
-  gap: 8px;
-  min-width: 150px;
+  gap: 10px;
+  min-width: 200px;
 }
 
 .form-label {
@@ -71,6 +79,8 @@
   font-weight: 500;
   color: #ffffff;
   white-space: nowrap;
+  min-width: 80px;
+  text-align: right;
 }
 
 .form-select {
@@ -82,6 +92,7 @@
   color: #333;
   min-width: 150px;
   cursor: pointer;
+  flex: 1;
 }
 
 .form-select:focus {
@@ -99,11 +110,23 @@
   
   .form-group {
     width: 100%;
-    max-width: 250px;
+    max-width: 300px;
+    flex-direction: column;
+    gap: 5px;
+  }
+  
+  .form-label {
+    text-align: center;
+    min-width: auto;
   }
   
   .form-select {
     width: 100%;
+  }
+  
+  .button-container {
+    flex-direction: column;
+    gap: 10px;
   }
 }
 

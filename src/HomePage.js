@@ -3,14 +3,17 @@ import { pdf } from '@react-pdf/renderer';
 import { generateFourCharacters, CharacterSheetDocument } from './utils/lv0DccGenerator';
 
 const HomePage = () => {
-  // State for form values
-  const [formValues, setFormValues] = useState({
+  // Default form values
+  const defaultFormValues = {
     alignment: 1,
     sex: 1,
     abilityScore: 1,
     hitPoints: 1,
     occupations: 1
-  });
+  };
+
+  // State for form values
+  const [formValues, setFormValues] = useState(defaultFormValues);
 
   // Handle dropdown changes
   const handleInputChange = (e) => {
@@ -19,6 +22,11 @@ const HomePage = () => {
       ...prev,
       [name]: parseInt(value, 10)
     }));
+  };
+
+  // Handle reset button
+  const handleResetClick = () => {
+    setFormValues(defaultFormValues);
   };
 
   const handleGenerateClick = async () => {
@@ -133,12 +141,21 @@ const HomePage = () => {
           </div>
         </div>
 
-        <button 
-          className="App-button-gen"
-          onClick={handleGenerateClick}
-        >
-          Generate Level 0 Character
-        </button>
+        <div className="button-container">
+          <button 
+            className="App-button-gen"
+            onClick={handleGenerateClick}
+          >
+            Generate Level 0 Character
+          </button>
+          
+          <button 
+            className="App-button-reset"
+            onClick={handleResetClick}
+          >
+            Reset
+          </button>
+        </div>
       </header>
     </div>
   );
