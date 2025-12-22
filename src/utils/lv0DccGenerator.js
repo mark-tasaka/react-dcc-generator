@@ -146,21 +146,30 @@ const styles = StyleSheet.create({
   notes: { position: 'absolute', top: 303, left: 125 , width: 155},
 });
 
-// Generate random character
-export const generateRandomCharacter = () => {
+// Generate random character// Update the generateRandomCharacter function to accept options
+export const generateRandomCharacter = (options = {}) => {
+  const {
+    alignment: alignmentOption = 1,
+    sex: sexOption = 1,
+    abilityScore: abilityScoreOption = 1,
+    hitPoints: hitPointsOption = 1,
+    occupations: occupationsOption = 1
+  } = options;
+
   const rollDice = (sides) => Math.floor(Math.random() * sides) + 1;
 
-  const selectedOccupation = occupations[getOccupationNumber(1)];
-  const gender = getGender(1); // Random gender with weighted distribution
+  const selectedOccupation = occupations[getOccupationNumber(occupationsOption)];
+  const gender = getGender(sexOption); 
   const nameGenderIndex = getNameGender(gender);
   const nameList = nameGenderIndex === 0 ? names.male : names.female;
     
-  const str = roll3D6();
-  const agi = roll3D6();
-  const sta = roll3D6();
-  const per = roll3D6();
-  const int = roll3D6();
-  const luck = roll3D6();
+  // Use the selected ability score method
+  const str = rollAbilityScores(abilityScoreOption);
+  const agi = rollAbilityScores(abilityScoreOption);
+  const sta = rollAbilityScores(abilityScoreOption);
+  const per = rollAbilityScores(abilityScoreOption);
+  const int = rollAbilityScores(abilityScoreOption);
+  const luck = rollAbilityScores(abilityScoreOption);
 
   // Get modifiers using DCC rules
   const strMod = getAbilityModifier(str);
@@ -174,8 +183,15 @@ export const generateRandomCharacter = () => {
   const birthAugur = getBirthAugur();
   const luckySign = birthAugur.id;
 
-  // Calculate stats with luck bonuses
-  const baseHp = rollDice(4) + staMod + getHitPointLuck(luckMod, luckySign);
+  // Calculate hit points based on selection
+  let baseHp;
+  if (hitPointsOption === 2) {
+    // Max hit points (4 before modifiers)
+    baseHp = 4 + staMod + getHitPointLuck(luckMod, luckySign);
+  } else {
+    // Normal 1d4 hit points
+    baseHp = rollDice(4) + staMod + getHitPointLuck(luckMod, luckySign);
+  }
   const hp = minHitPoints(baseHp);
   
   const ac = getAC(agiMod, luckMod, luckySign);
@@ -193,7 +209,7 @@ export const generateRandomCharacter = () => {
   const critDie = formatCritDie(luckMod, luckySign);
   const fumble = formatFumbleDie(luckMod, luckySign);
 
-  const alignment = getAlignment(1); // Random alignment
+  const alignment = getAlignment(alignmentOption); // Use selected alignment option
   const notes = getNotes(selectedOccupation.id);
   
   return {
@@ -205,7 +221,7 @@ export const generateRandomCharacter = () => {
     race: selectedOccupation.race,
     weapon: selectedOccupation.weapon,
     weaponDamage: selectedOccupation.damage,
-    equipment: generateEquipment(selectedOccupation), // Updated line
+    equipment: generateEquipment(selectedOccupation),
     stats: {
       str: { value: str, modifier: strMod },
       agi: { value: agi, modifier: agiMod },
@@ -241,6 +257,7 @@ export const generateRandomCharacter = () => {
     notes: notes
   };
 };
+
 
 // Character component for positioning data on the sheet
 const Character = ({ character, position }) => (
@@ -318,10 +335,12 @@ export const CharacterSheetDocument = ({ characters }) => (
   </Document>
 );
 
-export const generateFourCharacters = () => {
+
+// Update generateFourCharacters to accept options
+export const generateFourCharacters = (options = {}) => {
   const characters = [];
   for (let i = 0; i < 4; i++) {
-    characters.push(generateRandomCharacter());
+    characters.push(generateRandomCharacter(options));
   }
   return characters;
 };
