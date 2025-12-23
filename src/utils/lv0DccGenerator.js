@@ -1,7 +1,7 @@
 import { Document, Page, Text, View, StyleSheet, Image } from '@react-pdf/renderer';
 import characterSheetBg from '../character/img/lvZeroCharacterSheet.jpg';
 import characterSheetLn from '../character/img/lvZeroCharacterSheetLandscape.jpg';
-import { occupations, getACBonusArmour, getOccupationNumber } from './dccOccupations.js';
+import { occupations, getArmour, getACBonusArmour, getOccupationNumber } from './dccOccupations.js';
 import { generateEquipment, generateWealth } from './dccEquipment';
 import { getLanguages, formatLanguages } from './dccLanguages.js';
 import { 
@@ -234,7 +234,7 @@ const landscapeStyles = StyleSheet.create({
   notes: { position: 'absolute', top: 303, left: 125, width: 155 },
 });
 
-// Generate random character// Update the generateRandomCharacter function to accept options
+// Generate random character
 export const generateRandomCharacter = (options = {}) => {
   const {
     alignment: alignmentOption = 1,
@@ -299,6 +299,8 @@ export const generateRandomCharacter = (options = {}) => {
 
   const alignment = getAlignment(alignmentOption); // Use selected alignment option
   const notes = getNotes(selectedOccupation.id);
+  const equipment = generateEquipment(selectedOccupation);
+  const armour = getArmour(selectedOccupation);
   
   return {
     name: nameList[Math.floor(Math.random() * nameList.length)] + ' ' + 
@@ -309,7 +311,8 @@ export const generateRandomCharacter = (options = {}) => {
     race: selectedOccupation.race,
     weapon: selectedOccupation.weapon,
     weaponDamage: selectedOccupation.damage,
-    equipment: generateEquipment(selectedOccupation),
+    equipment: equipment,
+    armour: armour,
     stats: {
       str: { value: str, modifier: strMod },
       agi: { value: agi, modifier: agiMod },

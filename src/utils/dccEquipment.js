@@ -55,7 +55,7 @@ export const generateEquipment = (selectedOccupation) => {
     }
     else if (selectedOccupation.id >= 48 && selectedOccupation.id <= 56) {
         // Farmers - Livestock (farm animals)
-        return selectedOccupation.tradeGood + ' ' + getRandomElement(FARM_ANIMALS) + ', ' + randomEquipment;
+        return selectedOccupation.tradeGood + ' ' + getRandomElement(FARM_ANIMALS) + '), ' + randomEquipment;
     }
     
     // Handle regular trade goods
