@@ -137,6 +137,7 @@ const styles = StyleSheet.create({
   birthAugur: { position: 'absolute', top: 120, left: 203, width: 80 },
   weapon: { position: 'absolute', top: 183, left: 125 },
   weaponDamage: { position: 'absolute', top: 183, left: 240 }, 
+  armour: { position: 'absolute', top: 200, left: 125 },
   equipment: { position: 'absolute', top: 256, left: 125 },
   notes: { position: 'absolute', top: 303, left: 125 , width: 155},
 });
@@ -230,6 +231,7 @@ const landscapeStyles = StyleSheet.create({
   birthAugur: { position: 'absolute', top: 120, left: 203, width: 80 },
   weapon: { position: 'absolute', top: 183, left: 125 },
   weaponDamage: { position: 'absolute', top: 183, left: 240 }, 
+  armour: { position: 'absolute', top: 200, left: 125 },
   equipment: { position: 'absolute', top: 256, left: 125 },
   notes: { position: 'absolute', top: 303, left: 125, width: 155 },
 });
@@ -300,7 +302,7 @@ export const generateRandomCharacter = (options = {}) => {
   const alignment = getAlignment(alignmentOption); // Use selected alignment option
   const notes = getNotes(selectedOccupation.id);
   const equipment = generateEquipment(selectedOccupation);
-  const armour = getArmour(selectedOccupation);
+  const armour = getArmour(selectedOccupation.id);
   
   return {
     name: nameList[Math.floor(Math.random() * nameList.length)] + ' ' + 
@@ -322,7 +324,7 @@ export const generateRandomCharacter = (options = {}) => {
       luck: { value: luck, modifier: luckMod }
     },
     hp: hp,
-    ac: ac + getACBonusArmour(selectedOccupation) + ' (' + ac + ')',
+    ac: ac + getACBonusArmour(selectedOccupation.id) + ' (' + ac + ')',
     init: init,
     melee: melee,
     meleeDamage: meleeDamage,
@@ -401,6 +403,7 @@ const Character = ({ character, position }) => (
     <Text style={[styles.smallText, styles.weapon]}>{character.weapon}</Text>
     <Text style={[styles.smallText, styles.weaponDamage]}>{character.weaponDamage}</Text>
     <Text style={[styles.smallText, styles.equipment]}>{character.equipment}</Text>
+    <Text style={[styles.smallText, styles.armour]}>{character.armour}</Text>
     <Text style={[styles.smallText, styles.notes]}>{character.notes}</Text>
   </View>
 );
@@ -455,6 +458,7 @@ const LandscapeCharacter = ({ character, position }) => (
     <Text style={[landscapeStyles.smallText, landscapeStyles.weapon]}>{character.weapon}</Text>
     <Text style={[landscapeStyles.smallText, landscapeStyles.weaponDamage]}>{character.weaponDamage}</Text>
     <Text style={[landscapeStyles.smallText, landscapeStyles.equipment]}>{character.equipment}</Text>
+    <Text style={[landscapeStyles.smallText, landscapeStyles.armour]}>{character.armour}</Text>
     <Text style={[landscapeStyles.smallText, landscapeStyles.notes]}>{character.notes}</Text>
   </View>
 );
