@@ -169,12 +169,12 @@ const landscapeStyles = StyleSheet.create({
   },
   characterContainer: {
     position: 'absolute',
-    width: '100%', 
-    height: '50%',
+    width: '50%',
+    height: '100%',
   },
-  // Landscape positioning for 2 characters (top and bottom)
-  topHalf: { top: '0%', left: '0%' },
-  bottomHalf: { top: '50%', left: '0%' },
+  // Landscape positioning for 2 characters (side-by-side)
+  leftHalf: { top: '0%', left: '0%' },   
+  rightHalf: { top: '0%', left: '50%' }, 
   
   text: {
     fontSize: 10,
@@ -193,6 +193,10 @@ const landscapeStyles = StyleSheet.create({
   },
   smallText: {
     fontSize: 8,
+    color: 'black',
+  },
+  xSmallText: {
+    fontSize: 6,
     color: 'black',
   },
   
@@ -507,10 +511,10 @@ export const CharacterSheetLandscapeDocument = ({ characters }) => (
       <Image style={landscapeStyles.backgroundImage} src={characterSheetLn} />
       
       {characters.length > 0 && (
-        <LandscapeCharacter character={characters[0]} position={landscapeStyles.topHalf} />
+        <LandscapeCharacter character={characters[0]} position={landscapeStyles.leftHalf} />
       )}
       {characters.length > 1 && (
-        <LandscapeCharacter character={characters[1]} position={landscapeStyles.bottomHalf} />
+        <LandscapeCharacter character={characters[1]} position={landscapeStyles.rightHalf} />
       )}
     </Page>
   </Document>
