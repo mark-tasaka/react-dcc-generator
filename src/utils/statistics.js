@@ -19,12 +19,10 @@ export const formatCritDie = (luckMod, luckySign) => {
 export const formatFumbleDie = (luckMod, luckySign) => {
   const fumbleMod = getFumbleMod(luckMod, luckySign);
   
-  if (fumbleMod === 0 || fumbleMod === '') {
-    return 'd4';
-  } else if (fumbleMod > 0) {
-    return `d4+${fumbleMod}`;
+  if (fumbleMod <= 0 || fumbleMod === '') {
+    return '';
   } else {
-    return `d4${fumbleMod}`; // negative values already include the minus sign
+    return `+${fumbleMod}`;
   }
 };
 

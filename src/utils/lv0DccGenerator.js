@@ -1,7 +1,12 @@
 import { Document, Page, Text, View, StyleSheet, Image } from '@react-pdf/renderer';
 import characterSheetBg from '../character/img/lvZeroCharacterSheet.jpg';
 import characterSheetLn from '../character/img/lvZeroCharacterSheetLandscape.jpg';
-import { occupations, getArmour, getACBonusArmour, getOccupationNumber } from './dccOccupations.js';
+import { 
+  occupations, 
+  getArmour, 
+  getACBonusArmour,
+  getOccupationNumber,
+  getOccupationFumbleDie } from './dccOccupations.js';
 import { generateEquipment, generateWealth } from './dccEquipment';
 import { getLanguages, formatLanguages } from './dccLanguages.js';
 import { 
@@ -137,7 +142,7 @@ const styles = StyleSheet.create({
   birthAugur: { position: 'absolute', top: 120, left: 203, width: 80 },
   weapon: { position: 'absolute', top: 183, left: 125 },
   weaponDamage: { position: 'absolute', top: 183, left: 240 }, 
-  armour: { position: 'absolute', top: 200, left: 125 },
+  armour: { position: 'absolute', top: 230, left: 125 },
   equipment: { position: 'absolute', top: 256, left: 125 },
   notes: { position: 'absolute', top: 303, left: 125 , width: 155},
 });
@@ -231,7 +236,7 @@ const landscapeStyles = StyleSheet.create({
   birthAugur: { position: 'absolute', top: 120, left: 203, width: 80 },
   weapon: { position: 'absolute', top: 183, left: 125 },
   weaponDamage: { position: 'absolute', top: 183, left: 240 }, 
-  armour: { position: 'absolute', top: 200, left: 125 },
+  armour: { position: 'absolute', top: 230, left: 125 },
   equipment: { position: 'absolute', top: 256, left: 125 },
   notes: { position: 'absolute', top: 303, left: 125, width: 155 },
 });
