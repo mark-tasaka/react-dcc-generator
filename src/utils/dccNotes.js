@@ -35,9 +35,9 @@ export function dieRollMethodText(choice) {
 export function hitPointsMethodText(choice) {
     switch (choice) {
         case 1:
-            return ' 1d4 hp ';
+            return ' HP: 1d4 ';
         case 2:
-            return ' max hp ';
+            return ' HP: max hp ';
         default:
             return '';
     }

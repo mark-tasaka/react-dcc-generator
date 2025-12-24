@@ -96,6 +96,10 @@ const styles = StyleSheet.create({
     fontSize: 8,
     color: 'black',
   },
+  xSmallText: {
+    fontSize: 6,
+    color: 'black',
+  },
   
   // Position styles for form fields
   name: { position: 'absolute', top: 32, left: 30 },
@@ -145,6 +149,7 @@ const styles = StyleSheet.create({
   armour: { position: 'absolute', top: 230, left: 125 },
   equipment: { position: 'absolute', top: 256, left: 125 },
   notes: { position: 'absolute', top: 303, left: 125 , width: 155},
+  message: { position: 'absolute', top: 350, left: 125 , width: 155},
 });
 
 //landscape styles
@@ -239,6 +244,7 @@ const landscapeStyles = StyleSheet.create({
   armour: { position: 'absolute', top: 230, left: 125 },
   equipment: { position: 'absolute', top: 256, left: 125 },
   notes: { position: 'absolute', top: 303, left: 125, width: 155 },
+  message: { position: 'absolute', top: 345, left: 125 , width: 155},
 });
 
 // Generate random character
@@ -308,6 +314,8 @@ export const generateRandomCharacter = (options = {}) => {
   const notes = getNotes(selectedOccupation.id);
   const equipment = generateEquipment(selectedOccupation);
   const armour = getArmour(selectedOccupation.id);
+  const message = dieRollMethodText(abilityScoreOption) + hitPointsMethodText(hitPointsOption);
+
   
   return {
     name: nameList[Math.floor(Math.random() * nameList.length)] + ' ' + 
@@ -352,7 +360,8 @@ export const generateRandomCharacter = (options = {}) => {
       alignment, 
       int
     )),
-    notes: notes
+    notes: notes,
+    message: message
   };
 };
 
@@ -410,6 +419,7 @@ const Character = ({ character, position }) => (
     <Text style={[styles.smallText, styles.equipment]}>{character.equipment}</Text>
     <Text style={[styles.smallText, styles.armour]}>{character.armour}</Text>
     <Text style={[styles.smallText, styles.notes]}>{character.notes}</Text>
+    <Text style={[styles.xSmallText, styles.message]}>{character.message}</Text>
   </View>
 );
 
@@ -465,6 +475,7 @@ const LandscapeCharacter = ({ character, position }) => (
     <Text style={[landscapeStyles.smallText, landscapeStyles.equipment]}>{character.equipment}</Text>
     <Text style={[landscapeStyles.smallText, landscapeStyles.armour]}>{character.armour}</Text>
     <Text style={[landscapeStyles.smallText, landscapeStyles.notes]}>{character.notes}</Text>
+    <Text style={[landscapeStyles.xSmallText, landscapeStyles.message]}>{character.message}</Text>
   </View>
 );
 

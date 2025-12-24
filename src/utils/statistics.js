@@ -49,3 +49,4 @@ export const getAbilityModifier = (score) => {
   
   return 0; // fallback for unexpected values
 };
+
