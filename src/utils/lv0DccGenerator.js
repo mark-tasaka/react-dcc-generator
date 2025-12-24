@@ -302,7 +302,7 @@ export const generateRandomCharacter = (options = {}) => {
   const speed = getSpeed(agiMod, luckySign);
 
   const critDie = formatCritDie(luckMod, luckySign);
-  const fumble = formatFumbleDie(luckMod, luckySign);
+  const fumble = getOccupationFumbleDie(selectedOccupation.id) + formatFumbleDie(luckMod, luckySign);
 
   const alignment = getAlignment(alignmentOption); // Use selected alignment option
   const notes = getNotes(selectedOccupation.id);

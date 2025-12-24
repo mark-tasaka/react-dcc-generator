@@ -19,10 +19,13 @@ export const formatCritDie = (luckMod, luckySign) => {
 export const formatFumbleDie = (luckMod, luckySign) => {
   const fumbleMod = getFumbleMod(luckMod, luckySign);
   
-  if (fumbleMod <= 0 || fumbleMod === '') {
+  if (fumbleMod === 0 || fumbleMod === '') {
     return '';
-  } else {
+  } else if (fumbleMod < 0) {
+    fumbleMod = fumbleMod * -1; // make positive for formatting
     return `+${fumbleMod}`;
+  } else {
+    return `-${fumbleMod}`;
   }
 };
 
