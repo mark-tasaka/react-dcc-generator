@@ -177,26 +177,26 @@ const landscapeStyles = StyleSheet.create({
   rightHalf: { top: '0%', left: '50%' }, 
   
   text: {
-    fontSize: 10,
+    fontSize: 12,
     color: 'black',
     fontWeight: 'bold',
   },
   largeText: {
-    fontSize: 12,
+    fontSize: 14,
     color: 'black',
     fontWeight: 'bold',
   },
   largeTextWhite: {
-    fontSize: 12,
+    fontSize: 14,
     color: 'white',
     fontWeight: 'bold',
   },
   smallText: {
-    fontSize: 8,
+    fontSize: 10,
     color: 'black',
   },
   xSmallText: {
-    fontSize: 6,
+    fontSize: 8,
     color: 'black',
   },
   
@@ -242,13 +242,13 @@ const landscapeStyles = StyleSheet.create({
   speed: { position: 'absolute', top: 69, left: 265 },
   wealth: { position: 'absolute', top: 319, left: 25, width: 80 },
   languages: { position: 'absolute', top: 345, left: 25, width: 80 },
-  birthAugur: { position: 'absolute', top: 120, left: 203, width: 80 },
+  birthAugur: { position: 'absolute', top: 202, left: 260, width: 100 },
   weapon: { position: 'absolute', top: 183, left: 125 },
   weaponDamage: { position: 'absolute', top: 183, left: 240 }, 
   armour: { position: 'absolute', top: 230, left: 125 },
-  equipment: { position: 'absolute', top: 256, left: 125 },
-  notes: { position: 'absolute', top: 303, left: 125, width: 155 },
-  message: { position: 'absolute', top: 345, left: 125 , width: 155},
+  equipment: { position: 'absolute', top: 378, left: 165 },
+  notes: { position: 'absolute', top: 440, left: 165, width: 190 },
+  message: { position: 'absolute', top: 550, right: 40 },
 });
 
 // Generate random character
