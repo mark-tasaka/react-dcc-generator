@@ -209,25 +209,25 @@ const landscapeStyles = StyleSheet.create({
   fumble: { position: 'absolute', top: 57, left: 180 },
   
   // Stats positioning - VALUES (left side)
-  str: { position: 'absolute', top: 199, left: 86 },
-  agi: { position: 'absolute', top: 215, left: 86 },
-  sta: { position: 'absolute', top: 231, left: 86 },
-  per: { position: 'absolute', top: 246, left: 86 },
-  int: { position: 'absolute', top: 386, left: 86 },
+  str: { position: 'absolute', top: 307, left: 86 },
+  agi: { position: 'absolute', top: 326, left: 86 },
+  sta: { position: 'absolute', top: 346, left: 86 },
+  per: { position: 'absolute', top: 367, left: 86 },
+  int: { position: 'absolute', top: 388, left: 86 },
   luck: { position: 'absolute', top: 408, left: 86 },
   
   // Stats positioning - MODIFIERS (right side)
-  strMod: { position: 'absolute', top: 199, left: 106 },
-  agiMod: { position: 'absolute', top: 215, left: 106 },
-  staMod: { position: 'absolute', top: 231, left: 106 },
-  perMod: { position: 'absolute', top: 246, left: 106 },
-  intMod: { position: 'absolute', top: 386, left: 106 },
+  strMod: { position: 'absolute', top: 307, left: 106 },
+  agiMod: { position: 'absolute', top: 326, left: 106 },
+  staMod: { position: 'absolute', top: 346, left: 106 },
+  perMod: { position: 'absolute', top: 367, left: 106 },
+  intMod: { position: 'absolute', top: 388, left: 106 },
   luckMod: { position: 'absolute', top: 408, left: 106 },
   
   // Combat stats (adjust these for landscape layout)
-  ac: { position: 'absolute', top: 122, left: 235 }, 
-  hp: { position: 'absolute', top: 155, left: 32 },
-  init: { position: 'absolute', top: 110, left: 142 },
+  ac: { position: 'absolute', top: 210, right: 293 }, 
+  hp: { position: 'absolute', top: 253, left: 46 },
+  init: { position: 'absolute', top: 195, left: 185 },
   melee: { position: 'absolute', top: 219, left: 175 },
   missile: { position: 'absolute', top: 237, left: 175 },
   meleeDamage: { position: 'absolute', top: 219, left: 198 },
@@ -246,9 +246,9 @@ const landscapeStyles = StyleSheet.create({
   weapon: { position: 'absolute', top: 288, left: 165 },
   weaponDamage: { position: 'absolute', top: 288, left: 310 }, 
   armour: { position: 'absolute', top: 230, left: 210 },
-  equipment: { position: 'absolute', top: 378, left: 165 },
+  equipment: { position: 'absolute', top: 378, left: 165, width: 190 },
   notes: { position: 'absolute', top: 440, left: 165, width: 190 },
-  message: { position: 'absolute', top: 550, right: 40 },
+  message: { position: 'absolute', top: 540, right: 40 },
 });
 
 // Generate random character
