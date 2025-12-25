@@ -209,20 +209,20 @@ const landscapeStyles = StyleSheet.create({
   fumble: { position: 'absolute', top: 57, left: 180 },
   
   // Stats positioning - VALUES (left side)
-  str: { position: 'absolute', top: 199, left: 66 },
-  agi: { position: 'absolute', top: 215, left: 66 },
-  sta: { position: 'absolute', top: 231, left: 66 },
-  per: { position: 'absolute', top: 246, left: 66 },
-  int: { position: 'absolute', top: 263, left: 66 },
-  luck: { position: 'absolute', top: 410, left: 90 },
+  str: { position: 'absolute', top: 199, left: 86 },
+  agi: { position: 'absolute', top: 215, left: 86 },
+  sta: { position: 'absolute', top: 231, left: 86 },
+  per: { position: 'absolute', top: 246, left: 86 },
+  int: { position: 'absolute', top: 386, left: 86 },
+  luck: { position: 'absolute', top: 408, left: 86 },
   
   // Stats positioning - MODIFIERS (right side)
-  strMod: { position: 'absolute', top: 199, left: 82 },
-  agiMod: { position: 'absolute', top: 215, left: 82 },
-  staMod: { position: 'absolute', top: 231, left: 82 },
-  perMod: { position: 'absolute', top: 246, left: 82 },
-  intMod: { position: 'absolute', top: 263, left: 82 },
-  luckMod: { position: 'absolute', top: 279, left: 82 },
+  strMod: { position: 'absolute', top: 199, left: 106 },
+  agiMod: { position: 'absolute', top: 215, left: 106 },
+  staMod: { position: 'absolute', top: 231, left: 106 },
+  perMod: { position: 'absolute', top: 246, left: 106 },
+  intMod: { position: 'absolute', top: 386, left: 106 },
+  luckMod: { position: 'absolute', top: 408, left: 106 },
   
   // Combat stats (adjust these for landscape layout)
   ac: { position: 'absolute', top: 122, left: 235 }, 
