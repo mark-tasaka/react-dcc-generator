@@ -201,12 +201,12 @@ const landscapeStyles = StyleSheet.create({
   },
   
   // Position styles for landscape layout (you'll need to adjust these based on your landscape background)
-  name: { position: 'absolute', top: 32, left: 30 },
-  gender: { position: 'absolute', top: 32, left: 155 },
-  alignment: { position: 'absolute', top: 57, left: 30 },
-  occupation: { position: 'absolute', top: 80, left: 30 },
-  critDie: { position: 'absolute', top: 57, left: 125 },
-  fumble: { position: 'absolute', top: 57, left: 180 },
+  name: { position: 'absolute', top: 97, left: 40 },
+  gender: { position: 'absolute', top: 97, left: 200 },
+  alignment: { position: 'absolute', top: 127, left: 40 },
+  occupation: { position: 'absolute', top: 155, left: 40 },
+  critDie: { position: 'absolute', top: 127, left: 160 },
+  fumble: { position: 'absolute', top: 127, left: 230 },
   
   // Stats positioning - VALUES (left side)
   str: { position: 'absolute', top: 307, left: 86 },
@@ -245,7 +245,7 @@ const landscapeStyles = StyleSheet.create({
   birthAugur: { position: 'absolute', top: 202, left: 260, width: 100 },
   weapon: { position: 'absolute', top: 288, left: 165 },
   weaponDamage: { position: 'absolute', top: 288, left: 310 }, 
-  armour: { position: 'absolute', top: 230, left: 210 },
+  armour: { position: 'absolute', top: 343, left: 165 },
   equipment: { position: 'absolute', top: 378, left: 165, width: 190 },
   notes: { position: 'absolute', top: 440, left: 165, width: 190 },
   message: { position: 'absolute', top: 540, right: 40 },
