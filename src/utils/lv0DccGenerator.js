@@ -214,7 +214,7 @@ const landscapeStyles = StyleSheet.create({
   sta: { position: 'absolute', top: 231, left: 66 },
   per: { position: 'absolute', top: 246, left: 66 },
   int: { position: 'absolute', top: 263, left: 66 },
-  luck: { position: 'absolute', top: 279, left: 66 },
+  luck: { position: 'absolute', top: 410, left: 90 },
   
   // Stats positioning - MODIFIERS (right side)
   strMod: { position: 'absolute', top: 199, left: 82 },
@@ -228,24 +228,24 @@ const landscapeStyles = StyleSheet.create({
   ac: { position: 'absolute', top: 122, left: 235 }, 
   hp: { position: 'absolute', top: 155, left: 32 },
   init: { position: 'absolute', top: 110, left: 142 },
-  melee: { position: 'absolute', top: 130, left: 132 },
-  missile: { position: 'absolute', top: 142, left: 132 },
-  meleeDamage: { position: 'absolute', top: 130, left: 152 },
-  missileDamage: { position: 'absolute', top: 142, left: 152 },
+  melee: { position: 'absolute', top: 219, left: 175 },
+  missile: { position: 'absolute', top: 237, left: 175 },
+  meleeDamage: { position: 'absolute', top: 219, left: 198 },
+  missileDamage: { position: 'absolute', top: 237, left: 198 },
   
   // Saves (adjust for landscape)
-  reflex: { position: 'absolute', top: 35, left: 235 },
-  fortitude: { position: 'absolute', top: 35, left: 265 },
-  will: { position: 'absolute', top: 69, left: 235 },
+  reflex: { position: 'absolute', top: 100, left: 300 },
+  fortitude: { position: 'absolute', top: 100, left: 340 },
+  will: { position: 'absolute', top: 140, left: 300 },
   
   // Other fields (adjust for landscape)
-  speed: { position: 'absolute', top: 69, left: 265 },
-  wealth: { position: 'absolute', top: 319, left: 25, width: 80 },
-  languages: { position: 'absolute', top: 345, left: 25, width: 80 },
+  speed: { position: 'absolute', top: 140, left: 345 },
+  wealth: { position: 'absolute', top: 460, left: 30, width: 110 },
+  languages: { position: 'absolute', top: 490, left: 30, width: 110 },
   birthAugur: { position: 'absolute', top: 202, left: 260, width: 100 },
-  weapon: { position: 'absolute', top: 183, left: 125 },
-  weaponDamage: { position: 'absolute', top: 183, left: 240 }, 
-  armour: { position: 'absolute', top: 230, left: 125 },
+  weapon: { position: 'absolute', top: 288, left: 165 },
+  weaponDamage: { position: 'absolute', top: 288, left: 310 }, 
+  armour: { position: 'absolute', top: 230, left: 210 },
   equipment: { position: 'absolute', top: 378, left: 165 },
   notes: { position: 'absolute', top: 440, left: 165, width: 190 },
   message: { position: 'absolute', top: 550, right: 40 },
@@ -437,23 +437,23 @@ const LandscapeCharacter = ({ character, position }) => (
     <Text style={[landscapeStyles.text, landscapeStyles.fumble]}>{character.fumble}</Text>
     
     {/* Stats - Values and Modifiers separated */}
-    <Text style={[landscapeStyles.text, landscapeStyles.str]}>{character.stats.str.value}</Text>
-    <Text style={[landscapeStyles.text, landscapeStyles.strMod]}>({character.stats.str.modifier >= 0 ? '+' : ''}{character.stats.str.modifier})</Text>
+    <Text style={[landscapeStyles.largeText, landscapeStyles.str]}>{character.stats.str.value}</Text>
+    <Text style={[landscapeStyles.largeText, landscapeStyles.strMod]}>({character.stats.str.modifier >= 0 ? '+' : ''}{character.stats.str.modifier})</Text>
     
-    <Text style={[landscapeStyles.text, landscapeStyles.agi]}>{character.stats.agi.value}</Text>
-    <Text style={[landscapeStyles.text, landscapeStyles.agiMod]}>({character.stats.agi.modifier >= 0 ? '+' : ''}{character.stats.agi.modifier})</Text>
+    <Text style={[landscapeStyles.largeText, landscapeStyles.agi]}>{character.stats.agi.value}</Text>
+    <Text style={[landscapeStyles.largeText, landscapeStyles.agiMod]}>({character.stats.agi.modifier >= 0 ? '+' : ''}{character.stats.agi.modifier})</Text>
     
-    <Text style={[landscapeStyles.text, landscapeStyles.sta]}>{character.stats.sta.value}</Text>
-    <Text style={[landscapeStyles.text, landscapeStyles.staMod]}>({character.stats.sta.modifier >= 0 ? '+' : ''}{character.stats.sta.modifier})</Text>
+    <Text style={[landscapeStyles.largeText, landscapeStyles.sta]}>{character.stats.sta.value}</Text>
+    <Text style={[landscapeStyles.largeText, landscapeStyles.staMod]}>({character.stats.sta.modifier >= 0 ? '+' : ''}{character.stats.sta.modifier})</Text>
     
-    <Text style={[landscapeStyles.text, landscapeStyles.per]}>{character.stats.per.value}</Text>
-    <Text style={[landscapeStyles.text, landscapeStyles.perMod]}>({character.stats.per.modifier >= 0 ? '+' : ''}{character.stats.per.modifier})</Text>
+    <Text style={[landscapeStyles.largeText, landscapeStyles.per]}>{character.stats.per.value}</Text>
+    <Text style={[landscapeStyles.largeText, landscapeStyles.perMod]}>({character.stats.per.modifier >= 0 ? '+' : ''}{character.stats.per.modifier})</Text>
     
-    <Text style={[landscapeStyles.text, landscapeStyles.int]}>{character.stats.int.value}</Text>
-    <Text style={[landscapeStyles.text, landscapeStyles.intMod]}>({character.stats.int.modifier >= 0 ? '+' : ''}{character.stats.int.modifier})</Text>
+    <Text style={[landscapeStyles.largeText, landscapeStyles.int]}>{character.stats.int.value}</Text>
+    <Text style={[landscapeStyles.largeText, landscapeStyles.intMod]}>({character.stats.int.modifier >= 0 ? '+' : ''}{character.stats.int.modifier})</Text>
     
-    <Text style={[landscapeStyles.text, landscapeStyles.luck]}>{character.stats.luck.value}</Text>
-    <Text style={[landscapeStyles.text, landscapeStyles.luckMod]}>({character.stats.luck.modifier >= 0 ? '+' : ''}{character.stats.luck.modifier})</Text>
+    <Text style={[landscapeStyles.largeText, landscapeStyles.luck]}>{character.stats.luck.value}</Text>
+    <Text style={[landscapeStyles.largeText, landscapeStyles.luckMod]}>({character.stats.luck.modifier >= 0 ? '+' : ''}{character.stats.luck.modifier})</Text>
     
     {/* Combat Stats */}
     <Text style={[landscapeStyles.text, landscapeStyles.ac]}>{character.ac}</Text>
