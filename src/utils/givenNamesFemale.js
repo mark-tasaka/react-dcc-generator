@@ -415,3 +415,195 @@ export const koreanGivenNamesFemale = () => {
   
   return getRandomName(givenNames);
 };
+
+export const latinGivenNamesFemale = () => {
+  const givenNames = [
+    'Abby', 'Ada', 'Aderes', 'Adora', 'Adrienne', 'Aemilia', 'Affinity', 'Aimee', 'Alba', 'Allegra', 'Alma', 'Amanda', 'Amity', 'Amory', 'Amriel', 'Amy', 'Antlia', 'Antonia', 'April', 'Aqualina', 'Aquamarine', 'Arbor', 'Arden', 'Aril', 'Arva', 'Auburn', 'Augusta', 'Aurelia', 'Autumn', 'Ava', 'Avalon', 'Barbara', 'Beata', 'Beatrice', 'Bellona', 'Benedetta', 'Blase', 'Calcite', 'Calendula', 'Callis', 'Cambria', 'Camille', 'Campbell', 'Candida', 'Candra', 'Cara', 'Carey', 'Carina', 'Carisa', 'Carla', 'Carnelian', 'Cassiel', 'Cecilia', 'Celeste', 'Cerelia', 'Charity', 'Chastity', 'Cheridah', 'Citrine', 'Claire', 'Clementine', 'Colomba', 'Comfort', 'Compassion', 'Concepción', 'Concordia', 'Constance', 'Coral', 'Cordelia', 'Corky', 'Cornelia', 'Corrina', 'Dabria', 'Daisy', 'Danica', 'Delinda', 'Desiree', 'Dextra', 'Diana', 'Dido', 'Diella', 'Dillian', 'Diva', 'Dolores', 'Donna', 'Emily', 'Enza', 'Ermine', 'Esme', 'Essence', 'Estelle', 'Eternal', 'Eustacia', 'Faith', 'Fantasia', 'Fawn', 'Felicia', 'Feronia', 'Fidelity', 'Flavia', 'Florence', 'Fortitude', 'Fortuna', 'Franca', 'Fulvia', 'Garnet', 'Gemma', 'Genesis', 'Gill', 'Gillian', 'Ginger', 'Gloria', 'Grace', 'Gratia', 'Gustava', 'Heliotrope', 'Hester', 'Honesty', 'Honor', 'Hortense', 'Humbleness', 'Humility', 'Imogene', 'Integrity', 'Ivory', 'Jae', 'Jillian', 'Jocosa', 'Jovanna', 'Joy', 'Joyce', 'Julia', 'June', 'Juniper', 'Juno', 'Justice', 'Kadenza', 'Kalare', 'Kambrea', 'Kambria', 'Karise', 'Karlee', 'Karly', 'Karmen', 'Katarina', 'Khara', 'Kira', 'Kitty', 'Konstance', 'Kordell', 'Lacey', 'Lachesis', 'Laetitia', 'Lalo', 'Lara', 'Laraine', 'Lasthenia', 'Latisha', 'Latonia', 'Laura', 'Laurinda', 'Laveda', 'Lavina', 'Lavinia', 'Lawrence', 'Leann', 'Leauna', 'Lella', 'Leola', 'Leta', 'Leticia', 'Letitia', 'Levana', 'Libra', 'Licia', 'Lilian', 'Liliana', 'Lilianna', 'Lilliana', 'Lillias', 'Lily', 'Lita', 'Livi', 'Lora', 'Lori', 'Lorinda', 'Lotta', 'Lottie', 'Luce', 'Lucille', 'Lucinda', 'Lucrece', 'Lucretia', 'Lucy', 'Luka', 'Lumina', 'Luna', 'Lupe', 'Lynnea', 'Mabel', 'Madonna', 'Mae', 'Maeve', 'Magna', 'Magnolia', 'Marcella', 'Marcia', 'Maren', 'Maricel', 'Marina', 'Maris', 'Marissa', 'Martina', 'Maxine', 'May', 'Medea', 'Mei', 'Melba', 'Melina', 'Mercedes', 'Merit', 'Messina', 'Meta', 'Minerva', 'Mira', 'Mirabelle', 'Miranda', 'Modestus', 'Modesty', 'Monica', 'Muriel', 'Myra', 'Napea', 'Narda', 'Nasia', 'Natalie', 'Neci', 'Necia', 'Nedra', 'Nerissa', 'Nevada', 'Nigella', 'Nivea', 'Noble', 'Nohely', 'Nola', 'Noletta', 'Nona', 'Nonnita', 'Norma', 'Nova', 'Nydia', 'Octavia', 'Odina', 'Oistin', 'Olive', 'Ondine', 'Oralia', 'Orchid', 'Oria', 'Oriana', 'Orianna', 'Oriole', 'Orla', 'Orlanda', 'Orsa', 'Ortensia', 'Osma', 'Ova', 'Paula', 'Pax', 'Pearl', 'Persis', 'Petronella', 'Petula', 'Pia', 'Poppy', 'Portia', 'Priscilla', 'Prudence', 'Quartilla', 'Quinella', 'Quintessa', 'Quintina', 'Quirina', 'Quirita', 'Quita', 'Rain', 'Regina', 'Renata', 'Renita', 'Revelation', 'Rhea', 'Risa', 'Rosanne', 'Rose', 'Rue', 'Sabana', 'Sabina', 'Tosca', 'Toshi', 'Tosia', 'Tranquility', 'Tricia', 'Trini', 'Trinity', 'Trisha', 'Trista', 'Tristana', 'Tristessa', 'Tryphena', 'Ultima', 'Una', 'Undine', 'Uny', 'Urbana', 'Ursula', 'Valencia', 'Valentine', 'Valerie', 'Valisa', 'Valonia', 'Valora', 'Vanecia', 'Venice', 'Vera', 'Verda', 'Verena', 'Verity', 'Vernice', 'Veronica', 'Vesper', 'Vesta', 'Vestal', 'Vevina', 'Victoria', 'Vidonia', 'Vienna', 'Vincentia', 'Violet', 'Virgilia', 'Virginia', 'Virgo', 'Viridis', 'Vita', 'Vivian', 'Viviefont', 'Zama', 'Zanna', 'Zea', 'Zinnia', 'Zona'
+  ];
+  
+  return getRandomName(givenNames);
+};
+
+export const middleEnglishGivenNamesFemale = () => {
+  const givenNames = [
+    'Amiable', 'Cavanaugh', 'Citrine', 'Doe', 'Knowledge', 'Lane', 'Mercy', 'Merry', 'Scarlet'
+  ];
+  
+  return getRandomName(givenNames);
+};
+
+export const nativeAmericanGivenNamesFemale = () => {
+  const givenNames = [
+    'Abeque', 'Abey', 'Abeytu', 'Adoette', 'Adsila', 'Aiyana', 'Alameda', 'Alaqua', 'Alawa', 'Aleshanee', 'Algoma', 'Alsoomse', 'Amadahy', 'Amitola', 'Anaba', 'Angeni', 'Aponi', 'Aquene', 'Awendela', 'Ayasha', 'Ayita', 'Bly', 'Chapa', 'Chenoa', 'Cheyenne', 'Chimalis', 'Dakota', 'Doli', 'Donoma', 'Dyani', 'Elu', 'Enola', 'Etenia', 'Eyota', 'Fala', 'Galilahi', 'Genesee', 'Hachi', 'Haiwee', 'Halona', 'Honovi', 'Hurit', 'Huyana', 'Istas', 'Ituha', 'Kachine', 'Kai', 'Kaniya', 'Kanti', 'Karmiti', 'Kilenya', 'Kimama', 'Kimimela', 'Kiona', 'Kishi', 'Koko', 'Koleyn', 'Kwanita', 'Labdhi', 'Lahoma', 'Lakota', 'Leotie', 'Lequoia', 'Liluye', 'Liseli', 'Litonya', 'Lomasi', 'Luyu', 'Macha', 'Magena', 'Mahala', 'Mai', 'Maka', 'Makya', 'Malina', 'Mapiya', 'Meda', 'Miakoda', 'Migisi', 'Mika', 'Mitena', 'Mitexi', 'Nahimana', 'Nara', 'Nascha', 'Nasnan', 'Nata', 'Nayeli', 'Netis', 'Nita', 'Nitika', 'Nituna', 'Nokomis', 'Nuna', 'Nuttah', 'Ohio', 'Olathe', 'Olisa', 'Onawa', 'Oneida', 'Oni', 'Onida', 'Opa', 'Pala', 'Pana', 'Pelipa', 'Pinquana', 'Pocahontas', 'Quanah', 'Sahyko', 'Sakari', 'Sakima', 'Salali', 'Satinka', 'Sequoia', 'Shada', 'Shako', 'Shania', 'Shaniya', 'Shasta', 'Shima', 'Shysie', 'Sihu', 'Snana', 'Sokanon', 'Sora', 'Soyala', 'Taa', 'Taborri', 'Tacincala', 'Tadewi', 'Tadita', 'Taima', 'Taini', 'Tainn', 'Takoda', 'Tala', 'Tama', 'Tamsyn', 'Tareva-Chine\'', 'Tarsha', 'Tawana', 'Tayen', 'Tazanna', 'Tehya', 'Tiva', 'Tolinka', 'Topanga', 'Tuwa', 'Unega', 'Urika', 'Usdi', 'Utina', 'Wachiwi', 'Waneta', 'Wapeka', 'Wapin', 'Wasula', 'Wateka', 'Wawetseka', 'Weayaya', 'Weetamoo', 'Winema', 'Wyanet', 'Wynonah', 'Wyome', 'Yalika', 'Yanaha', 'Yoki', 'Zabana', 'Zaltana', 'Zonta'
+  ];
+  
+  return getRandomName(givenNames);
+};
+
+export const norseGivenNamesFemale = () => {
+  const givenNames = [
+    'Bo', 'Frigg', 'Grid', 'Gro', 'Guro', 'Haley', 'Heidrun', 'Hela', 'Magna', 'Oda', 'Ove', 'Ragnhild', 'Unni'
+  ];
+  
+  return getRandomName(givenNames);
+};
+
+export const oldEnglishGivenNamesFemale = () => {
+  const givenNames = [
+    'Afton', 'Agrona', 'Aida', 'Aislinn', 'Alcott', 'Alden', 'Alvina', 'Arantxa', 'Ariana', 'Arleigh', 'Ashley', 'Aspen', 'Audrey', 'Avon', 'Bailey', 'Beverly', 'Blaine', 'Blossom', 'Blythe', 'Brea', 'Brenda', 'Brook', 'Buffy', 'Cady', 'Cameron', 'Chelsea', 'Corliss', 'Courtney', 'Demelza', 'Eartha', 'Edda', 'Edith', 'Ethel', 'Farrah', 'Fern', 'Fiona', 'Godiva', 'Golda', 'Halsey', 'Harmony', 'Hazel', 'Hedwig', 'Hertha', 'Hollace', 'Holly', 'Hope', 'Idina', 'Isolda', 'Ivy', 'Jocelyn', 'Kim', 'Kimberley', 'Kyla', 'Lee', 'Leigh', 'Leslie', 'Lindsay', 'Locke', 'Love', 'Luella', 'Maida', 'Mirth', 'Missy', 'Misty', 'Nara', 'Obsession', 'Radella', 'Sacrifice'
+  ];
+  
+  return getRandomName(givenNames);
+};
+
+export const oldFrenchGivenNamesFemale = () => {
+  const givenNames = [
+    'Chance', 'Chantal', 'Delight', 'Fay', 'Frances', 'Jewel', 'Musetta', 'Olive', 'Raissa', 'Sojourner'
+  ];
+  
+  return getRandomName(givenNames);
+};
+
+export const oldGermanGivenNamesFemale = () => {
+  const givenNames = [
+    'Aloysia', 'Carla', 'Carol', 'Chay', 'Ella', 'Emiline', 'Ernestine', 'Etta', 'Ida', 'Leopolda', 'Leyna', 'Lorraine', 'Louise', 'Minna'
+  ];
+  
+  return getRandomName(givenNames);
+};
+
+export const oldNorseGivenNamesFemale = () => {
+  const givenNames = [
+    'Astrid', 'Deila', 'Gail', 'Harper', 'Kippi', 'Nessa', 'Olive', 'Ronalda', 'Sigrid', 'Thora', 'Valda'
+  ];
+  
+  return getRandomName(givenNames);
+};
+
+export const persianGivenNamesFemale = () => {
+  const givenNames = [
+    'Abtin', 'Ardeshir', 'Azarin', 'Azura', 'Cyra', 'Darice', 'Esther', 'Fila', 'Gelsey', 'Jaleh', 'Jasmine', 'Kasra', 'Kira', 'Mahdis', 'Mahsa', 'Mandana', 'Midge', 'Mina', 'Nickan', 'Roxanne', 'Sanam', 'Vashti', 'Yasmine', 'Zeeba', 'Zohreh'
+  ];
+  
+  return getRandomName(givenNames);
+};
+
+export const polishGivenNamesFemale = () => {
+  const givenNames = [
+    'Danuta', 'Ewa', 'Filipina', 'Jadwiga', 'Kalene', 'Karolina', 'Kasia', 'Kassia', 'Klementyna', 'Ksena', 'Lilka', 'Macy', 'Olesia', 'Rasine', 'Tajsa', 'Tekli', 'Tesia', 'Tola', 'Tolia', 'Truda', 'Valeska', 'Walentya', 'Wislawa', 'Zima', 'Zofia', 'Zotia'
+  ];
+  
+  return getRandomName(givenNames);
+};
+
+export const polynesianGivenNamesFemale = () => {
+  const givenNames = [
+    'Kaula', 'Lana', 'Mahal', 'Maili', 'Pua', 'Uinise', 'Vailea'
+  ];
+  
+  return getRandomName(givenNames);
+};
+
+export const russianGivenNamesFemale = () => {
+  const givenNames = [
+    'Akelah', 'Alexandrite', 'Anya', 'Bohdana', 'Cyzarine', 'Dusana', 'Feodora', 'Jelena', 'Kisa', 'Kiska', 'Leena', 'Lenya', 'Lida', 'Luba', 'Marinka', 'Mika', 'Mila', 'Misha', 'Nadie', 'Nickita', 'Nika', 'Oksana', 'Olga', 'Olien', 'Raissa', 'Sashenka', 'Savina', 'Sezja', 'Sonia', 'Svetlana', 'Taneya', 'Tanya', 'Tatiana', 'Vanka', 'Vanya', 'Verushka', 'Vilhemina', 'Yelena', 'Yeva', 'Yula', 'Zagir', 'Zasha', 'Zdebka', 'Zhenya', 'Zilya'
+  ];
+  
+  return getRandomName(givenNames);
+};
+
+export const sanskritGivenNamesFemale = () => {
+  const givenNames = [
+    'Chandra', 'Kalinda', 'Kalpana', 'Kama', 'Karma', 'Kashmir', 'Leelea', 'Lilac', 'Malika', 'Manjusha', 'Nalini', 'Opal', 'Shobha', 'Sitara', 'Taruna'
+  ];
+  
+  return getRandomName(givenNames);
+};
+
+export const scandinavianGivenNamesFemale = () => {
+  const givenNames = [
+    'Alleta', 'Bo', 'Dagna', 'Dahlia', 'Delling', 'Eir', 'Erica', 'Evonne', 'Freya', 'Gudrun', 'Gunda', 'Halle', 'Idonea', 'Ingrid', 'Jesen', 'Karena', 'Kelda', 'Kelsey', 'Kiersten', 'Krystyn', 'Lang', 'Larsen', 'Linnea', 'Lis', 'Lisolette', 'Litzy', 'Loki', 'Lundy', 'Malin', 'Marny', 'Mia', 'Nissa', 'Quenby', 'Quinby', 'Ran', 'Ranveig', 'Rinda', 'Runa', 'Sanna', 'Savea', 'Selma', 'Signa', 'Signild', 'Sigrun', 'Snøfrid', 'Sonja', 'Sorley', 'Svea', 'Synnove', 'Thorborg', 'Thurid', 'Thyrrni', 'Toril', 'Toyah', 'Tyra', 'Ula', 'Unn', 'Valkyrie', 'Vanja', 'Vigdis', 'Viola', 'Ylwa', 'Zainab'
+  ];
+  
+  return getRandomName(givenNames);
+};
+
+export const scottishGivenNamesFemale = () => {
+  const givenNames = [
+    'Ailsa', 'Ainsley', 'Artis', 'Bonnie', 'Campbell', 'Davine', 'Dree', 'Enya', 'Genene', 'Ilisa', 'Jeanne', 'Kelcie', 'Kelsi', 'Lesley', 'Leslie', 'Logan', 'Mairead', 'Malvina', 'Nairne', 'Rae', 'Sile', 'Siusan', 'Tira', 'Vanora'
+  ];
+  
+  return getRandomName(givenNames);
+};
+
+export const slavicGivenNamesFemale = () => {
+  const givenNames = [
+    'Anezka', 'Casmir', 'Darva', 'Kami', 'Kamila', 'Kamilia', 'Karayan', 'Katerina', 'Katia', 'Kisha', 'Klavdia', 'Kostya', 'Lada', 'Laima', 'Lala', 'Larya', 'Lenka', 'Lilia', 'Lizina', 'Lonna', 'Malika', 'Milena', 'Nadine', 'Natala', 'Neda', 'Neveah', 'Nijole', 'Ondrea', 'Radinka', 'Saskia', 'Sveta', 'Szitakota', 'Tana', 'Tania', 'Tasya', 'Teca', 'Velika', 'Vera', 'Viera', 'Yarmilla', 'Zabel', 'Zeljka', 'Zora', 'Zuzana'
+  ];
+  
+  return getRandomName(givenNames);
+};
+
+export const spanishGivenNamesFemale = () => {
+  const givenNames = [
+    'Adalia', 'Aidia', 'Alva', 'Aureliano', 'Belinda', 'Bettina', 'Carey', 'Carlotta', 'Coco', 'Damita', 'Delfina', 'Duenna', 'Dulcie', 'Elvira', 'Enriqua', 'Esmerelda', 'Esperanza', 'Fe', 'Fonda', 'Frida', 'Friera', 'Gitana', 'Gotzone', 'Guadalupe', 'Hermosa', 'Ines', 'Isabel', 'Itzel', 'Jade', 'Jardena', 'Julitta', 'Kesare', 'Kiki', 'Lacienega', 'Ladonna', 'Landrada', 'Lela', 'Lenora', 'Leya', 'Liani', 'Linda', 'Lluvia', 'Lola', 'Lolita', 'Luisa', 'Lujuana', 'Lupita', 'Lux', 'Luz', 'Madeira', 'Madra', 'Maitane', 'Maitea', 'Majondra', 'Manda', 'Manuela', 'Mariola', 'Mariposa', 'Marisa', 'Melosa', 'Mio', 'Mira', 'Montana', 'Mora', 'Neiva', 'Nerita', 'Neva', 'Nieve', 'Nina', 'Novia', 'Novyanna', 'Oihane', 'Ora', 'Osana', 'Paca', 'Paloma', 'Placida', 'Puma', 'Querida', 'Queta', 'Quinceanos', 'Raeka', 'Rafaela', 'Ramona', 'Rana', 'Ria', 'Rigoberta', 'Roana', 'Rosalind', 'Rosalynda', 'Sally', 'Salma', 'Sancha', 'Sancho', 'Sandia', 'Santana', 'Santina', 'Savana', 'Savanna', 'Seina', 'Senalda', 'Senona', 'Sierra', 'Sofiel', 'Solana', 'Soledad', 'Sonora', 'Taina', 'Tea', 'Tejana', 'Terceiro', 'Teresa', 'Texcean', 'Tia', 'Tierra', 'Tina', 'Tranquilia', 'Trella', 'Tulia', 'Ursulina', 'Verdad', 'Veta', 'Vina', 'Xalbadora', 'Xevera', 'Xiao', 'Xiomara', 'Yadra', 'Yomaris', 'Zaneta', 'Zarela', 'Zarita', 'Zaviera', 'Zequinha', 'Zuriaa', 'Zurine'
+  ];
+  
+  return getRandomName(givenNames);
+};
+
+export const swahiliGivenNamesFemale = () => {
+  const givenNames = [
+    'Adia', 'Barika', 'Epua', 'Kamaria', 'Kesi', 'Lakeisha', 'Leta', 'Nia', 'Shani', 'Simba', 'Taariq', 'Winda'
+  ];
+  
+  return getRandomName(givenNames);
+};
+
+export const swedishGivenNamesFemale = () => {
+  const givenNames = [
+    'Kajsa', 'Maj', 'Signe', 'Trind', 'Valborg'
+  ];
+  
+  return getRandomName(givenNames);
+};
+
+export const teutonicGivenNamesFemale = () => {
+  const givenNames = [
+    'Magan', 'Minka', 'Orinda', 'Verena', 'Waltraud', 'Willa', 'Yvette'
+  ];
+  
+  return getRandomName(givenNames);
+};
+
+export const turkishGivenNamesFemale = () => {
+  const givenNames = [
+    'Aylin', 'Banu', 'Jale', 'Kari', 'Karli', 'Kerzi', 'Kiral', 'Nagihan', 'Nerhim', 'Nilgun', 'Nuray', 'Nurhan', 'Olcay', 'Onur', 'Safak', 'Sefika', 'Semra', 'Sezen', 'Sibel', 'Sila', 'Zerdali'
+  ];
+  
+  return getRandomName(givenNames);
+};
+
+export const vietnameseGivenNamesFemale = () => {
+  const givenNames = [
+    'Cara', 'Duyen', 'Hong', 'Khanh', 'Kieu', 'Lan', 'Lieu', 'Linh', 'Loan', 'Ly', 'Mai', 'Mychau', 'Nguyet', 'Nhi', 'Nhu', 'Nhung', 'Nu', 'Sen', 'Tai', 'Tam', 'Tan', 'Thao', 'Thuy', 'Tien', 'Trang', 'Trinh', 'Tuyen', 'Ut', 'Xuan'
+  ];
+  
+  return getRandomName(givenNames);
+};
+
+export const welshGivenNamesFemale = () => {
+  const givenNames = [
+    'Bryn', 'Carey', 'Caron', 'Carys', 'Ceridwen', 'Crisiant', 'Dylan', 'Dyllis', 'Emlyn', 'Enid', 'Genevieve', 'Gladys', 'Idelle', 'Jensine', 'Karrington', 'Kordell', 'Kynan', 'Llewellyn', 'Lowri', 'Lyneth', 'Mabyn', 'Mairwen', 'Merlyn', 'Morgan', 'Myfanwy', 'Nerys', 'Olwen', 'Owena', 'Reese', 'Rhiamon', 'Rhiannon', 'Rhonwen', 'Riannon', 'Rowena', 'Saeran', 'Sian', 'Sulwyn', 'Taffy', 'Teleri', 'Telyn', 'Tydfill', 'Verran', 'Vevay', 'Wynn'
+  ];
+  
+  return getRandomName(givenNames);
+};
+
+export const yiddishGivenNamesFemale = () => {
+  const givenNames = [
+    'Bruna', 'Kyla', 'Leba', 'Mindel', 'Shayndel', 'Syshe'
+  ];
+  
+  return getRandomName(givenNames);
+};
