@@ -203,3 +203,202 @@ export const japaneseGivenNamesMale = () => {
   
   return getRandomName(givenNames);
 };
+
+export const koreanGivenNamesMale = () => {
+  const givenNames = [
+    'Daeshim', 'Jintao', 'Seung', 'Yong-Sun', 'Young-Ja', 'Young-Jae'
+  ];
+  
+  return getRandomName(givenNames);
+};
+
+export const latinGivenNamesMale = () => {
+  const givenNames = [
+    'Ace', 'Adeodatus', 'Adrian', 'Aemilius', 'Africa', 'Alban', 'Aleron', 'Amadeus', 'Amando', 'Amator', 'Ames', 'Amory', 'Anthony', 'Aquarius', 'Aquila', 'Arcadicus', 'Archangelo', 'Arden', 'Aruiragus', 'Atticus', 'Auburn', 'August', 'Aurelius', 'Auriga', 'Austin', 'Avis', 'Barber', 'Benedict', 'Bennett', 'Benvolio', 'Blaze', 'Boone', 'Branch', 'Caelum', 'Caesar', 'Caius', 'Callistus', 'Calvin', 'Camillo', 'Candidius', 'Capricornus', 'Capucius', 'Carew', 'Carnelian', 'Cassius', 'Cato', 'Celesto', 'Cepheus', 'Cetus', 'Chester', 'Cicero', 'Clarence', 'Claude', 'Clement', 'Constantine', 'Cooper', 'Cordell', 'Corin', 'Cornelius', 'Corvus', 'Costante', 'Crispin', 'Cupid', 'Curtis', 'Cygnus', 'Dacian', 'Dante', 'Decretas', 'Delmore', 'Desmond', 'Dexter', 'Dominick', 'Domitus', 'Donato', 'Drake', 'Duke', 'Durand', 'Eleutherius', 'Ellery', 'Emile', 'Equinox', 'Eridanus', 'Estes', 'Ethan', 'Eusebius', 'Evaristus', 'Ezio', 'Fabian', 'Fabrizio', 'Farrar', 'Felix', 'Ferris', 'Feste', 'Flavius', 'Florian', 'Formosus', 'Furio', 'Galloway', 'Garner', 'Gemini', 'Gennaro', 'Germanus', 'Grady', 'Graham', 'Griffin', 'Guiderius', 'Harmon', 'Hiemo', 'Hilario', 'Honorius', 'Horace', 'Hortensio', 'Horton', 'Iago', 'Ignatius', 'Innocent', 'Janus', 'Jarlath', 'Javan', 'Jermyn', 'Jerome', 'Julian', 'Junius', 'Kalvin', 'Kasen', 'Klemens', 'Korvin', 'Labhras', 'Lamar', 'Lamberto', 'Laurence', 'Lawrence', 'Lester', 'Levente', 'Lionel', 'Loren', 'Lorne', 'Lucas', 'Lucian', 'Lucius', 'Lyon', 'Mace', 'Magic', 'Magnus', 'Major', 'Malchidiel', 'Mamillius', 'Mar', 'Marcade', 'Marcellus', 'March', 'Marcus', 'Margarelon', 'Marinus', 'Marius', 'Mark', 'Mars', 'Martius', 'Maurice', 'Max', 'Maxwell', 'Mayer', 'Mercury', 'Merit', 'Meriweather', 'Mica', 'Miner', 'Montano', 'Morris', 'Myles', 'Narciso', 'Nemo', 'Neptune', 'Nero', 'Nigel', 'Nimbus', 'Noble', 'Nona', 'Octavius', 'Odina', 'Oistin', 'Oliver', 'Oral', 'Orde', 'Orelious', 'Oria', 'Orien', 'Oriole', 'Orlando', 'Osma', 'Ovid', 'Pandarus', 'Patrick', 'Paul', 'Peace', 'Pelagius', 'Peregrin', 'Peril', 'Peter', 'Philo', 'Placido', 'Platinum', 'Pontius', 'Prince', 'Prosper', 'Pryor', 'Quade', 'Quant', 'Quentin', 'Quirinus', 'Rainier', 'Ransom', 'Regis', 'Remus', 'Renee', 'Rex', 'Roman', 'Rufus', 'Sabene', 'Sabinian', 'Sagittarius', 'Saturn', 'Sebastian', 'Seleucus', 'Sempronius', 'Septimus', 'Serge', 'Severinus', 'Sextus', 'Silas', 'Silvester', 'Silvio', 'Silvius', 'Sol', 'Solan', 'Sparky', 'Stacey', 'Stanislaw', 'Taurin', 'Terence', 'Thaddeaus', 'Tony', 'Tracy', 'Trent', 'Trenus', 'Ulices', 'Ulises', 'Ulysses', 'Unus', 'Urban', 'Ursan', 'Val', 'Valentin', 'Valentine', 'Valerian', 'Valor', 'Varrius', 'Vergel', 'Verlin', 'Vern', 'Vernon', 'Vertumnus', 'Vester', 'Victor', 'Vida', 'Vigilius', 'Vincent', 'Vinson', 'Vireo', 'Virgil', 'Vito', 'Vitus', 'Zachriel', 'Zaniel', 'Zanobi', 'Zazel'
+  ];
+  
+  return getRandomName(givenNames);
+};
+
+export const middleEnglishGivenNamesMale = () => {
+  const givenNames = [
+    'Alden', 'Alder', 'Crockett', 'Kemp', 'Kipling', 'Ladd', 'Lander', 'Lane', 'Latimer', 'Lyman', 'Macon', 'Mendel', 'Mercer', 'Mull', 'Nye', 'Perry', 'Prentice', 'Reeve', 'Sanders', 'Sawyer', 'Skeet', 'Sterne', 'Swain', 'Taylor', 'Tennyson', 'Todd', 'Trey', 'Tucker', 'Turner', 'Twain', 'Tyler', 'Vance', 'Vane', 'Wade', 'Walker', 'Yates'
+  ];
+  
+  return getRandomName(givenNames);
+};
+
+export const nativeAmericanGivenNamesMale = () => {
+  const givenNames = [
+    'Achachak', 'Adahy', 'Ahanu', 'Akecheta', 'Alo', 'Apenimon', 'Ashkii', 'Atohi', 'Bemossed', 'Bidziil', 'Chatam', 'Chesmu', 'Cheveyo', 'Cheyenne', 'Chogan', 'Ciqala', 'Cochise', 'Colville', 'Dakota', 'Dichali', 'Dyami', 'Elan', 'Elsu', 'Enapay', 'Etchemin', 'Etu', 'Gad', 'Gawonii', 'Gosheven', 'Hania', 'Helaku', 'Hiamovi', 'Hinto', 'Holata', 'Honovi', 'Huritt', 'Illanipi', 'Jacy', 'Kaga', 'Kai', 'Kele', 'Kiyiyah', 'Knoton', 'Kohana', 'Koi', 'Lakota', 'Lallo', 'Lansa', 'Len', 'Lenno', 'Lokni', 'Lonato', 'Mahkah', 'Mahpee', 'Maska', 'Mikasi', 'Misu', 'Mohe', 'Mojag', 'Motega', 'Mukki', 'Nashoba', 'Nebraska', 'Nigan', 'Nikan', 'Nitis', 'Nocona', 'Nodin', 'Odakota', 'Ogima', 'Ohanzee', 'Ohio', 'Olathe', 'Omaha', 'Onawa', 'Oneida', 'Oni', 'Onida', 'Opa', 'Oya', 'Paco', 'Pallaton', 'Patamon', 'Patwin', 'Paytah', 'Pilan', 'Powa', 'Quanah', 'Qued', 'Quelatikan', 'Qunnoune', 'Rowtag', 'Sahale', 'Sakima', 'Shaman', 'Shilah', 'Taimah', 'Tansy', 'Tate', 'Tennessee', 'Thaonawyuthe', 'Tyee', 'Uhubitu', 'Unaduti', 'Unkas', 'Utatci', 'Waban', 'Wahid', 'Wamblee', 'Wapi', 'Wicasa', 'Wohehiv', 'Wuyi', 'Wynono', 'Wyome', 'Yahto', 'Yancy', 'Yas', 'Yotimo', 'Yottoko', 'Youkioma', 'Yuma', 'Yutu', 'Zitkaduta'
+  ];
+  
+  return getRandomName(givenNames);
+};
+
+export const norseGivenNamesMale = () => {
+  const givenNames = [
+    'Balder', 'Dana', 'Freyr', 'Gareth', 'Haldor', 'Hardicanute', 'Hogarth', 'Holm', 'Hsin', 'Hume', 'Kelby', 'Ker', 'Lamont', 'Magne', 'Oda', 'Oddvar', 'Odin', 'Ove', 'Quimby', 'Ragnar', 'Sutherland', 'Terje', 'Thurston', 'Ulfred', 'Unni', 'Volund', 'Yongvar'
+  ];
+  
+  return getRandomName(givenNames);
+};
+
+export const oldEnglishGivenNamesMale = () => {
+  const givenNames = [
+    'Ackley', 'Acton', 'Addison', 'Adger', 'Aiken', 'Alcott', 'Alder', 'Aldrich', 'Alfred', 'Allard', 'Allston', 'Alton', 'Alvertos', 'Alvin', 'Arledge', 'Arley', 'Arlo', 'Armstrong', 'Arundel', 'Ashley', 'Athelstan', 'Averill', 'Awarnach', 'Ballard', 'Bancroft', 'Barclay', 'Barnett', 'Beacher', 'Beardsley', 'Bede', 'Beldon', 'Bentley', 'Birch', 'Blake', 'Booker', 'Booth', 'Borden', 'Bradley', 'Brandon', 'Brent', 'Brewster', 'Brigham', 'Brinley', 'Brock', 'Bromley', 'Brook', 'Buckley', 'Bud', 'Burgess', 'Burne', 'Burt', 'Buster', 'Cade', 'Calder', 'Caldwell', 'Calhoun', 'Calvert', 'Cameron', 'Carden', 'Carleton', 'Carlyle', 'Carter', 'Carvell', 'Catcher', 'Cedric', 'Chad', 'Channing', 'Charles', 'Chevy', 'Chilton', 'Claiborne', 'Clark', 'Cleveland', 'Clifford', 'Colbert', 'Colborn', 'Colter', 'Cooper', 'Copper', 'Courtland', 'Crawford', 'Creighton', 'Cromwell', 'Currier', 'Dale', 'Darren', 'Darwin', 'Dayton', 'Dean', 'Digby', 'Donald', 'Dorset', 'Douglas', 'Dover', 'Doyle', 'Dudley', 'Duncan', 'Durward', 'Dustin', 'Dwight', 'Earl', 'Edgar', 'Edmund', 'Edsel', 'Edward', 'Edwin', 'Egerton', 'Elder', 'Eldon', 'Eldridge', 'Elmer', 'Elton', 'Emerson', 'Erskine', 'Esmond', 'Fairfax', 'Farley', 'Farrell', 'Fielding', 'Ford', 'Fuller', 'Fulton', 'Gilford', 'Goldman', 'Gordon', 'Gower', 'Gray', 'Hadden', 'Hadley', 'Hagley', 'Halbert', 'Haley', 'Hall', 'Hallam', 'Halsey', 'Hamilton', 'Hannibal', 'Hardy', 'Harlan', 'Harmon', 'Harry', 'Hastings', 'Hawk', 'Hawthorne', 'Hayden', 'Hayes', 'Haywood', 'Hedley', 'Hendrick', 'Henley', 'Herbert', 'Hilton', 'Holden', 'Hollis', 'Horton', 'Hudson', 'Hulk', 'Humphrey', 'Hunt', 'Hutton', 'Hyatt', 'Irving', 'Ives', 'Kenelm', 'Kenley', 'Kent', 'Kenton', 'Keyon', 'Kim', 'Kimberley', 'King', 'Kinsey', 'Kipp', 'Knox', 'Landon', 'Lang', 'Lawson', 'Layton', 'Lee', 'Legolas', 'Leland', 'Lincoln', 'Lind', 'Litton', 'Llewellyn', 'Lyndon', 'Lyre', 'Mace', 'Madison', 'Maitland', 'Makepeace', 'Manley', 'Manning', 'Marden', 'Marlow', 'Marsden', 'Mather', 'Mead', 'Millard', 'Miller', 'Milton', 'Morven', 'Nash', 'Nedes', 'Nelson', 'Newell', 'Newman', 'North', 'Nyle', 'Oakley', 'Ogden', 'Olin', 'Orman', 'Osbert', 'Osmond', 'Oswald', 'Oswin', 'Oxford', 'Packard', 'Palmer', 'Parker', 'Parr', 'Payton', 'Pell', 'Penley', 'Penn', 'Pierson', 'Preston', 'Putnam', 'Rabbit', 'Radcliff', 'Rae', 'Raleigh', 'Ralph', 'Ramsey', 'Ransford', 'Ransley', 'Ransom', 'Raven', 'Ravinger', 'Rawlins', 'Rayburn', 'Raymond', 'Read', 'Redford', 'Reginald', 'Remington', 'Rider', 'Ridley', 'Rigby', 'Ripley', 'Rishley', 'Robert', 'Rochester', 'Rodman', 'Rodney', 'Rowan', 'Rudyard', 'Rutherford', 'Rylan', 'Sandon', 'Sanford', 'Scott', 'Seabert', 'Seward', 'Shaw', 'Shelley', 'Shepherd', 'Sherlock', 'Sherman', 'Sherwood', 'Shipley', 'Siddel', 'Slade', 'Snowden', 'Speck', 'Spencer', 'Spike', 'Stanley', 'Stokley', 'Stroud', 'Studs', 'Tanner', 'Tate', 'Terrel', 'Thane', 'Thatcher', 'Thorne', 'Thorpe', 'Thurlow', 'Tomkin', 'Tostig', 'Townsend', 'Tranter', 'Trent', 'Tripp', 'Truman', 'Tye', 'Tyne', 'Wakefield', 'Wallace', 'Walton', 'Washington', 'Watson', 'Waverly', 'Wayland', 'Wayne', 'Webster', 'Wells', 'Wesley', 'West', 'Wetherby', 'Wheaton', 'Wheeler', 'Whit', 'Whitfield', 'Wilfred', 'Winifred', 'Winslow', 'Winston', 'Winter', 'Winthrop', 'Woodrow', 'Wright', 'Wyatt', 'Wylie', 'Wyndam', 'York'
+  ];
+  
+  return getRandomName(givenNames);
+};
+
+export const oldFrenchGivenNamesMale = () => {
+  const givenNames = [
+    'Anicetus', 'Bassett', 'Bayard', 'Bellamy', 'Boden', 'Borden', 'Boswell', 'Brigham', 'Cable', 'Chancellor', 'Channing', 'Chase', 'Chivalry', 'Corbin', 'Curtis', 'Darrell', 'Flannery', 'Fletcher', 'Forrest', 'Foster', 'Francis', 'Franklin', 'Jay', 'Jeffrey', 'Justin', 'Leroy', 'Lyle', 'Macy', 'Marlon', 'Maslin', 'Oriel', 'Percival', 'Prewitt', 'Quennel', 'Roy', 'Telo'
+  ];
+  
+  return getRandomName(givenNames);
+};
+
+export const oldGermanGivenNamesMale = () => {
+  const givenNames = [
+    'Adalbert', 'Adalgiso', 'Adelbert', 'Adelfried', 'Adelino', 'Adelmio', 'Adelmo', 'Ademaro', 'Ahren', 'Aksel', 'Alfonso', 'Alice', 'Aloysius', 'Anselm', 'Blaz', 'Carl', 'Carolus', 'Conrad', 'Engelbert', 'Ernest', 'Hamlet', 'Harold', 'Harvey', 'Jarvis', 'Leopold', 'Orlantha'
+  ];
+  
+  return getRandomName(givenNames);
+};
+
+export const oldNorseGivenNamesMale = () => {
+  const givenNames = [
+    'Alvis', 'Borg', 'Gunnar', 'Harper', 'Kirk', 'Leif', 'Njord', 'Olaf', 'Oliver', 'Oscar', 'Ronald', 'Roscoe', 'Sigurd', 'Sindri', 'Skipp', 'Thor', 'Turpin'
+  ];
+  
+  return getRandomName(givenNames);
+};
+
+export const persianGivenNamesMale = () => {
+  const givenNames = [
+    'Abtin', 'Ardalan', 'Atash', 'Azar', 'Bahram', 'Behdad', 'Behruz', 'Bijan', 'Borna', 'Caspar', 'Cyrus', 'Dareh', 'Darius', 'Davood', 'Eskander', 'Fazel', 'Firouz', 'Gaspar', 'Kaspar', 'Kaveh', 'Khorshed', 'Khortdad', 'Murdad', 'Nard', 'Persepolis', 'Rashne', 'Ruhollah', 'Sarosh', 'Siamak', 'Xerxes'
+  ];
+  
+  return getRandomName(givenNames);
+};
+
+export const polishGivenNamesMale = () => {
+  const givenNames = [
+    'Cerek', 'Dobry', 'Gerik', 'Jacek', 'Jarek', 'Lech', 'Ludoslaw', 'Magnar', 'Mandek', 'Marcin', 'Marek', 'Nelek', 'Olesia', 'Ryzard', 'Tanek', 'Urjasz', 'Waclaw', 'Walenty', 'Wlod', 'Wojtek', 'Zarek', 'Zygmunt'
+  ];
+  
+  return getRandomName(givenNames);
+};
+
+export const polynesianGivenNamesMale = () => {
+  const givenNames = [
+    'Kalani', 'Lauaki', 'Lisiate', 'Uhila', 'Ulani', 'Vala', 'Valu', 'Vea'
+  ];
+  
+  return getRandomName(givenNames);
+};
+
+export const russianGivenNamesMale = () => {
+  const givenNames = [
+    'Boris', 'Dobry', 'Dusan', 'Egor', 'Feodore', 'Fyodor', 'Gavrie', 'Gleb', 'Ivan', 'Konstantin', 'Kostas', 'Kostya', 'Lesta', 'Magar', 'Maksim', 'Mikhail', 'Miloslav', 'Nikhil', 'Oksana', 'Olga', 'Sacha', 'Sarkis', 'Semyon', 'Sergei', 'Timur', 'Ulan', 'Ustin', 'Vadim', 'Valeri', 'Valerian', 'Vanya', 'Venedict', 'Vladilen', 'Vlas', 'Wassily', 'Xenik', 'Yerik', 'Yevgeni', 'Yurchik', 'Yuri'
+  ];
+  
+  return getRandomName(givenNames);
+};
+
+export const sanskritGivenNamesMale = () => {
+  const givenNames = [
+    'Arjun', 'Jackal', 'Jafar', 'Krishna', 'Kumar', 'Mahatma', 'Nanda', 'Nataraj', 'Rajiv', 'Uttam', 'Vasu', 'Veda', 'Yogi'
+  ];
+  
+  return getRandomName(givenNames);
+};
+
+export const scandinavianGivenNamesMale = () => {
+  const givenNames = [
+    'Amund', 'Arvid', 'Bjorn', 'Canute', 'Carolus', 'Carson', 'Dag', 'Davin', 'Denholm', 'Dyre', 'Egil', 'Elvis', 'Eric', 'Filip', 'Fortinbras', 'Frey', 'Haakon', 'Hannes', 'Igor', 'Ingmar', 'Ingvar', 'Jarl', 'Kaj', 'Karr', 'Kelsey', 'Kerr', 'Kettil', 'Knute', 'Kolby', 'Lars', 'Ludvig', 'Lunt', 'Mats', 'Nels', 'Niels', 'Norb', 'Odell', 'Odo', 'Olan', 'Pal', 'Quinby', 'Rad', 'Rune', 'Skjøld', 'Snorre', 'Steinar', 'Stieran', 'Sven', 'Sølve', 'Thiassi', 'Thoralf', 'Thorin', 'Thorstein', 'Toste', 'Tryggvi', 'Ulffr', 'Ulick', 'Ull', 'Ulrik', 'Ulster', 'Ultar', 'Vali', 'Vannevar', 'Vanslow', 'Vidar', 'Vidkun', 'Viggo', 'Viljalmr', 'Viljo', 'Von', 'Waage', 'Wray', 'Zvi'
+  ];
+  
+  return getRandomName(givenNames);
+};
+
+export const scottishGivenNamesMale = () => {
+  const givenNames = [
+    'Abhorson', 'Adger', 'Akira', 'Alastair', 'Athol', 'Caithness', 'Calen', 'Camden', 'Donalbain', 'Drummond', 'Duffy', 'Edme', 'Hamish', 'Ian', 'Kai', 'Kameron', 'Kane', 'Keith', 'Kelvin', 'Kendrick', 'Kenneth', 'Kesley', 'Kester', 'Killian', 'Kincaid', 'Kyle', 'Lachlan', 'Laird', 'Leith', 'Lennox', 'Leslie', 'Logan', 'Lundy', 'Macbeth', 'Macduff', 'Mackinley', 'Maclean', 'Malcom', 'Maxwell', 'Mcaffie', 'Mccauley', 'McKinley', 'Morrison', 'Murdock', 'Nairne', 'Nolan', 'Norval', 'Ogilvy', 'Oran', 'Paden', 'Polk', 'Rab', 'Rosling', 'Ross', 'Scully', 'Stratton', 'Tavis', 'Teague', 'Tearlach', 'Tormod', 'Tremayne', 'Updike', 'Wite'
+  ];
+  
+  return getRandomName(givenNames);
+};
+export const slavicGivenNamesMale = () => {
+  const givenNames = [
+    'Casimir', 'Duscha', 'Evzen', 'Gavril', 'Ilie', 'Jan', 'Kostya', 'Ludovic', 'Marót', 'Melik', 'Mete', 'Miroslav', 'Mladen', 'Oleg', 'Ondrea', 'Pavel', 'Pavlos', 'Pavo', 'Peja', 'Polixenes', 'Polk', 'Radman', 'Reza', 'Vaclav', 'Vas', 'Vencel', 'Vlade', 'Vladimir', 'Volya', 'Wenceslaus', 'Wieslav', 'Ziven', 'Zorro', 'Zorya', 'Zydrunas'
+  ];
+  
+  return getRandomName(givenNames);
+};
+
+export const spanishGivenNamesMale = () => {
+  const givenNames = [
+    'Agapetus', 'Aimon', 'Beltran', 'Berto', 'Bronco', 'Cipriano', 'Cisco', 'Cortez', 'Cruz', 'Cuba', 'Dario', 'Desiderio', 'Diego', 'Dimos', 'Fanuco', 'Federico', 'Fraco', 'Francisco', 'Frisco', 'Gervasio', 'Gig', 'Gonzalo', 'Guido', 'Guillermo', 'Hernan', 'Hilario', 'Ignado', 'Isidro', 'Jaguar', 'Jair', 'Javier', 'Jerrold', 'Juan', 'Kiki', 'Larenzo', 'Lisandro', 'Loredo', 'Lorenzo', 'Macario', 'Malvolio', 'Manuel', 'Marjun', 'Montana', 'Montego', 'Montel', 'Montenegro', 'Nasario', 'Nemesio', 'Neper', 'Neron', 'Nicandro', 'Noe', 'Oihane', 'Oleos', 'Olindo', 'Onofre', 'Ora', 'Oro', 'Ovidio', 'Pablo', 'Paco', 'Pancho', 'Pedro', 'Ponce', 'Porfio', 'Quico', 'Quinto', 'Quiqui', 'Quito', 'Reyes', 'Reynaldo', 'Rico', 'Rio', 'Rogelio', 'Ryo', 'Sagaz', 'Salvador', 'Santiago', 'Saturnin', 'Seferino', 'Selestino', 'Senon', 'Sierra', 'Tajo', 'Urvano', 'Vegas', 'Venacio', 'Vicente', 'Vidal', 'Xabat', 'Xalvador', 'Xaver', 'Xaverius', 'Xavier', 'Xavion', 'Xeres', 'Ximen', 'Zelipe', 'Zenon'
+  ];
+  
+  return getRandomName(givenNames);
+};
+
+export const swahiliGivenNamesMale = () => {
+  const givenNames = [
+    'Jabari', 'Jelani', 'Khairi', 'Rashid'
+  ];
+  
+  return getRandomName(givenNames);
+};
+
+export const swedishGivenNamesMale = () => {
+  const givenNames = [
+    'Anderson', 'Axel', 'Balder', 'Beck', 'Burr', 'Fiske', 'Gustave', 'Per', 'Staffan'
+  ];
+  
+  return getRandomName(givenNames);
+};
+
+export const teutonicGivenNamesMale = () => {
+  const givenNames = [
+    'Kem', 'Orinda', 'Paxton', 'Raeburn', 'Renard', 'Roald', 'Sigfried', 'Sigmund', 'Stewart', 'Theodoric', 'Thierry', 'Thurborn', 'Udo', 'Uland', 'Ulf', 'Walden', 'Waldo', 'Wendell', 'Werner', 'Wilbur', 'Willard', 'William', 'Wolfgang', 'Wolfram', 'Yves'
+  ];
+  
+  return getRandomName(givenNames);
+};
+
+export const turkishGivenNamesMale = () => {
+  const givenNames = [
+    'Berk', 'Muzaffer', 'Nedim', 'Nesim', 'Nesip', 'Okan', 'Olcay', 'Onan', 'Ozan', 'Ozaner', 'Sadi', 'Safak', 'Selim', 'Semih', 'Sencer', 'Sevilin', 'Sinan', 'Taner', 'Tarkan', 'Tecer', 'Tercan', 'Tezer', 'Tuncer', 'Ufuk', 'Ugur', 'Ulucan', 'Yigit', 'Yucel', 'Zafer', 'Zeki', 'Zeren'
+  ];
+  
+  return getRandomName(givenNames);
+};
+
+export const vietnameseGivenNamesMale = () => {
+  const givenNames = [
+    'Chung', 'Dong', 'Duy', 'Gan', 'Keemo', 'Lam', 'Laman', 'Long', 'Phuoc', 'Phuong', 'Quan', 'Quan Van', 'Quang Tu', 'Ritchell', 'So', 'Tai', 'Thai', 'Thong', 'Tinh', 'Tong', 'Viet', 'Vui', 'Yen'
+  ];
+  
+  return getRandomName(givenNames);
+};
+
+export const welshGivenNamesMale = () => {
+  const givenNames = [
+    'Arthur', 'Avon', 'Baden', 'Barry', 'Bowen', 'Bronwen', 'Cade', 'Cedric', 'Clyde', 'Conway', 'Denzel', 'Deverell', 'Dewey', 'Drew', 'Dylan', 'Emrick', 'Floyd', 'Fluellen', 'Gavin', 'Gawain', 'Griffin', 'Griffith', 'Idris', 'Kai', 'Karey', 'Kay', 'Keith', 'Kenn', 'Kenrich', 'Mabon', 'Main', 'Olwen', 'Parry', 'Pembroke', 'Reese', 'Rondell', 'Sayer', 'Sonnagh', 'Tathal', 'Tathan', 'Teulyddog', 'Tewdwr', 'Trahaearn', 'Tudfwlch', 'Tudur', 'Wren', 'Ysgarran'
+  ];
+  
+  return getRandomName(givenNames);
+};
+
+export const yiddishGivenNamesMale = () => {
+  const givenNames = [
+    'Gershon', 'Lantz', 'Zaide', 'Zalman', 'Zindel'
+  ];
+  
+  return getRandomName(givenNames);
+};
