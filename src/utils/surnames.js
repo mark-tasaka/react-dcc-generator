@@ -133,3 +133,88 @@ export const dutchSurnames = () => {
 
   return getRandomName(surname);
 };
+
+export const englishSurnames = () => {
+  const surname = [
+    'Smith', 'Jones', 'Taylor', 'Williams', 'Brown', 'Davies', 'Evans', 'Wilson', 'Thomas', 'Roberts',
+    'Johnson', 'Lewis', 'Walker', 'Robinson', 'Wood', 'Thompson', 'White', 'Watson', 'Jackson', 'Wright',
+    'Green', 'Harris', 'Cooper', 'King', 'Lee', 'Martin', 'Clarke', 'James', 'Morgan', 'Hughes',
+    'Edwards', 'Hill', 'Moore', 'Clark', 'Harrison', 'Scott', 'Young', 'Morris', 'Hall', 'Ward',
+    'Turner', 'Carter', 'Phillips', 'Mitchell', 'Patel', 'Adams', 'Campbell', 'Anderson', 'Allen', 'Cook',
+    'Bailey', 'Parker', 'Miller', 'Davis', 'Murphy', 'Price', 'Bell', 'Baker', 'Griffiths', 'Kelly',
+    'Simpson', 'Marshall', 'Collins', 'Bennett', 'Cox', 'Richardson', 'Fox', 'Gray', 'Rose', 'Chapman',
+    'Hunt', 'Robertson', 'Shaw', 'Reynolds', 'Lloyd', 'Ellis', 'Richards', 'Russell', 'Wilkinson', 'Khan',
+    'Graham', 'Stewart', 'Reid', 'Murray', 'Powell', 'Palmer', 'Holmes', 'Rogers', 'Stevens', 'Walsh',
+    'Hunter', 'Thomson', 'Matthews', 'Ross', 'Owen', 'Mason', 'Knight', 'Kennedy', 'Butler', 'Saunders'
+  ];
+
+  return getRandomName(surname);
+};
+
+export const finnishSurnames = () => {
+  const surname = [
+    'Korhonen', 'Virtanen', 'Mäkinen', 'Nieminen', 'Mäkelä', 'Hämäläinen', 'Laine', 'Heikkinen', 'Koskinen', 'Järvinen',
+    'Lehtonen', 'Saarinen', 'Hakkarainen', 'Jokinen', 'Rantanen', 'Tuominen', 'Kinnunen', 'Salonen', 'Lahtinen', 'Karjalainen',
+    'Mattila', 'Turunen', 'Halonen', 'Martikainen', 'Rautiainen', 'Koskela', 'Lahti', 'Toivonen', 'Wikström', 'Hiltunen',
+    'Pitkänen', 'Hautala', 'Kurki', 'Manninen', 'Savolainen', 'Väisänen', 'Rajala', 'Määttä', 'Heinonen', 'Salminen',
+    'Miettinen', 'Räsänen', 'Kilpinen', 'Pellinen', 'Ahonen', 'Ranta', 'Niskanen', 'Kallio', 'Johansson', 'Partanen',
+    'Pulkkinen', 'Koivisto', 'Kettunen', 'Lindström', 'Andersson', 'Ikonen', 'Lehto', 'Huhtala', 'Niemi', 'Rinne',
+    'Huttunen', 'Väänänen', 'Alakoski', 'Holopainen', 'Mustonen', 'Tamminen', 'Kivelä', 'Metsä', 'Kärkkäinen', 'Aaltonen',
+    'Huhtanen', 'Sormunen', 'Paavola', 'Kokkonen', 'Laakso', 'Kuusisto', 'Laaksonen', 'Eskola', 'Harju', 'Ojala',
+    'Viitala', 'Aalto', 'Haapala', 'Moilanen', 'Peltonen', 'Honkanen', 'Hänninen', 'Sipilä', 'Vanhanen', 'Vartiainen',
+    'Lehti', 'Metsälä', 'Ruotsalainen', 'Kaipainen', 'Koskela', 'Ylönen', 'Pakarinen', 'Rämö', 'Leskinen', 'Väkeväinen'
+  ];
+
+  return getRandomName(surname);
+};
+
+export const frenchSurnames = () => {
+  const surname = [
+    'Martin', 'Bernard', 'Dubois', 'Thomas', 'Robert', 'Petit', 'Durand', 'Leroy', 'Moreau', 'Simon',
+    'Laurent', 'Lefebvre', 'Michel', 'Garcia', 'David', 'Bertrand', 'Roux', 'Vincent', 'Fournier', 'Morel',
+    'Girard', 'Andre', 'Lefevre', 'Mercier', 'Dupont', 'Lambert', 'Bonnet', 'Francois', 'Martinez', 'Legrand',
+    'Garnier', 'Faure', 'Rousseau', 'Blanc', 'Guerin', 'Muller', 'Henry', 'Roussel', 'Nicolas', 'Perrin',
+    'Morin', 'Mathieu', 'Clement', 'Gauthier', 'Dumont', 'Lopez', 'Fontaine', 'Chevalier', 'Robin', 'Masson',
+    'Sanchez', 'Gerard', 'Nguyen', 'Boyer', 'Denis', 'Lemaire', 'Duval', 'Morvan', 'Fleury', 'Riviere',
+    'Lucas', 'Barbier', 'Arnaud', 'Martinez', 'Gerard', 'Roche', 'Renard', 'Brunet', 'Joly', 'Meunier',
+    'Lacroix', 'Perez', 'Boucher', 'Moulin', 'Berger', 'Leclerc', 'Lecomte', 'Prevost', 'Gaillard', 'Carpentier',
+    'Schmitt', 'Rey', 'Colin', 'Vidal', 'Caron', 'Picard', 'Roger', 'Fabre', 'Aubert', 'Lemoine',
+    'Renaud', 'Dufour', 'Chevallier', 'Chapuis', 'Rey', 'Menard', 'Roy', 'Lucas', 'Millet', 'Marchand'
+  ];
+
+  return getRandomName(surname);
+};
+
+export const galicianSurnames = () => {
+  const surname = [
+    'González', 'Rodríguez', 'Fernández', 'López', 'Martínez', 'Pérez', 'García', 'Sánchez', 'Romero', 'Álvarez',
+    'Vázquez', 'Ramos', 'Castro', 'Blanco', 'Suárez', 'Varela', 'Iglesias', 'Silva', 'Otero', 'Martín',
+    'Núñez', 'Freire', 'Souto', 'Pena', 'Lamas', 'Vidal', 'Pose', 'Vigo', 'Carballo', 'Rei',
+    'Domínguez', 'Gómez', 'Rial', 'Casas', 'Barros', 'Montero', 'Caamaño', 'Campos', 'Couselo', 'Vila',
+    'Lago', 'Costa', 'Regueira', 'Soto', 'Pardo', 'Hermida', 'Carrera', 'Vilar', 'Leira', 'Eiras',
+    'Aldea', 'Bouza', 'Ferreiro', 'Amado', 'Fuentes', 'Conde', 'Ferreira', 'Novo', 'Franco', 'Seoane',
+    'Vales', 'Carballeira', 'Doval', 'Estévez', 'Garrido', 'Gesto', 'Losada', 'Mato', 'Outeiro', 'Penedo',
+    'Rama', 'Rosende', 'Saa', 'Taboada', 'Valcárcel', 'Villar', 'Vixide', 'Abad', 'Abraira', 'Agrelo',
+    'Alonso', 'Ameneiro', 'Araújo', 'Ballesteros', 'Barbeito', 'Barreal', 'Bermúdez', 'Bouzas', 'Buceta', 'Bustelo',
+    'Calvo', 'Casal', 'Cerdeira', 'Cortés', 'Couto', 'Cristal', 'Diz', 'Fandiño', 'Filgueira', 'Grandío'
+  ];
+
+  return getRandomName(surname);
+};
+
+export const germanSurnames = () => {
+  const surname = [
+    'Müller', 'Schmidt', 'Schneider', 'Fischer', 'Weber', 'Meyer', 'Wagner', 'Becker', 'Schulz', 'Hoffmann',
+    'Schäfer', 'Koch', 'Bauer', 'Richter', 'Klein', 'Wolf', 'Schröder', 'Neumann', 'Schwarz', 'Zimmermann',
+    'Braun', 'Krüger', 'Hofmann', 'Hartmann', 'Lange', 'Schmitt', 'Werner', 'Schmitz', 'Krause', 'Meier',
+    'Lehmann', 'Schmid', 'Schulze', 'Maier', 'Köhler', 'Herrmann', 'König', 'Walter', 'Mayer', 'Huber',
+    'Kaiser', 'Fuchs', 'Peters', 'Lang', 'Scholz', 'Möller', 'Weiß', 'Jung', 'Hahn', 'Schubert',
+    'Vogel', 'Friedrich', 'Keller', 'Günther', 'Frank', 'Berger', 'Winkler', 'Roth', 'Beck', 'Lorenz',
+    'Baumann', 'Franke', 'Albrecht', 'Ludwig', 'Martin', 'Schumacher', 'Krämer', 'Vogt', 'Stein', 'Jäger',
+    'Otto', 'Sommer', 'Groß', 'Seidel', 'Heinrich', 'Brandt', 'Haas', 'Schreiber', 'Graf', 'Schulte',
+    'Dietrich', 'Ziegler', 'Kuhn', 'Kühn', 'Pohl', 'Engel', 'Horn', 'Busch', 'Bergmann', 'Thomas',
+    'Voigt', 'Sauer', 'Arnold', 'Wolff', 'Pfeiffer', 'Weiss', 'Riedel', 'Seifert', 'Winter', 'Kraus'
+  ];
+
+  return getRandomName(surname);
+};
