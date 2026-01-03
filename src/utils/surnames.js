@@ -120,7 +120,127 @@ export const hungarianSurnames = () => {
 
 export const indianSurnames = () => {
   const surname = [
-    'Acharya', 'Agarwal', 'Agate', 'Aggarwal', 'Agrawal', 'Ahluwalia', 'Ahuja', 'Amble', 'Anand', 'Andra', 'Anne', 'Apte', 'Arora', 'Arya', 'Atwal', 'Aurora', 'Babu', 'Badal', 'Badami', 'Bahl', 'Bahri', 'Bail', 'Bains', 'Bajaj', 'Bajwa', 'Bakshi', 'Bal', 'Bala', 'Bala', 'Balakrishnan', 'Balan', 'Balasubramanian', 'Balay', 'Bali', 'Bandi', 'Banerjee', 'Banik', 'Bansal', 'Barad', 'Barad', 'Baral', 'Baria', 'Barman', 'Basak', 'Bassi', 'Basu', 'Bath', 'Batra', 'Batta', 'Bava', 'Bawa', 'Bedi', 'Behl', 'Ben', 'Bera', 'Bhagat', 'Bhakta', 'Bhalla', 'Bhandari', 'Bhardwaj', 'Bhargava', 'Bhasin', 'Bhat', 'Bhatia', 'Bhatnagar', 'Bhatt', 'Bhattacharyya', 'Bhatti', 'Bhavsar', 'Bir', 'Biswas', 'Boase', 'Bobal', 'Bora', 'Bora', 'Borah', 'Borde', 'Borra', 'Bose', 'Brahmbhatt', 'Brar', 'Buch', 'Buch', 'Bumb', 'Butala', 'Chacko', 'Chad', 'Chada', 'Chadha', 'Chahal', 'Chakrabarti', 'Chakraborty', 'Chana', 'Chand', 'Chanda', 'Chander', 'Chandra', 'Chandran', 'Char', 'Chatterjee', 'Chaudhari', 'Chaudhary', 'Chaudhry', 'Chaudhuri', 'Chaudry', 'Chauhan', 'Chawla', 'Cheema', 'Cherian', 'Chhabra', 'Chokshi', 'Chopra', 'Choudhary', 'Choudhry', 'Choudhury', 'Chowdhury', 'Comar', 'Contractor', 'D\'Alia', 'Dada', 'Dalal', 'Dani', 'Dar', 'Dara', 'Dara', 'Das', 'Dasgupta', 'Dash', 'Dass', 'Date', 'Datta', 'Dave', 'Dayal', 'De', 'Deep', 'Deo', 'Deol', 'Desai', 'Deshmukh', 'Deshpande', 'Devan', 'Devi', 'Dewan', 'Dey', 'Dhaliwal', 'Dhar', 'Dhar', 'Dhawan', 'Dhillon', 'Dhingra', 'Din', 'Divan', 'Dixit', 'Doctor', 'Dora', 'Doshi', 'Dua', 'Dube', 'Dubey', 'Dugal', 'Dugar', 'Dugar', 'Dutt', 'Dutta', 'Dyal', 'Edwin', 'Gaba', 'Gade', 'Gala', 'Gandhi', 'Ganesan', 'Ganesh', 'Ganguly', 'Gara', 'Garde', 'Garg', 'Gera', 'Ghose', 'Ghosh', 'Gill', 'Goda', 'Goel', 'Gokhale', 'Gola', 'Gole', 'Golla', 'Gopal', 'Goswami', 'Gour', 'Goyal', 'Grewal', 'Grover', 'Guha', 'Gulati', 'Gupta', 'Halder', 'Handa', 'Hans', 'Hari', 'Hayer', 'Hayre', 'Hegde', 'Hora', 'Issac', 'Iyengar', 'Iyer', 'Jaggi', 'Jain', 'Jani', 'Jayaraman', 'Jha', 'Jhaveri', 'Johal', 'Joshi', 'Kadakia', 'Kade', 'Kakar', 'Kala', 'Kala', 'Kala', 'Kale', 'Kalita', 'Kalla', 'Kamdar', 'Kanda', 'Kannan', 'Kant', 'Kapadia', 'Kapoor', 'Kapur', 'Kar', 'Kara', 'Karan', 'Kari', 'Karnik', 'Karpe', 'Kashyap', 'Kata', 'Kaul', 'Kaur', 'Keer', 'Keer', 'Khalsa', 'Khanna', 'Khare', 'Khatri', 'Khosla', 'Khurana', 'Kibe', 'Kohli', 'Konda', 'Korpal', 'Koshy', 'Kota', 'Kothari', 'Krish', 'Krishna', 'Krishnamurthy', 'Krishnan', 'Kulkarni', 'Kumar', 'Kumer', 'Kunda', 'Kurian', 'Kuruvilla', 'Lad', 'Lad', 'Lal', 'Lala', 'Lall', 'Lalla', 'Lanka', 'Lata', 'Loke', 'Loyal', 'Luthra', 'Madan', 'Madan', 'Magar', 'Mahajan', 'Mahal', 'Maharaj', 'Majumdar', 'Malhotra', 'Mall', 'Mallick', 'Mammen', 'Mand', 'Manda', 'Mandal', 'Mander', 'Mane', 'Mangal', 'Mangat', 'Mani', 'Mani', 'Mann', 'Mannan', 'Manne', 'Master', 'Mathai', 'Mathur', 'Matthai', 'Meda', 'Mehan', 'Mehra', 'Mehrotra', 'Mehta', 'Meka', 'Memon', 'Menon', 'Merchant', 'Minhas', 'Mishra', 'Misra', 'Mistry', 'Mital', 'Mitra', 'Mittal', 'Mitter', 'Modi', 'Mody', 'Mohan', 'Mohanty', 'Morar', 'More', 'Mukherjee', 'Mukhopadhyay', 'Muni', 'Munshi', 'Murthy', 'Murty', 'Mutti', 'Nadig', 'Nadkarni', 'Nagar', 'Nagarajan', 'Nagi', 'Nagy', 'Naidu', 'Naik', 'Nair', 'Nanda', 'Narain', 'Narang', 'Narasimhan', 'Narayan', 'Narayanan', 'Narula', 'Natarajan', 'Nath', 'Natt', 'Nayak', 'Nayar', 'Nazareth', 'Nigam', 'Nori', 'Oak', 'Om', 'Oommen', 'Oza', 'Padmanabhan', 'Pai', 'Pal', 'Palan', 'Pall', 'Palla', 'Palla', 'Panchal', 'Pandey', 'Pandit', 'Pandya', 'Pant', 'Parekh', 'Parikh', 'Parmar', 'Parmer', 'Parsa', 'Patel', 'Pathak', 'Patil', 'Patla', 'Patla', 'Pau', 'Peri', 'Pillai', 'Pillay', 'Pingle', 'Prabhakar', 'Prabhu', 'Pradhan', 'Prakash', 'Prasad', 'Prashad', 'Puri', 'Purohit', 'Radhakrishnan', 'Raghavan', 'Rai', 'Raj', 'Raja', 'Rajagopal', 'Rajagopalan', 'Rajan', 'Raju', 'Ram', 'Rama', 'Ramachandran', 'Ramakrishnan', 'Raman', 'Ramanathan', 'Ramaswamy', 'Ramesh', 'Rana', 'Randhawa', 'Ranganathan', 'Rao', 'Rastogi', 'Ratta', 'Rattan', 'Ratti', 'Rau', 'Raval', 'Ravel', 'Ravi', 'Ray', 'Reddy', 'Rege', 'Rout', 'Roy', 'Sabharwal', 'Sachar', 'Sachdev', 'Sachdeva', 'Sagar', 'Saha', 'Sahni', 'Sahota', 'Saini', 'Salvi', 'Sama', 'Sami', 'Sampath', 'Samra', 'Sandal', 'Sandhu', 'Sane', 'Sangha', 'Sanghvi', 'Sani', 'Sankar', 'Sankaran', 'Sant', 'Saraf', 'Saran', 'Sarin', 'Sarkar', 'Sarma', 'Sarna', 'Sarraf', 'Sastry', 'Sathe', 'Savant', 'Sawhney', 'Saxena', 'Sehgal', 'Sekhon', 'Sem', 'Sen', 'Sengupta', 'Seshadri', 'Seth', 'Sethi', 'Setty', 'Sha', 'Shah', 'Shan', 'Shankar', 'Shanker', 'Sharaf', 'Sharma', 'Shenoy', 'Shere', 'Sheth', 'Shetty', 'Shroff', 'Shukla', 'Sibal', 'Sidhu', 'Singh', 'Singhal', 'Sinha', 'Sodhi', 'Solanki', 'Som', 'Soman', 'Soni', 'Sood', 'Sridhar', 'Srinivas', 'Srinivasan', 'Srivastava', 'Subramaniam', 'Subramanian', 'Sule', 'Sundaram', 'Sunder', 'Sur', 'Sura', 'Suresh', 'Suri', 'Swaminathan', 'Swamy', 'Tailor', 'Tak', 'Talwar', 'Tandon', 'Taneja', 'Tank', 'Tara', 'Tata', 'Tella', 'Thaker', 'Thakkar', 'Thakur', 'Thaman', 'Tiwari', 'Toor', 'Tripathi', 'Trivedi', 'Upadhyay', 'Uppal', 'Vaidya', 'Vala', 'Varghese', 'Varkey', 'Varma', 'Varty', 'Varughese', 'Vasa', 'Venkataraman', 'Venkatesh', 'Verma', 'Vig', 'Virk', 'Viswanathan', 'Vohra', 'Vora', 'Vyas', 'Wable', 'Wadhwa', 'Wagle', 'Wali', 'Wali', 'Walia', 'Walla', 'Warrior', 'Wason', 'Yadav', 'Yogi', 'Yohannan', 'Zacharia', 'Zachariah'
+    'Agarwal', 'Aggarwal', 'Agrawal', 'Ahuja', 'Anand', 'Arora', 'Bajaj', 
+    'Banerjee', 'Bansal', 'Batra', 'Bedi', 'Bhat', 'Bhatia', 'Bhatt', 
+    'Bhattacharya', 'Bose', 'Chakraborty', 'Chandra', 'Chatterjee', 'Chauhan', 
+    'Chawla', 'Chopra', 'Das', 'Dasgupta', 'Dave', 'Desai', 'Dey', 'Dhawan', 
+    'Dixit', 'Doshi', 'Dubey', 'Dutta', 'Gandhi', 'Ganguly', 'Garg', 'Ghosh', 
+    'Gill', 'Goel', 'Goyal', 'Grewal', 'Grover', 'Guha', 'Gupta', 'Hegde', 
+    'Iyengar', 'Iyer', 'Jain', 'Jha', 'Joshi', 'Kakar', 'Kapoor', 'Kapur', 
+    'Kaul', 'Kaur', 'Khanna', 'Khatri', 'Khosla', 'Khurana', 'Kohli', 'Kulkarni', 
+    'Kumar', 'Lal', 'Mahajan', 'Malhotra', 'Mathur', 'Mehra', 'Mehta', 'Menon', 
+    'Mishra', 'Mistry', 'Mittal', 'Modi', 'Mukherjee', 'Nair', 'Naidu', 'Naik', 
+    'Narang', 'Narayan', 'Nath', 'Nayak', 'Pandey', 'Pant', 'Parekh', 'Parikh', 
+    'Patel', 'Pathak', 'Patil', 'Pillai', 'Prasad', 'Puri', 'Rai', 'Rajan', 
+    'Raju', 'Ramesh', 'Rana', 'Rao', 'Rastogi', 'Ray', 'Reddy', 'Roy', 'Sahni', 
+    'Saini', 'Saxena', 'Sen', 'Sethi', 'Shah', 'Shankar', 'Sharma', 'Shetty', 
+    'Shukla', 'Singh', 'Singhal', 'Sinha', 'Srivastava', 'Subramanian', 'Tandon', 
+    'Thakur', 'Tiwari', 'Trivedi', 'Varma', 'Verma', 'Yadav'
+  ];
+
+  return getRandomName(surname);
+};
+
+export const irishSurnames = () => {
+  const surname = [
+    'Murphy', 'Kelly', 'O\'Sullivan', 'Walsh', 'Smith', 'O\'Brien', 'Byrne', 
+    'O\'Connor', 'Ryan', 'O\'Neill', 'O\'Reilly', 'Doyle', 'McCarthy', 'Gallagher', 
+    'O\'Doherty', 'Kennedy', 'Lynch', 'Murray', 'Quinn', 'Moore', 'McLaughlin', 
+    'O\'Carroll', 'Connolly', 'Daly', 'O\'Connell', 'Wilson', 'Dunne', 'Clarke', 
+    'Fitzgerald', 'McDonald', 'McCarthy', 'O\'Mahony', 'O\'Callaghan', 'O\'Shea', 
+    'Healy', 'O\'Keeffe', 'Flanagan', 'Nolan', 'Kavanagh', 'Power', 'McGrath', 
+    'Moran', 'Brady', 'Stewart', 'Casey', 'Foley', 'Fitzpatrick', 'O\'Leary', 
+    'McDermott', 'O\'Driscoll', 'Duffy', 'O\'Donnell', 'Murphy', 'Buckley', 
+    'O\'Callaghan', 'Cullen', 'Griffin', 'O\'Shaughnessy', 'Higgins', 'Brennan', 
+    'O\'Brien', 'Sheridan', 'Whelan', 'Hayes', 'Donovan', 'Sweeney', 'Guinness', 
+    'Barry', 'Cunningham', 'Farrell', 'O\'Rourke', 'Boyle', 'O\'Sullivan', 
+    'Molloy', 'Curran', 'O\'Hara', 'Keane', 'Magee', 'McMahon', 'Lawlor', 
+    'McCormack', 'Hogan', 'McKenna', 'Regan', 'Costello', 'Joyce', 'Carroll', 
+    'Cleary', 'Clancy', 'Tierney', 'Crowley', 'Horan', 'Lyons', 'O\'Gorman', 
+    'Sheehan', 'Collins', 'Maher', 'MacCarthy', 'Sheehy', 'O\'Dwyer', 'Leonard', 
+    'Madden', 'Fox', 'Slattery', 'Sullivan'
+  ];
+
+  return getRandomName(surname);
+};
+
+export const italianSurnames = () => {
+  const surname = [
+    'Rossi', 'Russo', 'Ferrari', 'Esposito', 'Bianchi', 'Romano', 'Colombo', 
+    'Ricci', 'Marino', 'Greco', 'Bruno', 'Gallo', 'Conti', 'De Luca', 'Mancini', 
+    'Costa', 'Giordano', 'Rizzo', 'Lombardi', 'Moretti', 'Barbieri', 'Fontana', 
+    'Santoro', 'Mariani', 'Rinaldi', 'Caruso', 'Ferrara', 'Galli', 'Martini', 
+    'Leone', 'Longo', 'Gentile', 'Martinelli', 'Vitale', 'Lombardo', 'Serra', 
+    'Coppola', 'De Santis', 'D\'Angelo', 'Marchetti', 'Parisi', 'Villa', 'Conte', 
+    'Ferretti', 'Sala', 'De Angelis', 'Hernandez', 'Pellegrini', 'Palumbo', 
+    'Benedetti', 'Fabbri', 'Caputo', 'Rossini', 'D\'Amico', 'Messina', 'Montanari', 
+    'Grassi', 'Monti', 'Silvestri', 'Cattaneo', 'Barone', 'Negri', 'Carbone', 
+    'Fiore', 'Donati', 'Milani', 'Valentini', 'Pagano', 'Amato', 'Orlando', 
+    'Testa', 'Pellegrino', 'Sorrentino', 'D\'Andrea', 'Basile', 'Neri', 'Castelli', 
+    'Bianco', 'Farina', 'Morelli', 'Sanna', 'Ferraro', 'Bernardi', 'Gatti', 
+    'Galdi', 'Bellini', 'Guerra', 'Ferri', 'Martino', 'Cervi', 'Valentino', 
+    'Rosso', 'Riva', 'Sartori', 'Massa', 'Rota', 'Sala', 'Battaglia', 'Piazza', 
+    'Capello', 'Fioretti'
+  ];
+
+  return getRandomName(surname);
+};
+
+export const japaneseSurnames = () => {
+  const surname = [
+    'Sato', 'Suzuki', 'Takahashi', 'Tanaka', 'Watanabe', 'Ito', 'Yamamoto', 
+    'Nakamura', 'Kobayashi', 'Saito', 'Kato', 'Yoshida', 'Yamada', 'Sasaki', 
+    'Yamaguchi', 'Matsumoto', 'Inoue', 'Kimura', 'Hayashi', 'Shimizu', 'Yamazaki', 
+    'Mori', 'Abe', 'Ikeda', 'Hashimoto', 'Yamashita', 'Ishikawa', 'Nakajima', 
+    'Maeda', 'Fujita', 'Ogawa', 'Goto', 'Okada', 'Hasegawa', 'Murakami', 'Kondo', 
+    'Ishii', 'Sakai', 'Sakamoto', 'Endo', 'Aoki', 'Fujii', 'Nishimura', 'Fukuda', 
+    'Ota', 'Miura', 'Fujiwara', 'Okamoto', 'Matsuda', 'Nakagawa', 'Nakano', 
+    'Harada', 'Ono', 'Tamura', 'Takeuchi', 'Kaneko', 'Wada', 'Nakayama', 'Ishida', 
+    'Ueda', 'Morita', 'Hara', 'Shibata', 'Sakata', 'Kudo', 'Yokoyama', 'Miyazaki', 
+    'Miyamoto', 'Uchida', 'Takagi', 'Ando', 'Taniguchi', 'Ohno', 'Maruyama', 
+    'Imai', 'Takeda', 'Fujimoto', 'Takahata', 'Asano', 'Kubo', 'Kawai', 'Tsuchiya', 
+    'Yamane', 'Yoshikawa', 'Matsui', 'Takano', 'Nomura', 'Arai', 'Iwasaki', 
+    'Sakurai', 'Sugiyama', 'Masuda', 'Miyata', 'Araki', 'Oshima', 'Nagata', 
+    'Kono', 'Okazaki', 'Hiramatsu', 'Makino', 'Morimoto', 'Tsuji'
+  ];
+
+  return getRandomName(surname);
+};
+
+export const jewishSurnames = () => {
+  const surname = [
+    'Cohen', 'Levy', 'Miller', 'Goldberg', 'Rosen', 'Klein', 'Schwartz', 
+    'Friedman', 'Goldstein', 'Silver', 'Rosenberg', 'Katz', 'Weiss', 'Brown', 
+    'Gross', 'Green', 'Wolf', 'Stern', 'Kaplan', 'Shapiro', 'Hoffman', 'Davis', 
+    'Newman', 'Goldman', 'Rubin', 'Blum', 'Adler', 'Berman', 'Weinstein', 
+    'Rosenthal', 'Feldman', 'Abrams', 'Fischer', 'Eisenberg', 'Bernstein', 
+    'Gutman', 'Hirsch', 'Levi', 'Jacobson', 'Goldsmith', 'Silverman', 'Stein', 
+    'Horowitz', 'Greenberg', 'Rosenberg', 'Kramer', 'Mendelsohn', 'Epstein', 
+    'Schneider', 'Abraham', 'Kaufman', 'Goldfarb', 'Rosenstein', 'Zimmerman', 
+    'Weinberg', 'Roth', 'Fishman', 'Kessler', 'Landau', 'Fuchs', 'Segal', 
+    'Lerner', 'Glass', 'Geller', 'Marks', 'Perl', 'Rosen', 'Sachs', 'Kohn', 
+    'Levin', 'Glassman', 'Bloom', 'Reich', 'Goldenberg', 'Fox', 'Siegel', 
+    'Weil', 'Fried', 'Strauss', 'Goldwater', 'Rothstein', 'Feinberg', 'Levine', 
+    'Kornfeld', 'Rosner', 'Baum', 'Goldmann', 'Zuckerman', 'Schreiber', 'Weiner', 
+    'Frankel', 'Salomon', 'Deutsch', 'Richter', 'Goldschmidt', 'Mayer', 'Pollack', 
+    'Ginsberg', 'Falk', 'Herzberg'
+  ];
+
+  return getRandomName(surname);
+};
+
+export const koreanSurnames = () => {
+  const surname = [
+    'Kim', 'Lee', 'Park', 'Choi', 'Jung', 'Kang', 'Cho', 'Yoon', 'Jang', 'Lim', 
+    'Han', 'Oh', 'Seo', 'Shin', 'Kwon', 'Hwang', 'Ahn', 'Kim', 'Song', 'Yoo', 
+    'Hong', 'Jeon', 'Go', 'Moon', 'Yang', 'Son', 'Bae', 'Baek', 'Heo', 'Nam', 
+    'Min', 'Chae', 'Noh', 'Ma', 'Sim', 'Won', 'Ryu', 'Jin', 'Yu', 'Gong', 
+    'Joo', 'Woo', 'Do', 'Chang', 'Im', 'Yeo', 'Seong', 'Ra', 'Gang', 'Myung', 
+    'Pyeon', 'Gi', 'Pyo', 'Pyo', 'Cheon', 'Pi', 'Ha', 'Gang', 'Chu', 'Eom', 
+    'Ko', 'Tak', 'Sohn', 'Paik', 'Huh', 'Chung', 'Yim', 'Koo', 'Sung', 'Bang', 
+    'Shim', 'Tae', 'Noh', 'Oak', 'An', 'Byun', 'Sul', 'Se', 'Ku', 'Bin', 
+    'Geun', 'In', 'Dan', 'Hwan', 'Tong', 'Mook', 'Pan', 'Sam', 'Geum', 'Ro', 
+    'Myeong', 'Pil', 'Gun', 'Kal', 'Maeng', 'Bu', 'Gal', 'Wang', 'Su', 'Bok'
   ];
 
   return getRandomName(surname);
