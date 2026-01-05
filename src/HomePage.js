@@ -1,6 +1,9 @@
 import React, { useState } from 'react';
 import { pdf } from '@react-pdf/renderer';
+import { Buffer } from 'buffer';
 import { generateFourCharacters, generateTwoCharacters, CharacterSheetDocument, CharacterSheetLandscapeDocument } from './utils/lv0DccGenerator';
+
+window.Buffer = Buffer;
 
 const HomePage = () => {
   // Default form values
