@@ -22,13 +22,12 @@ export const formatFumbleDie = (luckMod, luckySign) => {
   if (fumbleMod === 0 || fumbleMod === '') {
     return '';
   } else if (fumbleMod < 0) {
-    fumbleMod = fumbleMod * -1; // make positive for formatting
-    return `+${fumbleMod}`;
+    const positiveMod = fumbleMod * -1; 
+    return `+${positiveMod}`;
   } else {
     return `-${fumbleMod}`;
   }
 };
-
 // Converted PHP functions
 export const getAbilityModifier = (score) => {
   if (score === 3) {
