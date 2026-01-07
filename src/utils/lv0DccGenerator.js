@@ -36,6 +36,7 @@ import {
 import { getNotes, dieRollMethodText, hitPointsMethodText } from './dccNotes.js';
 import { getAlignment } from './alignment.js';
 import { getGender, getNameGender } from './characterGender.js';
+import { getName, getNameDescript } from './nameSelect.js';
 
 const genders = ['Male', 'Female'];
 
