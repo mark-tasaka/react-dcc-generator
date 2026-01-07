@@ -245,3 +245,381 @@ export const koreanSurnames = () => {
 
   return getRandomName(surname);
 };
+
+export const lithuanianSurnames = () => {
+  const surname = [
+    'Kazlauskas', 'Petrauskas', 'Jankauskas', 'Urbanavičius', 'Žukauskas',
+    'Paulauskas', 'Kavaliauskas', 'Rimkus', 'Stankevičius', 'Leonavičius',
+    'Jonaitis', 'Butkus', 'Savickas', 'Mockus', 'Navickas',
+    'Ramanauskas', 'Stonkus', 'Bagdonas', 'Balčiūnas', 'Bartkus',
+    'Bernotas', 'Bieliauskas', 'Brazauskas', 'Bumblauskas', 'Čeponis',
+    'Daugėla', 'Endriukaitis', 'Gailius', 'Gudauskas', 'Jakubauskas',
+    'Kairys', 'Kaminskas', 'Karalius', 'Keršulis', 'Klimavičius',
+    'Korsakas', 'Kubilius', 'Kundrotas', 'Laurinavičius', 'Lukošius',
+    'Mačiulis', 'Masiulis', 'Mažeika', 'Mikelionis', 'Norkus',
+    'Pakštys', 'Paškevičius', 'Pavilonis', 'Petkevicius', 'Pocius',
+    'Račkauskas', 'Radvila', 'Rimkevičius', 'Sabaliauskas', 'Sakalauskas',
+    'Sinkevičius', 'Stasiulis', 'Šileika', 'Šimkus', 'Šimulis',
+    'Tamošauskas', 'Telksnys', 'Urbonas', 'Vasiliauskas', 'Vaitkus',
+    'Venckus', 'Vilkas', 'Vitkauskas', 'Žemaitis', 'Žilinskas',
+    'Adomaitis', 'Antanavicius', 'Astrauskas', 'Bacevičius', 'Banys',
+    'Bendorius', 'Blažys', 'Bučinskas', 'Čiurlionis', 'Dainauskas',
+    'Daunoravičius', 'Gaižauskas', 'Gedminas', 'Grigas', 'Jasaitis',
+    'Jodka', 'Jurgelionis', 'Kaktavičius', 'Kalvaitis', 'Kašėta',
+    'Končius', 'Kriaučiūnas', 'Lapienis', 'Laucevičius', 'Malinauskas',
+    'Marcinkevičius', 'Mikelėnas', 'Mockevičius', 'Nagevičius', 'Nausėda',
+    'Neniškis', 'Oginskis', 'Pakalniškis', 'Paliulis', 'Pankauskas',
+    'Pavilonienė', 'Petraitis', 'Plečkaitis', 'Puidokas', 'Račius',
+    'Rajeckas', 'Rimša', 'Rukšėnas', 'Rutkauskas', 'Sabonis'
+  ];
+
+  return getRandomName(surname);
+};
+
+export const muslimSurnames = () => {
+  const surname = [
+    'Ahmed', 'Ali', 'Khan', 'Hassan', 'Hussein', 'Rahman', 'Shah', 'Malik',
+    'Ahmad', 'Abdullah', 'Ibrahim', 'Mohamed', 'Mohammed', 'Mahmoud', 'Omar',
+    'Yusuf', 'Hasan', 'Rashid', 'Farouk', 'Khalil', 'Nasir', 'Saeed',
+    'Abdel', 'Al-Ahmad', 'Al-Hassan', 'Al-Hussein', 'Al-Mahmoud', 'Al-Omar',
+    'Ansari', 'Qureshi', 'Sheikh', 'Syed', 'Chaudhry', 'Butt', 'Awan',
+    'Dar', 'Gondal', 'Mughal', 'Rajput', 'Bhatti', 'Cheema', 'Gill',
+    'Janjua', 'Khattak', 'Lodhi', 'Pathan', 'Rana', 'Warraich', 'Mirza',
+    'Baig', 'Beg', 'Kazmi', 'Naqvi', 'Rizvi', 'Zaidi', 'Hashmi',
+    'Farooq', 'Tariq', 'Iqbal', 'Jamil', 'Karim', 'Latif', 'Majid',
+    'Nazir', 'Qadir', 'Rauf', 'Shakir', 'Tahir', 'Wahid', 'Zakir',
+    'Osman', 'Ozturk', 'Yilmaz', 'Demir', 'Celik', 'Kaya', 'Aydin',
+    'Dogan', 'Arslan', 'Polat', 'Erdogan', 'Korkmaz', 'Sahin', 'Ozkan',
+    'Hosseini', 'Ahmadi', 'Mohammadi', 'Karimi', 'Rezai', 'Moradi',
+    'Ebrahimi', 'Hashemi', 'Najafi', 'Sadeghi', 'Mousavi', 'Ghorbani',
+    'Haddad', 'Khoury', 'Mansour', 'Nasser', 'Saleh', 'Tahan', 'Yasin',
+    'Zain', 'Habib', 'Ismail', 'Kamil', 'Mustafa', 'Nabil', 'Sabir',
+    'Umar', 'Waleed', 'Yahya', 'Zubair'
+  ];
+
+  return getRandomName(surname);
+};
+
+export const norwegianSurnames = () => {
+  const surname = [
+    'Hansen', 'Johansen', 'Olsen', 'Larsen', 'Andersen', 'Pedersen', 'Nilsen',
+    'Kristiansen', 'Jensen', 'Karlsen', 'Johnsen', 'Pettersen', 'Eriksen',
+    'Berg', 'Haugen', 'Hagen', 'Johannessen', 'Andreassen', 'Jacobsen',
+    'Dahl', 'Jørgensen', 'Halvorsen', 'Henriksen', 'Lund', 'Sørensen',
+    'Bakken', 'Kristoffersen', 'Mathisen', 'Moen', 'Isaksen', 'Knudsen',
+    'Lie', 'Strand', 'By', 'Holmen', 'Solberg', 'Amundsen', 'Martinsen',
+    'Knutsen', 'Løken', 'Abrahamsen', 'Holm', 'Eide', 'Lunde', 'Moe',
+    'Rasmussen', 'Torp', 'Bjerke', 'Ellingsen', 'Haugan', 'Myhre',
+    'Hauge', 'Simonsen', 'Rød', 'Evensen', 'Aas', 'Østby', 'Nygård',
+    'Røed', 'Berge', 'Eikeland', 'Røsvik', 'Ruud', 'Bø', 'Kirkeby',
+    'Solheim', 'Nordahl', 'Skjervheim', 'Tangen', 'Fjeld', 'Stubhaug',
+    'Høiland', 'Tveit', 'Kleveland', 'Bjørk', 'Næss', 'Hvinden',
+    'Vik', 'Rognstad', 'Steen', 'Reistad', 'Helland', 'Engebretsen',
+    'Magnussen', 'Thomassen', 'Gustavsen', 'Paulsen', 'Christensen',
+    'Nielsen', 'Svendsen', 'Fredriksen', 'Danielsen', 'Mortensen',
+    'Gregersen', 'Thorsen', 'Nissen', 'Steen', 'Mikkelsen', 'Tørnquist',
+    'Bergersen', 'Hanssen', 'Larsson', 'Aasen', 'Gundersen', 'Myklebust',
+    'Aune', 'Bye', 'Fossum', 'Heggen', 'Myhra', 'Sand', 'Sunde',
+    'Tvedt', 'Wold', 'Ødegård'
+  ];
+
+  return getRandomName(surname);
+};
+
+export const polishSurnames = () => {
+  const surname = [
+    'Nowak', 'Kowalski', 'Wiśniewski', 'Wójcik', 'Kowalczyk', 'Kamiński',
+    'Lewandowski', 'Zieliński', 'Szymański', 'Woźniak', 'Dąbrowski',
+    'Kozłowski', 'Jankowski', 'Mazur', 'Wojciechowski', 'Kwiatkowski',
+    'Krawczyk', 'Kaczmarek', 'Piotrowski', 'Grabowski', 'Zając', 'Pawłowski',
+    'Michalski', 'Król', 'Wieczorek', 'Jabłoński', 'Wróbel', 'Nowakowski',
+    'Majewski', 'Olszewski', 'Stępień', 'Malinowski', 'Jaworski', 'Adamczyk',
+    'Dudek', 'Nowicki', 'Pawlak', 'Górski', 'Witkowski', 'Walczak',
+    'Sikora', 'Baran', 'Rutkowski', 'Michalak', 'Szewczyk', 'Ostrowski',
+    'Tomaszewski', 'Pietrzak', 'Marciniak', 'Wróblewski', 'Zalewski',
+    'Jakubowski', 'Jasiński', 'Zawadzki', 'Sadowski', 'Bąk', 'Chmielewski',
+    'Włodarczyk', 'Borkowski', 'Czarnecki', 'Sawicki', 'Sokołowski',
+    'Urbański', 'Kubiak', 'Maciejewski', 'Szczepański', 'Kucharski',
+    'Wilk', 'Kalinowski', 'Lis', 'Mazurek', 'Wysocki', 'Adamski',
+    'Kaźmierczak', 'Wasilewski', 'Sobczak', 'Czerwiński', 'Andrzejewski',
+    'Cieślak', 'Głowacki', 'Zakrzewski', 'Kołodziej', 'Sikorski',
+    'Krajewski', 'Gajewski', 'Szymczak', 'Laskowski', 'Ziółkowski',
+    'Grzegorczyk', 'Przybylski', 'Długosz', 'Kowal', 'Płóciennik',
+    'Bukowski', 'Markowski', 'Kowalik', 'Białek', 'Domański', 'Błaszczyk',
+    'Stroński', 'Smoliński', 'Szostak'
+  ];
+
+  return getRandomName(surname);
+};
+
+export const portugueseSurnames = () => {
+  const surname = [
+    'Silva', 'Santos', 'Ferreira', 'Pereira', 'Oliveira', 'Sousa', 'Rodrigues',
+    'Fernandes', 'Gomes', 'Martins', 'Costa', 'Ribeiro', 'Carvalho', 'Lopes',
+    'Alves', 'Rocha', 'Nunes', 'Correia', 'Teixeira', 'Marques', 'Monteiro',
+    'Vieira', 'Mendes', 'Cardoso', 'Reis', 'Moreira', 'Ramos', 'Pinto',
+    'Soares', 'Castro', 'Fonseca', 'Gonçalves', 'Pires', 'Barbosa', 'Machado',
+    'Cruz', 'Lima', 'Araújo', 'Azevedo', 'Cunha', 'Matos', 'Campos',
+    'Morais', 'Tavares', 'Antunes', 'Miranda', 'Coelho', 'Freitas', 'Simões',
+    'Amaral', 'Moura', 'Baptista', 'Guerreiro', 'Lourenço', 'Henriques',
+    'Borges', 'Esteves', 'Brandão', 'Domingues', 'Carreira', 'Maia',
+    'Ferraz', 'Bento', 'Faria', 'Sá', 'Magalhães', 'Leite', 'Melo',
+    'Valente', 'Vicente', 'Sampaio', 'Andrade', 'Nogueira', 'Paiva',
+    'Figueiredo', 'Carneiro', 'Bastos', 'Duarte', 'Pacheco', 'Vaz',
+    'Cabral', 'Dias', 'Gaspar', 'Batista', 'Peixoto', 'Torres', 'Barreto',
+    'Veloso', 'Serrano', 'Braga', 'Caetano', 'Leal', 'Guedes', 'Resende',
+    'Macedo', 'Franco', 'Viana', 'Brito', 'Coutinho', 'Mesquita', 'Abreu'
+  ];
+
+  return getRandomName(surname);
+};
+
+export const russianSurnames = () => {
+  const surname = [
+    'Ivanov', 'Smirnov', 'Kuznetsov', 'Popov', 'Vasiliev', 'Petrov', 'Sokolov',
+    'Mikhailov', 'Novikov', 'Fedorov', 'Morozov', 'Volkov', 'Alekseev',
+    'Lebedev', 'Semenov', 'Egorov', 'Pavlov', 'Kozlov', 'Stepanov', 'Nikolaev',
+    'Orlov', 'Andreev', 'Makarov', 'Nikitin', 'Matveev', 'Bobrov', 'Tarasov',
+    'Belov', 'Komarov', 'Vorobiev', 'Sergeev', 'Kovalev', 'Bogatyrev',
+    'Titov', 'Baranov', 'Kiselev', 'Ilyin', 'Maksimov', 'Polyakov',
+    'Sorokin', 'Vinogradov', 'Kovalenko', 'Belyaev', 'Gerasimov', 'Bogdanov',
+    'Kazakov', 'Gorshkov', 'Shcherbakov', 'Romanов', 'Yakovlev', 'Zakharov',
+    'Borisov', 'Korolev', 'Geraskov', 'Ponomarev', 'Grigoriev', 'Lazarev',
+    'Medvedev', 'Ershov', 'Naumov', 'Filatov', 'Fomin', 'Abramov',
+    'Martynov', 'Fadeev', 'Kozhevnikov', 'Kulik', 'Gusev', 'Markov',
+    'Kotov', 'Frolov', 'Vladimirov', 'Davydov', 'Rogov', 'Nikolaenko',
+    'Petrov', 'Voloshyn', 'Krylov', 'Sergeenko', 'Nesterov', 'Antonov',
+    'Prokhorov', 'Zhukov', 'Kulikov', 'Agafonov', 'Muravyev', 'Nosov',
+    'Kirillov', 'Golubev', 'Sidorov', 'Loginov', 'Savchenko', 'Kotlyarov',
+    'Vdovin', 'Artemiev', 'Kalinin', 'Voronin', 'Maslov', 'Dmitriev'
+  ];
+
+  return getRandomName(surname);
+};
+
+export const scandinavianSurnames = () => {
+  const surname = [
+    'Andersson', 'Johansson', 'Karlsson', 'Nilsson', 'Eriksson', 'Larsson',
+    'Olsson', 'Persson', 'Svensson', 'Gustafsson', 'Pettersson', 'Jonsson',
+    'Jansson', 'Hansson', 'Bengtsson', 'Jönsson', 'Lindberg', 'Jakobsson',
+    'Magnusson', 'Olofsson', 'Lindström', 'Lindqvist', 'Lindgren', 'Berg',
+    'Axelsson', 'Hedberg', 'Hellström', 'Lundberg', 'Sandberg', 'Forsberg',
+    'Mattsson', 'Sjöberg', 'Wallin', 'Engström', 'Eklund', 'Danielsson',
+    'Håkansson', 'Lundin', 'Gunnarsson', 'Björk', 'Bergström', 'Wikström',
+    'Sandström', 'Lind', 'Lundgren', 'Nyström', 'Holmberg', 'Arvidsson',
+    'Löfgren', 'Söderberg', 'Nyberg', 'Blomqvist', 'Claesson', 'Mårtensson',
+    'Hansen', 'Nielsen', 'Jensen', 'Pedersen', 'Andersen', 'Christensen',
+    'Larsen', 'Sørensen', 'Rasmussen', 'Jørgensen', 'Petersen', 'Madsen',
+    'Kristensen', 'Olsen', 'Thomsen', 'Christiansen', 'Poulsen', 'Johansen',
+    'Møller', 'Mortensen', 'Knudsen', 'Lund', 'Dahl', 'Holm', 'Strand',
+    'Haugen', 'Hagen', 'Bakken', 'Moen', 'Lie', 'Solberg', 'Eide',
+    'Virtanen', 'Korhonen', 'Mäkinen', 'Nieminen', 'Mäkelä', 'Hämäläinen',
+    'Laine', 'Heikkinen', 'Koskinen', 'Järvinen', 'Lehtonen', 'Saarinen',
+    'Salonen', 'Hakkarainen', 'Mattila', 'Rantanen', 'Turunen', 'Hiltunen',
+    'Pitkänen', 'Ojala', 'Lahtinen', 'Toivonen', 'Rinne', 'Salo'
+  ];
+
+  return getRandomName(surname);
+};
+
+export const scottishSurnames = () => {
+  const surname = [
+    'Smith', 'Brown', 'Wilson', 'Campbell', 'Stewart', 'Thomson', 'Robertson',
+    'Anderson', 'MacDonald', 'Scott', 'Reid', 'Murray', 'Taylor', 'Clark',
+    'Ross', 'Watson', 'Morrison', 'Miller', 'Fraser', 'McLean', 'Sinclair',
+    'McKenzie', 'MacLeod', 'Grant', 'Ferguson', 'Cameron', 'Henderson',
+    'Hamilton', 'Graham', 'Duncan', 'Johnstone', 'Hunter', 'Gordon', 'MacKay',
+    'Bell', 'Mitchell', 'Johnston', 'McDonald', 'MacPherson', 'Young',
+    'King', 'Davidson', 'Kelly', 'MacKenzie', 'Douglas', 'Gray', 'Walker',
+    'Hughes', 'MacLean', 'Allan', 'MacGregor', 'Kennedy', 'McIntosh',
+    'Simpson', 'Black', 'Paterson', 'Kerr', 'Wright', 'Martin', 'Murphy',
+    'Wallace', 'Burns', 'Boyd', 'Cunningham', 'MacFarlane', 'Russell',
+    'Gibson', 'Shaw', 'Forbes', 'MacInnes', 'Munro', 'MacMillan', 'Crawford',
+    'MacBride', 'MacNeil', 'MacKinnon', 'Sutherland', 'MacLellan', 'Gillies',
+    'Bruce', 'Mackintosh', 'Gunn', 'MacArthur', 'Buchanan', 'MacRae',
+    'Galbraith', 'Innes', 'McCallum', 'MacAulay', 'Drummond', 'Chisholm',
+    'MacIvor', 'Matheson', 'MacQueen', 'Menzies', 'Maclachlan', 'Lamont',
+    'MacNab', 'Urquhart', 'Colquhoun', 'MacFadden', 'MacIntyre', 'Hay',
+    'Lindsay', 'Carnegie', 'Ramsay', 'MacEwan', 'MacCormack'
+  ];
+
+  return getRandomName(surname);
+};
+
+export const slavicSurnames = () => {
+  const surname = [
+    'Novák', 'Svoboda', 'Novotný', 'Dvořák', 'Černý', 'Procházka', 'Kučera',
+    'Veselý', 'Horák', 'Němec', 'Pokorný', 'Pešek', 'Urban', 'Machala',
+    'Kratochvíl', 'Šimek', 'Polák', 'Kopecký', 'Konečný', 'Malý',
+    'Ivanov', 'Petrov', 'Sidorov', 'Kozlov', 'Smirnov', 'Popov', 'Sokolov',
+    'Lebedev', 'Kozlowski', 'Nowak', 'Kowalski', 'Wiśniewski', 'Lewandowski',
+    'Wójcik', 'Kamiński', 'Kowalczyk', 'Zieliński', 'Szymański', 'Woźniak',
+    'Petrović', 'Nikolić', 'Marković', 'Popović', 'Đorđević', 'Stojanović',
+    'Jovanović', 'Ilić', 'Stanković', 'Pavlović', 'Milošević', 'Đurić',
+    'Horvat', 'Kovač', 'Babić', 'Marić', 'Novak', 'Jurić', 'Knežević',
+    'Petrić', 'Matić', 'Tomić', 'Pavić', 'Božić', 'Krajnc', 'Hribar',
+    'Zupančič', 'Kovačič', 'Korošec', 'Potočnik', 'Vidmar', 'Golob',
+    'Kos', 'Oblak', 'Mlakar', 'Zorko', 'Shevchenko', 'Kovalenko', 'Bondarenko',
+    'Tkachenko', 'Kravchenko', 'Lysenko', 'Marchenko', 'Petrenko', 'Savchenko',
+    'Melnyk', 'Boyko', 'Koval', 'Moroz', 'Polishchuk', 'Rudenko',
+    'Ivanova', 'Petrova', 'Kuznetsova', 'Smirnova', 'Popova', 'Sokolova',
+    'Mikhailova', 'Novikova', 'Fedorova', 'Morozova', 'Volkova', 'Alekseeva',
+    'Lebedeva', 'Semenova', 'Egorova', 'Pavlova', 'Kozlova', 'Stepanova'
+  ];
+
+  return getRandomName(surname);
+};
+
+export const spanishSurnames = () => {
+  const surname = [
+    'García', 'Rodríguez', 'González', 'Fernández', 'López', 'Martínez', 'Sánchez',
+    'Pérez', 'Gómez', 'Martín', 'Jiménez', 'Ruiz', 'Hernández', 'Díaz', 'Moreno',
+    'Muñoz', 'Álvarez', 'Romero', 'Alonso', 'Gutiérrez', 'Navarro', 'Torres',
+    'Domínguez', 'Vázquez', 'Ramos', 'Gil', 'Ramírez', 'Serrano', 'Blanco',
+    'Suárez', 'Molina', 'Morales', 'Ortega', 'Delgado', 'Castro', 'Ortiz',
+    'Rubio', 'Marín', 'Sanz', 'Iglesias', 'Medina', 'Garrido', 'Cortés',
+    'Castillo', 'Santos', 'Lozano', 'Guerrero', 'Cano', 'Prieto', 'Méndez',
+    'Cruz', 'Calvo', 'Gallego', 'Vidal', 'León', 'Herrera', 'Peña', 'Flores',
+    'Cabrera', 'Campos', 'Vega', 'Fuentes', 'Carrasco', 'Diez', 'Caballero',
+    'Nieto', 'Reyes', 'Aguilar', 'Pascual', 'Herrero', 'Montero', 'Lorenzo',
+    'Hidalgo', 'Giménez', 'Ibáñez', 'Ferrer', 'Durán', 'Santiago', 'Benítez',
+    'Vargas', 'Arias', 'Carmona', 'Crespo', 'Román', 'Pastor', 'Soto',
+    'Sáez', 'Velasco', 'Moya', 'Soler', 'Parra', 'Esteban', 'Bravo',
+    'Gallardo', 'Rojas', 'Espinosa', 'Mora', 'Mendoza', 'Rivera', 'Aguilera',
+    'Morán', 'Peña', 'Campos', 'Núñez', 'Contreras', 'Rivas', 'Luna'
+  ];
+
+  return getRandomName(surname);
+};
+
+export const swedishSurnames = () => {
+  const surname = [
+    'Andersson', 'Johansson', 'Karlsson', 'Nilsson', 'Eriksson', 'Larsson',
+    'Olsson', 'Persson', 'Svensson', 'Gustafsson', 'Pettersson', 'Jonsson',
+    'Jansson', 'Hansson', 'Bengtsson', 'Jönsson', 'Lindberg', 'Jakobsson',
+    'Magnusson', 'Olofsson', 'Lindström', 'Lindqvist', 'Lindgren', 'Berg',
+    'Axelsson', 'Hedberg', 'Hellström', 'Lundberg', 'Sandberg', 'Forsberg',
+    'Mattsson', 'Sjöberg', 'Wallin', 'Engström', 'Eklund', 'Danielsson',
+    'Håkansson', 'Lundin', 'Gunnarsson', 'Björk', 'Bergström', 'Wikström',
+    'Sandström', 'Lind', 'Lundgren', 'Nyström', 'Holmberg', 'Arvidsson',
+    'Löfgren', 'Söderberg', 'Nyberg', 'Blomqvist', 'Claesson', 'Mårtensson',
+    'Isaksson', 'Blom', 'Nordström', 'Lund', 'Ström', 'Holmgren', 'Fransson',
+    'Johnsson', 'Samuelsson', 'Fredriksson', 'Abrahamsson', 'Carlsson', 'Öberg',
+    'Hedström', 'Dahlberg', 'Henriksson', 'Sundberg', 'Martinsson', 'Öhman',
+    'Hellberg', 'Blomberg', 'Ivarsson', 'Månsson', 'Nordberg', 'Österberg',
+    'Andreasson', 'Björklund', 'Westberg', 'Falk', 'Palm', 'Dahl', 'Borg',
+    'Roos', 'Cederlund', 'Åberg', 'Green', 'Holmström', 'Lundström', 'Nyman',
+    'Ek', 'Törnberg', 'Åkerberg', 'Vikberg', 'Grönberg', 'Kjellberg', 'Åkesson',
+    'Östberg', 'Blomgren', 'Stenberg', 'Eliasson', 'Viklund', 'Ögren'
+  ];
+
+  return getRandomName(surname);
+};
+
+export const swissSurnames = () => {
+  const surname = [
+    'Müller', 'Meier', 'Schmid', 'Keller', 'Weber', 'Huber', 'Schneider',
+    'Meyer', 'Steiner', 'Fischer', 'Gerber', 'Brunner', 'Baumann', 'Frei',
+    'Zimmermann', 'Moser', 'Widmer', 'Wyss', 'Roth', 'Kaufmann', 'Bauer',
+    'Sidler', 'Zürcher', 'Berger', 'Haller', 'Graf', 'Suter', 'Hofmann',
+    'Lehmann', 'Fuchs', 'Bachmann', 'Wüthrich', 'Siegrist', 'Lang', 'Blaser',
+    'Bühlmann', 'Kündig', 'Lüthi', 'Stucki', 'Ryser', 'Jäggi', 'Bichsel',
+    'Flückiger', 'Zbinden', 'Häberli', 'Zwahlen', 'Burkhard', 'Gugger',
+    'Bürki', 'Lauper', 'Studer', 'Stampfli', 'Probst', 'Christen', 'Kohler',
+    'Boss', 'Aebi', 'Lanz', 'Schär', 'Künzi', 'Lutz', 'Bärtschi', 'Rieder',
+    'Aeschlimann', 'Egli', 'Spörri', 'Kästli', 'Sommer', 'Thommen', 'Loosli',
+    'Marti', 'Rüfli', 'Bögli', 'Baer', 'Stauffer', 'Kälin', 'Küpfer',
+    'Tschanz', 'Rüegg', 'Hirschi', 'Schütz', 'Ischer', 'Streit', 'Hofer',
+    'Becker', 'Reber', 'Rubin', 'Schmutz', 'Gisler', 'Imhof', 'Hauser',
+    'Hürlimann', 'Käser', 'Felber', 'Wenger', 'Kessler', 'Kägi', 'Rüdisüeli',
+    'Fasel', 'Pfister', 'Gut', 'Ziegler', 'Ammann', 'Bernhard', 'Schäfer',
+    'Wolff', 'Schwarz', 'Hartmann', 'Schmitt', 'Kramer', 'Zimmerman', 'Braun'
+  ];
+
+  return getRandomName(surname);
+};
+
+export const turkishSurnames = () => {
+  const surname = [
+    'Yilmaz', 'Kaya', 'Demir', 'Celik', 'Sahin', 'Yildiz', 'Yildirim', 'Ozturk',
+    'Aydin', 'Ozdemir', 'Arslan', 'Dogan', 'Kilic', 'Aslan', 'Cetin', 'Kara',
+    'Koc', 'Kurt', 'Ozkan', 'Simsek', 'Erdogan', 'Guler', 'Turk', 'Ucar',
+    'Yilmazer', 'Aksoy', 'Akin', 'Gungor', 'Tan', 'Korkmaz', 'Ates', 'Basar',
+    'Polat', 'Karaca', 'Ozgur', 'Bozkurt', 'Altin', 'Gul', 'Toprak', 'Isik',
+    'Bulut', 'Kaplan', 'Sonmez', 'Tas', 'Kartal', 'Akcay', 'Balci', 'Cakir',
+    'Akbaba', 'Mutlu', 'Sevinc', 'Ozer', 'Yucel', 'Yasar', 'Ozay', 'Ozcelik',
+    'Ozkan', 'Parlak', 'Bayram', 'Guven', 'Uzun', 'Oz', 'Tekin', 'Aktas',
+    'Colak', 'Turan', 'Acar', 'Kose', 'Ozturk', 'Dinc', 'Gunes', 'Korkut',
+    'Ozmen', 'Duran', 'Savas', 'Erdem', 'Tuna', 'Akan', 'Ogut', 'Unal',
+    'Efe', 'Kavak', 'Ciftci', 'Konak', 'Kucuk', 'Demirel', 'Unlu', 'Sevgili',
+    'Narin', 'Vural', 'Can', 'Sert', 'Guc', 'Erdogmus', 'Pinar', 'Kirmizi',
+    'Tavuk', 'Duman', 'Koyun', 'Bayar', 'Akgun', 'Karakaya', 'Avci', 'Sari',
+    'Erturk', 'Akturk', 'Yavuz', 'Basak', 'Dag', 'Onal', 'Karaoglu', 'Cay'
+  ];
+
+  return getRandomName(surname);
+};
+
+export const ukrainianSurnames = () => {
+  const surname = [
+    'Shevchenko', 'Kovalenko', 'Bondarenko', 'Tkachenko', 'Kravchenko', 'Lysenko',
+    'Marchenko', 'Petrenko', 'Savchenko', 'Melnyk', 'Boyko', 'Koval', 'Moroz',
+    'Polishchuk', 'Rudenko', 'Ivanenko', 'Pavlenko', 'Kravets', 'Kovalchuk',
+    'Boyarchuk', 'Shevchuk', 'Demchenko', 'Levchenko', 'Karpenko', 'Romanenko',
+    'Goncharenko', 'Fedorenko', 'Sidorenko', 'Yakovenko', 'Doroshenko',
+    'Timoshenko', 'Klimenko', 'Panchenko', 'Omelchenko', 'Danylenko',
+    'Kharchenko', 'Miroshnyk', 'Tkachuk', 'Koval', 'Sydorenko', 'Franchuk',
+    'Onishchenko', 'Lyashenko', 'Nazarenko', 'Franchenko', 'Kononenko',
+    'Lytvyn', 'Boyko', 'Pavlenko', 'Kovalenko', 'Hrytsenko', 'Maksymenko',
+    'Makarenko', 'Andriyenko', 'Vasylenko', 'Ilyenko', 'Romanenko',
+    'Stepanenko', 'Khomenko', 'Kravchuk', 'Savchuk', 'Lysenko', 'Rudenko',
+    'Kravchenko', 'Bondarenko', 'Melnychuk', 'Pavlyk', 'Voloshyn', 'Kozak',
+    'Havrysh', 'Tkach', 'Koval', 'Mykytenko', 'Dmytrenko', 'Shved', 'Nemchenko',
+    'Kolesnik', 'Kowalenko', 'Marchuk', 'Oliynyk', 'Vdovenko', 'Petrenko',
+    'Pavlenko', 'Kuzmenko', 'Tymoshenko', 'Sergienko', 'Prokopenko', 'Nechayenko',
+    'Yaremenko', 'Zubenko', 'Gorenko', 'Lazarenko', 'Ostapenko', 'Stelmach',
+    'Yatsenko', 'Bogdanenko', 'Kondratenko', 'Artemenko', 'Fomenko', 'Boyarchuk',
+    'Franchuk', 'Kravets', 'Stasenko', 'Yakymenko', 'Prokopchuk', 'Demchuk'
+  ];
+
+  return getRandomName(surname);
+};
+
+export const vietnameseSurnames = () => {
+  const surname = [
+    'Nguyễn', 'Trần', 'Lê', 'Phạm', 'Hoàng', 'Huỳnh', 'Phan', 'Vũ', 'Võ', 'Đặng',
+    'Bùi', 'Đỗ', 'Hồ', 'Ngô', 'Dương', 'Lý', 'Đinh', 'Mai', 'Tạ', 'Lương',
+    'Trịnh', 'Đoàn', 'Phùng', 'Chu', 'Hà', 'Tô', 'Lâm', 'Vương', 'Lưu', 'Cao',
+    'Thái', 'Tăng', 'Đào', 'Tôn', 'Doãn', 'Hứa', 'Kiều', 'Diệp', 'Lạc', 'Khương',
+    'Mạc', 'Bạch', 'Lộc', 'Thạch', 'Thành', 'Ân', 'Quách', 'Thiều', 'Từ', 'Cung',
+    'Lăng', 'La', 'Vi', 'Hán', 'Tiêu', 'Ưng', 'Quang', 'Châu', 'Ông', 'Quyền',
+    'Quan', 'Âu', 'Hồng', 'Trương', 'Thôi', 'Nông', 'Lỗ', 'Thi', 'Giang', 'Khiết',
+    'Phó', 'Thượng', 'Ung', 'Điều', 'Hoa', 'Phạm', 'Tần', 'Triệu', 'Lê', 'Mã',
+    'Yên', 'Văn', 'Trang', 'Nghiêm', 'Sầm', 'Cù', 'Châm', 'Lại', 'Kha', 'An',
+    'Tòng', 'Hạ', 'Cổ', 'Nhan', 'Sa', 'Nghị', 'Lục', 'Tuyền', 'Khưu', 'Ngọc'
+  ];
+
+  return getRandomName(surname);
+};
+
+export const welshSurnames = () => {
+  const surname = [
+    'Jones', 'Williams', 'Davies', 'Evans', 'Thomas', 'Roberts', 'Lewis', 'Hughes',
+    'Morgan', 'Griffiths', 'Edwards', 'Owen', 'Price', 'Jenkins', 'Lloyd', 'James',
+    'Phillips', 'Rees', 'Morris', 'Powell', 'Watkins', 'John', 'Davies', 'Parry',
+    'Bowen', 'Harris', 'Pugh', 'David', 'Richards', 'Williams', 'George', 'Ellis',
+    'Howells', 'Charles', 'Francis', 'Samuel', 'Vaughan', 'Bevan', 'Nicholas',
+    'Rowlands', 'Pritchard', 'Rhys', 'Humphreys', 'Matthew', 'Stephens', 'Daniel',
+    'Hopkins', 'Roderick', 'Benjamin', 'Llewellyn', 'Simon', 'Gabriel', 'Michael',
+    'Rosser', 'Maddox', 'Probert', 'Prosser', 'Gwynne', 'Walters', 'Reynold',
+    'Gwilym', 'Tudor', 'Cadwallader', 'Floyd', 'Bleddyn', 'Beddoe', 'Beynon',
+    'Gwynn', 'Jerome', 'Meyrick', 'Penry', 'Voyle', 'Vaughn', 'Gough', 'Howell',
+    'Meredith', 'Griffith', 'Pritchett', 'Bellis', 'Cornish', 'Mathias', 'Maddocks',
+    'Goodwin', 'Savage', 'Picton', 'Puw', 'Salesbury', 'Traherne', 'Wogan',
+    'Anwyl', 'Bebb', 'Cynfyn', 'Devereux', 'Fychan', 'Gethin', 'Gryffydd',
+    'Kyffin', 'Mostyn', 'Pennant', 'Salusbury', 'Turberville', 'Wynne', 'Yorath',
+    'Ap Rice', 'Ap Rhys', 'Ap Owen', 'Ap Thomas', 'Ap John', 'Prys', 'Meyler'
+  ];
+
+  return getRandomName(surname);
+};
