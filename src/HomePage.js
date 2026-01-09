@@ -7,16 +7,16 @@ window.Buffer = Buffer;
 
 const HomePage = () => {
   // Default form values - ADD givenName and surname
-  const defaultFormValues = {
-    givenName: 100,     // Random by default
-    surname: 100,       // Random by default
-    alignment: 1,
-    sex: 1,
-    abilityScore: 1,
-    hitPoints: 1,
-    occupations: 1,
-    sheetLayout: 1
-  };
+const defaultFormValues = {
+  givenName: 100,     // Random by default
+  surname: 100,       // Random by default
+  alignment: 1,
+  gender: 1,            
+  abilityScore: 1,
+  hitPoints: 1,
+  occupations: 1,
+  sheetLayout: 1
+};
 
   // State for form values
   const [formValues, setFormValues] = useState(defaultFormValues);

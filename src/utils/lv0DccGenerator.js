@@ -244,23 +244,52 @@ const landscapeStyles = StyleSheet.create({
   message: { position: 'absolute', top: 540, right: 40 },
 });
 
+// Helper function to get random name origin when "Random" (100) is selected
+const getRandomNameOrigin = (type) => {
+  if (type === 'given') {
+    // Random given name origin (0-49)
+    return Math.floor(Math.random() * 50);
+  } else {
+    // Random surname origin (0-37)
+    return Math.floor(Math.random() * 38);
+  }
+};
+
 // Generate random character
 export const generateRandomCharacter = (options = {}) => {
   const {
     alignment: alignmentOption = 1,
-    sex: sexOption = 1,
+    gender: genderOption = 1,
     abilityScore: abilityScoreOption = 1,
     hitPoints: hitPointsOption = 1,
-    occupations: occupationsOption = 1
+    occupations: occupationsOption = 1,
+    givenName: givenNameOption = 100,
+    surname: surnameOption = 100
   } = options;
 
   const rollDice = (sides) => Math.floor(Math.random() * sides) + 1;
 
   const selectedOccupation = occupations[getOccupationNumber(occupationsOption)];
-  const gender = getGender(sexOption); 
+  const gender = getGender(genderOption); 
   const nameGenderIndex = getNameGender(gender);
-  const characterName = getName(nameGenderIndex);
-  const nameDescript = getNameDescript();
+
+  // Handle random name origins
+  let actualGivenName = givenNameOption;
+  let actualSurname = surnameOption;
+
+  if (givenNameOption === 100) {
+    actualGivenName = getRandomNameOrigin('given');
+  }
+  
+  if (surnameOption === 100) {
+    actualSurname = getRandomNameOrigin('surname');
+  }
+
+  // Generate character name using the getName function
+  const characterName = getName(actualGivenName, actualSurname, nameGenderIndex);
+  
+  // Generate name description
+  const nameDescript = getNameDescript(actualGivenName, actualSurname);
     
   // Use the selected ability score method
   const str = rollAbilityScores(abilityScoreOption);
@@ -312,12 +341,12 @@ export const generateRandomCharacter = (options = {}) => {
   const notes = getNotes(selectedOccupation.id);
   const equipment = generateEquipment(selectedOccupation);
   const armour = getArmour(selectedOccupation.id);
-  const message = dieRollMethodText(abilityScoreOption) + hitPointsMethodText(hitPointsOption);
+  const message = dieRollMethodText(abilityScoreOption) + hitPointsMethodText(hitPointsOption) + 
+                  (nameDescript ? ' ' + nameDescript : '');
 
   
   return {
-    name: nameList[Math.floor(Math.random() * nameList.length)] + ' ' + 
-          nameList[Math.floor(Math.random() * nameList.length)] + 'son',
+    name: characterName, // Use the generated name from getName function
     gender: gender,
     alignment: alignment,
     occupation: selectedOccupation.name,
@@ -359,7 +388,8 @@ export const generateRandomCharacter = (options = {}) => {
       int
     )),
     notes: notes,
-    message: message
+    message: message,
+    nameDescript: nameDescript // Add this if you want to access it separately
   };
 };
 
