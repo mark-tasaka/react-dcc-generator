@@ -38,14 +38,6 @@ import { getAlignment } from './alignment.js';
 import { getGender, getNameGender } from './characterGender.js';
 import { getName, getNameDescript } from './nameSelect.js';
 
-const genders = ['Male', 'Female'];
-
-const names = {
-  male: ['Aelar', 'Aerdrom', 'Ahvak', 'Aramil', 'Aranear', 'Berris', 'Cithreth', 'Dayereth', 'Drannor', 'Eckhart',
-         'Evendur', 'Galinndan', 'Hadarai', 'Halimath', 'Heian', 'Himo', 'Immeral', 'Ivellios', 'Korfel', 'Lamlis'],
-  female: ['Adrie', 'Ahanna', 'Aramara', 'Aranea', 'Berris', 'Caelynn', 'Carric', 'Dayereth', 'Enna', 'Galinndan',
-           'Hadarai', 'Halimath', 'Heian', 'Himo', 'Immeral', 'Ivellios', 'Korfel', 'Lada', 'Lamlis', 'Wade']
-};
 
 // Complete PDF Styles
 const styles = StyleSheet.create({
@@ -267,7 +259,8 @@ export const generateRandomCharacter = (options = {}) => {
   const selectedOccupation = occupations[getOccupationNumber(occupationsOption)];
   const gender = getGender(sexOption); 
   const nameGenderIndex = getNameGender(gender);
-  const nameList = nameGenderIndex === 0 ? names.male : names.female;
+  const characterName = getName(nameGenderIndex);
+  const nameDescript = getNameDescript();
     
   // Use the selected ability score method
   const str = rollAbilityScores(abilityScoreOption);

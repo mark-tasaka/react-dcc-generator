@@ -6,14 +6,16 @@ import { generateFourCharacters, generateTwoCharacters, CharacterSheetDocument, 
 window.Buffer = Buffer;
 
 const HomePage = () => {
-  // Default form values
+  // Default form values - ADD givenName and surname
   const defaultFormValues = {
+    givenName: 100,     // Random by default
+    surname: 100,       // Random by default
     alignment: 1,
     sex: 1,
     abilityScore: 1,
     hitPoints: 1,
     occupations: 1,
-    sheetLayout: 1  // 1 = Four Characters, 2 = Two Characters
+    sheetLayout: 1
   };
 
   // State for form values
@@ -77,6 +79,121 @@ const HomePage = () => {
 
         {/* Character Generation Options */}
         <div className="form-container">
+        
+          <div className="form-group">
+            <span className="form-label">Given Name:</span>
+            <select 
+              name="givenName" 
+              value={formValues.givenName}
+              onChange={handleInputChange}
+              className="form-select"
+            >
+              <option value={100}>Random</option>
+              <option value={200}>Blank</option>
+              <option value={0}>African</option>
+              <option value={1}>African American</option>
+              <option value={2}>American</option>
+              <option value={3}>Arabic</option>
+              <option value={4}>Armenian</option>
+              <option value={5}>Celtic</option>
+              <option value={6}>Chinese</option>
+              <option value={7}>Czechoslovakian</option>
+              <option value={8}>Danish</option>
+              <option value={9}>Dutch</option>
+              <option value={10}>Egyptian</option>
+              <option value={11}>English</option>
+              <option value={12}>Finnish</option>
+              <option value={13}>French</option>
+              <option value={14}>Gaelic</option>
+              <option value={15}>German</option>
+              <option value={16}>Greek</option>
+              <option value={17}>Hawaiian</option>
+              <option value={18}>Hebrew</option>
+              <option value={19}>Hindi</option>
+              <option value={20}>Hungarian</option>
+              <option value={21}>Indian</option>
+              <option value={22}>Irish</option>
+              <option value={23}>Italian</option>
+              <option value={24}>Japanese</option>
+              <option value={25}>Korean</option>
+              <option value={26}>Latin</option>
+              <option value={27}>Middle English</option>
+              <option value={28}>Native American</option>
+              <option value={29}>Norse</option>
+              <option value={30}>Old English</option>
+              <option value={31}>Old French</option>
+              <option value={32}>Old German</option>
+              <option value={33}>Old Norse</option>
+              <option value={34}>Persian</option>
+              <option value={35}>Polish</option>
+              <option value={36}>Polynesian</option>
+              <option value={37}>Russian</option>
+              <option value={38}>Sanskrit</option>
+              <option value={39}>Scandinavian</option>
+              <option value={40}>Scottish</option>
+              <option value={41}>Slavic</option>
+              <option value={42}>Spanish</option>
+              <option value={43}>Swahili</option>
+              <option value={44}>Swedish</option>
+              <option value={45}>Teutonic</option>
+              <option value={46}>Turkish</option>
+              <option value={47}>Vietnamese</option>
+              <option value={48}>Welsh</option>
+              <option value={49}>Yiddish</option>
+            </select>
+          </div>
+          
+          <div className="form-group">
+            <span className="form-label">Surname:</span>
+            <select 
+              name="surname" 
+              value={formValues.surname}
+              onChange={handleInputChange}
+              className="form-select"
+            >
+              <option value={100}>Random</option>
+              <option value={200}>Blank</option>
+              <option value={0}>African</option>
+              <option value={1}>Arabic</option>
+              <option value={2}>Armenian</option>
+              <option value={3}>Catalan</option>
+              <option value={4}>Chinese</option>
+              <option value={5}>Cornish</option>
+              <option value={6}>Czechoslovakian</option>
+              <option value={7}>Danish</option>
+              <option value={8}>Dutch</option>
+              <option value={9}>English</option>
+              <option value={10}>Finnish</option>
+              <option value={11}>French</option>
+              <option value={12}>Galician</option>
+              <option value={13}>German</option>
+              <option value={14}>Greek</option>
+              <option value={15}>Hungarian</option>
+              <option value={16}>Indian</option>
+              <option value={17}>Irish</option>
+              <option value={18}>Italian</option>
+              <option value={19}>Japanese</option>
+              <option value={20}>Jewish</option>
+              <option value={21}>Korean</option>
+              <option value={22}>Lithuanian</option>
+              <option value={23}>Muslim</option>
+              <option value={24}>Norwegian</option>
+              <option value={25}>Polish</option>
+              <option value={26}>Portuguese</option>
+              <option value={27}>Russian</option>
+              <option value={28}>Scandinavian</option>
+              <option value={29}>Scottish</option>
+              <option value={30}>Slavic</option>
+              <option value={31}>Spanish</option>
+              <option value={32}>Swedish</option>
+              <option value={33}>Swiss</option>
+              <option value={34}>Turkish</option>
+              <option value={35}>Ukrainian</option>
+              <option value={36}>Vietnamese</option>
+              <option value={37}>Welsh</option>
+            </select>
+          </div>
+
           <div className="form-group">
             <span className="form-label">Alignment:</span>
             <select 
@@ -93,10 +210,10 @@ const HomePage = () => {
           </div>
 
           <div className="form-group">
-            <span className="form-label">Sex:</span>
+            <span className="form-label">Gender:</span>
             <select 
-              name="sex" 
-              value={formValues.sex}
+              name="gender" 
+              value={formValues.gender}
               onChange={handleInputChange}
               className="form-select"
             >
