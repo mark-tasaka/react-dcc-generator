@@ -6,7 +6,6 @@ import { generateFourCharacters, generateTwoCharacters, CharacterSheetDocument, 
 window.Buffer = Buffer;
 
 const HomePage = () => {
-  // Default form values - ADD givenName and surname
 const defaultFormValues = {
   givenName: 100,     // Random by default
   surname: 100,       // Random by default

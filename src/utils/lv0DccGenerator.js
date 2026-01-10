@@ -142,7 +142,7 @@ const styles = StyleSheet.create({
   armour: { position: 'absolute', top: 230, left: 125 },
   equipment: { position: 'absolute', top: 256, left: 125 },
   notes: { position: 'absolute', top: 303, left: 125 , width: 155},
-  message: { position: 'absolute', top: 350, left: 125 , width: 155},
+  message: { position: 'absolute', bottom: 40, left: 125 , width: 145},
 });
 
 //landscape styles
@@ -189,7 +189,7 @@ const landscapeStyles = StyleSheet.create({
     color: 'black',
   },
   xSmallText: {
-    fontSize: 8,
+    fontSize: 7,
     color: 'black',
   },
   
@@ -241,7 +241,7 @@ const landscapeStyles = StyleSheet.create({
   armour: { position: 'absolute', top: 343, left: 165 },
   equipment: { position: 'absolute', top: 378, left: 165, width: 190 },
   notes: { position: 'absolute', top: 440, left: 165, width: 190 },
-  message: { position: 'absolute', top: 540, right: 40 },
+  message: { position: 'absolute', top: 488,  left: 165, width: 190 },
 });
 
 // Helper function to get random name origin when "Random" (100) is selected
@@ -341,8 +341,7 @@ export const generateRandomCharacter = (options = {}) => {
   const notes = getNotes(selectedOccupation.id);
   const equipment = generateEquipment(selectedOccupation);
   const armour = getArmour(selectedOccupation.id);
-  const message = dieRollMethodText(abilityScoreOption) + hitPointsMethodText(hitPointsOption) + 
-                  (nameDescript ? ' ' + nameDescript : '');
+  const message = dieRollMethodText(abilityScoreOption) + hitPointsMethodText(hitPointsOption) + nameDescript
 
   
   return {
@@ -388,8 +387,7 @@ export const generateRandomCharacter = (options = {}) => {
       int
     )),
     notes: notes,
-    message: message,
-    nameDescript: nameDescript // Add this if you want to access it separately
+    message: message
   };
 };
 
