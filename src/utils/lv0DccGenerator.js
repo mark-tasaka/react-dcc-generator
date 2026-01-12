@@ -92,7 +92,19 @@ const styles = StyleSheet.create({
   xSmallText: {
     fontSize: 6,
     color: 'black',
-  },
+  },// Add these new text styles
+rightAlignText: {
+  fontSize: 10,
+  color: 'black',
+  fontWeight: 'bold',
+  textAlign: 'right',
+},
+variableWidthText: {
+  fontSize: 10,
+  color: 'black',
+  fontWeight: 'bold',
+  width: 30, // Set a width for the modifier field
+},
   
   // Position styles for form fields
   name: { position: 'absolute', top: 32, left: 30 },
@@ -102,21 +114,21 @@ const styles = StyleSheet.create({
   critDie: { position: 'absolute', top: 57, left: 125 },
   fumble: { position: 'absolute', top: 57, left: 180 },
   
-  // Stats positioning - VALUES (left side)
-  str: { position: 'absolute', top: 199, left: 66 },
-  agi: { position: 'absolute', top: 215, left: 66 },
-  sta: { position: 'absolute', top: 231, left: 66 },
-  per: { position: 'absolute', top: 246, left: 66 },
-  int: { position: 'absolute', top: 263, left: 66 },
-  luck: { position: 'absolute', top: 279, left: 66 },
-  
-  // Stats positioning - MODIFIERS (right side)
-  strMod: { position: 'absolute', top: 199, left: 82 },
-  agiMod: { position: 'absolute', top: 215, left: 82 },
-  staMod: { position: 'absolute', top: 231, left: 82 },
-  perMod: { position: 'absolute', top: 246, left: 82 },
-  intMod: { position: 'absolute', top: 263, left: 82 },
-  luckMod: { position: 'absolute', top: 279, left: 82 },
+  // Stats positioning - VALUES (right-aligned)
+  str: { position: 'absolute', top: 199, left: 50, width: 25 },
+  agi: { position: 'absolute', top: 215, left: 50, width: 25 },
+  sta: { position: 'absolute', top: 231, left: 50, width: 25 },
+  per: { position: 'absolute', top: 246, left: 50, width: 25 },
+  int: { position: 'absolute', top: 263, left: 50, width: 25 },
+  luck: { position: 'absolute', top: 279, left: 50, width: 25 },
+
+  // Stats positioning - MODIFIERS (variable width)
+  strMod: { position: 'absolute', top: 199, left: 77, width: 30 },
+  agiMod: { position: 'absolute', top: 215, left: 77, width: 30 },
+  staMod: { position: 'absolute', top: 231, left: 77, width: 30 },
+  perMod: { position: 'absolute', top: 246, left: 77, width: 30 },
+  intMod: { position: 'absolute', top: 263, left: 77, width: 30 },
+  luckMod: { position: 'absolute', top: 279, left: 77, width: 30 },
   
   // Combat stats - Convert right positioning to left for container compatibility
   ac: { position: 'absolute', top: 122, right: 230}, 
@@ -192,6 +204,18 @@ const landscapeStyles = StyleSheet.create({
     fontSize: 7,
     color: 'black',
   },
+rightAlignText: {
+  fontSize: 12,
+  color: 'black',
+  fontWeight: 'bold',
+  textAlign: 'right',
+},
+variableWidthText: {
+  fontSize: 12,
+  color: 'black',
+  fontWeight: 'bold',
+  width: 35,
+},
   
   // Position styles for landscape layout (you'll need to adjust these based on your landscape background)
   name: { position: 'absolute', top: 97, left: 40 },
@@ -201,22 +225,20 @@ const landscapeStyles = StyleSheet.create({
   critDie: { position: 'absolute', top: 127, left: 160 },
   fumble: { position: 'absolute', top: 127, left: 230 },
   
-  // Stats positioning - VALUES (left side)
-  str: { position: 'absolute', top: 307, left: 86 },
-  agi: { position: 'absolute', top: 326, left: 86 },
-  sta: { position: 'absolute', top: 346, left: 86 },
-  per: { position: 'absolute', top: 367, left: 86 },
-  int: { position: 'absolute', top: 388, left: 86 },
-  luck: { position: 'absolute', top: 408, left: 86 },
-  
-  // Stats positioning - MODIFIERS (right side)
-  strMod: { position: 'absolute', top: 307, left: 106 },
-  agiMod: { position: 'absolute', top: 326, left: 106 },
-  staMod: { position: 'absolute', top: 346, left: 106 },
-  perMod: { position: 'absolute', top: 367, left: 106 },
-  intMod: { position: 'absolute', top: 388, left: 106 },
-  luckMod: { position: 'absolute', top: 408, left: 106 },
-  
+  str: { position: 'absolute', top: 307, left: 70, width: 25 },
+  agi: { position: 'absolute', top: 326, left: 70, width: 25 },
+  sta: { position: 'absolute', top: 346, left: 70, width: 25 },
+  per: { position: 'absolute', top: 367, left: 70, width: 25 },
+  int: { position: 'absolute', top: 388, left: 70, width: 25 },
+  luck: { position: 'absolute', top: 408, left: 70, width: 25 },
+
+  strMod: { position: 'absolute', top: 307, left: 97, width: 35 },
+  agiMod: { position: 'absolute', top: 326, left: 97, width: 35 },
+  staMod: { position: 'absolute', top: 346, left: 97, width: 35 },
+  perMod: { position: 'absolute', top: 367, left: 97, width: 35 },
+  intMod: { position: 'absolute', top: 388, left: 97, width: 35 },
+  luckMod: { position: 'absolute', top: 408, left: 97, width: 35 },
+    
   // Combat stats (adjust these for landscape layout)
   ac: { position: 'absolute', top: 210, right: 293 }, 
   hp: { position: 'absolute', top: 253, left: 46 },
@@ -403,23 +425,23 @@ const Character = ({ character, position }) => (
     <Text style={[styles.text, styles.fumble]}>{character.fumble}</Text>
     
     {/* Stats - Values and Modifiers separated */}
-    <Text style={[styles.text, styles.str]}>{character.stats.str.value}</Text>
-    <Text style={[styles.text, styles.strMod]}>({character.stats.str.modifier >= 0 ? '+' : ''}{character.stats.str.modifier})</Text>
+    <Text style={[styles.rightAlignText, styles.str]}>{character.stats.str.value}</Text>
+    <Text style={[styles.variableWidthText, styles.strMod]}>({character.stats.str.modifier >= 0 ? '+' : ''}{character.stats.str.modifier})</Text>
     
-    <Text style={[styles.text, styles.agi]}>{character.stats.agi.value}</Text>
-    <Text style={[styles.text, styles.agiMod]}>({character.stats.agi.modifier >= 0 ? '+' : ''}{character.stats.agi.modifier})</Text>
+    <Text style={[styles.rightAlignText, styles.agi]}>{character.stats.agi.value}</Text>
+    <Text style={[styles.variableWidthText, styles.agiMod]}>({character.stats.agi.modifier >= 0 ? '+' : ''}{character.stats.agi.modifier})</Text>
     
-    <Text style={[styles.text, styles.sta]}>{character.stats.sta.value}</Text>
-    <Text style={[styles.text, styles.staMod]}>({character.stats.sta.modifier >= 0 ? '+' : ''}{character.stats.sta.modifier})</Text>
+    <Text style={[styles.rightAlignText, styles.sta]}>{character.stats.sta.value}</Text>
+    <Text style={[styles.variableWidthText, styles.staMod]}>({character.stats.sta.modifier >= 0 ? '+' : ''}{character.stats.sta.modifier})</Text>
     
-    <Text style={[styles.text, styles.per]}>{character.stats.per.value}</Text>
-    <Text style={[styles.text, styles.perMod]}>({character.stats.per.modifier >= 0 ? '+' : ''}{character.stats.per.modifier})</Text>
+    <Text style={[styles.rightAlignText, styles.per]}>{character.stats.per.value}</Text>
+    <Text style={[styles.variableWidthText, styles.perMod]}>({character.stats.per.modifier >= 0 ? '+' : ''}{character.stats.per.modifier})</Text>
     
-    <Text style={[styles.text, styles.int]}>{character.stats.int.value}</Text>
-    <Text style={[styles.text, styles.intMod]}>({character.stats.int.modifier >= 0 ? '+' : ''}{character.stats.int.modifier})</Text>
+    <Text style={[styles.rightAlignText, styles.int]}>{character.stats.int.value}</Text>
+    <Text style={[styles.variableWidthText, styles.intMod]}>({character.stats.int.modifier >= 0 ? '+' : ''}{character.stats.int.modifier})</Text>
     
-    <Text style={[styles.text, styles.luck]}>{character.stats.luck.value}</Text>
-    <Text style={[styles.text, styles.luckMod]}>({character.stats.luck.modifier >= 0 ? '+' : ''}{character.stats.luck.modifier})</Text>
+    <Text style={[styles.rightAlignText, styles.luck]}>{character.stats.luck.value}</Text>
+    <Text style={[styles.variableWidthText, styles.luckMod]}>({character.stats.luck.modifier >= 0 ? '+' : ''}{character.stats.luck.modifier})</Text>
     
     {/* Combat Stats */}
     <Text style={[styles.text, styles.ac]}>{character.ac}</Text>
@@ -459,23 +481,23 @@ const LandscapeCharacter = ({ character, position }) => (
     <Text style={[landscapeStyles.text, landscapeStyles.fumble]}>{character.fumble}</Text>
     
     {/* Stats - Values and Modifiers separated */}
-    <Text style={[landscapeStyles.largeText, landscapeStyles.str]}>{character.stats.str.value}</Text>
-    <Text style={[landscapeStyles.largeText, landscapeStyles.strMod]}>({character.stats.str.modifier >= 0 ? '+' : ''}{character.stats.str.modifier})</Text>
+    <Text style={[landscapeStyles.rightAlignText, landscapeStyles.str]}>{character.stats.str.value}</Text>
+    <Text style={[landscapeStyles.variableWidthText, landscapeStyles.strMod]}>({character.stats.str.modifier >= 0 ? '+' : ''}{character.stats.str.modifier})</Text>
     
-    <Text style={[landscapeStyles.largeText, landscapeStyles.agi]}>{character.stats.agi.value}</Text>
-    <Text style={[landscapeStyles.largeText, landscapeStyles.agiMod]}>({character.stats.agi.modifier >= 0 ? '+' : ''}{character.stats.agi.modifier})</Text>
+    <Text style={[landscapeStyles.rightAlignText, landscapeStyles.agi]}>{character.stats.agi.value}</Text>
+    <Text style={[landscapeStyles.variableWidthText, landscapeStyles.agiMod]}>({character.stats.agi.modifier >= 0 ? '+' : ''}{character.stats.agi.modifier})</Text>
     
-    <Text style={[landscapeStyles.largeText, landscapeStyles.sta]}>{character.stats.sta.value}</Text>
-    <Text style={[landscapeStyles.largeText, landscapeStyles.staMod]}>({character.stats.sta.modifier >= 0 ? '+' : ''}{character.stats.sta.modifier})</Text>
+    <Text style={[landscapeStyles.rightAlignText, landscapeStyles.sta]}>{character.stats.sta.value}</Text>
+    <Text style={[landscapeStyles.variableWidthText, landscapeStyles.staMod]}>({character.stats.sta.modifier >= 0 ? '+' : ''}{character.stats.sta.modifier})</Text>
     
-    <Text style={[landscapeStyles.largeText, landscapeStyles.per]}>{character.stats.per.value}</Text>
-    <Text style={[landscapeStyles.largeText, landscapeStyles.perMod]}>({character.stats.per.modifier >= 0 ? '+' : ''}{character.stats.per.modifier})</Text>
+    <Text style={[landscapeStyles.rightAlignText, landscapeStyles.per]}>{character.stats.per.value}</Text>
+    <Text style={[landscapeStyles.variableWidthText, landscapeStyles.perMod]}>({character.stats.per.modifier >= 0 ? '+' : ''}{character.stats.per.modifier})</Text>
     
-    <Text style={[landscapeStyles.largeText, landscapeStyles.int]}>{character.stats.int.value}</Text>
-    <Text style={[landscapeStyles.largeText, landscapeStyles.intMod]}>({character.stats.int.modifier >= 0 ? '+' : ''}{character.stats.int.modifier})</Text>
+    <Text style={[landscapeStyles.rightAlignText, landscapeStyles.int]}>{character.stats.int.value}</Text>
+    <Text style={[landscapeStyles.variableWidthText, landscapeStyles.intMod]}>({character.stats.int.modifier >= 0 ? '+' : ''}{character.stats.int.modifier})</Text>
     
-    <Text style={[landscapeStyles.largeText, landscapeStyles.luck]}>{character.stats.luck.value}</Text>
-    <Text style={[landscapeStyles.largeText, landscapeStyles.luckMod]}>({character.stats.luck.modifier >= 0 ? '+' : ''}{character.stats.luck.modifier})</Text>
+    <Text style={[landscapeStyles.rightAlignText, landscapeStyles.luck]}>{character.stats.luck.value}</Text>
+    <Text style={[landscapeStyles.variableWidthText, landscapeStyles.luckMod]}>({character.stats.luck.modifier >= 0 ? '+' : ''}{character.stats.luck.modifier})</Text>
     
     {/* Combat Stats */}
     <Text style={[landscapeStyles.text, landscapeStyles.ac]}>{character.ac}</Text>
