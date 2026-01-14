@@ -134,10 +134,10 @@ variableWidthText: {
   ac: { position: 'absolute', top: 122, right: 230}, 
   hp: { position: 'absolute', top: 155, left: 32 },
   init: { position: 'absolute', top: 110, left: 142},
-  melee: { position: 'absolute', top: 130, left: 132 },
-  missile: { position: 'absolute', top: 142, left: 132 },
-  meleeDamage: { position: 'absolute', top: 130, left: 152 },
-  missileDamage: { position: 'absolute', top: 142, left: 152 },
+  melee: { position: 'absolute', top: 130, left: 132, width: 30 },
+  missile: { position: 'absolute', top: 142, left: 132, width: 30 },
+  meleeDamage: { position: 'absolute', top: 130, left: 152, width: 30 },
+  missileDamage: { position: 'absolute', top: 142, left: 152, width: 30 },
   
   // Saves - Convert right positioning to left for container compatibility
   reflex: { position: 'absolute', top: 35, left: 235 },    // Converted from right: 65
@@ -243,10 +243,10 @@ variableWidthText: {
   ac: { position: 'absolute', top: 210, right: 293 }, 
   hp: { position: 'absolute', top: 253, left: 46 },
   init: { position: 'absolute', top: 195, left: 185 },
-  melee: { position: 'absolute', top: 219, left: 175 },
-  missile: { position: 'absolute', top: 237, left: 175 },
-  meleeDamage: { position: 'absolute', top: 219, left: 198 },
-  missileDamage: { position: 'absolute', top: 237, left: 198 },
+  melee: { position: 'absolute', top: 219, left: 175, width: 35 },
+  missile: { position: 'absolute', top: 237, left: 175, width: 35 },
+  meleeDamage: { position: 'absolute', top: 219, left: 198, width: 35 },
+  missileDamage: { position: 'absolute', top: 237, left: 198, width: 35 },
   
   // Saves (adjust for landscape)
   reflex: { position: 'absolute', top: 100, left: 300 },
@@ -447,10 +447,10 @@ const Character = ({ character, position }) => (
     <Text style={[styles.text, styles.ac]}>{character.ac}</Text>
     <Text style={[styles.text, styles.hp]}>{character.hp}</Text>
     <Text style={[styles.text, styles.init]}>{character.init >= 0 ? '+' : ''}{character.init}</Text>
-    <Text style={[styles.text, styles.melee]}>{character.melee >= 0 ? '+' : ''}{character.melee}</Text>
-    <Text style={[styles.text, styles.missile]}>{character.missile >= 0 ? '+' : ''}{character.missile}</Text>
-    <Text style={[styles.text, styles.meleeDamage]}>{character.meleeDamage >= 0 ? '+' : ''}{character.meleeDamage}</Text>
-    <Text style={[styles.text, styles.missileDamage]}>{character.missileDamage >= 0 ? '+' : ''}{character.missileDamage}</Text>
+    <Text style={[styles.variableWidthText, styles.melee]}>{character.melee >= 0 ? '+' : ''}{character.melee}</Text>
+    <Text style={[styles.variableWidthText, styles.missile]}>{character.missile >= 0 ? '+' : ''}{character.missile}</Text>
+    <Text style={[styles.variableWidthText, styles.meleeDamage]}>{character.meleeDamage >= 0 ? '+' : ''}{character.meleeDamage}</Text>
+    <Text style={[styles.variableWidthText, styles.missileDamage]}>{character.missileDamage >= 0 ? '+' : ''}{character.missileDamage}</Text>
     
     {/* Saves */}
     <Text style={[styles.largeText, styles.reflex]}>{character.reflex >= 0 ? '+' : ''}{character.reflex}</Text>
@@ -503,10 +503,10 @@ const LandscapeCharacter = ({ character, position }) => (
     <Text style={[landscapeStyles.text, landscapeStyles.ac]}>{character.ac}</Text>
     <Text style={[landscapeStyles.text, landscapeStyles.hp]}>{character.hp}</Text>
     <Text style={[landscapeStyles.text, landscapeStyles.init]}>{character.init >= 0 ? '+' : ''}{character.init}</Text>
-    <Text style={[landscapeStyles.text, landscapeStyles.melee]}>{character.melee >= 0 ? '+' : ''}{character.melee}</Text>
-    <Text style={[landscapeStyles.text, landscapeStyles.missile]}>{character.missile >= 0 ? '+' : ''}{character.missile}</Text>
-    <Text style={[landscapeStyles.text, landscapeStyles.meleeDamage]}>{character.meleeDamage >= 0 ? '+' : ''}{character.meleeDamage}</Text>
-    <Text style={[landscapeStyles.text, landscapeStyles.missileDamage]}>{character.missileDamage >= 0 ? '+' : ''}{character.missileDamage}</Text>
+    <Text style={[landscapeStyles.variableWidthText, landscapeStyles.melee]}>{character.melee >= 0 ? '+' : ''}{character.melee}</Text>
+    <Text style={[landscapeStyles.variableWidthText, landscapeStyles.missile]}>{character.missile >= 0 ? '+' : ''}{character.missile}</Text>
+    <Text style={[landscapeStyles.variableWidthText, landscapeStyles.meleeDamage]}>{character.meleeDamage >= 0 ? '+' : ''}{character.meleeDamage}</Text>
+    <Text style={[landscapeStyles.variableWidthText, landscapeStyles.missileDamage]}>{character.missileDamage >= 0 ? '+' : ''}{character.missileDamage}</Text>
     
     {/* Saves */}
     <Text style={[landscapeStyles.largeText, landscapeStyles.reflex]}>{character.reflex >= 0 ? '+' : ''}{character.reflex}</Text>
