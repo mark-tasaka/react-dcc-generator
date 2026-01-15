@@ -134,21 +134,14 @@ export const danishGivenNamesFemale = () => {
 };
 
 export const dutchGivenNamesFemale = () => {
-  const givenNames = [
-    'Brandie', 'Haven', 'Hester', 'Kaatje', 'Kalie', 'Liannaka', 'Lieneke', 'Lonikie', 'Nelleke', 
-    'Schuyler', 'Tryne', 'Van'
-  ];
-  
+  const givenNames = ['Anna', 'Marie', 'Elisabeth', 'Johanna', 'Cornelia', 'Hendrika', 'Wilhelmina', 'Antonia', 'Catharina', 'Francina', 'Adriana', 'Christina', 'Petronella', 'Jacoba', 'Margaretha', 'Albertina', 'Theodora', 'Alida', 'Geertruida', 'Susanna', 'Helena', 'Pieternella', 'Jannigje', 'Neeltje', 'Grietje', 'Aagje', 'Trijntje', 'Annetje', 'Marietje', 'Berta', 'Clara', 'Emma', 'Sophia', 'Julia', 'Rosa', 'Dina', 'Lena', 'Meta', 'Rika', 'Mina', 'Dora', 'Ella', 'Nina', 'Ida', 'Ada', 'Eva', 'Lea', 'Cora', 'Nora', 'Vera', 'Frederika', 'Carolina', 'Emilia', 'Victoria', 'Amelia', 'Paulina', 'Angelina', 'Josephina', 'Martina', 'Bernardina', 'Gerardina', 'Augustina', 'Sabina', 'Cathelijne', 'Margriet', 'Anneke', 'Betje', 'Mientje', 'Klaartje', 'Aaltje', 'Maartje', 'Willemijn', 'Femke', 'Anouk', 'Lotte', 'Fleur', 'Iris', 'Sanne', 'Roos', 'Noor', 'Eline', 'Maud', 'Isa', 'Lynn', 'Fenna', 'Britt', 'Daphne', 'Amber', 'Jasmijn', 'Nienke', 'Lot', 'Floor', 'Lieke', 'Romy', 'Tess', 'Lara', 'Saar', 'Joanne', 'Rosanne', 'Marieke', 'Annelies', 'Marianne'];
+
   return getRandomName(givenNames);
 };
 
 export const egyptianGivenNamesFemale = () => {
-  const givenNames = [
-    'Chione', 'Femi', 'Hekenu', 'Hekt', 'Icess', 'Kanika', 'Khety', 'Lapis', 'Mariasha', 'Nakia', 
-    'Nashwa', 'Nebta', 'Neferu', 'Neith', 'Nile', 'Nubia', 'Ramla', 'Rennefer', 'Sabola', 'Sagira', 
-    'Sahirah', 'Salama', 'Sanura', 'Suma', 'Tauret', 'Tetisheri'
-  ];
-  
+  const givenNames = ['Fatima', 'Aisha', 'Khadija', 'Maryam', 'Amina', 'Zahra', 'Salma', 'Nour', 'Yasmin', 'Layla', 'Sarah', 'Dina', 'Rana', 'Nadia', 'Hala', 'Rania', 'Noura', 'Marwa', 'Amira', 'Farah', 'Zeinab', 'Mona', 'Hanan', 'Samar', 'Reem', 'Ghada', 'Iman', 'Nesma', 'Heba', 'Aliaa', 'Radwa', 'Nada', 'Rasha', 'Yousra', 'Nagwa', 'Soha', 'Shimaa', 'Doaa', 'Esraa', 'Rehab', 'Norhan', 'Habiba', 'Malak', 'Jana', 'Nayera', 'Asmaa', 'Shaima', 'Safaa', 'Hanaa', 'Zakia', 'Warda', 'Nawal', 'Karima', 'Latifa', 'Souad', 'Fawzia', 'Samira', 'Zeineb', 'Hayam', 'Manal', 'Suzan', 'Wafaa', 'Nagla', 'Naglaa', 'Maha', 'Sahar', 'Azza', 'Mervat', 'Nahed', 'Sanaa', 'Sabah', 'Leila', 'Neval', 'Magda', 'Maha', 'Nayla', 'Thuraya', 'Samah', 'Wedad', 'Nayrouz', 'Nashwa', 'Lobna', 'Hoda', 'Abeer', 'Afaf', 'Rawda', 'Basma', 'Nihal', 'Rahma', 'Nermeen', 'Passant', 'Sherine', 'Nesrine', 'Carole', 'Miriam', 'Neveen', 'Maggie', 'Farida', 'Mennat', 'Arwa', 'Aya'];
+
   return getRandomName(givenNames);
 };
 
@@ -195,10 +188,8 @@ export const englishGivenNamesFemale = () => {
 
 
 export const finnishGivenNamesFemale = () => {
-  const givenNames = [
-    'Kaija', 'Kalle', 'Louhi', 'Preita', 'Senja', 'Tarja', 'Terhi'
-  ];
-  
+  const givenNames = ['Aino', 'Helmi', 'Liisa', 'Maria', 'Anna', 'Elina', 'Sari', 'Hanna', 'Johanna', 'Katariina', 'Marja', 'Tuula', 'Pirjo', 'Riitta', 'Eeva', 'Helena', 'Marjatta', 'Aila', 'Kyllikki', 'Sinikka', 'Anneli', 'Maija', 'Leena', 'Pirkko', 'Seija', 'Terttu', 'Ulla', 'Annikki', 'Kaarina', 'Merja', 'Tarja', 'Päivi', 'Kristiina', 'Inkeri', 'Kaija', 'Marjukka', 'Kirsti', 'Raija', 'Anja', 'Tellervo', 'Sirkka', 'Hilkka', 'Ritva', 'Maarit', 'Satu', 'Tiina', 'Pia', 'Outi', 'Jaana', 'Susanna', 'Heidi', 'Mari', 'Laura', 'Jenni', 'Emma', 'Julia', 'Ella', 'Aada', 'Olivia', 'Isla', 'Ellen', 'Amanda', 'Emilia', 'Sara', 'Kerttu', 'Linnea', 'Alma', 'Lumi', 'Pinja', 'Helka', 'Siiri', 'Venla', 'Enni', 'Iida', 'Matilda', 'Kiira', 'Elli', 'Ronja', 'Lilja', 'Nea', 'Nelma', 'Alisa', 'Sofia', 'Peppi', 'Aava', 'Vilma', 'Kira', 'Mila', 'Freja', 'Viivi', 'Elsa', 'Lotta', 'Sylvia', 'Lempi', 'Veera', 'Alina', 'Niina', 'Noora', 'Karoliina', 'Emmi', 'Riikka', 'Miia', 'Petra', 'Elise', 'Minna'];
+
   return getRandomName(givenNames);
 };
 
@@ -228,14 +219,8 @@ export const frenchGivenNamesFemale = () => {
 };
 
 export const gaelicGivenNamesFemale = () => {
-  const givenNames = [
-    'Blaine', 'Blair', 'Eilis', 'Kalene', 'Keaira', 'Keelty', 'Keely', 'Keen', 'Keitha', 'Kellan', 
-    'Kennis', 'Kerry', 'Kevina', 'Killian', 'Kyna', 'Lakyle', 'Lee', 'Mab', 'Maeryn', 'Maille', 
-    'Mairi', 'Maisie', 'Meara', 'Meckenzie', 'Myrna', 'Nara', 'Neala', 'Nelia', 'Oona', 'Quinn', 
-    'Rhoswen', 'Riane', 'Riley', 'Rogan', 'Rona', 'Ryan', 'Sadb', 'Shanley', 'Shelagh', 'Sine', 
-    'Siobhan', 'Sorcha', 'Ultreia', 'Vevila'
-  ];
-  
+  const givenNames = ['Áine', 'Aoife', 'Brigid', 'Caoimhe', 'Deirdre', 'Éabha', 'Fionnuala', 'Gráinne', 'Íde', 'Mairéad', 'Niamh', 'Órla', 'Róisín', 'Siobhán', 'Úna', 'Ailbhe', 'Bláithín', 'Ciara', 'Eimear', 'Fíona', 'Muirenn', 'Saoirse', 'Treasa', 'Clodagh', 'Aoibhinn', 'Caoimhín', 'Síle', 'Máire', 'Cáit', 'Peig', 'Nóra', 'Éilis', 'Bríd', 'Sinéad', 'Ásta', 'Beibhinn', 'Líadan', 'Meadhbh', 'Neasa', 'Orla', 'Ruairí', 'Síomha', 'Tuileann', 'Ailís', 'Bláthnaid', 'Ceara', 'Doireann', 'Éadaoin', 'Gobnait', 'Iseult', 'Laoise', 'Móirín', 'Neamh', 'Onóra', 'Páraic', 'Ríona', 'Sadhbh', 'Teamhair', 'Úrsula', 'Ailbheann', 'Báirbre', 'Caitlín', 'Damhnait', 'Eithne', 'Fainche', 'Gormlaith', 'Íte', 'Lasairfhíona', 'Muiris', 'Neasa', 'Órlaith', 'Proinsias', 'Réaltín', 'Saraid', 'Tadhgín', 'Úlíosa', 'Banbha', 'Ceallach', 'Dubheasa', 'Eabha', 'Fidelma', 'Gormfhlaith', 'Ita', 'Lúna', 'Máirín', 'Nioclás', 'Odharnait', 'Pádraigín', 'Ríoghnach', 'Saileog', 'Tuilelaith', 'Áilinn', 'Beatha', 'Caoilfhionn', 'Dáirine', 'Étaín', 'Finola', 'Gormlaith', 'Iníon', 'Lasairíona'];
+
   return getRandomName(givenNames);
 };
 
@@ -318,42 +303,26 @@ export const greekGivenNamesFemale = () => {
 };
 
 export const hawaiianGivenNamesFemale = () => {
-  const givenNames = [
-    'Alana', 'Aloani', 'Aloha', 'Alohi', 'Alona', 'Anani', 'Aulii', 'Edena', 'Haimi', 'Iolana', 'Kai', 
-    'Kailani', 'Kaili', 'Kaimi', 'Kalama', 'Kalani', 'Kalena', 'Kaley', 'Kali', 'Kalia', 'Kalina', 
-    'Kaloni', 'Kamea', 'Kawena', 'Keahi', 'Keala', 'Keandra', 'Keanu', 'Keiki', 'Keilana', 'Kekona', 
-    'Keola', 'Kiana', 'Kiele', 'Kina', 'Kinipela', 'Konane', 'Lahela', 'Lanai', 'Lani', 'Lanikai', 
-    'Leilana', 'Liliha', 'Lilo', 'Loe', 'Lokelani', 'Luana', 'Mahala', 'Mahina', 'Maik', 'Makaio', 
-    'Makala', 'Makana', 'Makani', 'Makelina', 'Malana', 'Maleah', 'Malia', 'Malu', 'Mei', 'Mekia', 
-    'Melia', 'Mily', 'Nalani', 'Nalanie', 'Nallely', 'Napua', 'Nira', 'Noelani', 'Okelani', 'Ola', 
-    'Oliana', 'Olina', 'Onaona', 'Palakika', 'Palila', 'Paterekia', 'Pela', 'Pelenakino', 'Pelika', 
-    'Pelulio', 'Puakai', 'Puanani', 'Roselani', 'Sasilvia', 'Ululani', 'Walanika', 'Wanaao', 'Wanika'
-  ];
-  
+  const givenNames = ['Leilani', 'Kailani', 'Mahina', 'Nalani', 'Keoni', 'Ailana', 'Akela', 'Alana', 'Alohi', 'Anela', 'Haunani', 'Hoku', 'Iolana', 'Kahale', 'Kailana', 'Kala', 'Kalani', 'Kalena', 'Kamea', 'Kanani', 'Kaui', 'Kawena', 'Keala', 'Keiko', 'Kiana', 'Laka', 'Lana', 'Lehua', 'Lilia', 'Lilo', 'Luana', 'Mahealani', 'Malia', 'Maile', 'Makamae', 'Maleka', 'Mana', 'Moana', 'Naia', 'Nani', 'Noelani', 'Olina', 'Palila', 'Pika', 'Pua', 'Puanani', 'Tiana', 'Ulani', 'Wailana', 'Wikolia', 'Aleka', 'Aolani', 'Haunani', 'Hiwalani', 'Hokulani', 'Iolani', 'Kahalewai', 'Kaileia', 'Kaiona', 'Kala', 'Kalama', 'Kaleo', 'Kalola', 'Kapua', 'Kawai', 'Kealani', 'Kealoha', 'Keoni', 'Kiele', 'Leiloa', 'Leinani', 'Leialoha', 'Likeke', 'Lokelani', 'Luisa', 'Mahina', 'Makana', 'Malana', 'Manoa', 'Nalei', 'Noelle', 'Ohana', 'Palani', 'Pikake', 'Pualani', 'Ululani', 'Waileia', 'Akamu', 'Haunani', 'Haulani', 'Kawika', 'Keahole', 'Kekoa', 'Leilana', 'Mahalo', 'Maikai', 'Malama', 'Naloa', 'Ohelo', 'Palauni', 'Ulalia', 'Waiola', 'Kaimana', 'Keaulana', 'Lelei'];
+
   return getRandomName(givenNames);
 };
 
 export const hebrewGivenNamesFemale = () => {
-  const givenNames = [
-    'Aaliyah', 'Aari', 'Aase', 'Abbellonna', 'Abie', 'Abigail', 'Abira', 'Abital', 'Abra', 'Achazia', 'Ada', 'Adamina', 'Adena', 'Affera', 'Afra', 'Ahava', 'Ahmose', 'Akiva', 'Aliza', 'Alumit', 'Amissa', 'Anita', 'Ann', 'Apphia', 'Araminta', 'Arashel', 'Arella', 'Ariel', 'Arnon', 'Ascah', 'Asenath', 'Asenka', 'Asisa', 'Atara', 'Aviva', 'Ayala', 'Ayla', 'Ayn', 'Bara', 'Basha', 'Bathsheba', 'Becky', 'Bena', 'Beryl', 'Bess', 'Bethany', 'Bettina', 'Beulah', 'Bina', 'Bo', 'Bracha', 'Carmel', 'Chaka', 'Chanah', 'Chaya', 'Daba', 'Dagen', 'Dalia', 'Danielle', 'Danuta', 'Dara', 'Davan', 'Daya', 'Dayla', 'Deborah', 'Delilah', 'Denna', 'Derora', 'Dinah', 'Diza', 'Dodie', 'Dorrit', 'Eden', 'Edena', 'Edna', 'Edria', 'Efrosini', 'Elam', 'Eleora', 'Eliann', 'Elizabeth', 'Emanuelle', 'Endora', 'Eve', 'Gabriela', 'Galya', 'Gana', 'Gayora', 'Gelilah', 'Geva', 'Gilana', 'Gilla', 'Gita', 'Giuseppina', 'Hadara', 'Hadassa', 'Hannah', 'Hariel', 'Hava', 'Heba', 'Hedia', 'Hedva', 'Hepziba', 'Hila', 'Hinda', 'Hosea', 'Ideh', 'Idit', 'Ikia', 'Ilana', 'Iras', 'Isela', 'Iva', 'Ivana', 'Ivria', 'Iyana', 'Jael', 'Jaen', 'Jana', 'Jane', 'Janese', 'Janica', 'Jariah', 'Jedida', 'Jemima', 'Jenay', 'Jenova', 'Jerusha', 'Jesse', 'Jessica', 'Jezebel', 'Jimena', 'Joakima', 'Joan', 'Joaquina', 'Jobey', 'Joelle', 'Jonina', 'Jora', 'Jordan', 'Josephine', 'Josie', 'Judith', 'Kadisha', 'Kaila', 'Kalanit', 'Kaleigh', 'Kanara', 'Karmel', 'Karmina', 'Katriel', 'Kay', 'Kayla', 'Kazia', 'Kefira', 'Keilah', 'Kelila', 'Kenia', 'Keturah', 'Ketzia', 'Kezia', 'Kitra', 'Kizzy', 'Kochava', 'Laah', 'Labana', 'Lael', 'Laela', 'Laila', 'Lailie', 'Laisha', 'Lavey', 'Lavi', 'Lea', 'Leah', 'Ledah', 'Leeza', 'Leia', 'Lemuela', 'Lena', 'Leora', 'Levia', 'Lexine', 'Lia', 'Liana', 'Libba', 'Libby', 'Liora', 'Lirit', 'Lisa', 'Lisbet', 'Lisea', 'Livia', 'Liza', 'Lizbeth', 'Lizeth', 'Lois', 'Lysia', 'Macayle', 'Madeline', 'Magda', 'Magdalen', 'Magena', 'Mahala', 'Mahalia', 'Mahola', 'Malca', 'Malha', 'Malina', 'Malka', 'Mangena', 'Mara', 'Maretta', 'Maria', 'Mariah', 'Mariam', 'Mariasha', 'Marilynne', 'Marna', 'Marnina', 'Marsena', 'Mary', 'Matana', 'Mathea', 'Mattea', 'May', 'Meera', 'Mehitabel', 'Meira', 'Mia', 'Michaela', 'Minna', 'Mira', 'Mireya', 'Miriam', 'Moria', 'Moselle', 'Nancy', 'Nanna', 'Naomi', 'Nasya', 'Natania', 'Nataniella', 'Naysa', 'Nediva', 'Neorah', 'Neria', 'Netta', 'Neviah', 'Nira', 'Nisi', 'Nitza', 'Nitzana', 'Nizana', 'Noemi', 'Nuria', 'Odeda', 'Odele', 'Odera', 'Ofira', 'Oma', 'Oprah', 'Oralee', 'Orpah', 'Ozora', 'Paz', 'Peliah', 'Peninah', 'Raanana', 'Rachel', 'Rahab', 'Raizel', 'Rakel', 'Raphaella', 'Rayna', 'Reba', 'Rebecca', 'Rena', 'Richael', 'Rimona', 'Rishona', 'Ruth', 'Sabeans', 'Sabra', 'Saloma', 'Salome', 'Samara', 'Samatha', 'Samicah', 'Sammy-Jo', 'Samuela', 'Sarah', 'Sarahi', 'Sarai', 'Sarea', 'Sari', 'Sariah', 'Sela', 'Seraphina', 'Shaina', 'Shaine', 'Shalom', 'Shamira', 'Shana', 'Shanae', 'Shanna', 'Sharay', 'Shari', 'Sharis', 'Sharon', 'Shawn', 'Shayna', 'Sheba', 'Sheera', 'Shelah', 'Shera', 'Sheri', 'Sherine', 'Sherri', 'Shira', 'Shobi', 'Shoshannah', 'Shulamit', 'Simone', 'Soshannah', 'Susan', 'Sydelle', 'Taanach', 'Tahlia', 'Talia', 'Talor', 'Tamara', 'Tamitha', 'Tamma', 'Tammy', 'Tamra', 'Tebeth', 'Tema', 'Temina', 'Temira', 'Thadine', 'Thirza', 'Tiarra', 'Timera', 'Tirza', 'Tivona', 'Tobit', 'Tora', 'Tova', 'Tzila', 'Tziporah', 'Tzippa', 'Tzofit', 'Tzvia', 'Udiya', 'Uriah', 'Vada', 'Varda', 'Vida', 'Vidette', 'Ximena', 'Yaara', 'Yachne', 'Yadira', 'Yael', 'Yaffa', 'Yakira', 'Yanira', 'Yardena', 'Yardeniya', 'Yavonna', 'Ydel', 'Yenta', 'Yesmina', 'Yoana', 'Yona', 'Yoninah', 'Yovela', 'Yudelle', 'Zaanannim', 'Zacharee', 'Zahari', 'Zahava', 'Zaide', 'Zair', 'Zakia', 'Zalia', 'Zambda', 'Zan', 'Zana', 'Zanoah', 'Zara', 'Zareah', 'Zareen', 'Zarephath', 'Zaretan', 'Zati', 'Zayit', 'Zayra', 'Zaza', 'Zeanes', 'Zee', 'Zehava', 'Zelek', 'Zella', 'Zelotes', 'Zelpha', 'Zemaraim', 'Zemil', 'Zeph', 'Zephath', 'Zeredah', 'Zeresh', 'Zerlinda', 'Zeruah', 'Zethel', 'Zevida', 'Zez', 'Zhalore', 'Zia', 'Ziahon', 'Zibiah', 'Zila', 'Ziona', 'Zippora', 'Zisel', 'Zita', 'Zoleen', 'Zonda', 'Zula', 'Zuriel'
-  ];
-  
+  const givenNames = ['Sarah', 'Rebecca', 'Rachel', 'Leah', 'Miriam', 'Esther', 'Ruth', 'Naomi', 'Hannah', 'Deborah', 'Judith', 'Tamar', 'Abigail', 'Dinah', 'Bathsheba', 'Michal', 'Gomer', 'Hagar', 'Keturah', 'Bilhah', 'Zilpah', 'Asenath', 'Zipporah', 'Jochebed', 'Shifrah', 'Puah', 'Rahab', 'Achsah', 'Mahlah', 'Noah', 'Hoglah', 'Milcah', 'Tirzah', 'Peninnah', 'Orpah', 'Vashti', 'Hadassah', 'Zeresh', 'Gula', 'Sheerah', 'Huldah', 'Noadiah', 'Athaliah', 'Jehosheba', 'Zibiah', 'Jecoliah', 'Abi', 'Hephzibah', 'Meshullemeth', 'Jedidah', 'Hamutal', 'Nehushta', 'Shomer', 'Adah', 'Zillah', 'Naamah', 'Basemath', 'Maacah', 'Hodesh', 'Baara', 'Hushim', 'Shaharaim', 'Mehetabel', 'Matred', 'Timna', 'Oholibamah', 'Anah', 'Judith', 'Basemath', 'Ada', 'Ahinoam', 'Abital', 'Eglah', 'Maacah', 'Haggith', 'Abishag', 'Abishag', 'Naamah', 'Pharaoh', 'Tahpenes', 'Gomer', 'Loruhamah', 'Lois', 'Eunice', 'Dorcas', 'Lydia', 'Priscilla', 'Phoebe', 'Tryphena', 'Tryphosa', 'Persis', 'Julia', 'Nereus', 'Olympas', 'Claudia', 'Lois', 'Eunice', 'Apphia', 'Nympha', 'Chloe', 'Susanna', 'Joanna', 'Mary', 'Martha', 'Elizabeth', 'Anna', 'Salome'];
+
   return getRandomName(givenNames);
 };
 
 export const hindiGivenNamesFemale = () => {
-  const givenNames = [
-    'Akuti', 'Alka', 'Aloani', 'Amari', 'Ami', 'Anjali', 'Anuradha', 'Anusha', 'Aparna', 'Aruna', 'Ayana', 'Basanti', 'Bharati', 'Bhuma', 'Bina', 'Bindiya', 'Chandra', 'Charu', 'Chhaya', 'Chitrangda', 'Darshana', 'Deepa', 'Deva', 'Devaki', 'Dharma', 'Dipti', 'Divya', 'Dristi', 'Ekta', 'Gatha', 'Gayatri', 'Gopi', 'Harhsa', 'Hema', 'Henna', 'Hiten', 'India', 'Indira', 'Indu', 'Ishara', 'Jahnavi', 'Jamuna', 'Jaya', 'Jayani', 'Juhy', 'Jyoti', 'Kailas', 'Kajal', 'Kajol', 'Kala', 'Kali', 'Kalinda', 'Kamakshi', 'Kamala', 'Kamana', 'Kamna', 'Kaniya', 'Kantha', 'Kanushi', 'Karishma', 'Karka', 'Karya', 'Kasi', 'Katyayani', 'Kausalya', 'Kaveri', 'Kavi', 'Kavindra', 'Kavita', 'Kazanna', 'Kerani', 'Ketika', 'Kimatra', 'Kiran', 'Kirana', 'Kirit', 'Kirsi', 'Kirtana', 'Kirti', 'Kitu', 'Komal', 'Komala', 'Kriti', 'Krupa', 'Krupali', 'Kshama', 'Kuhuk', 'Kumud', 'Kunti', 'Laasya', 'Laksha', 'Lakshmi', 'Lalan', 'Lalasa', 'Lalima', 'Lalita', 'Lalitamohana', 'Lata', 'Latika', 'Lavani', 'Lavanya', 'Laxmi', 'Lolaksi', 'Madhavi', 'Madhu', 'Madhul', 'Madhulika', 'Madhur', 'Madhuri', 'Magan', 'Mahima', 'Mahita', 'Maina', 'Maitryi', 'Makara', 'Malati', 'Malavika', 'Maliha', 'Mallika', 'Malti', 'Mamta', 'Manasa', 'Manasi', 'Manavi', 'Mandara', 'Mandeep', 'Manisha', 'Manjari', 'Manju', 'Manjula', 'Manjusha', 'Manushi', 'Maruti', 'Matangi', 'Matrika', 'Maya', 'Mayuri', 'Medha', 'Meena', 'Meenakshi', 'Megha', 'Meghana', 'Mela', 'Mena', 'Menaka', 'Mesha', 'Minda', 'Mitra', 'Mohini', 'Monisha', 'Mridul', 'Mrinalini', 'Mukul', 'Naina', 'Namrata', 'Nanda', 'Nandini', 'Nandita', 'Natesa', 'Navdeep', 'Nayana', 'Neeharika', 'Neelam', 'Neelja', 'Neema', 'Neena', 'Neerja', 'Neeta', 'Neha', 'Nidra', 'Niju', 'Nilima', 'Nilini', 'Niloufer', 'Nimisha', 'Nimmi', 'Niradhara', 'Niral', 'Nirguna', 'Nirmala', 'Nirupa', 'Nirvana', 'Nisha', 'Nitara', 'Niti', 'Nitu', 'Nitya', 'Niverta', 'Niyati', 'Ojal', 'Paavana', 'Paavani', 'Parvani', 'Pausha', 'Pavana', 'Pollyam', 'Pragyata', 'Prarthana', 'Prashanti', 'Pratiksha', 'Pratima', 'Preeti', 'Prema', 'Premila', 'Prerana', 'Preyasi', 'Pritha', 'Priti', 'Pritika', 'Priya', 'Priyanka', 'Pulkita', 'Pundari', 'Punita', 'Purandhri', 'Purnima', 'Purva', 'Purvaja', 'Purvi', 'Pusti', 'Radha', 'Radhika', 'Rafa', 'Ragini', 'Rajni', 'Rakhil', 'Raksha', 'Ramya', 'Rani', 'Ranjana', 'Ranjita', 'Rasika', 'Rasna', 'Rati', 'Reena', 'Rekha', 'Reman', 'Renuka', 'Reshma', 'Revati', 'Rhu', 'Riddhi', 'Rima', 'Rina', 'Rishabh', 'Ritu', 'Rohana', 'Rohini', 'Roshni', 'Ruchi', 'Ruchika', 'Ruchira', 'Rudrani', 'Rukmini', 'Rupa', 'Rupal', 'Rupali', 'Sabita', 'Sachi', 'Sadhana', 'Sagara', 'Saheli', 'Sahiba', 'Sahila', 'Sajili', 'Sajni', 'Sakina', 'Sakti', 'Saloni', 'Samiksha', 'Sampriti', 'Samta', 'Sanchay', 'Sandya', 'Sangita', 'Saniya', 'Sanjna', 'Sanjula', 'Sanyogita', 'Sanyukta', 'Sapna', 'Sarasvati', 'Saravati', 'Sarika', 'Sarisha', 'Sarita', 'Sarmistha', 'Saryu', 'Sashi', 'Sasthi', 'Satyavati', 'Saumya', 'Saundarya', 'Savarna', 'Savita', 'Savitri', 'Sayana', 'Seema', 'Sesha', 'Sevati', 'Sevita', 'Shaila', 'Shailaja', 'Shaili', 'Shalini', 'Shamita', 'Shanata', 'Shanika', 'Shantah', 'Shante', 'Shanti', 'Sharda', 'Sharmila', 'Sharmistha', 'Sharvani', 'Shashi', 'Sheetal', 'Shobha', 'Shobhna', 'Shradhdha', 'Shreya', 'Shri', 'Shridevi', 'Shrijani', 'Shruti', 'Shubha', 'Shyla', 'Siddhi', 'Simoni', 'Simran', 'Sirisha', 'Smita', 'Smridhi', 'Smriti', 'Sneh', 'Sneha', 'Snigdha', 'Somatra', 'Sona', 'Sonakshi', 'Sonal', 'Sonika', 'Sraddha', 'Srilata', 'Sripada', 'Srishti', 'Sruti', 'Subhadra', 'Subhaga', 'Subhangi', 'Subhuja', 'Suchi', 'Suchitra', 'Sudevi', 'Sudha', 'Sujata', 'Sukanya', 'Suksma', 'Sumana', 'Sumanna', 'Sumati', 'Sundarai', 'Sunee', 'Sunila', 'Sunita', 'Suniti', 'Suparna', 'Suprabha', 'Supriti', 'Supriya', 'Surabhi', 'Suravinda', 'Surotama', 'Suruchi', 'Surupa', 'Surya', 'Sushanti', 'Sushma', 'Sushmita', 'Susila', 'Suvarna', 'Suvrata', 'Swarupa', 'Sweta', 'Tamali', 'Tamanna', 'Tanaya', 'Tanika', 'Tanu', 'Tanuja', 'Tanushi', 'Tanvi', 'Tapi', 'Tapti', 'Tarala', 'Tarannum', 'Tarika', 'Tejal', 'Teji', 'Toral', 'Trishna', 'Triveni', 'Trupti', 'Trusha', 'Tuhina', 'Tulasi', 'Tusti', 'Udaya', 'Ujila', 'Ujwala', 'Uma', 'Umali', 'Unnati', 'Urmila', 'Urvasi', 'Usha', 'Ushmil', 'Uttara', 'Vachya', 'Vaishali', 'Vandana', 'Vani', 'Vanika', 'Vanita', 'Vanjan', 'Varana', 'Varsha', 'Varuni', 'Vasanta', 'Vasavi', 'Vasudha', 'Vasumati', 'Veda', 'Veena', 'Vibhuti', 'Vidya', 'Vimala', 'Vinata', 'Vinaya', 'Vineeta', 'Visala', 'Vrinda', 'Vyoma', 'Waheeda', 'Yaksha', 'Yamini', 'Yamuna', 'Yashona', 'Yauvani', 'Yogini', 'Yogita', 'Zankhana', 'Zarna'
-  ];
-  
+  const givenNames = ['Priya', 'Anita', 'Sunita', 'Kavita', 'Geeta', 'Sita', 'Radha', 'Krishna', 'Lakshmi', 'Saraswati', 'Parvati', 'Durga', 'Kali', 'Shanti', 'Kamala', 'Indira', 'Devika', 'Meera', 'Usha', 'Asha', 'Nisha', 'Ritu', 'Sushma', 'Rekha', 'Deepika', 'Rashmi', 'Vandana', 'Sangita', 'Namita', 'Savita', 'Lalita', 'Malini', 'Sushila', 'Sheela', 'Veena', 'Ganga', 'Yamuna', 'Narmada', 'Kaveri', 'Godavari', 'Sarita', 'Kumari', 'Devi', 'Mata', 'Rani', 'Rajni', 'Shobha', 'Sudha', 'Vidya', 'Maya', 'Lata', 'Kanta', 'Mala', 'Nila', 'Hema', 'Sona', 'Rupa', 'Pushpa', 'Kamala', 'Padma', 'Lotus', 'Chandra', 'Surya', 'Tara', 'Jyoti', 'Deepa', 'Dipa', 'Nandini', 'Manjula', 'Vasanti', 'Sharda', 'Bharati', 'Shakti', 'Bhavana', 'Rachana', 'Kalpana', 'Sapna', 'Swapna', 'Nidhi', 'Riddhi', 'Siddhi', 'Buddhi', 'Medha', 'Pragya', 'Suman', 'Gunjan', 'Ranjan', 'Kiran', 'Pawan', 'Vayu', 'Akash', 'Prithvi', 'Jal', 'Agni', 'Tejal', 'Ujjwal', 'Prakash', 'Arun', 'Tarun', 'Varun', 'Mani', 'Ratna', 'Heera'];
+
   return getRandomName(givenNames);
 };
 
 export const hungarianGivenNamesFemale = () => {
-  const givenNames = [
-    'Bela', 'Kamella', 'Katalin', 'Katoka', 'Klara', 'Klarika', 'Lenci', 'Lilike', 'Lorand', 'Nusa', 'Onella', 'Zigana', 'Zizi', 'Zsa Zsa'
-  ];
-  
+  const givenNames = ['Anna', 'Mária', 'Erzsébet', 'Katalin', 'Judit', 'Ilona', 'Margit', 'Éva', 'Zsuzsanna', 'Ágnes', 'Irén', 'Magdolna', 'Jolán', 'Eszter', 'Klára', 'Teréz', 'Rozália', 'Borbála', 'Gizella', 'Krisztina', 'Andrea', 'Gabriella', 'Mónika', 'Erika', 'Tímea', 'Anita', 'Beáta', 'Claudia', 'Daniella', 'Edit', 'Fanni', 'Georgina', 'Hajnalka', 'Ildikó', 'Jázmin', 'Kinga', 'Laura', 'Melinda', 'Nikolett', 'Orsolya', 'Petra', 'Réka', 'Szilvia', 'Tünde', 'Viktória', 'Zsófia', 'Adrienn', 'Brigitta', 'Csilla', 'Dorottya', 'Emese', 'Fruzsina', 'Györgyi', 'Henrietta', 'Inez', 'Janka', 'Kamilla', 'Lilla', 'Mariann', 'Natália', 'Ottília', 'Piroska', 'Renáta', 'Szabina', 'Terézia', 'Ulrika', 'Veronika', 'Zita', 'Alíz', 'Berta', 'Csenge', 'Dóra', 'Emma', 'Flóra', 'Gréta', 'Hanna', 'Inez', 'Júlia', 'Kira', 'Léna', 'Milla', 'Nóra', 'Olivér', 'Panna', 'Regina', 'Sára', 'Tamara', 'Unoka', 'Vivien', 'Zara', 'Adél', 'Bianka', 'Cintia', 'Diána', 'Eliza', 'Franciska', 'Gilda', 'Helga', 'Ibolya', 'Jozefa', 'Kornélia', 'Lívia', 'Mirtill', 'Nikoletta', 'Olga', 'Patrícia'];
+
   return getRandomName(givenNames);
 };
 
