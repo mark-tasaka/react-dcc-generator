@@ -327,10 +327,19 @@ export const hungarianGivenNamesFemale = () => {
 };
 
 export const indianGivenNamesFemale = () => {
-  const givenNames = [
-    'Ketaki', 'Kusum', 'Narmada', 'Naveena', 'Nishtha', 'Nivedita', 'Sahana', 'Salena', 'Sanchali', 'Sanchaya', 'Sanjana', 'Shivani', 'Shubhada', 'Sumitra', 'Swati', 'Tarangini', 'Tarjani', 'Trilochana', 'Zaqaria'
+  const givenNames = ['Aadhya', 'Aanya', 'Aditi', 'Ahana', 'Aisha', 'Akanksha', 'Ambika', 'Amrita', 'Ananya', 'Anita', 
+    'Anjali', 'Anuja', 'Aparna', 'Arjuna', 'Arya', 'Ashwini', 'Avani', 'Bhavana', 'Chitra', 'Deepika', 
+    'Devi', 'Divya', 'Durga', 'Gauri', 'Gayatri', 'Gita', 'Harini', 'Hema', 'Indira', 'Isha', 
+    'Jaya', 'Jyoti', 'Kalpana', 'Kamala', 'Kanchan', 'Kavita', 'Kiran', 'Krishna', 'Kumari', 'Lakshmi', 
+    'Latha', 'Lila', 'Madhuri', 'Malini', 'Manisha', 'Meera', 'Mira', 'Nandini', 'Neha', 'Nisha', 
+    'Padma', 'Parvati', 'Pooja', 'Priya', 'Priyanka', 'Radha', 'Rashni', 'Rekha', 'Renu', 'Ritu', 
+    'Ruchi', 'Sadhana', 'Sandhya', 'Sanjana', 'Saraswati', 'Savitri', 'Shanti', 'Sharmila', 'Shilpa', 'Shobha', 
+    'Shruti', 'Sita', 'Sneha', 'Sonia', 'Sudha', 'Sujata', 'Sumitra', 'Sunita', 'Sushma', 'Swati', 
+    'Tara', 'Tejaswi', 'Uma', 'Urmila', 'Usha', 'Vandana', 'Vaishali', 'Vasanti', 'Vidya', 'Vijaya', 
+    'Vinita', 'Vishakha', 'Yamini', 'Yasmin', 'Yogita', 'Zara', 'Aarti', 'Bhumi', 'Chandni', 'Damini', 
+    'Esha', 'Falguni', 'Garima', 'Hansa', 'Ila', 'Janaki', 'Kanika', 'Lalita', 'Mohini', 'Nalini'
   ];
-  
+
   return getRandomName(givenNames);
 };
 
@@ -342,13 +351,24 @@ export const irishGivenNamesFemale = () => {
   return getRandomName(givenNames);
 };
 
+
 export const italianGivenNamesFemale = () => {
-  const givenNames = [
-    'Abriana', 'Bambi', 'Bianca', 'Caprice', 'Cara', 'Carin', 'Carlotta', 'Cettina', 'Contessa', 'Domani', 'Donatella', 'Fabiana', 'Fiorella', 'Fiorenza', 'Gaetana', 'Gioia', 'Giordana', 'Giovanna', 'Graziella', 'Ilaria', 'Itala', 'Justina', 'Lanza', 'Lave', 'Liona', 'Luca', 'Lucia', 'Luciana', 'Mariabella', 'Marietta', 'Marsala', 'Mia', 'Michelle', 'Mila', 'Natalia', 'Neroli', 'Ornella', 'Prima', 'Primavera', 'Quorra', 'Ricarda', 'Rocio', 'Romana', 'Ruffina', 'Sidonia', 'Sienna', 'Sistine', 'Speranza', 'Tessa', 'Trilby', 'Uberta', 'Vedette', 'Venecia', 'Venetia', 'Zola'
+  const givenNames = ['Alessandra', 'Alessia', 'Alice', 'Ambra', 'Anna', 'Antonella', 'Arianna', 'Barbara', 'Beatrice', 'Bianca', 
+    'Camilla', 'Carla', 'Carlotta', 'Carmen', 'Caterina', 'Cecilia', 'Chiara', 'Cinzia', 'Clara', 'Claudia', 
+    'Cristina', 'Daniela', 'Debora', 'Diana', 'Diletta', 'Elena', 'Eleonora', 'Elisa', 'Elisabetta', 'Emanuela', 
+    'Emma', 'Enrica', 'Federica', 'Francesca', 'Gabriella', 'Gaia', 'Giada', 'Gianna', 'Giorgia', 'Giovanna', 
+    'Giulia', 'Giuseppina', 'Grazia', 'Ilaria', 'Irene', 'Isabella', 'Jessica', 'Laura', 'Letizia', 'Licia', 
+    'Lucia', 'Luciana', 'Luisa', 'Manuela', 'Mara', 'Margherita', 'Maria', 'Marianna', 'Marina', 'Marta', 
+    'Martina', 'Matilde', 'Michela', 'Monica', 'Nadia', 'Natalia', 'Nicoletta', 'Noemi', 'Paola', 'Patrizia', 
+    'Raffaella', 'Rebecca', 'Roberta', 'Rosa', 'Rosanna', 'Sabrina', 'Sara', 'Serena', 'Silvia', 'Simona', 
+    'Sofia', 'Stefania', 'Stella', 'Susanna', 'Teresa', 'Valentina', 'Valeria', 'Vanessa', 'Veronica', 'Vittoria', 
+    'Viviana', 'Adelaide', 'Agata', 'Agnese', 'Annamaria', 'Antonia', 'Benedetta', 'Carmelina', 'Costanza', 'Donatella', 
+    'Fabrizia', 'Fiamma', 'Fiorella', 'Flavia', 'Francesca', 'Gemma', 'Gioia', 'Graziella', 'Lidia', 'Loredana'
   ];
-  
+
   return getRandomName(givenNames);
 };
+
 
 export const japaneseGivenNamesFemale = () => {
   const givenNames = [
@@ -358,27 +378,54 @@ export const japaneseGivenNamesFemale = () => {
   return getRandomName(givenNames);
 };
 
+
 export const koreanGivenNamesFemale = () => {
-  const givenNames = [
-    'Cho', 'Chon', 'HeeWon', 'Jeong', 'Joo Mi', 'Min', 'Moon', 'Shin', 'Soo', 'Sun'
+  const givenNames = ['Ae-cha', 'Ae-ri', 'Ah-reum', 'Ah-young', 'Bo-ram', 'Bo-young', 'Byeol', 'Chae-won', 'Chae-young', 'Da-bin', 
+    'Da-eun', 'Da-hye', 'Da-som', 'Da-young', 'Dong-sun', 'Eui-jin', 'Eun-ae', 'Eun-bi', 'Eun-ha', 'Eun-hye', 
+    'Eun-ji', 'Eun-jung', 'Eun-kyung', 'Eun-mi', 'Eun-seo', 'Eun-young', 'Ga-eul', 'Ga-young', 'Geum-ja', 'Gi-ppeum', 
+    'Gu-reum', 'Ha-eun', 'Ha-na', 'Ha-neul', 'Ha-yeon', 'Ha-young', 'Hae-won', 'Han-na', 'Hee-jin', 'Hee-jung', 
+    'Hee-kyung', 'Hee-sook', 'Hee-sun', 'Hee-young', 'Hye-jin', 'Hye-jung', 'Hye-kyung', 'Hye-min', 'Hye-ri', 'Hye-sook', 
+    'Hye-sun', 'Hye-young', 'Hyeon-jeong', 'Hyun-ae', 'Hyun-jung', 'Hyun-kyung', 'In-sook', 'In-sun', 'Ja-young', 'Jeong-eun', 
+    'Jeong-hee', 'Jeong-mi', 'Jeong-sook', 'Ji-eun', 'Ji-hae', 'Ji-hee', 'Ji-hye', 'Ji-hyeon', 'Ji-min', 'Ji-soo', 
+    'Ji-sun', 'Ji-woo', 'Ji-young', 'Jin-ae', 'Jin-young', 'Joo-eun', 'Joo-hee', 'Joo-young', 'Jung-eun', 'Jung-hee', 
+    'Jung-sook', 'Kyung-eun', 'Kyung-hee', 'Kyung-ja', 'Kyung-mi', 'Kyung-sook', 'Mi-jin', 'Mi-jung', 'Mi-kyung', 'Mi-ran', 
+    'Mi-sook', 'Mi-sun', 'Mi-young', 'Min-jeong', 'Min-jung', 'Min-kyung', 'Myeong-hee', 'Na-ri', 'So-hee', 'So-young'
   ];
-  
+
   return getRandomName(givenNames);
 };
 
+
+
 export const latinGivenNamesFemale = () => {
-  const givenNames = [
-    'Abby', 'Ada', 'Aderes', 'Adora', 'Adrienne', 'Aemilia', 'Affinity', 'Aimee', 'Alba', 'Allegra', 'Alma', 'Amanda', 'Amity', 'Amory', 'Amriel', 'Amy', 'Antlia', 'Antonia', 'April', 'Aqualina', 'Aquamarine', 'Arbor', 'Arden', 'Aril', 'Arva', 'Auburn', 'Augusta', 'Aurelia', 'Autumn', 'Ava', 'Avalon', 'Barbara', 'Beata', 'Beatrice', 'Bellona', 'Benedetta', 'Blase', 'Calcite', 'Calendula', 'Callis', 'Cambria', 'Camille', 'Campbell', 'Candida', 'Candra', 'Cara', 'Carey', 'Carina', 'Carisa', 'Carla', 'Carnelian', 'Cassiel', 'Cecilia', 'Celeste', 'Cerelia', 'Charity', 'Chastity', 'Cheridah', 'Citrine', 'Claire', 'Clementine', 'Colomba', 'Comfort', 'Compassion', 'Concepción', 'Concordia', 'Constance', 'Coral', 'Cordelia', 'Corky', 'Cornelia', 'Corrina', 'Dabria', 'Daisy', 'Danica', 'Delinda', 'Desiree', 'Dextra', 'Diana', 'Dido', 'Diella', 'Dillian', 'Diva', 'Dolores', 'Donna', 'Emily', 'Enza', 'Ermine', 'Esme', 'Essence', 'Estelle', 'Eternal', 'Eustacia', 'Faith', 'Fantasia', 'Fawn', 'Felicia', 'Feronia', 'Fidelity', 'Flavia', 'Florence', 'Fortitude', 'Fortuna', 'Franca', 'Fulvia', 'Garnet', 'Gemma', 'Genesis', 'Gill', 'Gillian', 'Ginger', 'Gloria', 'Grace', 'Gratia', 'Gustava', 'Heliotrope', 'Hester', 'Honesty', 'Honor', 'Hortense', 'Humbleness', 'Humility', 'Imogene', 'Integrity', 'Ivory', 'Jae', 'Jillian', 'Jocosa', 'Jovanna', 'Joy', 'Joyce', 'Julia', 'June', 'Juniper', 'Juno', 'Justice', 'Kadenza', 'Kalare', 'Kambrea', 'Kambria', 'Karise', 'Karlee', 'Karly', 'Karmen', 'Katarina', 'Khara', 'Kira', 'Kitty', 'Konstance', 'Kordell', 'Lacey', 'Lachesis', 'Laetitia', 'Lalo', 'Lara', 'Laraine', 'Lasthenia', 'Latisha', 'Latonia', 'Laura', 'Laurinda', 'Laveda', 'Lavina', 'Lavinia', 'Lawrence', 'Leann', 'Leauna', 'Lella', 'Leola', 'Leta', 'Leticia', 'Letitia', 'Levana', 'Libra', 'Licia', 'Lilian', 'Liliana', 'Lilianna', 'Lilliana', 'Lillias', 'Lily', 'Lita', 'Livi', 'Lora', 'Lori', 'Lorinda', 'Lotta', 'Lottie', 'Luce', 'Lucille', 'Lucinda', 'Lucrece', 'Lucretia', 'Lucy', 'Luka', 'Lumina', 'Luna', 'Lupe', 'Lynnea', 'Mabel', 'Madonna', 'Mae', 'Maeve', 'Magna', 'Magnolia', 'Marcella', 'Marcia', 'Maren', 'Maricel', 'Marina', 'Maris', 'Marissa', 'Martina', 'Maxine', 'May', 'Medea', 'Mei', 'Melba', 'Melina', 'Mercedes', 'Merit', 'Messina', 'Meta', 'Minerva', 'Mira', 'Mirabelle', 'Miranda', 'Modestus', 'Modesty', 'Monica', 'Muriel', 'Myra', 'Napea', 'Narda', 'Nasia', 'Natalie', 'Neci', 'Necia', 'Nedra', 'Nerissa', 'Nevada', 'Nigella', 'Nivea', 'Noble', 'Nohely', 'Nola', 'Noletta', 'Nona', 'Nonnita', 'Norma', 'Nova', 'Nydia', 'Octavia', 'Odina', 'Oistin', 'Olive', 'Ondine', 'Oralia', 'Orchid', 'Oria', 'Oriana', 'Orianna', 'Oriole', 'Orla', 'Orlanda', 'Orsa', 'Ortensia', 'Osma', 'Ova', 'Paula', 'Pax', 'Pearl', 'Persis', 'Petronella', 'Petula', 'Pia', 'Poppy', 'Portia', 'Priscilla', 'Prudence', 'Quartilla', 'Quinella', 'Quintessa', 'Quintina', 'Quirina', 'Quirita', 'Quita', 'Rain', 'Regina', 'Renata', 'Renita', 'Revelation', 'Rhea', 'Risa', 'Rosanne', 'Rose', 'Rue', 'Sabana', 'Sabina', 'Tosca', 'Toshi', 'Tosia', 'Tranquility', 'Tricia', 'Trini', 'Trinity', 'Trisha', 'Trista', 'Tristana', 'Tristessa', 'Tryphena', 'Ultima', 'Una', 'Undine', 'Uny', 'Urbana', 'Ursula', 'Valencia', 'Valentine', 'Valerie', 'Valisa', 'Valonia', 'Valora', 'Vanecia', 'Venice', 'Vera', 'Verda', 'Verena', 'Verity', 'Vernice', 'Veronica', 'Vesper', 'Vesta', 'Vestal', 'Vevina', 'Victoria', 'Vidonia', 'Vienna', 'Vincentia', 'Violet', 'Virgilia', 'Virginia', 'Virgo', 'Viridis', 'Vita', 'Vivian', 'Viviefont', 'Zama', 'Zanna', 'Zea', 'Zinnia', 'Zona'
+  const givenNames = ['Aelia', 'Aemilia', 'Agrippina', 'Alba', 'Antonia', 'Aquilia', 'Arria', 'Atia', 'Augusta', 'Aurelia', 
+    'Aureliana', 'Balbina', 'Caecilia', 'Caesaria', 'Camilla', 'Candida', 'Carina', 'Cassia', 'Claudia', 'Clementina', 
+    'Constantia', 'Cordelia', 'Cornelia', 'Crispina', 'Decima', 'Drusilla', 'Ducia', 'Fabia', 'Fabiana', 'Fausta', 
+    'Faustina', 'Felicia', 'Flaminia', 'Flavia', 'Flora', 'Fortunata', 'Fulvia', 'Gaia', 'Galeria', 'Germana', 
+    'Gratiana', 'Hadriana', 'Honoria', 'Hortensia', 'Iunia', 'Julia', 'Juliana', 'Junia', 'Justina', 'Laelia', 
+    'Laetitia', 'Laurentia', 'Lavinia', 'Livia', 'Livilla', 'Longina', 'Lucilla', 'Lucretia', 'Lucinda', 'Marcella', 
+    'Marcia', 'Marina', 'Martina', 'Maxima', 'Messalina', 'Minervina', 'Octavia', 'Orestilla', 'Paterna', 'Paula', 
+    'Paulina', 'Petronia', 'Pompeia', 'Porcia', 'Prima', 'Priscilla', 'Publia', 'Pulcheria', 'Quinta', 'Quintilla', 
+    'Regina', 'Sabina', 'Secunda', 'Septima', 'Serena', 'Servilia', 'Severina', 'Silvia', 'Tacita', 'Tertia', 
+    'Tullia', 'Valeria', 'Valeriana', 'Vesta', 'Victoria', 'Violenta', 'Virgilia', 'Vita', 'Viviana', 'Volumnia'
   ];
-  
+
   return getRandomName(givenNames);
 };
 
 export const middleEnglishGivenNamesFemale = () => {
-  const givenNames = [
-    'Amiable', 'Cavanaugh', 'Citrine', 'Doe', 'Knowledge', 'Lane', 'Mercy', 'Merry', 'Scarlet'
+  const givenNames = ['Adela', 'Adelaide', 'Adelheid', 'Agatha', 'Agnes', 'Aldith', 'Alice', 'Amice', 'Amy', 'Anabel', 
+    'Anne', 'Arabella', 'Avice', 'Beatrice', 'Bertha', 'Blanche', 'Bridget', 'Cecily', 'Christiana', 'Clarice', 
+    'Clemence', 'Constance', 'Dionisia', 'Dorothy', 'Dulcia', 'Edith', 'Eleanor', 'Elizabeth', 'Ellen', 'Emma', 
+    'Emmeline', 'Euphemia', 'Eve', 'Felice', 'Florence', 'Frances', 'Gillian', 'Grace', 'Gunnild', 'Gwendolyn', 
+    'Helen', 'Hilda', 'Honor', 'Isabel', 'Jane', 'Joan', 'Joyce', 'Judith', 'Julian', 'Katherine', 
+    'Lettice', 'Lucy', 'Mabel', 'Magdalen', 'Margaret', 'Margery', 'Marion', 'Mary', 'Matilda', 'Maud', 
+    'Millicent', 'Nicola', 'Parnel', 'Patience', 'Peronelle', 'Petronilla', 'Philippa', 'Prudence', 'Rachel', 'Rebecca', 
+    'Rohesia', 'Rosamond', 'Rose', 'Sabina', 'Sarah', 'Scholastica', 'Sibyl', 'Susan', 'Sybil', 'Thomasine', 
+    'Ursula', 'Venetia', 'Winifred', 'Ysabel', 'Amicia', 'Aveline', 'Basilia', 'Cassandra', 'Celestine', 'Denise', 
+    'Dionise', 'Eloise', 'Ermengarde', 'Estelle', 'Godiva', 'Godelieve', 'Hawisa', 'Idonea', 'Isolde', 'Jacquetta'
   ];
-  
+
   return getRandomName(givenNames);
 };
 
@@ -391,42 +438,82 @@ export const nativeAmericanGivenNamesFemale = () => {
 };
 
 export const norseGivenNamesFemale = () => {
-  const givenNames = [
-    'Bo', 'Frigg', 'Grid', 'Gro', 'Guro', 'Haley', 'Heidrun', 'Hela', 'Magna', 'Oda', 'Ove', 'Ragnhild', 'Unni'
+  const givenNames = ['Astrid', 'Sigrid', 'Ingrid', 'Solveig', 'Gudrun', 'Bergljot', 'Ragnhild', 'Thora', 'Helga', 'Freyja', 
+    'Sigrid', 'Liv', 'Kari', 'Asta', 'Magnhild', 'Ranveig', 'Gyda', 'Hilda', 'Signa', 'Valdis', 
+    'Bergthora', 'Ingibjorg', 'Steinunn', 'Hallgerd', 'Thurid', 'Vigdis', 'Joreid', 'Oddrun', 'Ragnhild', 'Bergdis', 
+    'Thorbjorg', 'Sigmund', 'Ingvild', 'Ulfhild', 'Thorunn', 'Ragnveig', 'Hervor', 'Aslaug', 'Brynhild', 'Svanhild', 
+    'Gudveig', 'Ingeborg', 'Thorgerda', 'Sigvor', 'Kristin', 'Jorunn', 'Bothild', 'Alvhild', 'Gunhild', 'Thordis', 
+    'Hallfrid', 'Rannveig', 'Ingigerd', 'Steinvor', 'Gunnhild', 'Thorild', 'Unn', 'Thorkatla', 'Sigfrid', 'Ragnfrid', 
+    'Hlif', 'Svala', 'Gudny', 'Alfhild', 'Thorey', 'Sigurd', 'Bergny', 'Ingun', 'Thorgerd', 'Aud', 
+    'Hallbera', 'Thorhild', 'Siggy', 'Valdis', 'Gunnvor', 'Ingirid', 'Thorlaug', 'Signe', 'Randi', 'Asgerd', 
+    'Thorstein', 'Gudlaug', 'Sigthora', 'Ingfrid', 'Hallveig', 'Thorunn', 'Solva', 'Bergit', 'Gunnlaug', 'Thorkatla', 
+    'Sigdis', 'Ingunn', 'Thorhalla', 'Ragnild', 'Steinunn', 'Sigrid', 'Thorbjörg', 'Halldora', 'Vigdis', 'Gunnthora'
   ];
-  
+
   return getRandomName(givenNames);
 };
 
 export const oldEnglishGivenNamesFemale = () => {
-  const givenNames = [
-    'Afton', 'Agrona', 'Aida', 'Aislinn', 'Alcott', 'Alden', 'Alvina', 'Arantxa', 'Ariana', 'Arleigh', 'Ashley', 'Aspen', 'Audrey', 'Avon', 'Bailey', 'Beverly', 'Blaine', 'Blossom', 'Blythe', 'Brea', 'Brenda', 'Brook', 'Buffy', 'Cady', 'Cameron', 'Chelsea', 'Corliss', 'Courtney', 'Demelza', 'Eartha', 'Edda', 'Edith', 'Ethel', 'Farrah', 'Fern', 'Fiona', 'Godiva', 'Golda', 'Halsey', 'Harmony', 'Hazel', 'Hedwig', 'Hertha', 'Hollace', 'Holly', 'Hope', 'Idina', 'Isolda', 'Ivy', 'Jocelyn', 'Kim', 'Kimberley', 'Kyla', 'Lee', 'Leigh', 'Leslie', 'Lindsay', 'Locke', 'Love', 'Luella', 'Maida', 'Mirth', 'Missy', 'Misty', 'Nara', 'Obsession', 'Radella', 'Sacrifice'
+  const givenNames = ['Ælfgifu', 'Ælfhild', 'Ælfrun', 'Ælfthryth', 'Ælfwynn', 'Æthelburg', 'Æthelflæd', 'Æthelhild', 'Æthelswyth', 'Beornflæd', 
+    'Burgred', 'Cwenthryth', 'Eadburg', 'Eadgifu', 'Eadhild', 'Eadrun', 'Eadswyth', 'Ealdgyth', 'Ealhild', 'Ealhswith', 
+    'Ecgwynn', 'Edith', 'Elgiva', 'Elfgifu', 'Elfleda', 'Elgiva', 'Emma', 'Eormenhild', 'Godgifu', 'Godiva', 
+    'Gunnhild', 'Gunnora', 'Gytha', 'Hild', 'Hildegard', 'Leofgifu', 'Leofrun', 'Leofwynn', 'Mildburg', 'Mildred', 
+    'Mildthryth', 'Osthryth', 'Ricarda', 'Saethryth', 'Seaxburg', 'Sexburg', 'Wulfgifu', 'Wulfhild', 'Wulfrun', 'Wulfthryth', 
+    'Wynflæd', 'Wynfrid', 'Bebbe', 'Cynehild', 'Cynethryth', 'Eadburga', 'Ealdburh', 'Ealhburg', 'Eanflæd', 'Eangyth', 
+    'Earcongota', 'Eormenburga', 'Frithugyth', 'Frithuswith', 'Hereswith', 'Hlothhere', 'Hungyth', 'Hygeburg', 'Modthryth', 'Osburh', 
+    'Ricberht', 'Seaxburh', 'Torhtgyth', 'Werburga', 'Wulfgyth', 'Ceolburga', 'Cutburga', 'Eadburga', 'Eadgyth', 'Ealdgyth', 
+    'Ealhburh', 'Ecgburga', 'Edelburga', 'Eldeburga', 'Ethelburga', 'Folcburga', 'Gislhild', 'Godgyth', 'Harlindis', 'Hereburga', 
+    'Hildeburg', 'Hunberct', 'Hygeberht', 'Iudith', 'Liobsynd', 'Milburga', 'Oethilburga', 'Osgyth', 'Ricula', 'Tetta'
   ];
-  
+
   return getRandomName(givenNames);
 };
 
 export const oldFrenchGivenNamesFemale = () => {
-  const givenNames = [
-    'Chance', 'Chantal', 'Delight', 'Fay', 'Frances', 'Jewel', 'Musetta', 'Olive', 'Raissa', 'Sojourner'
+  const givenNames = ['Adelais', 'Adeline', 'Agnes', 'Alienor', 'Alis', 'Ameline', 'Anne', 'Beatriz', 'Blanche', 'Cecile', 
+    'Clemence', 'Constance', 'Denise', 'Douce', 'Emeline', 'Ermengarde', 'Estelle', 'Eude', 'Euphemie', 'Eve', 
+    'Felicie', 'Florence', 'Francoise', 'Gile', 'Giselle', 'Guenièvre', 'Guillemette', 'Heloise', 'Hersende', 'Hodierne', 
+    'Isabelle', 'Jacqueline', 'Jeanne', 'Josseline', 'Juliane', 'Laurence', 'Luce', 'Madeleine', 'Margot', 'Marguerite', 
+    'Marie', 'Matilde', 'Melisende', 'Michelle', 'Nicole', 'Peronelle', 'Petronille', 'Philippe', 'Richarde', 'Rohais', 
+    'Rose', 'Sybille', 'Thomasse', 'Ysabel', 'Aalis', 'Aaliz', 'Aceline', 'Adelheid', 'Adelinde', 'Adelis', 
+    'Aelips', 'Aeliz', 'Agatha', 'Agathe', 'Aigeline', 'Aiglentine', 'Aimee', 'Alais', 'Alazais', 'Alberade', 
+    'Aldegonde', 'Aldevie', 'Alienorde', 'Alips', 'Alizee', 'Almonde', 'Alpaiz', 'Alpais', 'Alverède', 'Ambroisine', 
+    'Amee', 'Amelie', 'Amelot', 'Amicie', 'Ameline', 'Ancel', 'Anceline', 'Andre', 'Andrée', 'Angèle', 
+    'Annes', 'Anseline', 'Anthoinine', 'Antoinette', 'Archambaud', 'Arnoul', 'Arnoult', 'Arthemise', 'Asceline', 'Aubree'
   ];
-  
+
   return getRandomName(givenNames);
 };
 
 export const oldGermanGivenNamesFemale = () => {
-  const givenNames = [
-    'Aloysia', 'Carla', 'Carol', 'Chay', 'Ella', 'Emiline', 'Ernestine', 'Etta', 'Ida', 'Leopolda', 'Leyna', 'Lorraine', 'Louise', 'Minna'
+  const givenNames = ['Adalhaid', 'Adalheid', 'Adelheid', 'Agatha', 'Agnes', 'Alberta', 'Aldegund', 'Alfhild', 'Alice', 'Alpais', 
+    'Amalia', 'Anastasia', 'Anna', 'Ava', 'Barbara', 'Beatrice', 'Berta', 'Bertha', 'Brunhild', 'Cecilia', 
+    'Christina', 'Clara', 'Clementia', 'Constance', 'Cordula', 'Cunigunde', 'Diemut', 'Dorothea', 'Ebba', 'Edith', 
+    'Elisabeth', 'Emma', 'Engeltrud', 'Ermengart', 'Ermengard', 'Ermesind', 'Euphemia', 'Fastrada', 'Friderun', 'Gerhild', 
+    'Gertrude', 'Geva', 'Gisela', 'Gisla', 'Godila', 'Grimhild', 'Guda', 'Gudrun', 'Gunhild', 'Gunnhild', 
+    'Hadwig', 'Hedwig', 'Helena', 'Helga', 'Herberg', 'Herlind', 'Herlinda', 'Hermengild', 'Hilda', 'Hildeberg', 
+    'Hildegard', 'Hildegund', 'Hildeswind', 'Hildtrud', 'Ida', 'Irmengard', 'Irmgard', 'Irmhild', 'Irmingart', 'Irmintrud', 
+    'Isolde', 'Judith', 'Juliana', 'Kunigunde', 'Liudgard', 'Liutgard', 'Liutbirg', 'Mahthild', 'Mathilde', 'Mechthild', 
+    'Meginhard', 'Otgiva', 'Radegund', 'Richarda', 'Richenza', 'Richlind', 'Roswitha', 'Sophia', 'Suanhild', 'Swanhild', 
+    'Theodora', 'Theophanu', 'Thiedburga', 'Thietberga', 'Uda', 'Ulrica', 'Ursula', 'Waldrada', 'Waltraud', 'Wichburg'
   ];
-  
+
   return getRandomName(givenNames);
 };
 
 export const oldNorseGivenNamesFemale = () => {
-  const givenNames = [
-    'Astrid', 'Deila', 'Gail', 'Harper', 'Kippi', 'Nessa', 'Olive', 'Ronalda', 'Sigrid', 'Thora', 'Valda'
+  const givenNames = ['Álfhild', 'Ásta', 'Ástriđr', 'Auđr', 'Bergđis', 'Bergljót', 'Bergþóra', 'Björg', 'Brynhild', 'Einarsdóttir', 
+    'Eir', 'Eydis', 'Freyđis', 'Freyja', 'Frigg', 'Geirriđr', 'Gerđr', 'Grímhild', 'Guđrún', 'Guđveig', 
+    'Gunnhild', 'Gunnlaugr', 'Gunnvor', 'Gyđa', 'Hallbera', 'Hallgerđr', 'Hallveig', 'Helga', 'Herdis', 'Hervor', 
+    'Hild', 'Hilda', 'Hlíf', 'Hrafnhild', 'Húngerđ', 'Ingibjörg', 'Ingigerd', 'Ingiriđr', 'Ingriđr', 'Ingvild', 
+    'Jórunn', 'Kaðlín', 'Kristín', 'Ljótgeirr', 'Magnhild', 'Oddný', 'Oddrun', 'Óláfr', 'Ólöf', 'Ósk', 
+    'Óttarr', 'Ragnhild', 'Ragnveig', 'Rannveig', 'Signý', 'Sigríđr', 'Sigrún', 'Sigþóra', 'Skjaldvor', 'Solveig', 
+    'Steinunn', 'Steinvör', 'Svala', 'Svanhild', 'Sveinsdóttir', 'Þordis', 'Þórbjörg', 'Þórfríđr', 'Þórgerđr', 'Þórhild', 
+    'Þórunn', 'Þóra', 'Þórkatla', 'Þórdís', 'Þórlaug', 'Þórey', 'Þórsteinn', 'Þórunnr', 'Þuríđr', 'Úlfa', 
+    'Úlfhild', 'Unna', 'Unnr', 'Ursula', 'Valdisr', 'Véfreyja', 'Vigdis', 'Vigfús', 'Ýr', 'Þórdís', 
+    'Aldgísl', 'Arnbjörg', 'Ásgerd', 'Áshild', 'Björk', 'Eyrún', 'Gerđa', 'Gyrid', 'Halla', 'Íris'
   ];
-  
+
   return getRandomName(givenNames);
 };
 
