@@ -35,28 +35,54 @@ export const arabicGivenNamesMale = () => {
   
   return getRandomName(givenNames);
 };
-
 export const armenianGivenNamesMale = () => {
   const givenNames = [
-    'Nishan', 'Ohanna', 'Vahe', 'Vartan', 'Yervant'
+    'Aram', 'Armen', 'Arshag', 'Avedis', 'Bedros', 'Boghos', 'Dikran', 'Garo', 'Gegham', 'Grigor',
+    'Hagop', 'Harout', 'Hovhannes', 'Krikor', 'Levon', 'Manoug', 'Mgrdich', 'Nigoghos', 'Ohan', 'Papken',
+    'Parsegh', 'Raffi', 'Sarkis', 'Stepan', 'Takvor', 'Torkom', 'Vartan', 'Vartkes', 'Vahan', 'Yervant',
+    'Zareh', 'Zaven', 'Arshavir', 'Ashod', 'Ashot', 'Avedik', 'Berj', 'Dajad', 'Garabed', 'Haroutioun',
+    'Haygaz', 'Haik', 'Hampig', 'Hovannes', 'Hovsep', 'Khachig', 'Kevork', 'Kourken', 'Krikor', 'Levon',
+    'Mesrob', 'Misak', 'Movses', 'Nerses', 'Noubar', 'Onnig', 'Paramaz', 'Puzant', 'Reteos', 'Rouben',
+    'Sahag', 'Shavarsh', 'Siragan', 'Smbat', 'Soghomon', 'Tatul', 'Tavit', 'Toros', 'Vahram', 'Varaz',
+    'Vartavar', 'Vigen', 'Yeghia', 'Yeghishe', 'Yetvart', 'Zohrab', 'Arsen', 'Artavazd', 'Artashes', 'Avetis',
+    'Babgen', 'Barkev', 'Daron', 'Davit', 'Garnik', 'Gevorg', 'Gourgen', 'Hambartsum', 'Hayg', 'Hrach',
+    'Kegham', 'Khoren', 'Koryoun', 'Lusavorich', 'Mashtots', 'Mher', 'Narek', 'Nerseh', 'Ruben', 'Vrej'
   ];
-  
+
   return getRandomName(givenNames);
 };
 
 export const celticGivenNamesMale = () => {
   const givenNames = [
-    'Afton', 'Ahearn', 'Annan', 'Fallon', 'Finley', 'Kearney', 'Keary', 'Kegan', 'Keir', 'Kendall', 'Mannix', 'Marmaduke', 'Melvin', 'Merlin', 'Murray', 'Perth', 'Ronan', 'Sean', 'Tadc', 'Tegan', 'Tiernan', 'Torin', 'Tuathal', 'Ultan', 'Vaughan'
+    'Aiden', 'Alan', 'Alec', 'Alistair', 'Angus', 'Arthur', 'Bran', 'Brendan', 'Brian', 'Bryce',
+    'Cade', 'Cael', 'Callum', 'Cameron', 'Campbell', 'Cian', 'Colin', 'Conan', 'Conor', 'Craig',
+    'Daire', 'Damien', 'Daragh', 'Declan', 'Dermot', 'Desmond', 'Donal', 'Donovan', 'Duncan', 'Eamon',
+    'Ewan', 'Fergal', 'Fergus', 'Finbar', 'Finn', 'Fintan', 'Gareth', 'Gavin', 'Gideon', 'Glen',
+    'Graham', 'Hamish', 'Ian', 'Ivor', 'Kael', 'Kane', 'Keith', 'Kelly', 'Kenneth', 'Kevin',
+    'Kieran', 'Kyle', 'Liam', 'Logan', 'Lorcan', 'Magnus', 'Malcolm', 'Manus', 'Morgan', 'Murdoch',
+    'Neil', 'Niall', 'Nolan', 'Oisin', 'Owen', 'Padraig', 'Patrick', 'Quinn', 'Ronan', 'Ross',
+    'Ruairi', 'Ryan', 'Sean', 'Seamus', 'Shane', 'Tadhg', 'Torquil', 'Tristan', 'Uilliam', 'Wallace',
+    'Blaine', 'Bram', 'Cailean', 'Cathair', 'Ciaran', 'Cillian', 'Cormac', 'Daithi', 'Diarmuid', 'Eoin',
+    'Fiachra', 'Fionn', 'Galen', 'Innes', 'Jarlath', 'Keegan', 'Lachlan', 'Mael', 'Oran', 'Rory'
   ];
-  
+
   return getRandomName(givenNames);
 };
 
 export const chineseGivenNamesMale = () => {
   const givenNames = [
-    'An', 'Bing', 'Chen', 'Chung', 'Confucius', 'Cong', 'Deshi', 'Dewei', 'Fo-hai', 'Fo-hsing', 'Gan', 'Gao', 'Genjo', 'Ho', 'Hsin', 'Huang fu', 'Hui-chao', 'HuiK\'o', 'Jiang', 'Jin', 'Jing', 'Jun', 'Kong', 'Lao-Tzu', 'Lee', 'Lei', 'Li', 'Li-Liang', 'Liang', 'Liko', 'Manchu', 'Ming', 'Niao-ka', 'On', 'Qing-Nan', 'Quon', 'Shen', 'Shing', 'Sun', 'Tung', 'Uang', 'Wang', 'Wen', 'Woo', 'Wu-pen', 'Xi-Wang', 'Xiaoping', 'Xin', 'Xing-fu', 'Yao', 'Ye', 'Yo', 'Yong', 'Yu', 'Yuan', 'Zhong', 'Zhu', 'Zhuang'
+    'Wei', 'Jun', 'Ming', 'Hao', 'Lei', 'Tao', 'Chen', 'Yang', 'Long', 'Feng',
+    'Gang', 'Qiang', 'Bin', 'Yu', 'Jian', 'Peng', 'Dong', 'Kai', 'Rui', 'Bo',
+    'Cheng', 'Hui', 'Yong', 'An', 'Chao', 'Ning', 'Xin', 'Liang', 'Zhi', 'Wen',
+    'Jie', 'Yun', 'Guang', 'Zheng', 'Heng', 'Han', 'Sheng', 'Xiang', 'Lin', 'Qin',
+    'Jin', 'De', 'Zi', 'Zhong', 'Meng', 'Xuan', 'Yuan', 'Ran', 'Qi', 'Fei',
+    'Kun', 'Chang', 'Guo', 'Song', 'Ping', 'He', 'Xiong', 'Jun', 'Shan', 'Zhen',
+    'Bing', 'Cong', 'Da', 'Fan', 'Huan', 'Jiang', 'Kang', 'Lie', 'Nan', 'Qiu',
+    'Sen', 'Tian', 'Wu', 'Xiao', 'Yi', 'Ze', 'Ang', 'Bao', 'Cai', 'En',
+    'Fu', 'Heng', 'Jia', 'Ke', 'Lu', 'Mu', 'Ou', 'Quan', 'Shen', 'Tu',
+    'Wang', 'Xu', 'Yan', 'Zeng', 'Ai', 'Bei', 'Cui', 'Duan', 'Gong', 'Hong'
   ];
-  
+
   return getRandomName(givenNames);
 };
 
