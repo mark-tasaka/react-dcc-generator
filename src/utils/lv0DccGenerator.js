@@ -1,4 +1,4 @@
-import { Document, Page, Text, View, StyleSheet, Image } from '@react-pdf/renderer';
+import { Document, Page, Text, View, StyleSheet, Image, Font } from '@react-pdf/renderer';
 import characterSheetBg from '../character/img/lvZeroCharacterSheet.jpg';
 import characterSheetLn from '../character/img/lvZeroCharacterSheetLandscape.jpg';
 import { 
@@ -38,7 +38,19 @@ import { getAlignment } from './alignment.js';
 import { getGender, getNameGender } from './characterGender.js';
 import { getName, getNameDescript } from './nameSelect.js';
 
-
+Font.register({
+  family: 'Roboto Mono',
+  fonts: [
+    {
+      src: 'https://fonts.gstatic.com/s/robotomono/v23/L0xuDF4xlVMF-BfR8bXMIhJHg45mwgGEFl0_3vrtROW4.woff2',
+      fontWeight: 'normal',
+    },
+    {
+      src: 'https://fonts.gstatic.com/s/robotomono/v23/L0xuDF4xlVMF-BfR8bXMIhJHg45mwgGEFl0_Xvs_ROW4.woff2',
+      fontWeight: 'bold',
+    }
+  ]
+});
 // Complete PDF Styles
 const styles = StyleSheet.create({
   page: {
