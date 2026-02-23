@@ -1,3 +1,8 @@
+h1, h2 {
+  font-family: 'ITC Benguiat', serif;
+  font-weight: 700;
+}
+
 .App-button-gen, .App-button-reset {
   background-color: #4CAF50;
   border: none;
