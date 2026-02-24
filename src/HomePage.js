@@ -73,7 +73,7 @@ const defaultFormValues = {
   return (
     <div className="App">
       <header className="App-header">
-        <h1>DCC PDF Character Generator</h1>
+        <h1 className="generator-title">DCC Lv 0 Character Generator</h1>
         <p>This is a placeholder for the DCC Generator application.</p>
 
         {/* Character Generation Options */}

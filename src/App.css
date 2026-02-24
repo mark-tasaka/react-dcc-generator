@@ -1,6 +1,8 @@
-h1, h2 {
+.generator-title {
   font-family: 'ITC Benguiat', serif;
-  font-weight: 700;
+  font-weight: 600;
+  color: #FFFFFF;
+  border: 2px solid #6d3c6b;
 }
 
 .App-button-gen, .App-button-reset {
