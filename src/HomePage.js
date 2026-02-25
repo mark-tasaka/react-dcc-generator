@@ -75,7 +75,7 @@ const defaultFormValues = {
     <div className="App">
       <header className="App-header">
         <h2><img src={dccLv0Title} alt="DCC Level 0 Character Generator" className="lv0-title"/></h2>
-        <p>The Dungeon Crawl Classics Level 0 Character Generator is designed to allow Players and Judges the ability to quickly generate Level 0 Characters. This generator allows for options for increasing the survivability of the characters by modifying the 3d6 ability score rolls and by maximizing the number of hit points the characters start off with.</p>
+        <p className="generator-description">The Dungeon Crawl Classics Level 0 Character Generator is designed to allow Players and Judges the ability to quickly generate Level 0 Characters. This generator allows for options for increasing the survivability of the characters by modifying the 3d6 ability score rolls and by maximizing the number of hit points the characters start off with.</p>
 
         {/* Character Generation Options */}
         <div className="form-container">
