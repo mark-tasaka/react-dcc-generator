@@ -11,16 +11,16 @@ const Header = () => {
     <header className="header">
       <div className="header-container">
 
-        {/* ── Logo ── */}
-        <div className="header-logo">
-          <img
-            src={headerLogo}
-            alt="Goodman Games PDF Character Generators"
-          />
-        </div>
+        {/* ── Top Row: Logo (left) + Social Icons (right) ── */}
+        <div className="header-top">
 
-        {/* ── Right Section: Social Icons (top-right) + Nav (bottom) ── */}
-        <div className="header-right">
+          {/* Logo */}
+          <div className="header-logo">
+            <img
+              src={headerLogo}
+              alt="Goodman Games PDF Character Generators"
+            />
+          </div>
 
           {/* Social Media Icons */}
           <div className="header-social">
@@ -81,65 +81,65 @@ const Header = () => {
             </a>
 
           </div>
-
-          {/* Navigation Links */}
-          <nav className="header-nav" aria-label="Main navigation">
-            <ul className="nav-list">
-              <li>
-                <NavLink
-                  to="/"
-                  end
-                  className={({ isActive }) =>
-                    isActive ? 'nav-link nav-link--active' : 'nav-link'
-                  }
-                >
-                  Home (Lv 0)
-                </NavLink>
-              </li>
-              <li>
-                <NavLink
-                  to="/classes"
-                  className={({ isActive }) =>
-                    isActive ? 'nav-link nav-link--active' : 'nav-link'
-                  }
-                >
-                  Classes
-                </NavLink>
-              </li>
-              <li>
-                <NavLink
-                  to="/resources"
-                  className={({ isActive }) =>
-                    isActive ? 'nav-link nav-link--active' : 'nav-link'
-                  }
-                >
-                  Resources
-                </NavLink>
-              </li>
-              <li>
-                <NavLink
-                  to="/updates"
-                  className={({ isActive }) =>
-                    isActive ? 'nav-link nav-link--active' : 'nav-link'
-                  }
-                >
-                  Updates
-                </NavLink>
-              </li>
-              <li>
-                <NavLink
-                  to="/portal"
-                  className={({ isActive }) =>
-                    isActive ? 'nav-link nav-link--active' : 'nav-link'
-                  }
-                >
-                  Portal
-                </NavLink>
-              </li>
-            </ul>
-          </nav>
-
         </div>
+
+        {/* ── Bottom Row: Nav centered below logo ── */}
+        <nav className="header-nav" aria-label="Main navigation">
+          <ul className="nav-list">
+            <li>
+              <NavLink
+                to="/"
+                end
+                className={({ isActive }) =>
+                  isActive ? 'nav-link nav-link--active' : 'nav-link'
+                }
+              >
+                Home (Lv 0)
+              </NavLink>
+            </li>
+            <li>
+              <NavLink
+                to="/classes"
+                className={({ isActive }) =>
+                  isActive ? 'nav-link nav-link--active' : 'nav-link'
+                }
+              >
+                Classes
+              </NavLink>
+            </li>
+            <li>
+              <NavLink
+                to="/resources"
+                className={({ isActive }) =>
+                  isActive ? 'nav-link nav-link--active' : 'nav-link'
+                }
+              >
+                Resources
+              </NavLink>
+            </li>
+            <li>
+              <NavLink
+                to="/updates"
+                className={({ isActive }) =>
+                  isActive ? 'nav-link nav-link--active' : 'nav-link'
+                }
+              >
+                Updates
+              </NavLink>
+            </li>
+            <li>
+              <NavLink
+                to="/portal"
+                className={({ isActive }) =>
+                  isActive ? 'nav-link nav-link--active' : 'nav-link'
+                }
+              >
+                Portal
+              </NavLink>
+            </li>
+          </ul>
+        </nav>
+
       </div>
     </header>
   );
