@@ -78,8 +78,8 @@
 
 /* 2) PNG icons match SVG size exactly */
 .social-img {
-  width: 26px;
-  height: 26px;
+  width: 16px;
+  height: 16px;
   object-fit: contain;
   display: block;
 }
@@ -197,7 +197,7 @@
     height: 46px;
   }
 
-  .social-svg {
+  /* .social-svg {
     width: 22px;
     height: 22px;
   }
@@ -205,7 +205,7 @@
   .social-img {
     width: 22px;
     height: 22px;
-  }
+  } */
 
   .header-social {
     gap: 12px;
