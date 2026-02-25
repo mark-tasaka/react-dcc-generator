@@ -54,7 +54,7 @@
   display: flex;
   flex-direction: row;
   align-items: center;
-  gap: 10px;
+  gap: 20px;
 }
 
 .social-icon {
@@ -162,7 +162,7 @@
 
   .header-social {
     justify-content: center;
-    gap: 14px;
+    gap: 18px;
   }
 
   .header-nav {
@@ -192,7 +192,7 @@
 
 
   .header-social {
-    gap: 12px;
+    gap: 16px;
   }
 
   .nav-list {
