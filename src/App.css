@@ -5,6 +5,13 @@
   border: 2px solid #6d3c6b;
 }
 
+.lv0-title{
+  display:block;
+  width: 800px;
+  height: auto;
+}
+
+
 .App-button-gen, .App-button-reset {
   background-color: #4CAF50;
   border: none;
@@ -48,7 +55,8 @@
 }
 
 .App-header {
-  background-color: #282c34;
+  /* background-color: #282c34; */
+  background-color: #4A4A6A;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
