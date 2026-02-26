@@ -2,7 +2,7 @@
 import React from 'react';
 import { NavLink } from 'react-router-dom';
 import './Header.css';
-import headerLogo    from './img/header2.png';
+import headerLogo    from './img/header6.png';
 import linkedinIcon  from './img/linkedin.png';
 import githubIcon    from './img/github.png';
 import socialMedia1  from './img/social-media1.png';
