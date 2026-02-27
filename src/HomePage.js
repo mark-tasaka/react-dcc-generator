@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { pdf } from '@react-pdf/renderer';
 import { Buffer } from 'buffer';
 import { generateFourCharacters, generateTwoCharacters, CharacterSheetDocument, CharacterSheetLandscapeDocument } from './utils/lv0DccGenerator';
-import dccLv0Title from './img/dcc-lv05.png';
+import dccLv0Title from './img/dcc-lv06.png';
 
 window.Buffer = Buffer;
 
