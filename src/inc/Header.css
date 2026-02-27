@@ -1,4 +1,4 @@
-/* src/Header.css */
+/* src/inc/Header.css */
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap');
 
 /* =====================================================
@@ -9,8 +9,6 @@
   width: 100%;
 }
 
-/* ── Outer container: flex column, gap: 20px creates
-      the 20px space between .header-social and .header-body ── */
 .header-container {
   display: flex;
   flex-direction: column;
@@ -18,7 +16,7 @@
   width: 100%;
   margin: 0 auto;
   padding: 12px 24px;
-  gap: 10px;                
+  gap: 10px;
   box-sizing: border-box;
 }
 
@@ -28,7 +26,7 @@
 .header-social {
   display: flex;
   flex-direction: row;
-  justify-content: flex-end;   /* push icons to far right */
+  justify-content: flex-end;
   align-items: center;
   gap: 20px;
   width: 100%;
@@ -59,7 +57,7 @@
 .header-body {
   display: flex;
   flex-direction: column;
-  align-items: flex-start;     /* ← was: center */
+  align-items: flex-start;
   gap: 8px;
   width: 100%;
   padding-bottom: 6px;
@@ -70,7 +68,7 @@
    ===================================================== */
 .header-logo {
   display: flex;
-  justify-content: flex-start; /* ← was: center */
+  justify-content: flex-start;
   align-items: center;
   flex-shrink: 0;
 }
@@ -122,6 +120,54 @@
 }
 
 /* =====================================================
+   Sticky Header
+   ===================================================== */
+
+/* Fixed bar — hidden above viewport by default */
+.header--sticky {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+  transform: translateY(-100%);
+  transition: transform 0.3s ease-in-out;
+  box-shadow: 0 2px 14px rgba(0, 0, 0, 0.55);
+  /* Prevent phantom clicks while off-screen */
+  pointer-events: none;
+}
+
+/* Slides down into view */
+.header--sticky-visible {
+  transform: translateY(0);
+  pointer-events: auto;
+}
+
+/* Single-row container overrides */
+.header-container--sticky {
+  flex-direction: row;          /* horizontal instead of vertical */
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 24px;
+  gap: 24px;
+}
+
+/* Nav takes remaining space, left-aligned */
+.header-nav--sticky {
+  justify-content: flex-start;
+  flex: 1;
+  width: auto;
+}
+
+/* Social icons: right-aligned, tighter gap */
+.header-social--sticky {
+  justify-content: flex-end;
+  flex-shrink: 0;
+  width: auto;
+  gap: 16px;
+}
+
+/* =====================================================
    Responsive Design
    ===================================================== */
 
@@ -153,13 +199,12 @@
     gap: 18px;
   }
 
-  /* ── Re-center logo + body on mobile ── */
   .header-body {
-    align-items: center;       /* ← add this */
+    align-items: center;
   }
 
   .header-logo {
-    justify-content: center;   /* ← add this */
+    justify-content: center;
   }
 
   .header-logo img {
@@ -174,6 +219,12 @@
 
   .nav-link {
     font-size: 13px;
+  }
+
+  /* Sticky adjustments for tablet */
+  .header-container--sticky {
+    padding: 8px 16px;
+    gap: 16px;
   }
 }
 
@@ -198,6 +249,23 @@
 
   .nav-link {
     font-size: 12px;
+  }
+
+  /* Sticky: stack on very small screens */
+  .header-container--sticky {
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+    padding: 8px 12px;
+  }
+
+  .header-nav--sticky {
+    justify-content: center;
+  }
+
+  .header-social--sticky {
+    justify-content: center;
+    gap: 14px;
   }
 }
 
