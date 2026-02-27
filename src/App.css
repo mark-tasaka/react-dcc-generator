@@ -1,3 +1,4 @@
+/* App.css */
 .generator-title {
   font-family: 'ITC Benguiat', serif;
   font-weight: 600;
@@ -5,12 +6,11 @@
   border: 2px solid #6d3c6b;
 }
 
-.lv0-title{
-  display:block;
+.lv0-title {
+  display: block;
   width: 800px;
   height: auto;
 }
-
 
 .App-button-gen, .App-button-reset {
   background-color: #4CAF50;
@@ -30,7 +30,6 @@
 .App-button-gen:hover, .App-button-reset:hover {
   background-color: #45a049;
 }
-
 
 .button-container {
   display: flex;
@@ -55,13 +54,23 @@
 }
 
 .App-header {
-  /* background-color: #282c34; */
   background-color: #4A4A6A;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
+  /* ─────────────────────────────────────────────────────────
+     FIXED: was justify-content: center
+     Firefox distributes flex overflow above AND below when
+     justify-content: center is used with min-height: 100vh,
+     creating an internal flex scroll context.
+     window.scroll never fires in Firefox in that scenario.
+     Using flex-start + padding achieves the same visual result
+     but keeps the document as the scroll container in all browsers.
+  ───────────────────────────────────────────────────────── */
+  justify-content: flex-start;
+  padding-top: 60px;
+  padding-bottom: 60px;
   font-size: calc(10px + 2vmin);
   color: white;
 }
@@ -70,13 +79,12 @@
   color: #61dafb;
 }
 
-/* Updated form container for three-column grid */
 .form-container {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   gap: 20px;
   margin: 30px auto;
-  max-width: 1000px; /* Increased width to accommodate three columns */
+  max-width: 1000px;
   align-items: start;
 }
 
@@ -85,7 +93,7 @@
   flex-direction: column;
   align-items: flex-start;
   gap: 8px;
-  min-width: 0; /* Prevents overflow issues */
+  min-width: 0;
 }
 
 .form-label {
@@ -113,9 +121,7 @@
   box-shadow: 0 0 0 2px rgba(76, 175, 80, 0.2);
 }
 
-/* Responsive design for different screen sizes */
 @media (max-width: 1024px) and (min-width: 769px) {
-  /* Tablets: Two columns */
   .form-container {
     grid-template-columns: 1fr 1fr;
     max-width: 800px;
@@ -123,21 +129,20 @@
 }
 
 @media (max-width: 768px) {
-  /* Mobile: Single column */
   .form-container {
     grid-template-columns: 1fr;
     gap: 15px;
     max-width: 300px;
   }
-  
+
   .form-group {
     width: 100%;
   }
-  
+
   .form-label {
     text-align: center;
   }
-  
+
   .button-container {
     flex-direction: column;
     gap: 10px;
@@ -145,10 +150,6 @@
 }
 
 @keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+  from { transform: rotate(0deg); }
+  to   { transform: rotate(360deg); }
 }
