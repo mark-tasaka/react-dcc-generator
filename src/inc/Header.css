@@ -84,7 +84,7 @@
    ===================================================== */
 .header-nav {
   display: flex;
-  justify-content: center;
+  justify-content: flex-end;
   align-items: center;
   width: 100%;
 }
@@ -210,6 +210,11 @@
     height: 56px;
   }
 
+  /* ── Re-center nav on mobile ── */
+  .header-nav {
+    justify-content: center;   /* ← override back to center on mobile */
+  }
+
   .nav-list {
     flex-wrap: wrap;
     justify-content: center;
@@ -220,7 +225,6 @@
     font-size: 13px;
   }
 
-  /* Sticky adjustments for tablet */
   .header-container--sticky {
     padding: 8px 16px;
     gap: 16px;
