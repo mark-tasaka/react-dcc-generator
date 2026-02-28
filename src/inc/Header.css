@@ -151,16 +151,16 @@
   gap: 24px;
 }
 
-/* Nav takes remaining space, left-aligned */
+/* Nav — now on the RIGHT, so right-align its content */
 .header-nav--sticky {
-  justify-content: flex-start;
+  justify-content: flex-end;   /* ← was: flex-start */
   flex: 1;
   width: auto;
 }
 
-/* Social icons: right-aligned, tighter gap */
+/* Social icons — now on the LEFT, so left-align their content */
 .header-social--sticky {
-  justify-content: flex-end;
+  justify-content: flex-start; /* ← was: flex-end */
   flex-shrink: 0;
   width: auto;
   gap: 16px;

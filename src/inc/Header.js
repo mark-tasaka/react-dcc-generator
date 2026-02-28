@@ -144,23 +144,28 @@ const Header = () => {
         </div>
       </header>
 
-      {/* ── Sticky header — Portal escapes all parent stacking contexts ── */}
-      {ReactDOM.createPortal(
-        <header
-          className={`header header--sticky${isSticky ? ' header--sticky-visible' : ''}`}
-          aria-hidden={!isSticky}
-        >
-          <div className="header-container header-container--sticky">
-            <nav className="header-nav header-nav--sticky" aria-label="Main navigation">
-              <NavLinks />
-            </nav>
-            <div className="header-social header-social--sticky">
-              <SocialLinks />
-            </div>
+    {/* ── Sticky header — Portal escapes all parent stacking contexts ── */}
+    {ReactDOM.createPortal(
+      <header
+        className={`header header--sticky${isSticky ? ' header--sticky-visible' : ''}`}
+        aria-hidden={!isSticky}
+      >
+        <div className="header-container header-container--sticky">
+
+          {/* Social icons — NOW LEFT */}
+          <div className="header-social header-social--sticky">
+            <SocialLinks />
           </div>
-        </header>,
-        document.body
-      )}
+
+          {/* Nav — NOW RIGHT */}
+          <nav className="header-nav header-nav--sticky" aria-label="Main navigation">
+            <NavLinks />
+          </nav>
+
+        </div>
+      </header>,
+      document.body
+    )}
     </>
   );
 };
