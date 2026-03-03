@@ -3,11 +3,11 @@ import React, { useState, useEffect, useRef } from 'react';
 import ReactDOM from 'react-dom';
 import { NavLink } from 'react-router-dom';
 import './Header.css';
-import headerLogo   from './img/header6.png';
-import linkedinIcon from './img/linkedin.png';
-import githubIcon   from './img/github.png';
-import socialMedia1 from './img/social-media1.png';
-import socialMedia2 from './img/social-media2.png';
+import headerLogo   from './img/header/header6.png';
+import linkedinIcon from './img/header/linkedin.png';
+import githubIcon   from './img/header/github.png';
+import socialMedia1 from './img/header/social-media1.png';
+import socialMedia2 from './img/header/social-media2.png';
 
 /* ─────────────────────────────────────────────────────────
    Shared sub-components
