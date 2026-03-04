@@ -11,13 +11,12 @@
 
 .header-container {
   display: flex;
-  flex-direction: row;          /* ← CHANGED: was column */
-  align-items: flex-start;      /* ← CHANGED: top-aligns logo with social icons */
+  flex-direction: column;
   max-width: 1200px;
   width: 100%;
   margin: 0 auto;
   padding: 12px 24px;
-  gap: 24px;                    /* ← INCREASED: suits a row layout */
+  gap: 10px;
   box-sizing: border-box;
 }
 
@@ -30,9 +29,7 @@
   justify-content: flex-end;
   align-items: center;
   gap: 20px;
-  order: 2;                     /* ← ADDED: visually moves to the right */
-  flex-shrink: 0;               /* ← ADDED: never squishes the icons */
-  width: auto;                  /* ← CHANGED: was 100%; auto suits a row sibling */
+  width: 100%;
 }
 
 .social-icon {
@@ -55,15 +52,14 @@
 }
 
 /* =====================================================
-   Logo + Nav wrapper
+   Rows 2 & 3 — Logo + Nav wrapper
    ===================================================== */
 .header-body {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
   gap: 8px;
-  flex: 1;                      /* ← ADDED: fills remaining row space */
-  order: 1;                     /* ← ADDED: stays on the left */
+  width: 100%;
   padding-bottom: 6px;
 }
 
@@ -84,7 +80,7 @@
 }
 
 /* =====================================================
-   Navigation (right-aligned below logo)
+   Navigation (centered below logo)
    ===================================================== */
 .header-nav {
   display: flex;
@@ -126,6 +122,7 @@
 /* =====================================================
    Sticky Header
    ===================================================== */
+
 .header--sticky {
   position: fixed;
   top: 0;
@@ -134,32 +131,36 @@
   z-index: 1000;
   transform: translateY(-100%);
   transition: transform 0.3s ease-in-out;
-  will-change: transform;
+  will-change: transform;                      /* ← Added: forces Firefox GPU layer */
   box-shadow: 0 2px 14px rgba(0, 0, 0, 0.55);
   pointer-events: none;
 }
 
+/* Slides down into view */
 .header--sticky-visible {
   transform: translateY(0);
   pointer-events: auto;
 }
 
+/* Single-row container overrides */
 .header-container--sticky {
-  flex-direction: row;
+  flex-direction: row;          /* horizontal instead of vertical */
   align-items: center;
   justify-content: space-between;
   padding: 10px 24px;
   gap: 24px;
 }
 
+/* Nav — now on the RIGHT, so right-align its content */
 .header-nav--sticky {
-  justify-content: flex-end;
+  justify-content: flex-end;   /* ← was: flex-start */
   flex: 1;
   width: auto;
 }
 
+/* Social icons — now on the LEFT, so left-align their content */
 .header-social--sticky {
-  justify-content: flex-start;
+  justify-content: flex-start; /* ← was: flex-end */
   flex-shrink: 0;
   width: auto;
   gap: 16px;
@@ -186,29 +187,19 @@
 }
 
 /* ── Small Tablet / Large Mobile (max 768px) ── */
-/* Revert to the original column stacking on smaller screens */
 @media (max-width: 768px) {
   .header-container {
-    flex-direction: column;     /* ← revert to stacked layout */
-    align-items: stretch;
     padding: 12px 16px;
     gap: 16px;
   }
 
-  /* Social icons back on top, centred */
   .header-social {
-    order: 1;                   /* ← back above the logo */
-    width: 100%;                /* ← full-width row again */
     justify-content: center;
     gap: 18px;
   }
 
-  /* Logo + nav block back below social */
   .header-body {
-    order: 2;                   /* ← below social again */
-    flex: unset;                /* ← release the flex-grow */
     align-items: center;
-    width: 100%;
   }
 
   .header-logo {
@@ -219,8 +210,9 @@
     height: 56px;
   }
 
+  /* ── Re-center nav on mobile ── */
   .header-nav {
-    justify-content: center;
+    justify-content: center;   /* ← override back to center on mobile */
   }
 
   .nav-list {
@@ -262,6 +254,7 @@
     font-size: 12px;
   }
 
+  /* Sticky: stack on very small screens */
   .header-container--sticky {
     flex-direction: column;
     align-items: center;
