@@ -18,7 +18,7 @@ const SLIDES = [
   { src: slide6, alt: 'DCC Character Sheet – Slide 6' },
 ];
 
-const SLIDE_INTERVAL_MS = 4000;
+const SLIDE_INTERVAL_MS = 6000;
 
 const Hero = () => {
   const [activeIndex, setActiveIndex] = useState(0);
