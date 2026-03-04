@@ -1,0 +1,173 @@
+/* src/inc/Hero.css */
+
+/* =====================================================
+   Hero Section
+   ===================================================== */
+.hero {
+  background-color: #000000;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 40px 0 28px;
+  box-sizing: border-box;
+}
+
+/* =====================================================
+   Slide Track — fixed height keeps layout stable
+   while all slides are absolutely stacked inside
+   ===================================================== */
+.hero-track {
+  position: relative;
+  width: 100%;
+  max-width: 1000px;
+  height: 500px;
+  padding: 0 24px;
+  box-sizing: border-box;
+}
+
+/* =====================================================
+   Slides — all stacked, active one fades to opacity 1
+   ===================================================== */
+.hero-slide {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  max-width: calc(100% - 48px);   /* respects horizontal padding */
+  max-height: 500px;
+  width: auto;
+  height: auto;
+  object-fit: contain;
+  opacity: 0;
+  transition: opacity 0.9s ease-in-out;
+  pointer-events: none;
+  user-select: none;
+  -webkit-user-drag: none;
+}
+
+.hero-slide--active {
+  opacity: 1;
+}
+
+/* =====================================================
+   Navigation Dots
+   ===================================================== */
+.hero-dots {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  margin-top: 24px;
+}
+
+.hero-dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background-color: #444444;
+  border: 2px solid #666666;
+  cursor: pointer;
+  padding: 0;
+  transition: background-color 0.3s ease,
+              border-color     0.3s ease,
+              transform        0.3s ease;
+  flex-shrink: 0;
+}
+
+.hero-dot:hover {
+  background-color: #888888;
+  border-color: #aaaaaa;
+}
+
+.hero-dot--active {
+  background-color: #9B59B6;
+  border-color: #C39BD3;
+  transform: scale(1.4);
+}
+
+/* =====================================================
+   Responsive Design
+   ===================================================== */
+
+/* ── Tablet (max 1024px) ── */
+@media (max-width: 1024px) {
+  .hero-track {
+    height: 420px;
+  }
+
+  .hero-slide {
+    max-height: 420px;
+  }
+}
+
+/* ── Small Tablet / Large Mobile (max 768px) ── */
+@media (max-width: 768px) {
+  .hero {
+    padding: 28px 0 20px;
+  }
+
+  .hero-track {
+    height: 340px;
+    padding: 0 16px;
+  }
+
+  .hero-slide {
+    max-width: calc(100% - 32px);
+    max-height: 340px;
+  }
+
+  .hero-dots {
+    gap: 10px;
+    margin-top: 18px;
+  }
+}
+
+/* ── Mobile (max 480px) ── */
+@media (max-width: 480px) {
+  .hero {
+    padding: 20px 0 16px;
+  }
+
+  .hero-track {
+    height: 260px;
+    padding: 0 12px;
+  }
+
+  .hero-slide {
+    max-width: calc(100% - 24px);
+    max-height: 260px;
+  }
+
+  .hero-dot {
+    width: 8px;
+    height: 8px;
+  }
+
+  .hero-dots {
+    gap: 8px;
+    margin-top: 14px;
+  }
+}
+
+/* ── Extra Small Mobile (max 360px) ── */
+@media (max-width: 360px) {
+  .hero-track {
+    height: 210px;
+  }
+
+  .hero-slide {
+    max-height: 210px;
+  }
+
+  .hero-dot {
+    width: 7px;
+    height: 7px;
+  }
+
+  .hero-dots {
+    gap: 6px;
+  }
+}
