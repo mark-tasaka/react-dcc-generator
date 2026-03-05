@@ -6,6 +6,11 @@
   border: 2px solid #6d3c6b;
 }
 
+.generator-description{
+  font-size: 18px;
+  color: #FFFFFF;
+}
+
 .lv0-title {
   display: block;
   width: 800px;
