@@ -58,22 +58,12 @@
   }
 }
 
-.App-header {
+.App {
   background-color: #4A4A6A;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
   align-items: center;
-  /* ─────────────────────────────────────────────────────────
-     FIXED: was justify-content: center
-     Firefox distributes flex overflow above AND below when
-     justify-content: center is used with min-height: 100vh,
-     creating an internal flex scroll context.
-     window.scroll never fires in Firefox in that scenario.
-     Using flex-start + padding achieves the same visual result
-     but keeps the document as the scroll container in all browsers.
-  ───────────────────────────────────────────────────────── */
-  justify-content: flex-start;
   padding-top: 60px;
   padding-bottom: 60px;
   font-size: calc(10px + 2vmin);
