@@ -11,9 +11,11 @@ function App() {
       <div className="App">
         <Header />
         <Hero />
-        <Routes>
-          <Route path="/" element={<HomePage />} />
-        </Routes>
+        <main className="main-content">
+          <Routes>
+            <Route path="/" element={<HomePage />} />
+          </Routes>
+        </main>
       </div>
     </Router>
   );
