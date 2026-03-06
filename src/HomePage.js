@@ -1,7 +1,6 @@
 import React, { useState } from 'react';
 import DccLv0 from './generator/dccLv0';
 import lv0Title from './img/lv0title.png';
-import './HomePage.css';
 
 const HomePage = () => {
   const [isOpen, setIsOpen] = useState(true);
@@ -31,8 +30,7 @@ const HomePage = () => {
           className="home-section-title-img"
         />
 
-        {/* Description paragraphs — wrapped so section gap applies
-            between this block and the accordion below */}
+        {/* Description paragraphs */}
         <div className="home-descriptions">
           <p className="home-description">
             The Character Funnel is a unique feature of the Dungeon Crawl Classics role-playing system;

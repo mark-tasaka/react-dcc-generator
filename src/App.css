@@ -1,5 +1,8 @@
 /* App.css */
 
+/* =====================================================
+   App Shell
+   ===================================================== */
 .App {
   text-align: center;
   background-color: #4A4A6A;
@@ -10,7 +13,6 @@
   justify-content: flex-start;
   font-size: calc(10px + 2vmin);
   color: white;
-  /* padding-top and padding-bottom removed — were pushing Header down */
 }
 
 .main-content {
@@ -40,4 +42,208 @@
 @keyframes App-logo-spin {
   from { transform: rotate(0deg); }
   to   { transform: rotate(360deg); }
+}
+
+/* =====================================================
+   HomePage
+   ===================================================== */
+
+/* ── Page wrapper ── */
+.home-page {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 24px;
+  box-sizing: border-box;
+  color: #ffffff;
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+  gap: 48px; /* intro ↔ home-section */
+}
+
+/* ── Intro paragraph ── */
+.home-intro {
+  font-size: 18px;
+  line-height: 1.7;
+  color: #ffffff;
+}
+
+.home-intro-link {
+  color: #C09EE0;
+  text-decoration: underline;
+}
+
+.home-intro-link:hover {
+  color: #ffffff;
+}
+
+/* ── Section container ── */
+.home-section {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 32px; /* title-img ↔ descriptions ↔ accordion */
+}
+
+/* ── Section title image ── */
+.home-section-title-img {
+  display: block;
+  width: 100%;
+  max-width: 700px;
+  height: auto;
+  margin: 0 auto; /* horizontal centering only */
+}
+
+/* ── Description paragraphs wrapper ── */
+.home-descriptions {
+  display: flex;
+  flex-direction: column;
+}
+
+/* ── Description paragraph ── */
+.home-description {
+  font-size: 16px;
+  line-height: 1.7;
+  color: #ffffff;
+}
+
+/* =====================================================
+   Accordion
+   ===================================================== */
+
+.accordion {
+  width: 100%;
+  border-radius: 6px;
+  overflow: hidden;
+}
+
+.accordion-toggle {
+  width: 100%;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #7048A0;
+  color: #ffffff;
+  border: none;
+  padding: 14px 52px;
+  font-size: 18px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+  box-sizing: border-box;
+}
+
+.accordion-toggle:hover {
+  background-color: #8058B0;
+}
+
+.accordion-icon {
+  position: absolute;
+  left: 20px;
+  font-size: 22px;
+  line-height: 1;
+  flex-shrink: 0;
+}
+
+.accordion-label {
+  text-align: center;
+}
+
+/* Collapsed */
+.accordion-content {
+  overflow: hidden;
+  max-height: 0;
+  transition: max-height 0.4s ease;
+}
+
+/* Expanded */
+.accordion-content--open {
+  max-height: 3000px;
+  transition: max-height 0.6s ease;
+}
+
+/* =====================================================
+   Responsive
+   ===================================================== */
+
+@media (max-width: 1024px) {
+  .home-page {
+    padding: 0 20px;
+    gap: 40px;
+  }
+
+  .home-section {
+    gap: 28px;
+  }
+}
+
+@media (max-width: 768px) {
+  .home-page {
+    padding: 0 16px;
+    gap: 32px;
+  }
+
+  .home-section {
+    gap: 24px;
+  }
+
+  .home-descriptions {
+    gap: 10px;
+  }
+
+  .home-intro {
+    font-size: 15px;
+  }
+
+  .home-description {
+    font-size: 14px;
+  }
+
+  .home-section-title-img {
+    max-width: 100%;
+  }
+
+  .accordion-toggle {
+    font-size: 15px;
+    padding: 12px 44px;
+  }
+
+  .accordion-icon {
+    left: 16px;
+  }
+}
+
+@media (max-width: 480px) {
+  .home-page {
+    padding: 0 12px;
+    gap: 24px;
+  }
+
+  .home-section {
+    gap: 20px;
+  }
+
+  .home-descriptions {
+    gap: 8px;
+  }
+
+  .home-intro {
+    font-size: 13px;
+  }
+
+  .home-description {
+    font-size: 13px;
+  }
+
+  .accordion-toggle {
+    font-size: 14px;
+    padding: 10px 38px;
+  }
+
+  .accordion-icon {
+    left: 12px;
+    font-size: 18px;
+  }
 }
