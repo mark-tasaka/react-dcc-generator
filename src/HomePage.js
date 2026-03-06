@@ -4,7 +4,7 @@ import lv0Title from './img/lv0title.png';
 import './HomePage.css';
 
 const HomePage = () => {
-  const [isOpen, setIsOpen] = useState(true); // default: open
+  const [isOpen, setIsOpen] = useState(true);
 
   return (
     <div className="home-page">
@@ -31,22 +31,25 @@ const HomePage = () => {
           className="home-section-title-img"
         />
 
-        {/* Description paragraphs */}
-        <p className="home-description">
-          The Character Funnel is a unique feature of the Dungeon Crawl Classics role-playing system;
-          it is the starting point of every new DCC campaign. A band of lowly zero-level peasants,
-          armed only with the tools of their humble occupations, sets off on an adventure to prove
-          themselves worthy of being called adventurers. Most will perish on this first adventure, but
-          those few who survive will earn the right to choose a character class and begin new lives as
-          first-level characters.
-        </p>
+        {/* Description paragraphs — wrapped so section gap applies
+            between this block and the accordion below */}
+        <div className="home-descriptions">
+          <p className="home-description">
+            The Character Funnel is a unique feature of the Dungeon Crawl Classics role-playing system;
+            it is the starting point of every new DCC campaign. A band of lowly zero-level peasants,
+            armed only with the tools of their humble occupations, sets off on an adventure to prove
+            themselves worthy of being called adventurers. Most will perish on this first adventure, but
+            those few who survive will earn the right to choose a character class and begin new lives as
+            first-level characters.
+          </p>
 
-        <p className="home-description">
-          The Zero-Level Character Generators are designed to allow players and Judges (the DCC term
-          for GMs) to quickly generate zero-level characters. This generator offers options for
-          increasing character survivability by modifying the 3d6 ability score rolls and by
-          maximizing starting hit points.
-        </p>
+          <p className="home-description">
+            The Zero-Level Character Generators are designed to allow players and Judges (the DCC term
+            for GMs) to quickly generate zero-level characters. This generator offers options for
+            increasing character survivability by modifying the 3d6 ability score rolls and by
+            maximizing starting hit points.
+          </p>
+        </div>
 
         {/* ── Accordion ── */}
         <div className="accordion">

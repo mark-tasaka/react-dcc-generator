@@ -9,11 +9,9 @@
   box-sizing: border-box;
   color: #ffffff;
   text-align: left;
-
-  /* Flexbox layout — gap replaces all margins between intro and section */
   display: flex;
   flex-direction: column;
-  gap: 48px; /* ← large gap: intro ↔ section title image */
+  gap: 48px; /* intro ↔ home-section */
 }
 
 /* ── Intro paragraph ── */
@@ -21,7 +19,6 @@
   font-size: 18px;
   line-height: 1.7;
   color: #ffffff;
-  /* no margin — gap on parent handles spacing */
 }
 
 .home-intro-link {
@@ -36,11 +33,9 @@
 /* ── Section container ── */
 .home-section {
   width: 100%;
-
-  /* Flexbox layout — gap replaces margins between all section children */
   display: flex;
   flex-direction: column;
-  gap: 12px; /* ← small gap: title image ↔ descriptions ↔ accordion */
+  gap: 32px; /* title-img ↔ descriptions ↔ accordion */
 }
 
 /* ── Section title image ── */
@@ -49,15 +44,20 @@
   width: 100%;
   max-width: 700px;
   height: auto;
-  margin: 0 auto; /* horizontal centering only — no top/bottom margin */
+  margin: 0 auto; /* horizontal centering only */
 }
 
-/* ── Description paragraphs ── */
+/* ── Description paragraphs wrapper ── */
+.home-descriptions {
+  display: flex;
+  flex-direction: column;
+}
+
+/* ── Description paragraph ── */
 .home-description {
   font-size: 16px;
   line-height: 1.7;
   color: #ffffff;
-  /* no margin — gap on parent handles spacing */
 }
 
 /* ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
@@ -67,19 +67,19 @@
 .accordion {
   width: 100%;
   border-radius: 6px;
-  overflow: hidden;                 /* clips toggle corners to match border-radius */
+  overflow: hidden;
 }
 
 .accordion-toggle {
   width: 100%;
-  position: relative;              /* ← allows icon to be pinned to the left */
+  position: relative;
   display: flex;
   align-items: center;
-  justify-content: center;         /* ← centers the label */
+  justify-content: center;
   background-color: #7048A0;
   color: #ffffff;
   border: none;
-  padding: 14px 52px;              /* horizontal padding prevents label/icon overlap */
+  padding: 14px 52px;
   font-size: 18px;
   font-weight: 600;
   cursor: pointer;
@@ -91,7 +91,6 @@
   background-color: #8058B0;
 }
 
-/* Icon — pinned to the left of the button */
 .accordion-icon {
   position: absolute;
   left: 20px;
@@ -100,7 +99,6 @@
   flex-shrink: 0;
 }
 
-/* Label — centred in the full button width */
 .accordion-label {
   text-align: center;
 }
@@ -126,6 +124,10 @@
     padding: 0 20px;
     gap: 40px;
   }
+
+  .home-section {
+    gap: 28px;
+  }
 }
 
 @media (max-width: 768px) {
@@ -135,6 +137,10 @@
   }
 
   .home-section {
+    gap: 24px;
+  }
+
+  .home-descriptions {
     gap: 10px;
   }
 
@@ -167,6 +173,10 @@
   }
 
   .home-section {
+    gap: 20px;
+  }
+
+  .home-descriptions {
     gap: 8px;
   }
 
