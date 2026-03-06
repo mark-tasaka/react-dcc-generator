@@ -16,9 +16,9 @@ const HomePage = () => {
         earlier DCC character generators I designed, featuring the ability to randomly generate
         characters as PDF character sheets. If you have any questions or would like to reach out,
         please contact me at{' '}
-        <a href="mailto:dcccharterinfo@gmail.com" className="home-intro-link">
-          dcccharterinfo@gmail.com
-        </a>
+        <a href="mailto:dccfanforlife@gmail.com" className="home-intro-link">
+          dccfanforlife@gmail.com
+        </a>.
       </p>
 
       {/* ── Level 0 section ── */}

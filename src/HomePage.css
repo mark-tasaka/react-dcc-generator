@@ -13,10 +13,10 @@
 
 /* ── Intro paragraph ── */
 .home-intro {
-  font-size: 16px;
+  font-size: 18px;
   line-height: 1.7;
   color: #ffffff;
-  margin: 0 0 32px 0;
+  /* margin: 0 0 32px 0; */
 }
 
 .home-intro-link {
