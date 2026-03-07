@@ -3,7 +3,6 @@ import { pdf } from '@react-pdf/renderer';
 import { Buffer } from 'buffer';
 import { generateFourCharacters, generateTwoCharacters, CharacterSheetDocument, CharacterSheetLandscapeDocument } from './utils/lv0DccGenerator';
 import './generator.css';
-import lv0Generator from './img/dcclv0.png'; 
 
 window.Buffer = Buffer;
 
@@ -67,11 +66,13 @@ const DccLv0 = () => {
   return (
     <div className="generator-form-wrapper">
 
-      <h2><img
+      {/* <h2><img
         src={lv0Generator}
         alt="DCC Level 0 Character Generator"
         className="lv0-generator-img"
-      /></h2>
+      /></h2> */}
+      
+      <h2 className="dcc-generator-title">DCC Level Zero Character Generator</h2>
 
       {/* Character Generation Options */}
       <div className="form-container">
