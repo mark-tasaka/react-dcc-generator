@@ -24,11 +24,14 @@ const HomePage = () => {
       <div className="home-section">
 
         {/* Section title image */}
-        <img
+        {/* <h1><img
           src={lv0Title}
           alt="Level 0 Character Generators"
           className="home-section-title-img"
         />
+        </h1> */}
+
+        <h1 className="home-section-title">Level 0 Character Generators</h1>
 
         {/* Description paragraphs */}
         <div className="home-descriptions">

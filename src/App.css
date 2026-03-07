@@ -86,6 +86,14 @@
   gap: 32px; /* title-img ↔ descriptions ↔ accordion */
 }
 
+.home-section-title {
+  font-family: 'ITC Benguiat', serif;
+  font-size: 52px;
+  color: #ffffff;
+  text-shadow: 4px 4px 0px #b83bb3, -4px -4px 0px #b83bb3, 4px -4px 0px #b83bb3, -4px 4px 0px #b83bb3;
+  /* -webkit-text-stroke: 3px #6B3A8E;*/
+}
+
 /* ── Section title image ── */
 .home-section-title-img {
   display: block;
