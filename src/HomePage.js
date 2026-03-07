@@ -31,7 +31,7 @@ const HomePage = () => {
         />
         </h1> */}
 
-        <h1 className="home-section-title">Level 0 Character Generators</h1>
+        <h1 className="home-section-title">Level Zero Character Generators</h1>
 
         {/* Description paragraphs */}
         <div className="home-descriptions">
