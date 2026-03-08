@@ -1,8 +1,10 @@
 import React, { useState } from 'react';
 import DccLv0 from './character/dccLv0';
+import MccLv0 from './character/mccLv0';
 
 const HomePage = () => {
-  const [isOpen, setIsOpen] = useState(true);
+  const [isDccOpen, setIsDccOpen] = useState(true);   // DCC open by default
+  const [isMccOpen, setIsMccOpen] = useState(false);  // MCC closed by default
 
   return (
     <div className="home-page">
@@ -21,14 +23,6 @@ const HomePage = () => {
 
       {/* ── Level 0 section ── */}
       <div className="home-section">
-
-        {/* Section title image */}
-        {/* <h1><img
-          src={lv0Title}
-          alt="Level 0 Character Generators"
-          className="home-section-title-img"
-        />
-        </h1> */}
 
         <h1 className="home-section-title">Level Zero Character Generators</h1>
 
@@ -51,19 +45,35 @@ const HomePage = () => {
           </p>
         </div>
 
-        {/* ── Accordion ── */}
+        {/* ── DCC Accordion ── */}
         <div className="accordion">
           <button
             className="accordion-toggle"
-            onClick={() => setIsOpen(prev => !prev)}
-            aria-expanded={isOpen}
+            onClick={() => setIsDccOpen(prev => !prev)}
+            aria-expanded={isDccOpen}
           >
-            <span className="accordion-icon">{isOpen ? '−' : '+'}</span>
+            <span className="accordion-icon">{isDccOpen ? '−' : '+'}</span>
             <span className="accordion-label">DCC Level 0 Character Generator</span>
           </button>
 
-          <div className={`accordion-content${isOpen ? ' accordion-content--open' : ''}`}>
+          <div className={`accordion-content${isDccOpen ? ' accordion-content--open' : ''}`}>
             <DccLv0 />
+          </div>
+        </div>
+
+        {/* ── MCC Accordion ── */}
+        <div className="accordion">
+          <button
+            className="accordion-toggle"
+            onClick={() => setIsMccOpen(prev => !prev)}
+            aria-expanded={isMccOpen}
+          >
+            <span className="accordion-icon">{isMccOpen ? '−' : '+'}</span>
+            <span className="accordion-label">MCC Level 0 Character Generator</span>
+          </button>
+
+          <div className={`accordion-content${isMccOpen ? ' accordion-content--open' : ''}`}>
+            <MccLv0 />
           </div>
         </div>
 
