@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import DccLv0 from './generator/dccLv0';
+import DccLv0 from './character/dccLv0';
 
 const HomePage = () => {
   const [isOpen, setIsOpen] = useState(true);

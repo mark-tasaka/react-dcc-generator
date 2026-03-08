@@ -1,6 +1,6 @@
 import { Document, Page, Text, View, StyleSheet, Image, Font } from '@react-pdf/renderer';
-import characterSheetBg from '../character/img/lvZeroCharacterSheet.jpg';
-import characterSheetLn from '../character/img/lvZeroCharacterSheetLandscape.jpg';
+import characterSheetBg from '../img/lvZeroCharacterSheet.jpg';
+import characterSheetLn from '../img/lvZeroCharacterSheetLandscape.jpg';
 import { 
   occupations, 
   getArmour, 
