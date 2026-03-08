@@ -127,6 +127,14 @@
    Accordion
    ===================================================== */
 
+   /* ── Accordion Group (flex container for spacing) ── */
+.accordion-group {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;                
+  width: 100%;
+}
+
 .accordion {
   width: 100%;
   border-radius: 6px;
