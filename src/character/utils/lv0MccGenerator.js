@@ -9,12 +9,12 @@ import {
   getOccupationFumbleDie } from './dccOccupations.js';
 import { generateEquipment, generateWealth } from './dccEquipment.js';
 import { getLanguages, formatLanguages } from './dccLanguages.js';
-import { 
-  getBirthAugur,
-  getSpeed, 
-  getInit, 
-  getAC, 
-  getHitPointLuck, 
+import {
+  getMccBirthAugur,   // ← replaces getBirthAugur from dccBirthAugurs
+  getSpeed,
+  getInit,
+  getAC,
+  getHitPointLuck,
   getRefLuckBonus,
   getFortLuckBonus,
   getWillLuckBonus,
@@ -22,7 +22,7 @@ import {
   missileAttackLuckSign,
   meleeDamageLuckSign,
   missileDamageLuckSign,
-} from './dccBirthAugurs.js';
+} from './mccLuckySign.js';
 import { 
   minHitPoints, 
   formatCritDie, 
@@ -30,7 +30,7 @@ import {
   getAbilityModifier,
 } from './statistics.js';
 import {
-    rollAbilityScores,
+  rollAbilityScores,
 } from './abilityScoreGen.js';
 import { getNotes, dieRollMethodText, hitPointsMethodText } from './dccNotes.js';
 import { getArchaicAlignment } from './archaicAlignment.js';
@@ -290,7 +290,7 @@ export const generateRandomCharacter = (options = {}) => {
 
   // Occupations always drawn from the full "All" pool (option 1) for MCC
   const selectedOccupation = occupations[getOccupationNumber(1)];
-  const gender = getGender(genderOption); 
+  const gender = getGender(genderOption);
   const nameGenderIndex = getNameGender(gender);
 
   let actualGivenName = givenNameOption;
@@ -299,14 +299,14 @@ export const generateRandomCharacter = (options = {}) => {
   if (givenNameOption === 100) {
     actualGivenName = getRandomNameOrigin('given');
   }
-  
+
   if (surnameOption === 100) {
     actualSurname = getRandomNameOrigin('surname');
   }
 
   const characterName = getName(actualGivenName, actualSurname, nameGenderIndex);
   const nameDescript = getNameDescript(actualGivenName, actualSurname);
-    
+
   const str = rollAbilityScores(abilityScoreOption);
   const agi = rollAbilityScores(abilityScoreOption);
   const sta = rollAbilityScores(abilityScoreOption);
@@ -321,7 +321,8 @@ export const generateRandomCharacter = (options = {}) => {
   const intMod = getAbilityModifier(int);
   const luckMod = getAbilityModifier(luck);
 
-  const birthAugur = getBirthAugur();
+  // ── Use MCC lucky sign table instead of DCC birth augurs ──
+  const birthAugur = getMccBirthAugur();
   const luckySign = birthAugur.id;
 
   let baseHp;
@@ -331,18 +332,18 @@ export const generateRandomCharacter = (options = {}) => {
     baseHp = rollDice(4) + staMod + getHitPointLuck(luckMod, luckySign);
   }
   const hp = minHitPoints(baseHp);
-  
+
   const ac = getAC(agiMod, luckMod, luckySign);
   const init = getInit(agiMod, luckMod, luckySign);
   const melee = strMod + meleeAttackLuckSign(luckMod, luckySign);
   const meleeDamage = strMod + meleeDamageLuckSign(luckMod, luckySign);
   const missile = agiMod + missileAttackLuckSign(luckMod, luckySign);
   const missileDamage = agiMod + missileDamageLuckSign(luckMod, luckySign);
-  
+
   const reflex = agiMod + getRefLuckBonus(luckMod, luckySign);
   const fortitude = staMod + getFortLuckBonus(luckMod, luckySign);
   const will = perMod + getWillLuckBonus(luckMod, luckySign);
-  const speed = getSpeed(agiMod, luckySign);
+  const speed = getSpeed(luckMod, luckySign);
 
   const critDie = formatCritDie(luckMod, luckySign);
   const fumble = getOccupationFumbleDie(selectedOccupation.id) + formatFumbleDie(luckMod, luckySign);
@@ -388,13 +389,13 @@ export const generateRandomCharacter = (options = {}) => {
     speed: speed,
     birthAugur: `${birthAugur.name}: ${birthAugur.effect}`,
     birthAugurData: birthAugur,
-    wealth: generateWealth(selectedOccupation), 
+    wealth: generateWealth(selectedOccupation),
     languages: formatLanguages(getLanguages(
-      intMod, 
-      luckMod, 
-      luckySign, 
-      selectedOccupation.race, 
-      alignment, 
+      intMod,
+      luckMod,
+      luckySign,
+      selectedOccupation.race,
+      alignment,
       int
     )),
     notes: notes,
