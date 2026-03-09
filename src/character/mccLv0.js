@@ -186,17 +186,15 @@ const DccLv0 = () => {
         </div>
 
         <div className="form-group">
-          <span className="form-label">Alignment:</span>
+          <span className="form-label">Archaic Alignment:</span>
           <select
             name="alignment"
             value={formValues.alignment}
             onChange={handleInputChange}
             className="form-select"
           >
-            <option value={1}>Random</option>
-            <option value={2}>Lawful</option>
-            <option value={3}>Neutral</option>
-            <option value={4}>Chaotic</option>
+            <option value={1}>Clan of the Cog</option>
+            <option value={2}>By Genotypes</option>
           </select>
         </div>
 
