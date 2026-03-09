@@ -23,7 +23,6 @@ import {
   meleeDamageLuckSign,
   missileDamageLuckSign,
 } from './dccBirthAugurs.js';
-
 import { 
   minHitPoints, 
   formatCritDie, 
@@ -34,7 +33,7 @@ import {
     rollAbilityScores,
 } from './abilityScoreGen.js';
 import { getNotes, dieRollMethodText, hitPointsMethodText } from './dccNotes.js';
-import { getArchaicAlignment } from './archaicAlignment.js'; // ← swapped
+import { getArchaicAlignment } from './archaicAlignment.js';
 import { getGender, getNameGender } from './characterGender.js';
 import { getName, getNameDescript } from './nameSelect.js';
 
@@ -283,14 +282,14 @@ export const generateRandomCharacter = (options = {}) => {
     gender: genderOption = 1,
     abilityScore: abilityScoreOption = 1,
     hitPoints: hitPointsOption = 1,
-    occupations: occupationsOption = 1,
     givenName: givenNameOption = 100,
     surname: surnameOption = 100
   } = options;
 
   const rollDice = (sides) => Math.floor(Math.random() * sides) + 1;
 
-  const selectedOccupation = occupations[getOccupationNumber(occupationsOption)];
+  // Occupations always drawn from the full "All" pool (option 1) for MCC
+  const selectedOccupation = occupations[getOccupationNumber(1)];
   const gender = getGender(genderOption); 
   const nameGenderIndex = getNameGender(gender);
 
