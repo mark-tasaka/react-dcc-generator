@@ -1,5 +1,3 @@
-// archaiAlignment.js
-
 export function getArchaicAlignment(choice, species) {
     var alignment = "The Clan of the Cog";
 

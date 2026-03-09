@@ -6,7 +6,7 @@ import './generator.css';
 
 window.Buffer = Buffer;
 
-const DccLv0 = () => {
+const MccLv0 = () => {
   const defaultFormValues = {
     givenName: 100,
     surname: 100,
@@ -14,7 +14,6 @@ const DccLv0 = () => {
     gender: 1,
     abilityScore: 1,
     hitPoints: 1,
-    occupations: 1,
     sheetLayout: 1
   };
 
@@ -244,24 +243,6 @@ const DccLv0 = () => {
         </div>
 
         <div className="form-group">
-          <span className="form-label">Occupations:</span>
-          <select
-            name="occupations"
-            value={formValues.occupations}
-            onChange={handleInputChange}
-            className="form-select"
-          >
-            <option value={1}>All</option>
-            <option value={2}>Humans</option>
-            <option value={3}>Demi-Humans</option>
-            <option value={4}>Dwarves</option>
-            <option value={5}>Elves</option>
-            <option value={6}>Halflings</option>
-            <option value={7}>With Armour</option>
-          </select>
-        </div>
-
-        <div className="form-group">
           <span className="form-label">Sheets per Page:</span>
           <select
             name="sheetLayout"
@@ -289,4 +270,4 @@ const DccLv0 = () => {
   );
 };
 
-export default DccLv0;
+export default MccLv0;
