@@ -66,13 +66,7 @@ const DccLv0 = () => {
   return (
     <div className="generator-form-wrapper">
 
-      {/* <h2><img
-        src={lv0Generator}
-        alt="DCC Level 0 Character Generator"
-        className="lv0-generator-img"
-      /></h2> */}
-      
-      <h2 className="dcc-generator-title">DCC Level Zero Character Generator</h2>
+      <h2 className="dcc-generator-title-mcc">MCC Level Zero Character Generator</h2>
 
       {/* Character Generation Options */}
       <div className="form-container">

@@ -79,7 +79,6 @@
 }
 
 /* ── Section container ── */
-/* CHANGE 2: gap removed — spacing now handled by margins on children */
 .home-section {
   width: 100%;
   display: flex;
@@ -87,15 +86,24 @@
   gap: 0;
 }
 
-/* ── Generator h2 title ── */
-.dcc-generator-title {
+/* ── Generator h2 title (shared styles) ── */
+.dcc-generator-title,
+.dcc-generator-title-mcc {
   font-family: 'Playfair Display', serif;
-  font-size: 42px;                           /* base size */
+  font-size: 42px;
   color: #ffffff;
   text-shadow: 4px 4px 0px #b83bb3,
                -4px -4px 0px #b83bb3,
                4px -4px 0px #b83bb3,
                -4px 4px 0px #b83bb3;
+}
+
+/* ── MCC variant overrides the text-shadow colour ── */
+.dcc-generator-title-mcc {
+  text-shadow: 4px 4px 0px #3D5FA0,
+               -4px -4px 0px #3D5FA0,
+               4px -4px 0px #3D5FA0,
+               -4px 4px 0px #3D5FA0;
 }
 
 /* ── Section title image ── */
@@ -108,12 +116,11 @@
 }
 
 /* ── Description paragraphs wrapper ── */
-/* CHANGE 2: margin-bottom creates gap before accordion */
 .home-descriptions {
   display: flex;
   flex-direction: column;
-  gap: 16px;                                 /* space between the two paragraphs */
-  margin-bottom: 32px;                       /* space before the accordion */
+  gap: 16px;
+  margin-bottom: 32px;
 }
 
 /* ── Description paragraph ── */
@@ -127,11 +134,11 @@
    Accordion
    ===================================================== */
 
-   /* ── Accordion Group (flex container for spacing) ── */
+/* ── Accordion Group ── */
 .accordion-group {
   display: flex;
   flex-direction: column;
-  gap: 16px;                
+  gap: 16px;
   width: 100%;
 }
 
@@ -197,7 +204,6 @@
     gap: 40px;
   }
 
-  /* CHANGE 3: responsive font-size for dcc-generator-title */
   .dcc-generator-title {
     font-size: 34px;
   }
@@ -209,7 +215,6 @@
     gap: 32px;
   }
 
-  /* CHANGE 2: tighten descriptions bottom margin on smaller screens */
   .home-descriptions {
     gap: 10px;
     margin-bottom: 24px;
@@ -227,7 +232,6 @@
     max-width: 100%;
   }
 
-  /* CHANGE 3 continued */
   .dcc-generator-title {
     font-size: 26px;
   }
@@ -248,7 +252,6 @@
     gap: 24px;
   }
 
-  /* CHANGE 2 continued */
   .home-descriptions {
     gap: 8px;
     margin-bottom: 20px;
@@ -262,7 +265,6 @@
     font-size: 13px;
   }
 
-  /* CHANGE 3 continued */
   .dcc-generator-title {
     font-size: 20px;
   }
