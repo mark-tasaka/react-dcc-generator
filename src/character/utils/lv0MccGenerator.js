@@ -1,16 +1,8 @@
 import { Document, Page, Text, View, StyleSheet, Image, Font } from '@react-pdf/renderer';
 import characterSheetBg from '../img/lvZeroMccCharacterSheet.jpg';
 import characterSheetLn from '../img/lvZeroMccCharacterSheetLandscape.jpg';
-import { 
-  occupations, 
-  getArmour, 
-  getACBonusArmour,
-  getOccupationNumber,
-  getOccupationFumbleDie } from './dccOccupations.js';
-import { generateEquipment, generateWealth } from './dccEquipment.js';
-import { getLanguages, formatLanguages } from './dccLanguages.js';
 import {
-  getMccBirthAugur,   // ← replaces getBirthAugur from dccBirthAugurs
+  getMccBirthAugur,
   getSpeed,
   getInit,
   getAC,
@@ -23,19 +15,32 @@ import {
   meleeDamageLuckSign,
   missileDamageLuckSign,
 } from './mccLuckySign.js';
-import { 
-  minHitPoints, 
-  formatCritDie, 
+import {
+  minHitPoints,
+  formatCritDie,
   formatFumbleDie,
   getAbilityModifier,
 } from './statistics.js';
 import {
   rollAbilityScores,
 } from './abilityScoreGen.js';
-import { getNotes, dieRollMethodText, hitPointsMethodText } from './dccNotes.js';
+import { dieRollMethodText, hitPointsMethodText } from './dccNotes.js';
 import { getArchaicAlignment } from './archaicAlignment.js';
 import { getGender, getNameGender } from './characterGender.js';
 import { getName, getNameDescript } from './nameSelect.js';
+import {
+  getGenotype,
+  getProfession,
+  addRandomWeapon,
+  addItem,
+  getMccArmourRoll,
+  getMccArmour,
+  getArmourACBonus,
+  getArmourFumbleDie,
+  getBaseLanguages,
+  getBonusLanguages,
+  getMaxTechLevel,
+} from './mccAdjustments.js';
 
 Font.register({
   family: 'Roboto Mono',
@@ -68,14 +73,14 @@ const styles = StyleSheet.create({
   },
   characterContainer: {
     position: 'absolute',
-    width: '50%', 
+    width: '50%',
     height: '50%',
   },
-  topLeft: { top: '0%', left: '0%' },
-  topRight: { top: '0%', left: '50%' },
-  bottomLeft: { top: '50%', left: '0%' },
+  topLeft:     { top: '0%',  left: '0%'  },
+  topRight:    { top: '0%',  left: '50%' },
+  bottomLeft:  { top: '50%', left: '0%'  },
   bottomRight: { top: '50%', left: '50%' },
-  
+
   text: {
     fontSize: 10,
     color: 'black',
@@ -116,50 +121,50 @@ const styles = StyleSheet.create({
     fontWeight: 'bold',
     width: 30,
   },
-  
-  name: { position: 'absolute', top: 32, left: 30 },
-  gender: { position: 'absolute', top: 32, left: 155 },
-  alignment: { position: 'absolute', top: 57, left: 30 },
-  occupation: { position: 'absolute', top: 80, left: 30 },
-  critDie: { position: 'absolute', top: 57, left: 125 },
-  fumble: { position: 'absolute', top: 57, left: 180 },
-  
-  str: { position: 'absolute', top: 199, left: 52, width: 25 },
-  agi: { position: 'absolute', top: 215, left: 52, width: 25 },
-  sta: { position: 'absolute', top: 231, left: 52, width: 25 },
-  per: { position: 'absolute', top: 246, left: 52, width: 25 },
-  int: { position: 'absolute', top: 263, left: 52, width: 25 },
+
+  name:       { position: 'absolute', top: 32,  left: 30  },
+  gender:     { position: 'absolute', top: 32,  left: 155 },
+  alignment:  { position: 'absolute', top: 57,  left: 30  },
+  occupation: { position: 'absolute', top: 80,  left: 30  },
+  critDie:    { position: 'absolute', top: 57,  left: 125 },
+  fumble:     { position: 'absolute', top: 57,  left: 180 },
+
+  str:  { position: 'absolute', top: 199, left: 52, width: 25 },
+  agi:  { position: 'absolute', top: 215, left: 52, width: 25 },
+  sta:  { position: 'absolute', top: 231, left: 52, width: 25 },
+  per:  { position: 'absolute', top: 246, left: 52, width: 25 },
+  int:  { position: 'absolute', top: 263, left: 52, width: 25 },
   luck: { position: 'absolute', top: 279, left: 52, width: 25 },
 
-  strMod: { position: 'absolute', top: 199, left: 82, width: 30 },
-  agiMod: { position: 'absolute', top: 215, left: 82, width: 30 },
-  staMod: { position: 'absolute', top: 231, left: 82, width: 30 },
-  perMod: { position: 'absolute', top: 246, left: 82, width: 30 },
-  intMod: { position: 'absolute', top: 263, left: 82, width: 30 },
+  strMod:  { position: 'absolute', top: 199, left: 82, width: 30 },
+  agiMod:  { position: 'absolute', top: 215, left: 82, width: 30 },
+  staMod:  { position: 'absolute', top: 231, left: 82, width: 30 },
+  perMod:  { position: 'absolute', top: 246, left: 82, width: 30 },
+  intMod:  { position: 'absolute', top: 263, left: 82, width: 30 },
   luckMod: { position: 'absolute', top: 279, left: 82, width: 30 },
-  
-  ac: { position: 'absolute', top: 122, right: 230 }, 
-  hp: { position: 'absolute', top: 155, left: 32 },
-  init: { position: 'absolute', top: 110, left: 142 },
-  melee: { position: 'absolute', top: 130, left: 132, width: 30 },
-  missile: { position: 'absolute', top: 142, left: 132, width: 30 },
-  meleeDamage: { position: 'absolute', top: 130, left: 152, width: 30 },
+
+  ac:            { position: 'absolute', top: 122, right: 230 },
+  hp:            { position: 'absolute', top: 155, left: 32  },
+  init:          { position: 'absolute', top: 110, left: 142 },
+  melee:         { position: 'absolute', top: 130, left: 132, width: 30 },
+  missile:       { position: 'absolute', top: 142, left: 132, width: 30 },
+  meleeDamage:   { position: 'absolute', top: 130, left: 152, width: 30 },
   missileDamage: { position: 'absolute', top: 142, left: 152, width: 30 },
-  
-  reflex: { position: 'absolute', top: 35, left: 235 },
+
+  reflex:    { position: 'absolute', top: 35, left: 235 },
   fortitude: { position: 'absolute', top: 35, left: 265 },
-  will: { position: 'absolute', top: 69, left: 235 },
-  
-  speed: { position: 'absolute', top: 69, left: 265 },
-  wealth: { position: 'absolute', top: 319, left: 25, width: 80 },
-  languages: { position: 'absolute', top: 345, left: 25, width: 80 },
-  birthAugur: { position: 'absolute', top: 120, left: 203, width: 80 },
-  weapon: { position: 'absolute', top: 183, left: 125 },
-  weaponDamage: { position: 'absolute', top: 183, left: 240 }, 
-  armour: { position: 'absolute', top: 230, left: 125 },
-  equipment: { position: 'absolute', top: 256, left: 125 },
-  notes: { position: 'absolute', top: 303, left: 125, width: 155 },
-  message: { position: 'absolute', bottom: 40, left: 125, width: 145 },
+  will:      { position: 'absolute', top: 69, left: 235 },
+
+  speed:      { position: 'absolute', top: 69,  left: 265, },
+  wealth:     { position: 'absolute', top: 319, left: 25,  width: 80  },
+  languages:  { position: 'absolute', top: 345, left: 25,  width: 80  },
+  birthAugur: { position: 'absolute', top: 120, left: 203, width: 80  },
+  weapon:     { position: 'absolute', top: 183, left: 125 },
+  weaponDamage: { position: 'absolute', top: 183, left: 240 },
+  armour:     { position: 'absolute', top: 230, left: 125 },
+  equipment:  { position: 'absolute', top: 256, left: 125 },
+  notes:      { position: 'absolute', top: 303, left: 125, width: 155 },
+  message:    { position: 'absolute', bottom: 40, left: 125, width: 145 },
 });
 
 // Landscape styles
@@ -182,9 +187,9 @@ const landscapeStyles = StyleSheet.create({
     width: '50%',
     height: '100%',
   },
-  leftHalf: { top: '0%', left: '0%' },   
-  rightHalf: { top: '0%', left: '50%' }, 
-  
+  leftHalf:  { top: '0%', left: '0%'  },
+  rightHalf: { top: '0%', left: '50%' },
+
   text: {
     fontSize: 12,
     color: 'black',
@@ -220,53 +225,53 @@ const landscapeStyles = StyleSheet.create({
     fontWeight: 'bold',
     width: 35,
   },
-  
-  name: { position: 'absolute', top: 97, left: 40 },
-  gender: { position: 'absolute', top: 97, left: 200 },
-  alignment: { position: 'absolute', top: 127, left: 40 },
-  occupation: { position: 'absolute', top: 155, left: 40 },
-  critDie: { position: 'absolute', top: 127, left: 160 },
-  fumble: { position: 'absolute', top: 127, left: 230 },
-  
-  str: { position: 'absolute', top: 307, left: 75, width: 25 },
-  agi: { position: 'absolute', top: 326, left: 75, width: 25 },
-  sta: { position: 'absolute', top: 346, left: 75, width: 25 },
-  per: { position: 'absolute', top: 367, left: 75, width: 25 },
-  int: { position: 'absolute', top: 388, left: 75, width: 25 },
+
+  name:       { position: 'absolute', top: 97,  left: 40  },
+  gender:     { position: 'absolute', top: 97,  left: 200 },
+  alignment:  { position: 'absolute', top: 127, left: 40  },
+  occupation: { position: 'absolute', top: 155, left: 40  },
+  critDie:    { position: 'absolute', top: 127, left: 160 },
+  fumble:     { position: 'absolute', top: 127, left: 230 },
+
+  str:  { position: 'absolute', top: 307, left: 75, width: 25 },
+  agi:  { position: 'absolute', top: 326, left: 75, width: 25 },
+  sta:  { position: 'absolute', top: 346, left: 75, width: 25 },
+  per:  { position: 'absolute', top: 367, left: 75, width: 25 },
+  int:  { position: 'absolute', top: 388, left: 75, width: 25 },
   luck: { position: 'absolute', top: 408, left: 75, width: 25 },
 
-  strMod: { position: 'absolute', top: 307, left: 107, width: 35 },
-  agiMod: { position: 'absolute', top: 326, left: 107, width: 35 },
-  staMod: { position: 'absolute', top: 346, left: 107, width: 35 },
-  perMod: { position: 'absolute', top: 367, left: 107, width: 35 },
-  intMod: { position: 'absolute', top: 388, left: 107, width: 35 },
+  strMod:  { position: 'absolute', top: 307, left: 107, width: 35 },
+  agiMod:  { position: 'absolute', top: 326, left: 107, width: 35 },
+  staMod:  { position: 'absolute', top: 346, left: 107, width: 35 },
+  perMod:  { position: 'absolute', top: 367, left: 107, width: 35 },
+  intMod:  { position: 'absolute', top: 388, left: 107, width: 35 },
   luckMod: { position: 'absolute', top: 408, left: 107, width: 35 },
-    
-  ac: { position: 'absolute', top: 210, right: 293 }, 
-  hp: { position: 'absolute', top: 253, left: 46 },
-  init: { position: 'absolute', top: 195, left: 185 },
-  melee: { position: 'absolute', top: 219, left: 175, width: 35 },
-  missile: { position: 'absolute', top: 237, left: 175, width: 35 },
-  meleeDamage: { position: 'absolute', top: 219, left: 198, width: 35 },
+
+  ac:            { position: 'absolute', top: 210, right: 293 },
+  hp:            { position: 'absolute', top: 253, left: 46  },
+  init:          { position: 'absolute', top: 195, left: 185 },
+  melee:         { position: 'absolute', top: 219, left: 175, width: 35 },
+  missile:       { position: 'absolute', top: 237, left: 175, width: 35 },
+  meleeDamage:   { position: 'absolute', top: 219, left: 198, width: 35 },
   missileDamage: { position: 'absolute', top: 237, left: 198, width: 35 },
-  
-  reflex: { position: 'absolute', top: 100, left: 300 },
+
+  reflex:    { position: 'absolute', top: 100, left: 300 },
   fortitude: { position: 'absolute', top: 100, left: 340 },
-  will: { position: 'absolute', top: 140, left: 300 },
-  
-  speed: { position: 'absolute', top: 140, left: 345 },
-  wealth: { position: 'absolute', top: 460, left: 30, width: 110 },
-  languages: { position: 'absolute', top: 490, left: 30, width: 110 },
-  birthAugur: { position: 'absolute', top: 202, left: 260, width: 100 },
-  weapon: { position: 'absolute', top: 288, left: 165 },
-  weaponDamage: { position: 'absolute', top: 288, left: 310 }, 
-  armour: { position: 'absolute', top: 343, left: 165 },
-  equipment: { position: 'absolute', top: 378, left: 165, width: 190 },
-  notes: { position: 'absolute', top: 440, left: 165, width: 190 },
-  message: { position: 'absolute', top: 488, left: 165, width: 190 },
+  will:      { position: 'absolute', top: 140, left: 300 },
+
+  speed:        { position: 'absolute', top: 140, left: 345 },
+  wealth:       { position: 'absolute', top: 460, left: 30,  width: 110 },
+  languages:    { position: 'absolute', top: 490, left: 30,  width: 110 },
+  birthAugur:   { position: 'absolute', top: 202, left: 260, width: 100 },
+  weapon:       { position: 'absolute', top: 288, left: 165 },
+  weaponDamage: { position: 'absolute', top: 288, left: 310 },
+  armour:       { position: 'absolute', top: 343, left: 165 },
+  equipment:    { position: 'absolute', top: 378, left: 165, width: 190 },
+  notes:        { position: 'absolute', top: 440, left: 165, width: 190 },
+  message:      { position: 'absolute', top: 488, left: 165, width: 190 },
 });
 
-// Helper function to get random name origin when "Random" (100) is selected
+// Helper: random name origin index when "Random" (100) is selected
 const getRandomNameOrigin = (type) => {
   if (type === 'given') {
     return Math.floor(Math.random() * 50);
@@ -275,7 +280,8 @@ const getRandomNameOrigin = (type) => {
   }
 };
 
-// Generate random character
+// ── Generate random character ─────────────────────────────────────────────
+
 export const generateRandomCharacter = (options = {}) => {
   const {
     alignment: alignmentOption = 1,
@@ -288,43 +294,66 @@ export const generateRandomCharacter = (options = {}) => {
 
   const rollDice = (sides) => Math.floor(Math.random() * sides) + 1;
 
-  // Occupations always drawn from the full "All" pool (option 1) for MCC
-  const selectedOccupation = occupations[getOccupationNumber(1)];
-  const gender = getGender(genderOption);
+  // ── Species & Profession ──────────────────────────────────────────────
+  const species = getGenotype();
+  const profession = getProfession();
+
+  // ── Weapon: use profession weapon when available, else random ─────────
+  let weaponName, weaponDamage;
+  if (profession.weapon) {
+    weaponName   = profession.weapon;
+    weaponDamage = profession.damage;
+  } else {
+    const randomWeapon = addRandomWeapon();
+    weaponName   = randomWeapon.weapon;
+    weaponDamage = randomWeapon.damage;
+  }
+
+  // ── Equipment ─────────────────────────────────────────────────────────
+  const extraItem      = addItem();
+  const equipmentParts = [profession.equipment, extraItem.item].filter(Boolean);
+  const equipment      = equipmentParts.join(', ');
+
+  // ── Armour ────────────────────────────────────────────────────────────
+  const armourItem      = getMccArmourRoll();
+  const armourName      = getMccArmour(armourItem);
+  const acBonus         = getArmourACBonus(armourItem);
+  // Fall back to 'd4' when no armour is worn
+  const armourFumbleBase = getArmourFumbleDie(armourItem) || 'd4';
+
+  // ── Name ──────────────────────────────────────────────────────────────
+  const gender         = getGender(genderOption);
   const nameGenderIndex = getNameGender(gender);
 
   let actualGivenName = givenNameOption;
-  let actualSurname = surnameOption;
+  let actualSurname   = surnameOption;
 
-  if (givenNameOption === 100) {
-    actualGivenName = getRandomNameOrigin('given');
-  }
-
-  if (surnameOption === 100) {
-    actualSurname = getRandomNameOrigin('surname');
-  }
+  if (givenNameOption === 100) actualGivenName = getRandomNameOrigin('given');
+  if (surnameOption   === 100) actualSurname   = getRandomNameOrigin('surname');
 
   const characterName = getName(actualGivenName, actualSurname, nameGenderIndex);
-  const nameDescript = getNameDescript(actualGivenName, actualSurname);
+  const nameDescript  = getNameDescript(actualGivenName, actualSurname);
 
-  const str = rollAbilityScores(abilityScoreOption);
-  const agi = rollAbilityScores(abilityScoreOption);
-  const sta = rollAbilityScores(abilityScoreOption);
-  const per = rollAbilityScores(abilityScoreOption);
-  const int = rollAbilityScores(abilityScoreOption);
+  // ── Ability scores ────────────────────────────────────────────────────
+  const str  = rollAbilityScores(abilityScoreOption);
+  const agi  = rollAbilityScores(abilityScoreOption);
+  const sta  = rollAbilityScores(abilityScoreOption);
+  const per  = rollAbilityScores(abilityScoreOption);
+  const int  = rollAbilityScores(abilityScoreOption);
   const luck = rollAbilityScores(abilityScoreOption);
 
-  const strMod = getAbilityModifier(str);
-  const agiMod = getAbilityModifier(agi);
-  const staMod = getAbilityModifier(sta);
-  const perMod = getAbilityModifier(per);
-  const intMod = getAbilityModifier(int);
+  const strMod  = getAbilityModifier(str);
+  const agiMod  = getAbilityModifier(agi);
+  const staMod  = getAbilityModifier(sta);
+  const perMod  = getAbilityModifier(per);
+  const intMod  = getAbilityModifier(int);
   const luckMod = getAbilityModifier(luck);
 
-  // ── Use MCC lucky sign table instead of DCC birth augurs ──
+  // ── Lucky sign ────────────────────────────────────────────────────────
   const birthAugur = getMccBirthAugur();
-  const luckySign = birthAugur.id;
+  const luckySign  = birthAugur.id;
 
+  // ── Hit points ────────────────────────────────────────────────────────
   let baseHp;
   if (hitPointsOption === 2) {
     baseHp = 4 + staMod + getHitPointLuck(luckMod, luckySign);
@@ -333,78 +362,75 @@ export const generateRandomCharacter = (options = {}) => {
   }
   const hp = minHitPoints(baseHp);
 
-  const ac = getAC(agiMod, luckMod, luckySign);
-  const init = getInit(agiMod, luckMod, luckySign);
-  const melee = strMod + meleeAttackLuckSign(luckMod, luckySign);
-  const meleeDamage = strMod + meleeDamageLuckSign(luckMod, luckySign);
-  const missile = agiMod + missileAttackLuckSign(luckMod, luckySign);
-  const missileDamage = agiMod + missileDamageLuckSign(luckMod, luckySign);
+  // ── Combat stats ──────────────────────────────────────────────────────
+  const baseAC       = getAC(agiMod, luckMod, luckySign);
+  const init         = getInit(agiMod, luckMod, luckySign);
+  const melee        = strMod  + meleeAttackLuckSign(luckMod, luckySign);
+  const meleeDmg     = strMod  + meleeDamageLuckSign(luckMod, luckySign);
+  const missile      = agiMod  + missileAttackLuckSign(luckMod, luckySign);
+  const missileDmg   = agiMod  + missileDamageLuckSign(luckMod, luckySign);
 
-  const reflex = agiMod + getRefLuckBonus(luckMod, luckySign);
-  const fortitude = staMod + getFortLuckBonus(luckMod, luckySign);
-  const will = perMod + getWillLuckBonus(luckMod, luckySign);
-  const speed = getSpeed(luckMod, luckySign);
+  // ── Saves ─────────────────────────────────────────────────────────────
+  const reflex    = agiMod  + getRefLuckBonus(luckMod, luckySign);
+  const fortitude = staMod  + getFortLuckBonus(luckMod, luckySign);
+  const will      = perMod  + getWillLuckBonus(luckMod, luckySign);
+  const speed     = getSpeed(luckMod, luckySign);
 
+  // ── Crit / Fumble ─────────────────────────────────────────────────────
   const critDie = formatCritDie(luckMod, luckySign);
-  const fumble = getOccupationFumbleDie(selectedOccupation.id) + formatFumbleDie(luckMod, luckySign);
+  const fumble  = armourFumbleBase + formatFumbleDie(luckMod, luckySign);
 
-  // ── Archaic Alignment: uses species (occupation race) to determine faction ──
-  const alignment = getArchaicAlignment(alignmentOption, selectedOccupation.race);
+  // ── Alignment & Languages ─────────────────────────────────────────────
+  const alignment = getArchaicAlignment(alignmentOption, species);
+  const languages = getBaseLanguages(species, int) + getBonusLanguages(int);
 
-  const notes = getNotes(selectedOccupation.id);
-  const equipment = generateEquipment(selectedOccupation);
-  const armour = getArmour(selectedOccupation.id);
+  // ── Notes & Message ───────────────────────────────────────────────────
+  const notes   = `Max Tech Level: ${getMaxTechLevel(int)}`;
   const message = dieRollMethodText(abilityScoreOption) + hitPointsMethodText(hitPointsOption) + nameDescript;
 
   return {
-    name: characterName,
-    gender: gender,
-    alignment: alignment,
-    occupation: selectedOccupation.name,
-    race: selectedOccupation.race,
-    weapon: selectedOccupation.weapon,
-    weaponDamage: selectedOccupation.damage,
-    equipment: equipment,
-    armour: armour,
+    name:         characterName,
+    gender:       gender,
+    alignment:    alignment,
+    occupation:   profession.role,
+    race:         species,
+    weapon:       weaponName,
+    weaponDamage: weaponDamage,
+    equipment:    equipment,
+    armour:       armourName,
     stats: {
-      str: { value: str, modifier: strMod },
-      agi: { value: agi, modifier: agiMod },
-      sta: { value: sta, modifier: staMod },
-      per: { value: per, modifier: perMod },
-      int: { value: int, modifier: intMod },
+      str:  { value: str,  modifier: strMod  },
+      agi:  { value: agi,  modifier: agiMod  },
+      sta:  { value: sta,  modifier: staMod  },
+      per:  { value: per,  modifier: perMod  },
+      int:  { value: int,  modifier: intMod  },
       luck: { value: luck, modifier: luckMod }
     },
-    hp: hp,
-    ac: ac + getACBonusArmour(selectedOccupation.id) + ' (' + ac + ')',
-    init: init,
-    melee: melee,
-    meleeDamage: meleeDamage,
-    missile: missile,
-    missileDamage: missileDamage,
-    critDie: critDie + ' / I',
-    fumble: fumble,
-    reflex: reflex,
-    fortitude: fortitude,
-    will: will,
-    speed: speed,
-    birthAugur: `${birthAugur.name}: ${birthAugur.effect}`,
+    hp:            hp,
+    ac:            String(baseAC + acBonus) + ' (' + baseAC + ')',
+    init:          init,
+    melee:         melee,
+    meleeDamage:   meleeDmg,
+    missile:       missile,
+    missileDamage: missileDmg,
+    critDie:       critDie + ' / I',
+    fumble:        fumble,
+    reflex:        reflex,
+    fortitude:     fortitude,
+    will:          will,
+    speed:         speed,
+    birthAugur:    `${birthAugur.name}: ${birthAugur.effect}`,
     birthAugurData: birthAugur,
-    wealth: generateWealth(selectedOccupation),
-    languages: formatLanguages(getLanguages(
-      intMod,
-      luckMod,
-      luckySign,
-      selectedOccupation.race,
-      alignment,
-      int
-    )),
-    notes: notes,
-    message: message
+    wealth:        '',    // TODO: MCC wealth system
+    languages:     languages,
+    notes:         notes,
+    message:       message
   };
 };
 
 
-// Character component for positioning data on the sheet
+// ── Portrait layout — 4-up ────────────────────────────────────────────────
+
 const Character = ({ character, position }) => (
   <View style={[styles.characterContainer, position]}>
     <Text style={[styles.text, styles.name]}>{character.name}</Text>
@@ -413,25 +439,25 @@ const Character = ({ character, position }) => (
     <Text style={[styles.text, styles.occupation]}>{character.occupation}</Text>
     <Text style={[styles.text, styles.critDie]}>{character.critDie}</Text>
     <Text style={[styles.text, styles.fumble]}>{character.fumble}</Text>
-    
+
     <Text style={[styles.rightAlignText, styles.str]}>{character.stats.str.value}</Text>
     <Text style={[styles.variableWidthText, styles.strMod]}>({character.stats.str.modifier >= 0 ? '+' : ''}{character.stats.str.modifier})</Text>
-    
+
     <Text style={[styles.rightAlignText, styles.agi]}>{character.stats.agi.value}</Text>
     <Text style={[styles.variableWidthText, styles.agiMod]}>({character.stats.agi.modifier >= 0 ? '+' : ''}{character.stats.agi.modifier})</Text>
-    
+
     <Text style={[styles.rightAlignText, styles.sta]}>{character.stats.sta.value}</Text>
     <Text style={[styles.variableWidthText, styles.staMod]}>({character.stats.sta.modifier >= 0 ? '+' : ''}{character.stats.sta.modifier})</Text>
-    
+
     <Text style={[styles.rightAlignText, styles.per]}>{character.stats.per.value}</Text>
     <Text style={[styles.variableWidthText, styles.perMod]}>({character.stats.per.modifier >= 0 ? '+' : ''}{character.stats.per.modifier})</Text>
-    
+
     <Text style={[styles.rightAlignText, styles.int]}>{character.stats.int.value}</Text>
     <Text style={[styles.variableWidthText, styles.intMod]}>({character.stats.int.modifier >= 0 ? '+' : ''}{character.stats.int.modifier})</Text>
-    
+
     <Text style={[styles.rightAlignText, styles.luck]}>{character.stats.luck.value}</Text>
     <Text style={[styles.variableWidthText, styles.luckMod]}>({character.stats.luck.modifier >= 0 ? '+' : ''}{character.stats.luck.modifier})</Text>
-    
+
     <Text style={[styles.text, styles.ac]}>{character.ac}</Text>
     <Text style={[styles.text, styles.hp]}>{character.hp}</Text>
     <Text style={[styles.text, styles.init]}>{character.init >= 0 ? '+' : ''}{character.init}</Text>
@@ -439,23 +465,25 @@ const Character = ({ character, position }) => (
     <Text style={[styles.variableWidthText, styles.missile]}>{character.missile >= 0 ? '+' : ''}{character.missile}</Text>
     <Text style={[styles.variableWidthText, styles.meleeDamage]}>{character.meleeDamage >= 0 ? '+' : ''}{character.meleeDamage}</Text>
     <Text style={[styles.variableWidthText, styles.missileDamage]}>{character.missileDamage >= 0 ? '+' : ''}{character.missileDamage}</Text>
-    
-    <Text style={[styles.largeText, styles.reflex]}>{character.reflex >= 0 ? '+' : ''}{character.reflex}</Text>
+
+    <Text style={[styles.largeText,      styles.reflex]}>{character.reflex >= 0 ? '+' : ''}{character.reflex}</Text>
     <Text style={[styles.largeTextWhite, styles.fortitude]}>{character.fortitude >= 0 ? '+' : ''}{character.fortitude}</Text>
     <Text style={[styles.largeTextWhite, styles.will]}>{character.will >= 0 ? '+' : ''}{character.will}</Text>
-    
-    <Text style={[styles.largeText, styles.speed]}>{character.speed + "'"}</Text>
-    <Text style={[styles.smallText, styles.wealth]}>{character.wealth}</Text>
-    <Text style={[styles.smallText, styles.languages]}>{character.languages}</Text>
-    <Text style={[styles.smallText, styles.birthAugur]}>{character.birthAugur}</Text>
-    <Text style={[styles.smallText, styles.weapon]}>{character.weapon}</Text>
-    <Text style={[styles.smallText, styles.weaponDamage]}>{character.weaponDamage}</Text>
-    <Text style={[styles.smallText, styles.equipment]}>{character.equipment}</Text>
-    <Text style={[styles.smallText, styles.armour]}>{character.armour}</Text>
-    <Text style={[styles.smallText, styles.notes]}>{character.notes}</Text>
+
+    <Text style={[styles.largeText,  styles.speed]}>{character.speed + "'"}</Text>
+    <Text style={[styles.smallText,  styles.wealth]}>{character.wealth}</Text>
+    <Text style={[styles.smallText,  styles.languages]}>{character.languages}</Text>
+    <Text style={[styles.smallText,  styles.birthAugur]}>{character.birthAugur}</Text>
+    <Text style={[styles.smallText,  styles.weapon]}>{character.weapon}</Text>
+    <Text style={[styles.smallText,  styles.weaponDamage]}>{character.weaponDamage}</Text>
+    <Text style={[styles.smallText,  styles.equipment]}>{character.equipment}</Text>
+    <Text style={[styles.smallText,  styles.armour]}>{character.armour}</Text>
+    <Text style={[styles.smallText,  styles.notes]}>{character.notes}</Text>
     <Text style={[styles.xSmallText, styles.message]}>{character.message}</Text>
   </View>
 );
+
+// ── Landscape layout — 2-up ───────────────────────────────────────────────
 
 const LandscapeCharacter = ({ character, position }) => (
   <View style={[landscapeStyles.characterContainer, position]}>
@@ -465,25 +493,25 @@ const LandscapeCharacter = ({ character, position }) => (
     <Text style={[landscapeStyles.text, landscapeStyles.occupation]}>{character.occupation}</Text>
     <Text style={[landscapeStyles.text, landscapeStyles.critDie]}>{character.critDie}</Text>
     <Text style={[landscapeStyles.text, landscapeStyles.fumble]}>{character.fumble}</Text>
-    
+
     <Text style={[landscapeStyles.rightAlignText, landscapeStyles.str]}>{character.stats.str.value}</Text>
     <Text style={[landscapeStyles.variableWidthText, landscapeStyles.strMod]}>({character.stats.str.modifier >= 0 ? '+' : ''}{character.stats.str.modifier})</Text>
-    
+
     <Text style={[landscapeStyles.rightAlignText, landscapeStyles.agi]}>{character.stats.agi.value}</Text>
     <Text style={[landscapeStyles.variableWidthText, landscapeStyles.agiMod]}>({character.stats.agi.modifier >= 0 ? '+' : ''}{character.stats.agi.modifier})</Text>
-    
+
     <Text style={[landscapeStyles.rightAlignText, landscapeStyles.sta]}>{character.stats.sta.value}</Text>
     <Text style={[landscapeStyles.variableWidthText, landscapeStyles.staMod]}>({character.stats.sta.modifier >= 0 ? '+' : ''}{character.stats.sta.modifier})</Text>
-    
+
     <Text style={[landscapeStyles.rightAlignText, landscapeStyles.per]}>{character.stats.per.value}</Text>
     <Text style={[landscapeStyles.variableWidthText, landscapeStyles.perMod]}>({character.stats.per.modifier >= 0 ? '+' : ''}{character.stats.per.modifier})</Text>
-    
+
     <Text style={[landscapeStyles.rightAlignText, landscapeStyles.int]}>{character.stats.int.value}</Text>
     <Text style={[landscapeStyles.variableWidthText, landscapeStyles.intMod]}>({character.stats.int.modifier >= 0 ? '+' : ''}{character.stats.int.modifier})</Text>
-    
+
     <Text style={[landscapeStyles.rightAlignText, landscapeStyles.luck]}>{character.stats.luck.value}</Text>
     <Text style={[landscapeStyles.variableWidthText, landscapeStyles.luckMod]}>({character.stats.luck.modifier >= 0 ? '+' : ''}{character.stats.luck.modifier})</Text>
-    
+
     <Text style={[landscapeStyles.text, landscapeStyles.ac]}>{character.ac}</Text>
     <Text style={[landscapeStyles.text, landscapeStyles.hp]}>{character.hp}</Text>
     <Text style={[landscapeStyles.text, landscapeStyles.init]}>{character.init >= 0 ? '+' : ''}{character.init}</Text>
@@ -491,42 +519,34 @@ const LandscapeCharacter = ({ character, position }) => (
     <Text style={[landscapeStyles.variableWidthText, landscapeStyles.missile]}>{character.missile >= 0 ? '+' : ''}{character.missile}</Text>
     <Text style={[landscapeStyles.variableWidthText, landscapeStyles.meleeDamage]}>{character.meleeDamage >= 0 ? '+' : ''}{character.meleeDamage}</Text>
     <Text style={[landscapeStyles.variableWidthText, landscapeStyles.missileDamage]}>{character.missileDamage >= 0 ? '+' : ''}{character.missileDamage}</Text>
-    
-    <Text style={[landscapeStyles.largeText, landscapeStyles.reflex]}>{character.reflex >= 0 ? '+' : ''}{character.reflex}</Text>
+
+    <Text style={[landscapeStyles.largeText,      landscapeStyles.reflex]}>{character.reflex >= 0 ? '+' : ''}{character.reflex}</Text>
     <Text style={[landscapeStyles.largeTextWhite, landscapeStyles.fortitude]}>{character.fortitude >= 0 ? '+' : ''}{character.fortitude}</Text>
     <Text style={[landscapeStyles.largeTextWhite, landscapeStyles.will]}>{character.will >= 0 ? '+' : ''}{character.will}</Text>
-    
-    <Text style={[landscapeStyles.largeText, landscapeStyles.speed]}>{character.speed + "'"}</Text>
-    <Text style={[landscapeStyles.smallText, landscapeStyles.wealth]}>{character.wealth}</Text>
-    <Text style={[landscapeStyles.smallText, landscapeStyles.languages]}>{character.languages}</Text>
-    <Text style={[landscapeStyles.smallText, landscapeStyles.birthAugur]}>{character.birthAugur}</Text>
-    <Text style={[landscapeStyles.smallText, landscapeStyles.weapon]}>{character.weapon}</Text>
-    <Text style={[landscapeStyles.smallText, landscapeStyles.weaponDamage]}>{character.weaponDamage}</Text>
-    <Text style={[landscapeStyles.smallText, landscapeStyles.equipment]}>{character.equipment}</Text>
-    <Text style={[landscapeStyles.smallText, landscapeStyles.armour]}>{character.armour}</Text>
-    <Text style={[landscapeStyles.smallText, landscapeStyles.notes]}>{character.notes}</Text>
+
+    <Text style={[landscapeStyles.largeText,  landscapeStyles.speed]}>{character.speed + "'"}</Text>
+    <Text style={[landscapeStyles.smallText,  landscapeStyles.wealth]}>{character.wealth}</Text>
+    <Text style={[landscapeStyles.smallText,  landscapeStyles.languages]}>{character.languages}</Text>
+    <Text style={[landscapeStyles.smallText,  landscapeStyles.birthAugur]}>{character.birthAugur}</Text>
+    <Text style={[landscapeStyles.smallText,  landscapeStyles.weapon]}>{character.weapon}</Text>
+    <Text style={[landscapeStyles.smallText,  landscapeStyles.weaponDamage]}>{character.weaponDamage}</Text>
+    <Text style={[landscapeStyles.smallText,  landscapeStyles.equipment]}>{character.equipment}</Text>
+    <Text style={[landscapeStyles.smallText,  landscapeStyles.armour]}>{character.armour}</Text>
+    <Text style={[landscapeStyles.smallText,  landscapeStyles.notes]}>{character.notes}</Text>
     <Text style={[landscapeStyles.xSmallText, landscapeStyles.message]}>{character.message}</Text>
   </View>
 );
 
-// PDF Document component
+// ── PDF Document components ───────────────────────────────────────────────
+
 export const CharacterSheetDocument = ({ characters }) => (
   <Document>
     <Page size="LETTER" style={styles.page}>
       <Image style={styles.backgroundImage} src={characterSheetBg} />
-      
-      {characters.length > 0 && (
-        <Character character={characters[0]} position={styles.topLeft} />
-      )}
-      {characters.length > 1 && (
-        <Character character={characters[1]} position={styles.topRight} />
-      )}
-      {characters.length > 2 && (
-        <Character character={characters[2]} position={styles.bottomLeft} />
-      )}
-      {characters.length > 3 && (
-        <Character character={characters[3]} position={styles.bottomRight} />
-      )}
+      {characters.length > 0 && <Character character={characters[0]} position={styles.topLeft}     />}
+      {characters.length > 1 && <Character character={characters[1]} position={styles.topRight}    />}
+      {characters.length > 2 && <Character character={characters[2]} position={styles.bottomLeft}  />}
+      {characters.length > 3 && <Character character={characters[3]} position={styles.bottomRight} />}
     </Page>
   </Document>
 );
@@ -535,29 +555,20 @@ export const CharacterSheetLandscapeDocument = ({ characters }) => (
   <Document>
     <Page size="LETTER" orientation="landscape" style={landscapeStyles.page}>
       <Image style={landscapeStyles.backgroundImage} src={characterSheetLn} />
-      
-      {characters.length > 0 && (
-        <LandscapeCharacter character={characters[0]} position={landscapeStyles.leftHalf} />
-      )}
-      {characters.length > 1 && (
-        <LandscapeCharacter character={characters[1]} position={landscapeStyles.rightHalf} />
-      )}
+      {characters.length > 0 && <LandscapeCharacter character={characters[0]} position={landscapeStyles.leftHalf}  />}
+      {characters.length > 1 && <LandscapeCharacter character={characters[1]} position={landscapeStyles.rightHalf} />}
     </Page>
   </Document>
 );
 
 export const generateFourCharacters = (options = {}) => {
   const characters = [];
-  for (let i = 0; i < 4; i++) {
-    characters.push(generateRandomCharacter(options));
-  }
+  for (let i = 0; i < 4; i++) characters.push(generateRandomCharacter(options));
   return characters;
 };
 
 export const generateTwoCharacters = (options = {}) => {
   const characters = [];
-  for (let i = 0; i < 2; i++) {
-    characters.push(generateRandomCharacter(options));
-  }
+  for (let i = 0; i < 2; i++) characters.push(generateRandomCharacter(options));
   return characters;
 };
