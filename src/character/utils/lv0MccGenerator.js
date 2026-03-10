@@ -82,7 +82,7 @@ const styles = StyleSheet.create({
   bottomRight: { top: '48%', left: '48%' },
 
   text: {
-    fontSize: 10,
+    fontSize: 8,
     color: 'black',
     fontWeight: 'bold',
   },
@@ -122,10 +122,10 @@ const styles = StyleSheet.create({
     width: 30,
   },
 
-  name:       { position: 'absolute', top: 32,  left: 30  },
-  gender:     { position: 'absolute', top: 32,  left: 155 },
-  alignment:  { position: 'absolute', top: 57,  left: 30  },
-  occupation: { position: 'absolute', top: 80,  left: 30  },
+  name:       { position: 'absolute', top: 48,  left: 42  },
+  gender:     { position: 'absolute', top: 48,  left: 138 },
+  alignment:  { position: 'absolute', top: 68,  left: 128 },
+  occupation: { position: 'absolute', top: 48,  left: 175 },
   critDie:    { position: 'absolute', top: 57,  left: 125 },
   fumble:     { position: 'absolute', top: 57,  left: 180 },
 
