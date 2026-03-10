@@ -77,9 +77,9 @@ const styles = StyleSheet.create({
     height: '50%',
   },
   topLeft:     { top: '0%',  left: '0%'  },
-  topRight:    { top: '0%',  left: '50%' },
-  bottomLeft:  { top: '50%', left: '0%'  },
-  bottomRight: { top: '50%', left: '50%' },
+  topRight:    { top: '0%',  left: '48%' },
+  bottomLeft:  { top: '48%', left: '0%'  },
+  bottomRight: { top: '48%', left: '48%' },
 
   text: {
     fontSize: 10,
