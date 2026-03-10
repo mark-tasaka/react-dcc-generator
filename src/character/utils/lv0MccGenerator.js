@@ -86,6 +86,11 @@ const styles = StyleSheet.create({
     color: 'black',
     fontWeight: 'bold',
   },
+  textTest: {
+    fontSize: 8,
+    color: 'red',
+    fontWeight: 'bold',
+  },
   largeText: {
     fontSize: 12,
     color: 'black',
@@ -124,10 +129,10 @@ const styles = StyleSheet.create({
 
   name:       { position: 'absolute', top: 48,  left: 42  },
   gender:     { position: 'absolute', top: 48,  left: 138 },
-  alignment:  { position: 'absolute', top: 68,  left: 128 },
+  alignment:  { position: 'absolute', top: 68,  left: 125 },
   occupation: { position: 'absolute', top: 48,  left: 175 },
-  critDie:    { position: 'absolute', top: 57,  left: 125 },
-  fumble:     { position: 'absolute', top: 57,  left: 180 },
+  critDie:    { position: 'absolute', top: 93,  left: 46 },
+  fumble:     { position: 'absolute', top: 93,  left: 190 },
 
   str:  { position: 'absolute', top: 199, left: 52, width: 25 },
   agi:  { position: 'absolute', top: 215, left: 52, width: 25 },
@@ -143,7 +148,7 @@ const styles = StyleSheet.create({
   intMod:  { position: 'absolute', top: 263, left: 82, width: 30 },
   luckMod: { position: 'absolute', top: 279, left: 82, width: 30 },
 
-  ac:            { position: 'absolute', top: 122, right: 230 },
+  ac:            { position: 'absolute', top: 115, right: 200 },
   hp:            { position: 'absolute', top: 155, left: 32  },
   init:          { position: 'absolute', top: 110, left: 142 },
   melee:         { position: 'absolute', top: 130, left: 132, width: 30 },
@@ -458,7 +463,7 @@ const Character = ({ character, position }) => (
     <Text style={[styles.rightAlignText, styles.luck]}>{character.stats.luck.value}</Text>
     <Text style={[styles.variableWidthText, styles.luckMod]}>({character.stats.luck.modifier >= 0 ? '+' : ''}{character.stats.luck.modifier})</Text>
 
-    <Text style={[styles.text, styles.ac]}>{character.ac}</Text>
+    <Text style={[styles.largeText, styles.ac]}>{character.ac}</Text>
     <Text style={[styles.text, styles.hp]}>{character.hp}</Text>
     <Text style={[styles.text, styles.init]}>{character.init >= 0 ? '+' : ''}{character.init}</Text>
     <Text style={[styles.variableWidthText, styles.melee]}>{character.melee >= 0 ? '+' : ''}{character.melee}</Text>
