@@ -1,23 +1,18 @@
 export function getArchaicAlignment(choice, species) {
-    var alignment = "The Clan of the Cog";
 
-    if (choice == "1") {
-        if (species == "Pure Strain Human") {
-            alignment = "The Curates";
-        }
+  // Option 1 ── Clan of the Cog: every character shares the same alignment
+  if (choice === 1) {
+    return 'Clan of the Cog';
+  }
 
-        if (species == "Mutant") {
-            alignment = "The Children of the Glow";
-        }
+  // Option 2 ── By Genotypes: alignment determined by species
+  if (choice === 2) {
+    if (species === 'Pure Strain Human') return 'The Curates';
+    if (species === 'Mutant')            return 'The Children of the Glow';
+    if (species === 'Manimal')           return 'The Chosen Zuu';
+    if (species === 'Plantient')         return 'The Atomic Equinox';
+  }
 
-        if (species == "Manimal") {
-            alignment = "The Chosen Zuu";
-        }
-
-        if (species == "Plantient") {
-            alignment = "The Atomic Equinox";
-        }
-    }
-
-    return alignment;
+  // Fallback
+  return 'Clan of the Cog';
 }
