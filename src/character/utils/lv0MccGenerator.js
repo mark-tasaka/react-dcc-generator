@@ -168,6 +168,7 @@ const styles = StyleSheet.create({
   weaponDamage: { position: 'absolute', top: 183, left: 240 },
   armour:       { position: 'absolute', top: 230, left: 125 },
   equipment:    { position: 'absolute', top: 256, left: 125 },
+  maxTechLevel: { position: 'absolute', top: 93, left: 155 },
   notes:        { position: 'absolute', top: 303, left: 125, width: 155 },
   message:      { position: 'absolute', bottom: 40, left: 125, width: 145 },
 });
@@ -272,6 +273,7 @@ const landscapeStyles = StyleSheet.create({
   weaponDamage: { position: 'absolute', top: 288, left: 310 },
   armour:       { position: 'absolute', top: 343, left: 165 },
   equipment:    { position: 'absolute', top: 378, left: 165, width: 190 },
+  maxTechLevel: { position: 'absolute', top: 343, left: 165 },
   notes:        { position: 'absolute', top: 440, left: 165, width: 190 },
   message:      { position: 'absolute', top: 488, left: 165, width: 190 },
 });
@@ -483,6 +485,7 @@ const Character = ({ character, position }) => (
     <Text style={[styles.smallText,  styles.weaponDamage]}>{character.weaponDamage}</Text>
     <Text style={[styles.smallText,  styles.equipment]}>{character.equipment}</Text>
     <Text style={[styles.smallText,  styles.armour]}>{character.armour}</Text>
+    <Text style={[styles.text,  styles.maxTechLevel]}>{character.maxTechLevel}</Text>
     <Text style={[styles.smallText,  styles.notes]}>{character.notes}</Text>
     <Text style={[styles.xSmallText, styles.message]}>{character.message}</Text>
   </View>
@@ -537,6 +540,7 @@ const LandscapeCharacter = ({ character, position }) => (
     <Text style={[landscapeStyles.smallText,  landscapeStyles.weaponDamage]}>{character.weaponDamage}</Text>
     <Text style={[landscapeStyles.smallText,  landscapeStyles.equipment]}>{character.equipment}</Text>
     <Text style={[landscapeStyles.smallText,  landscapeStyles.armour]}>{character.armour}</Text>
+    <Text style={[landscapeStyles.smallText,  landscapeStyles.maxTechLevel]}>{character.maxTechLevel}</Text>
     <Text style={[landscapeStyles.smallText,  landscapeStyles.notes]}>{character.notes}</Text>
     <Text style={[landscapeStyles.xSmallText, landscapeStyles.message]}>{character.message}</Text>
   </View>
