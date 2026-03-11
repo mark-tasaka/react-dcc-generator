@@ -152,9 +152,9 @@ const styles = StyleSheet.create({
   hp:            { position: 'absolute', top: 144, right: 200 },
   init:          { position: 'absolute', top: 110, left: 142 },
   melee:         { position: 'absolute', top: 183, left: 70 },
-  missile:       { position: 'absolute', top: 142, left: 50 },
+  missile:       { position: 'absolute', top: 193, left: 70 },
   meleeDamage:   { position: 'absolute', top: 183, left: 95 },
-  missileDamage: { position: 'absolute', top: 142, left: 152 },
+  missileDamage: { position: 'absolute', top: 193, left: 95 },
 
   reflex:    { position: 'absolute', top: 35, left: 235 },
   fortitude: { position: 'absolute', top: 35, left: 265 },
