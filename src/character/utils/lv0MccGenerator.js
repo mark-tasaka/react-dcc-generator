@@ -36,6 +36,7 @@ import {
   getMccArmourRoll,
   getMccArmour,
   getArmourACBonus,
+  getArmourACBonusString,
   getArmourFumbleDie,
   getBaseLanguages,
   getBonusLanguages,
@@ -157,9 +158,9 @@ const styles = StyleSheet.create({
   hp:            { position: 'absolute', top: 144, right: 200 },
   init:          { position: 'absolute', top: 110, left: 142 },
   melee:         { position: 'absolute', top: 183, left: 70 },
-  missile:       { position: 'absolute', top: 193, left: 70 },
+  missile:       { position: 'absolute', top: 195, left: 70 },
   meleeDamage:   { position: 'absolute', top: 183, left: 95 },
-  missileDamage: { position: 'absolute', top: 193, left: 95 },
+  missileDamage: { position: 'absolute', top: 195, left: 95 },
 
   reflex:    { position: 'absolute', top: 35, left: 235 },
   fortitude: { position: 'absolute', top: 35, left: 265 },
@@ -167,13 +168,14 @@ const styles = StyleSheet.create({
 
   speed:        { position: 'absolute', top: 69,  left: 265 },
   wealth:       { position: 'absolute', top: 319, left: 25,  width: 80  },
-  languages:    { position: 'absolute', top: 345, left: 25,  width: 80  },
-  birthAugur:   { position: 'absolute', top: 120, left: 203, width: 80  },
+  languages:    { position: 'absolute', top: 120, left: 217, width: 70   },
+  birthAugur:   { position: 'absolute', top: 175, left: 217, width: 70  },
   weapon:       { position: 'absolute', top: 240, left: 28, width: 100 },
   weaponDamage: { position: 'absolute', top: 240, left: 113 },
   armour:       { position: 'absolute', top: 285, left: 28 },
-  armourFumbleBase: { position: 'absolute', top: 285, left: 116 },
-  equipment:    { position: 'absolute', top: 256, left: 125 },
+  armourACBonus: { position: 'absolute', top: 285, left: 98 },
+  armourFumbleBase: { position: 'absolute', top: 285, left: 120 },
+  equipment:    { position: 'absolute', top: 315, left: 28, width: 120 },
   maxTechLevel: { position: 'absolute', top: 93, left: 155 },
   notes:        { position: 'absolute', top: 303, left: 125, width: 155 },
   message:      { position: 'absolute', bottom: 40, left: 125, width: 145 },
@@ -278,6 +280,7 @@ const landscapeStyles = StyleSheet.create({
   weapon:       { position: 'absolute', top: 288, left: 165 },
   weaponDamage: { position: 'absolute', top: 288, left: 310 },
   armour:       { position: 'absolute', top: 343, left: 165 },
+  armourACBonus: { position: 'absolute', top: 343, left: 200 },
   armourFumbleBase:       { position: 'absolute', top: 343, left: 200 },
   equipment:    { position: 'absolute', top: 378, left: 165, width: 190 },
   maxTechLevel: { position: 'absolute', top: 343, left: 165 },
@@ -331,6 +334,7 @@ export const generateRandomCharacter = (options = {}) => {
   // ── Armour ────────────────────────────────────────────────────────────
   const armourItem       = getMccArmourRoll();
   const armourName       = getMccArmour(armourItem);
+  const armourACBonusStr = getArmourACBonusString(armourItem);
   const acBonus          = getArmourACBonus(armourItem);
   const armourFumbleBase = getArmourFumbleDie(armourItem) || 'd4';
 
@@ -439,7 +443,8 @@ export const generateRandomCharacter = (options = {}) => {
     notes:         '',                  // ← now separate from maxTechLevel
     maxTechLevel:  maxTechLevel,        // ← new dedicated field
     message:       message,
-    armourFumbleBase: armourFumbleBase,   
+    armourFumbleBase: armourFumbleBase,
+    armourACBonus: armourACBonusStr,   
   };
 };
 
@@ -493,6 +498,7 @@ const Character = ({ character, position }) => (
     <Text style={[styles.smallText,  styles.weaponDamage]}>{character.weaponDamage}</Text>
     <Text style={[styles.smallText,  styles.equipment]}>{character.equipment}</Text>
     <Text style={[styles.smallText,  styles.armour]}>{character.armour}</Text>
+    <Text style={[styles.smallText,  styles.armourACBonus]}>{character.armourACBonus}</Text>
     <Text style={[styles.smallText,  styles.armourFumbleBase]}>{character.armourFumbleBase}</Text>
     <Text style={[styles.text,  styles.maxTechLevel]}>{character.maxTechLevel}</Text>
     <Text style={[styles.smallText,  styles.notes]}>{character.notes}</Text>
@@ -549,6 +555,7 @@ const LandscapeCharacter = ({ character, position }) => (
     <Text style={[landscapeStyles.smallText,  landscapeStyles.weaponDamage]}>{character.weaponDamage}</Text>
     <Text style={[landscapeStyles.smallText,  landscapeStyles.equipment]}>{character.equipment}</Text>
     <Text style={[landscapeStyles.smallText,  landscapeStyles.armour]}>{character.armour}</Text>
+    <Text style={[landscapeStyles.smallText,  landscapeStyles.armourACBonus]}>{character.armourACBonus}</Text>
     <Text style={[landscapeStyles.smallText,  landscapeStyles.armourFumbleBase]}>{character.armourFumbleBase}</Text>
     <Text style={[landscapeStyles.smallText,  landscapeStyles.maxTechLevel]}>{character.maxTechLevel}</Text>
     <Text style={[landscapeStyles.smallText,  landscapeStyles.notes]}>{character.notes}</Text>
