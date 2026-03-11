@@ -91,8 +91,13 @@ const styles = StyleSheet.create({
     color: 'red',
     fontWeight: 'bold',
   },
+  mediumText: {
+    fontSize: 11,
+    color: 'black',
+    fontWeight: 'bold',
+  },
   largeText: {
-    fontSize: 12,
+    fontSize: 11,
     color: 'black',
     fontWeight: 'bold',
   },
@@ -134,15 +139,15 @@ const styles = StyleSheet.create({
   critDie:    { position: 'absolute', top: 93,  left: 46  },
   fumble:     { position: 'absolute', top: 93,  left: 190 },
 
-  str:  { position: 'absolute', top: 199, left: 52, width: 25 },
-  agi:  { position: 'absolute', top: 215, left: 52, width: 25 },
-  sta:  { position: 'absolute', top: 231, left: 52, width: 25 },
-  per:  { position: 'absolute', top: 246, left: 52, width: 25 },
-  int:  { position: 'absolute', top: 263, left: 52, width: 25 },
-  luck: { position: 'absolute', top: 279, left: 52, width: 25 },
+  str:  { position: 'absolute', top: 116, right: 135 },
+  agi:  { position: 'absolute', top: 131, right: 135 },
+  sta:  { position: 'absolute', top: 231, left: 52 },
+  per:  { position: 'absolute', top: 246, left: 52 },
+  int:  { position: 'absolute', top: 263, left: 52 },
+  luck: { position: 'absolute', top: 279, left: 52 },
 
-  strMod:  { position: 'absolute', top: 199, left: 82 },
-  agiMod:  { position: 'absolute', top: 215, left: 82 },
+  strMod:  { position: 'absolute', top: 116, left: 175 },
+  agiMod:  { position: 'absolute', top: 131, left: 175 },
   staMod:  { position: 'absolute', top: 231, left: 82 },
   perMod:  { position: 'absolute', top: 246, left: 82 },
   intMod:  { position: 'absolute', top: 263, left: 82 },
@@ -450,23 +455,23 @@ const Character = ({ character, position }) => (
     <Text style={[styles.text, styles.critDie]}>{character.critDie}</Text>
     <Text style={[styles.text, styles.fumble]}>{character.fumble}</Text>
 
-    <Text style={[styles.rightAlignText, styles.str]}>{character.stats.str.value}</Text>
-    <Text style={[styles.variableWidthText, styles.strMod]}>({character.stats.str.modifier >= 0 ? '+' : ''}{character.stats.str.modifier})</Text>
+    <Text style={[styles.mediumText, styles.str]}>{character.stats.str.value}</Text>
+    <Text style={[styles.mediumText, styles.strMod]}>({character.stats.str.modifier >= 0 ? '+' : ''}{character.stats.str.modifier})</Text>
 
-    <Text style={[styles.rightAlignText, styles.agi]}>{character.stats.agi.value}</Text>
-    <Text style={[styles.variableWidthText, styles.agiMod]}>({character.stats.agi.modifier >= 0 ? '+' : ''}{character.stats.agi.modifier})</Text>
+    <Text style={[styles.mediumText, styles.agi]}>{character.stats.agi.value}</Text>
+    <Text style={[styles.mediumText, styles.agiMod]}>({character.stats.agi.modifier >= 0 ? '+' : ''}{character.stats.agi.modifier})</Text>
 
-    <Text style={[styles.rightAlignText, styles.sta]}>{character.stats.sta.value}</Text>
-    <Text style={[styles.variableWidthText, styles.staMod]}>({character.stats.sta.modifier >= 0 ? '+' : ''}{character.stats.sta.modifier})</Text>
+    <Text style={[styles.mediumText, styles.sta]}>{character.stats.sta.value}</Text>
+    <Text style={[styles.mediumText, styles.staMod]}>({character.stats.sta.modifier >= 0 ? '+' : ''}{character.stats.sta.modifier})</Text>
 
-    <Text style={[styles.rightAlignText, styles.per]}>{character.stats.per.value}</Text>
-    <Text style={[styles.variableWidthText, styles.perMod]}>({character.stats.per.modifier >= 0 ? '+' : ''}{character.stats.per.modifier})</Text>
+    <Text style={[styles.mediumText, styles.per]}>{character.stats.per.value}</Text>
+    <Text style={[styles.mediumText, styles.perMod]}>({character.stats.per.modifier >= 0 ? '+' : ''}{character.stats.per.modifier})</Text>
 
-    <Text style={[styles.rightAlignText, styles.int]}>{character.stats.int.value}</Text>
-    <Text style={[styles.variableWidthText, styles.intMod]}>({character.stats.int.modifier >= 0 ? '+' : ''}{character.stats.int.modifier})</Text>
+    <Text style={[styles.mediumText, styles.int]}>{character.stats.int.value}</Text>
+    <Text style={[styles.mediumText, styles.intMod]}>({character.stats.int.modifier >= 0 ? '+' : ''}{character.stats.int.modifier})</Text>
 
-    <Text style={[styles.rightAlignText, styles.luck]}>{character.stats.luck.value}</Text>
-    <Text style={[styles.variableWidthText, styles.luckMod]}>({character.stats.luck.modifier >= 0 ? '+' : ''}{character.stats.luck.modifier})</Text>
+    <Text style={[styles.mediumText, styles.luck]}>{character.stats.luck.value}</Text>
+    <Text style={[styles.mediumText, styles.luckMod]}>({character.stats.luck.modifier >= 0 ? '+' : ''}{character.stats.luck.modifier})</Text>
 
     <Text style={[styles.largeText, styles.ac]}>{character.ac}</Text>
     <Text style={[styles.largeText, styles.hp]}>{character.hp}</Text>
