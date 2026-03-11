@@ -151,9 +151,9 @@ const styles = StyleSheet.create({
   ac:            { position: 'absolute', top: 115, right: 196 },
   hp:            { position: 'absolute', top: 144, right: 200 },
   init:          { position: 'absolute', top: 110, left: 142 },
-  melee:         { position: 'absolute', top: 130, left: 132 },
-  missile:       { position: 'absolute', top: 142, left: 132 },
-  meleeDamage:   { position: 'absolute', top: 130, left: 152 },
+  melee:         { position: 'absolute', top: 183, left: 70 },
+  missile:       { position: 'absolute', top: 142, left: 50 },
+  meleeDamage:   { position: 'absolute', top: 183, left: 95 },
   missileDamage: { position: 'absolute', top: 142, left: 152 },
 
   reflex:    { position: 'absolute', top: 35, left: 235 },
@@ -164,9 +164,10 @@ const styles = StyleSheet.create({
   wealth:       { position: 'absolute', top: 319, left: 25,  width: 80  },
   languages:    { position: 'absolute', top: 345, left: 25,  width: 80  },
   birthAugur:   { position: 'absolute', top: 120, left: 203, width: 80  },
-  weapon:       { position: 'absolute', top: 183, left: 125 },
-  weaponDamage: { position: 'absolute', top: 183, left: 240 },
-  armour:       { position: 'absolute', top: 230, left: 125 },
+  weapon:       { position: 'absolute', top: 240, left: 28, width: 100 },
+  weaponDamage: { position: 'absolute', top: 240, left: 113 },
+  armour:       { position: 'absolute', top: 285, left: 28 },
+  armourFumbleBase: { position: 'absolute', top: 285, left: 116 },
   equipment:    { position: 'absolute', top: 256, left: 125 },
   maxTechLevel: { position: 'absolute', top: 93, left: 155 },
   notes:        { position: 'absolute', top: 303, left: 125, width: 155 },
@@ -272,6 +273,7 @@ const landscapeStyles = StyleSheet.create({
   weapon:       { position: 'absolute', top: 288, left: 165 },
   weaponDamage: { position: 'absolute', top: 288, left: 310 },
   armour:       { position: 'absolute', top: 343, left: 165 },
+  armourFumbleBase:       { position: 'absolute', top: 343, left: 200 },
   equipment:    { position: 'absolute', top: 378, left: 165, width: 190 },
   maxTechLevel: { position: 'absolute', top: 343, left: 165 },
   notes:        { position: 'absolute', top: 440, left: 165, width: 190 },
@@ -431,7 +433,8 @@ export const generateRandomCharacter = (options = {}) => {
     languages:     languages,
     notes:         '',                  // ← now separate from maxTechLevel
     maxTechLevel:  maxTechLevel,        // ← new dedicated field
-    message:       message
+    message:       message,
+    armourFumbleBase: armourFumbleBase,   
   };
 };
 
@@ -485,6 +488,7 @@ const Character = ({ character, position }) => (
     <Text style={[styles.smallText,  styles.weaponDamage]}>{character.weaponDamage}</Text>
     <Text style={[styles.smallText,  styles.equipment]}>{character.equipment}</Text>
     <Text style={[styles.smallText,  styles.armour]}>{character.armour}</Text>
+    <Text style={[styles.smallText,  styles.armourFumbleBase]}>{character.armourFumbleBase}</Text>
     <Text style={[styles.text,  styles.maxTechLevel]}>{character.maxTechLevel}</Text>
     <Text style={[styles.smallText,  styles.notes]}>{character.notes}</Text>
     <Text style={[styles.xSmallText, styles.message]}>{character.message}</Text>
@@ -540,6 +544,7 @@ const LandscapeCharacter = ({ character, position }) => (
     <Text style={[landscapeStyles.smallText,  landscapeStyles.weaponDamage]}>{character.weaponDamage}</Text>
     <Text style={[landscapeStyles.smallText,  landscapeStyles.equipment]}>{character.equipment}</Text>
     <Text style={[landscapeStyles.smallText,  landscapeStyles.armour]}>{character.armour}</Text>
+    <Text style={[landscapeStyles.smallText,  landscapeStyles.armourFumbleBase]}>{character.armourFumbleBase}</Text>
     <Text style={[landscapeStyles.smallText,  landscapeStyles.maxTechLevel]}>{character.maxTechLevel}</Text>
     <Text style={[landscapeStyles.smallText,  landscapeStyles.notes]}>{character.notes}</Text>
     <Text style={[landscapeStyles.xSmallText, landscapeStyles.message]}>{character.message}</Text>
