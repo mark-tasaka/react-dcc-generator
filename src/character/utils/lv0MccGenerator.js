@@ -120,18 +120,6 @@ const styles = StyleSheet.create({
     fontSize: 6,
     color: 'black',
   },
-  rightAlignText: {
-    fontSize: 10,
-    color: 'black',
-    fontWeight: 'bold',
-    textAlign: 'right',
-  },
-  variableWidthText: {
-    fontSize: 10,
-    color: 'black',
-    fontWeight: 'bold',
-    width: 30,
-  },
 
   name:       { position: 'absolute', top: 48,  left: 42  },
   gender:     { position: 'absolute', top: 48,  left: 138 },
@@ -166,19 +154,19 @@ const styles = StyleSheet.create({
   fortitude: { position: 'absolute', top: 35, left: 265 },
   will:      { position: 'absolute', top: 69, left: 235 },
 
-  speed:        { position: 'absolute', top: 69,  left: 265 },
-  wealth:       { position: 'absolute', top: 319, left: 25,  width: 80  },
-  languages:    { position: 'absolute', top: 120, left: 217, width: 70   },
-  birthAugur:   { position: 'absolute', top: 175, left: 217, width: 70  },
-  weapon:       { position: 'absolute', top: 240, left: 28, width: 100 },
-  weaponDamage: { position: 'absolute', top: 240, left: 113 },
-  armour:       { position: 'absolute', top: 285, left: 28 },
-  armourACBonus: { position: 'absolute', top: 285, left: 98 },
+  speed:            { position: 'absolute', top: 69,  left: 265 },
+  wealth:           { position: 'absolute', top: 319, left: 25,  width: 80  },
+  languages:        { position: 'absolute', top: 120, left: 217, width: 70  },
+  birthAugur:       { position: 'absolute', top: 175, left: 217, width: 70  },
+  weapon:           { position: 'absolute', top: 240, left: 28,  width: 100 },
+  weaponDamage:     { position: 'absolute', top: 240, left: 113 },
+  armour:           { position: 'absolute', top: 285, left: 28  },
+  armourACBonus:    { position: 'absolute', top: 285, left: 98  },
   armourFumbleBase: { position: 'absolute', top: 285, left: 120 },
-  equipment:    { position: 'absolute', top: 315, left: 28, width: 120 },
-  maxTechLevel: { position: 'absolute', top: 93, left: 155 },
-  notes:        { position: 'absolute', top: 303, left: 125, width: 155 },
-  message:      { position: 'absolute', bottom: 40, left: 125, width: 145 },
+  equipment:        { position: 'absolute', top: 315, left: 28,  width: 120 },
+  maxTechLevel:     { position: 'absolute', top: 93,  left: 155 },
+  notes:            { position: 'absolute', top: 303, left: 125, width: 155 },
+  message:          { position: 'absolute', bottom: 40, left: 125, width: 145 },
 });
 
 // Landscape styles
@@ -227,18 +215,6 @@ const landscapeStyles = StyleSheet.create({
     fontSize: 7,
     color: 'black',
   },
-  rightAlignText: {
-    fontSize: 12,
-    color: 'black',
-    fontWeight: 'bold',
-    textAlign: 'right',
-  },
-  variableWidthText: {
-    fontSize: 12,
-    color: 'black',
-    fontWeight: 'bold',
-    width: 35,
-  },
 
   name:       { position: 'absolute', top: 97,  left: 40  },
   gender:     { position: 'absolute', top: 97,  left: 200 },
@@ -273,19 +249,19 @@ const landscapeStyles = StyleSheet.create({
   fortitude: { position: 'absolute', top: 100, left: 340 },
   will:      { position: 'absolute', top: 140, left: 300 },
 
-  speed:        { position: 'absolute', top: 140, left: 345 },
-  wealth:       { position: 'absolute', top: 460, left: 30,  width: 110 },
-  languages:    { position: 'absolute', top: 490, left: 30,  width: 110 },
-  birthAugur:   { position: 'absolute', top: 202, left: 260, width: 100 },
-  weapon:       { position: 'absolute', top: 288, left: 165 },
-  weaponDamage: { position: 'absolute', top: 288, left: 310 },
-  armour:       { position: 'absolute', top: 343, left: 165 },
-  armourACBonus: { position: 'absolute', top: 343, left: 200 },
-  armourFumbleBase:       { position: 'absolute', top: 343, left: 200 },
-  equipment:    { position: 'absolute', top: 378, left: 165, width: 190 },
-  maxTechLevel: { position: 'absolute', top: 343, left: 165 },
-  notes:        { position: 'absolute', top: 440, left: 165, width: 190 },
-  message:      { position: 'absolute', top: 488, left: 165, width: 190 },
+  speed:            { position: 'absolute', top: 140, left: 345 },
+  wealth:           { position: 'absolute', top: 460, left: 30,  width: 110 },
+  languages:        { position: 'absolute', top: 490, left: 30,  width: 110 },
+  birthAugur:       { position: 'absolute', top: 202, left: 260, width: 100 },
+  weapon:           { position: 'absolute', top: 288, left: 165 },
+  weaponDamage:     { position: 'absolute', top: 288, left: 310 },
+  armour:           { position: 'absolute', top: 343, left: 165 },
+  armourACBonus:    { position: 'absolute', top: 343, left: 200 },
+  armourFumbleBase: { position: 'absolute', top: 343, left: 200 },
+  equipment:        { position: 'absolute', top: 378, left: 165, width: 190 },
+  maxTechLevel:     { position: 'absolute', top: 343, left: 165 },
+  notes:            { position: 'absolute', top: 440, left: 165, width: 190 },
+  message:          { position: 'absolute', top: 488, left: 165, width: 190 },
 });
 
 // Helper: random name origin index when "Random" (100) is selected
@@ -336,8 +312,8 @@ export const generateRandomCharacter = (options = {}) => {
   const armourName       = getMccArmour(armourItem);
   const armourACBonusStr = getArmourACBonusString(armourItem);
   const acBonus          = getArmourACBonus(armourItem);
-  const armourFumbleBase = getArmourFumbleDie(armourItem);        // '' when no armour
-  const fumbleBase       = armourFumbleBase || 'd4';              // d4 default for calculation only
+  const armourFumbleBase = getArmourFumbleDie(armourItem);   // '' when no armour
+  const fumbleBase       = armourFumbleBase || 'd4';         // d4 default for calculation only
 
   // ── Name ──────────────────────────────────────────────────────────────
   const gender          = getGender(genderOption);
@@ -396,14 +372,14 @@ export const generateRandomCharacter = (options = {}) => {
 
   // ── Crit / Fumble ─────────────────────────────────────────────────────
   const critDie = formatCritDie(luckMod, luckySign);
-  const fumble = fumbleBase + formatFumbleDie(luckMod, luckySign);
+  const fumble  = fumbleBase + formatFumbleDie(luckMod, luckySign);
 
   // ── Alignment & Languages ─────────────────────────────────────────────
   const alignment = getArchaicAlignment(alignmentOption, species);
   const languages = getBaseLanguages(species, int) + getBonusLanguages(int);
 
   // ── Max Tech Level & Message ──────────────────────────────────────────
-  const maxTechLevel = getMaxTechLevel(int);                               // ← renamed
+  const maxTechLevel = getMaxTechLevel(int);
   const message      = dieRollMethodText(abilityScoreOption) + hitPointsMethodText(hitPointsOption) + nameDescript;
 
   return {
@@ -441,11 +417,11 @@ export const generateRandomCharacter = (options = {}) => {
     birthAugurData: birthAugur,
     wealth:        '',
     languages:     languages,
-    notes:         '',                  // ← now separate from maxTechLevel
-    maxTechLevel:  maxTechLevel,        // ← new dedicated field
+    notes:         '',
+    maxTechLevel:  maxTechLevel,
     message:       message,
     armourFumbleBase: armourFumbleBase,
-    armourACBonus: armourACBonusStr,   
+    armourACBonus: armourACBonusStr,
   };
 };
 
@@ -481,11 +457,11 @@ const Character = ({ character, position }) => (
 
     <Text style={[styles.largeText, styles.ac]}>{character.ac}</Text>
     <Text style={[styles.largeText, styles.hp]}>{character.hp}</Text>
-    <Text style={[styles.text, styles.init]}>{character.init >= 0 ? '+' : ''}{character.init}</Text>
-    <Text style={[styles.variableWidthText, styles.melee]}>{character.melee >= 0 ? '+' : ''}{character.melee}</Text>
-    <Text style={[styles.variableWidthText, styles.missile]}>{character.missile >= 0 ? '+' : ''}{character.missile}</Text>
-    <Text style={[styles.variableWidthText, styles.meleeDamage]}>{character.meleeDamage >= 0 ? '+' : ''}{character.meleeDamage}</Text>
-    <Text style={[styles.variableWidthText, styles.missileDamage]}>{character.missileDamage >= 0 ? '+' : ''}{character.missileDamage}</Text>
+    <Text style={[styles.text,       styles.init]}>{character.init >= 0 ? '+' : ''}{character.init}</Text>
+    <Text style={[styles.mediumText, styles.melee]}>{character.melee >= 0 ? '+' : ''}{character.melee}</Text>
+    <Text style={[styles.mediumText, styles.missile]}>{character.missile >= 0 ? '+' : ''}{character.missile}</Text>
+    <Text style={[styles.mediumText, styles.meleeDamage]}>{character.meleeDamage >= 0 ? '+' : ''}{character.meleeDamage}</Text>
+    <Text style={[styles.mediumText, styles.missileDamage]}>{character.missileDamage >= 0 ? '+' : ''}{character.missileDamage}</Text>
 
     <Text style={[styles.largeText,      styles.reflex]}>{character.reflex >= 0 ? '+' : ''}{character.reflex}</Text>
     <Text style={[styles.largeTextWhite, styles.fortitude]}>{character.fortitude >= 0 ? '+' : ''}{character.fortitude}</Text>
@@ -501,7 +477,7 @@ const Character = ({ character, position }) => (
     <Text style={[styles.smallText,  styles.armour]}>{character.armour}</Text>
     <Text style={[styles.smallText,  styles.armourACBonus]}>{character.armourACBonus}</Text>
     <Text style={[styles.smallText,  styles.armourFumbleBase]}>{character.armourFumbleBase}</Text>
-    <Text style={[styles.text,  styles.maxTechLevel]}>{character.maxTechLevel}</Text>
+    <Text style={[styles.text,       styles.maxTechLevel]}>{character.maxTechLevel}</Text>
     <Text style={[styles.smallText,  styles.notes]}>{character.notes}</Text>
     <Text style={[styles.xSmallText, styles.message]}>{character.message}</Text>
   </View>
@@ -518,31 +494,31 @@ const LandscapeCharacter = ({ character, position }) => (
     <Text style={[landscapeStyles.text, landscapeStyles.critDie]}>{character.critDie}</Text>
     <Text style={[landscapeStyles.text, landscapeStyles.fumble]}>{character.fumble}</Text>
 
-    <Text style={[landscapeStyles.rightAlignText, landscapeStyles.str]}>{character.stats.str.value}</Text>
-    <Text style={[landscapeStyles.variableWidthText, landscapeStyles.strMod]}>({character.stats.str.modifier >= 0 ? '+' : ''}{character.stats.str.modifier})</Text>
+    <Text style={[landscapeStyles.text, landscapeStyles.str]}>{character.stats.str.value}</Text>
+    <Text style={[landscapeStyles.text, landscapeStyles.strMod]}>({character.stats.str.modifier >= 0 ? '+' : ''}{character.stats.str.modifier})</Text>
 
-    <Text style={[landscapeStyles.rightAlignText, landscapeStyles.agi]}>{character.stats.agi.value}</Text>
-    <Text style={[landscapeStyles.variableWidthText, landscapeStyles.agiMod]}>({character.stats.agi.modifier >= 0 ? '+' : ''}{character.stats.agi.modifier})</Text>
+    <Text style={[landscapeStyles.text, landscapeStyles.agi]}>{character.stats.agi.value}</Text>
+    <Text style={[landscapeStyles.text, landscapeStyles.agiMod]}>({character.stats.agi.modifier >= 0 ? '+' : ''}{character.stats.agi.modifier})</Text>
 
-    <Text style={[landscapeStyles.rightAlignText, landscapeStyles.sta]}>{character.stats.sta.value}</Text>
-    <Text style={[landscapeStyles.variableWidthText, landscapeStyles.staMod]}>({character.stats.sta.modifier >= 0 ? '+' : ''}{character.stats.sta.modifier})</Text>
+    <Text style={[landscapeStyles.text, landscapeStyles.sta]}>{character.stats.sta.value}</Text>
+    <Text style={[landscapeStyles.text, landscapeStyles.staMod]}>({character.stats.sta.modifier >= 0 ? '+' : ''}{character.stats.sta.modifier})</Text>
 
-    <Text style={[landscapeStyles.rightAlignText, landscapeStyles.per]}>{character.stats.per.value}</Text>
-    <Text style={[landscapeStyles.variableWidthText, landscapeStyles.perMod]}>({character.stats.per.modifier >= 0 ? '+' : ''}{character.stats.per.modifier})</Text>
+    <Text style={[landscapeStyles.text, landscapeStyles.per]}>{character.stats.per.value}</Text>
+    <Text style={[landscapeStyles.text, landscapeStyles.perMod]}>({character.stats.per.modifier >= 0 ? '+' : ''}{character.stats.per.modifier})</Text>
 
-    <Text style={[landscapeStyles.rightAlignText, landscapeStyles.int]}>{character.stats.int.value}</Text>
-    <Text style={[landscapeStyles.variableWidthText, landscapeStyles.intMod]}>({character.stats.int.modifier >= 0 ? '+' : ''}{character.stats.int.modifier})</Text>
+    <Text style={[landscapeStyles.text, landscapeStyles.int]}>{character.stats.int.value}</Text>
+    <Text style={[landscapeStyles.text, landscapeStyles.intMod]}>({character.stats.int.modifier >= 0 ? '+' : ''}{character.stats.int.modifier})</Text>
 
-    <Text style={[landscapeStyles.rightAlignText, landscapeStyles.luck]}>{character.stats.luck.value}</Text>
-    <Text style={[landscapeStyles.variableWidthText, landscapeStyles.luckMod]}>({character.stats.luck.modifier >= 0 ? '+' : ''}{character.stats.luck.modifier})</Text>
+    <Text style={[landscapeStyles.text, landscapeStyles.luck]}>{character.stats.luck.value}</Text>
+    <Text style={[landscapeStyles.text, landscapeStyles.luckMod]}>({character.stats.luck.modifier >= 0 ? '+' : ''}{character.stats.luck.modifier})</Text>
 
     <Text style={[landscapeStyles.text, landscapeStyles.ac]}>{character.ac}</Text>
     <Text style={[landscapeStyles.text, landscapeStyles.hp]}>{character.hp}</Text>
     <Text style={[landscapeStyles.text, landscapeStyles.init]}>{character.init >= 0 ? '+' : ''}{character.init}</Text>
-    <Text style={[landscapeStyles.variableWidthText, landscapeStyles.melee]}>{character.melee >= 0 ? '+' : ''}{character.melee}</Text>
-    <Text style={[landscapeStyles.variableWidthText, landscapeStyles.missile]}>{character.missile >= 0 ? '+' : ''}{character.missile}</Text>
-    <Text style={[landscapeStyles.variableWidthText, landscapeStyles.meleeDamage]}>{character.meleeDamage >= 0 ? '+' : ''}{character.meleeDamage}</Text>
-    <Text style={[landscapeStyles.variableWidthText, landscapeStyles.missileDamage]}>{character.missileDamage >= 0 ? '+' : ''}{character.missileDamage}</Text>
+    <Text style={[landscapeStyles.text, landscapeStyles.melee]}>{character.melee >= 0 ? '+' : ''}{character.melee}</Text>
+    <Text style={[landscapeStyles.text, landscapeStyles.missile]}>{character.missile >= 0 ? '+' : ''}{character.missile}</Text>
+    <Text style={[landscapeStyles.text, landscapeStyles.meleeDamage]}>{character.meleeDamage >= 0 ? '+' : ''}{character.meleeDamage}</Text>
+    <Text style={[landscapeStyles.text, landscapeStyles.missileDamage]}>{character.missileDamage >= 0 ? '+' : ''}{character.missileDamage}</Text>
 
     <Text style={[landscapeStyles.largeText,      landscapeStyles.reflex]}>{character.reflex >= 0 ? '+' : ''}{character.reflex}</Text>
     <Text style={[landscapeStyles.largeTextWhite, landscapeStyles.fortitude]}>{character.fortitude >= 0 ? '+' : ''}{character.fortitude}</Text>
