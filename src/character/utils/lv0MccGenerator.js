@@ -164,7 +164,7 @@ const styles = StyleSheet.create({
   armour:           { position: 'absolute', top: 285, left: 28  },
   armourACBonus:    { position: 'absolute', top: 285, left: 98  },
   armourFumbleBase: { position: 'absolute', top: 285, left: 120 },
-  equipment:        { position: 'absolute', top: 315, left: 28,  width: 120 },
+  equipment:        { position: 'absolute', top: 315, left: 28,  width: 115 },
   maxTechLevel:     { position: 'absolute', top: 93,  left: 155 },
   notes:            { position: 'absolute', top: 303, left: 125, width: 155 },
   message:          { position: 'absolute', bottom: 40, left: 125, width: 145 },
