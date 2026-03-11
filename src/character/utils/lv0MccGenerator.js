@@ -336,7 +336,8 @@ export const generateRandomCharacter = (options = {}) => {
   const armourName       = getMccArmour(armourItem);
   const armourACBonusStr = getArmourACBonusString(armourItem);
   const acBonus          = getArmourACBonus(armourItem);
-  const armourFumbleBase = getArmourFumbleDie(armourItem) || 'd4';
+  const armourFumbleBase = getArmourFumbleDie(armourItem);        // '' when no armour
+  const fumbleBase       = armourFumbleBase || 'd4';              // d4 default for calculation only
 
   // ── Name ──────────────────────────────────────────────────────────────
   const gender          = getGender(genderOption);
@@ -395,7 +396,7 @@ export const generateRandomCharacter = (options = {}) => {
 
   // ── Crit / Fumble ─────────────────────────────────────────────────────
   const critDie = formatCritDie(luckMod, luckySign);
-  const fumble  = armourFumbleBase + formatFumbleDie(luckMod, luckySign);
+  const fumble = fumbleBase + formatFumbleDie(luckMod, luckySign);
 
   // ── Alignment & Languages ─────────────────────────────────────────────
   const alignment = getArchaicAlignment(alignmentOption, species);
