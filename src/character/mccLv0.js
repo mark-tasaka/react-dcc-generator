@@ -6,15 +6,17 @@ import './generator.css';
 
 window.Buffer = Buffer;
 
-const MccLv0 = () => {
+const MccLv0 = () => {                    // ← this line was missing
+
   const defaultFormValues = {
-    givenName: 100,
-    surname: 100,
-    alignment: 1,
-    gender: 1,
+    givenName:    100,
+    surname:      100,
+    genotype:     1,
+    alignment:    1,
+    gender:       1,
     abilityScore: 1,
-    hitPoints: 1,
-    sheetLayout: 1
+    hitPoints:    1,
+    sheetLayout:  1,
   };
 
   const [formValues, setFormValues] = useState(defaultFormValues);
@@ -185,6 +187,22 @@ const MccLv0 = () => {
         </div>
 
         <div className="form-group">
+          <span className="form-label">Genotype:</span>
+          <select
+            name="genotype"
+            value={formValues.genotype}
+            onChange={handleInputChange}
+            className="form-select"
+          >
+            <option value={1}>Random</option>
+            <option value={2}>Pure Strain Human</option>
+            <option value={3}>Mutant</option>
+            <option value={4}>Manimal</option>
+            <option value={5}>Plantient</option>
+          </select>
+        </div>
+
+        <div className="form-group">
           <span className="form-label">Archaic Alignment:</span>
           <select
             name="alignment"
@@ -268,6 +286,6 @@ const MccLv0 = () => {
 
     </div>
   );
-};
+};                                        
 
 export default MccLv0;

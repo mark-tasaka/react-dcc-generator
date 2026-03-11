@@ -275,22 +275,33 @@ const getRandomNameOrigin = (type) => {
   }
 };
 
+// ── Resolve genotype from dropdown option ─────────────────────────────────
+
+const resolveGenotype = (option) => {
+  if (option === 2) return 'Pure Strain Human';
+  if (option === 3) return 'Mutant';
+  if (option === 4) return 'Manimal';
+  if (option === 5) return 'Plantient';
+  return getGenotype();   // option === 1 → Random
+};
+
 // ── Generate random character ─────────────────────────────────────────────
 
 export const generateRandomCharacter = (options = {}) => {
   const {
-    alignment: alignmentOption = 1,
-    gender: genderOption = 1,
+    alignment:    alignmentOption    = 1,
+    genotype:     genotypeOption     = 1,   
+    gender:       genderOption       = 1,
     abilityScore: abilityScoreOption = 1,
-    hitPoints: hitPointsOption = 1,
-    givenName: givenNameOption = 100,
-    surname: surnameOption = 100
+    hitPoints:    hitPointsOption    = 1,
+    givenName:    givenNameOption    = 100,
+    surname:      surnameOption      = 100
   } = options;
 
   const rollDice = (sides) => Math.floor(Math.random() * sides) + 1;
 
   // ── Species & Profession ──────────────────────────────────────────────
-  const species    = getGenotype();
+  const species    = resolveGenotype(genotypeOption);   
   const profession = getProfession();
 
   // ── Weapon: use profession weapon when available, else random ─────────
