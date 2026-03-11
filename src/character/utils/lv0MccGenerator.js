@@ -131,7 +131,7 @@ const styles = StyleSheet.create({
   gender:     { position: 'absolute', top: 48,  left: 138 },
   alignment:  { position: 'absolute', top: 68,  left: 125 },
   occupation: { position: 'absolute', top: 48,  left: 175 },
-  critDie:    { position: 'absolute', top: 93,  left: 46 },
+  critDie:    { position: 'absolute', top: 93,  left: 46  },
   fumble:     { position: 'absolute', top: 93,  left: 190 },
 
   str:  { position: 'absolute', top: 199, left: 52, width: 25 },
@@ -141,35 +141,35 @@ const styles = StyleSheet.create({
   int:  { position: 'absolute', top: 263, left: 52, width: 25 },
   luck: { position: 'absolute', top: 279, left: 52, width: 25 },
 
-  strMod:  { position: 'absolute', top: 199, left: 82, width: 30 },
-  agiMod:  { position: 'absolute', top: 215, left: 82, width: 30 },
-  staMod:  { position: 'absolute', top: 231, left: 82, width: 30 },
-  perMod:  { position: 'absolute', top: 246, left: 82, width: 30 },
-  intMod:  { position: 'absolute', top: 263, left: 82, width: 30 },
-  luckMod: { position: 'absolute', top: 279, left: 82, width: 30 },
+  strMod:  { position: 'absolute', top: 199, left: 82 },
+  agiMod:  { position: 'absolute', top: 215, left: 82 },
+  staMod:  { position: 'absolute', top: 231, left: 82 },
+  perMod:  { position: 'absolute', top: 246, left: 82 },
+  intMod:  { position: 'absolute', top: 263, left: 82 },
+  luckMod: { position: 'absolute', top: 279, left: 82 },
 
-  ac:            { position: 'absolute', top: 115, right: 200 },
-  hp:            { position: 'absolute', top: 155, left: 32  },
+  ac:            { position: 'absolute', top: 115, right: 196 },
+  hp:            { position: 'absolute', top: 144, right: 200 },
   init:          { position: 'absolute', top: 110, left: 142 },
-  melee:         { position: 'absolute', top: 130, left: 132, width: 30 },
-  missile:       { position: 'absolute', top: 142, left: 132, width: 30 },
-  meleeDamage:   { position: 'absolute', top: 130, left: 152, width: 30 },
-  missileDamage: { position: 'absolute', top: 142, left: 152, width: 30 },
+  melee:         { position: 'absolute', top: 130, left: 132 },
+  missile:       { position: 'absolute', top: 142, left: 132 },
+  meleeDamage:   { position: 'absolute', top: 130, left: 152 },
+  missileDamage: { position: 'absolute', top: 142, left: 152 },
 
   reflex:    { position: 'absolute', top: 35, left: 235 },
   fortitude: { position: 'absolute', top: 35, left: 265 },
   will:      { position: 'absolute', top: 69, left: 235 },
 
-  speed:      { position: 'absolute', top: 69,  left: 265, },
-  wealth:     { position: 'absolute', top: 319, left: 25,  width: 80  },
-  languages:  { position: 'absolute', top: 345, left: 25,  width: 80  },
-  birthAugur: { position: 'absolute', top: 120, left: 203, width: 80  },
-  weapon:     { position: 'absolute', top: 183, left: 125 },
+  speed:        { position: 'absolute', top: 69,  left: 265 },
+  wealth:       { position: 'absolute', top: 319, left: 25,  width: 80  },
+  languages:    { position: 'absolute', top: 345, left: 25,  width: 80  },
+  birthAugur:   { position: 'absolute', top: 120, left: 203, width: 80  },
+  weapon:       { position: 'absolute', top: 183, left: 125 },
   weaponDamage: { position: 'absolute', top: 183, left: 240 },
-  armour:     { position: 'absolute', top: 230, left: 125 },
-  equipment:  { position: 'absolute', top: 256, left: 125 },
-  notes:      { position: 'absolute', top: 303, left: 125, width: 155 },
-  message:    { position: 'absolute', bottom: 40, left: 125, width: 145 },
+  armour:       { position: 'absolute', top: 230, left: 125 },
+  equipment:    { position: 'absolute', top: 256, left: 125 },
+  notes:        { position: 'absolute', top: 303, left: 125, width: 155 },
+  message:      { position: 'absolute', bottom: 40, left: 125, width: 145 },
 });
 
 // Landscape styles
@@ -300,7 +300,7 @@ export const generateRandomCharacter = (options = {}) => {
   const rollDice = (sides) => Math.floor(Math.random() * sides) + 1;
 
   // ── Species & Profession ──────────────────────────────────────────────
-  const species = getGenotype();
+  const species    = getGenotype();
   const profession = getProfession();
 
   // ── Weapon: use profession weapon when available, else random ─────────
@@ -320,14 +320,13 @@ export const generateRandomCharacter = (options = {}) => {
   const equipment      = equipmentParts.join(', ');
 
   // ── Armour ────────────────────────────────────────────────────────────
-  const armourItem      = getMccArmourRoll();
-  const armourName      = getMccArmour(armourItem);
-  const acBonus         = getArmourACBonus(armourItem);
-  // Fall back to 'd4' when no armour is worn
+  const armourItem       = getMccArmourRoll();
+  const armourName       = getMccArmour(armourItem);
+  const acBonus          = getArmourACBonus(armourItem);
   const armourFumbleBase = getArmourFumbleDie(armourItem) || 'd4';
 
   // ── Name ──────────────────────────────────────────────────────────────
-  const gender         = getGender(genderOption);
+  const gender          = getGender(genderOption);
   const nameGenderIndex = getNameGender(gender);
 
   let actualGivenName = givenNameOption;
@@ -368,17 +367,17 @@ export const generateRandomCharacter = (options = {}) => {
   const hp = minHitPoints(baseHp);
 
   // ── Combat stats ──────────────────────────────────────────────────────
-  const baseAC       = getAC(agiMod, luckMod, luckySign);
-  const init         = getInit(agiMod, luckMod, luckySign);
-  const melee        = strMod  + meleeAttackLuckSign(luckMod, luckySign);
-  const meleeDmg     = strMod  + meleeDamageLuckSign(luckMod, luckySign);
-  const missile      = agiMod  + missileAttackLuckSign(luckMod, luckySign);
-  const missileDmg   = agiMod  + missileDamageLuckSign(luckMod, luckySign);
+  const baseAC     = getAC(agiMod, luckMod, luckySign);
+  const init       = getInit(agiMod, luckMod, luckySign);
+  const melee      = strMod + meleeAttackLuckSign(luckMod, luckySign);
+  const meleeDmg   = strMod + meleeDamageLuckSign(luckMod, luckySign);
+  const missile    = agiMod + missileAttackLuckSign(luckMod, luckySign);
+  const missileDmg = agiMod + missileDamageLuckSign(luckMod, luckySign);
 
   // ── Saves ─────────────────────────────────────────────────────────────
-  const reflex    = agiMod  + getRefLuckBonus(luckMod, luckySign);
-  const fortitude = staMod  + getFortLuckBonus(luckMod, luckySign);
-  const will      = perMod  + getWillLuckBonus(luckMod, luckySign);
+  const reflex    = agiMod + getRefLuckBonus(luckMod, luckySign);
+  const fortitude = staMod + getFortLuckBonus(luckMod, luckySign);
+  const will      = perMod + getWillLuckBonus(luckMod, luckySign);
   const speed     = getSpeed(luckMod, luckySign);
 
   // ── Crit / Fumble ─────────────────────────────────────────────────────
@@ -389,9 +388,9 @@ export const generateRandomCharacter = (options = {}) => {
   const alignment = getArchaicAlignment(alignmentOption, species);
   const languages = getBaseLanguages(species, int) + getBonusLanguages(int);
 
-  // ── Notes & Message ───────────────────────────────────────────────────
-  const notes   = `Max Tech Level: ${getMaxTechLevel(int)}`;
-  const message = dieRollMethodText(abilityScoreOption) + hitPointsMethodText(hitPointsOption) + nameDescript;
+  // ── Max Tech Level & Message ──────────────────────────────────────────
+  const maxTechLevel = getMaxTechLevel(int);                               // ← renamed
+  const message      = dieRollMethodText(abilityScoreOption) + hitPointsMethodText(hitPointsOption) + nameDescript;
 
   return {
     name:         characterName,
@@ -426,9 +425,10 @@ export const generateRandomCharacter = (options = {}) => {
     speed:         speed,
     birthAugur:    `${birthAugur.name}: ${birthAugur.effect}`,
     birthAugurData: birthAugur,
-    wealth:        '',    // TODO: MCC wealth system
+    wealth:        '',
     languages:     languages,
-    notes:         notes,
+    notes:         '',                  // ← now separate from maxTechLevel
+    maxTechLevel:  maxTechLevel,        // ← new dedicated field
     message:       message
   };
 };
@@ -464,7 +464,7 @@ const Character = ({ character, position }) => (
     <Text style={[styles.variableWidthText, styles.luckMod]}>({character.stats.luck.modifier >= 0 ? '+' : ''}{character.stats.luck.modifier})</Text>
 
     <Text style={[styles.largeText, styles.ac]}>{character.ac}</Text>
-    <Text style={[styles.text, styles.hp]}>{character.hp}</Text>
+    <Text style={[styles.largeText, styles.hp]}>{character.hp}</Text>
     <Text style={[styles.text, styles.init]}>{character.init >= 0 ? '+' : ''}{character.init}</Text>
     <Text style={[styles.variableWidthText, styles.melee]}>{character.melee >= 0 ? '+' : ''}{character.melee}</Text>
     <Text style={[styles.variableWidthText, styles.missile]}>{character.missile >= 0 ? '+' : ''}{character.missile}</Text>
