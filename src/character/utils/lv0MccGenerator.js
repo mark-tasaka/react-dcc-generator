@@ -103,7 +103,7 @@ const styles = StyleSheet.create({
     fontWeight: 'bold',
   },
   largeTextWhite: {
-    fontSize: 12,
+    fontSize: 11,
     color: 'white',
     fontWeight: 'bold',
   },
@@ -123,6 +123,7 @@ const styles = StyleSheet.create({
 
   name:       { position: 'absolute', top: 48,  left: 42  },
   gender:     { position: 'absolute', top: 48,  left: 138 },
+  genotype:   { position: 'absolute', top: 68,  left: 42  },
   alignment:  { position: 'absolute', top: 68,  left: 125 },
   occupation: { position: 'absolute', top: 48,  left: 175 },
   critDie:    { position: 'absolute', top: 93,  left: 46  },
@@ -144,18 +145,18 @@ const styles = StyleSheet.create({
 
   ac:            { position: 'absolute', top: 115, right: 196 },
   hp:            { position: 'absolute', top: 144, right: 200 },
-  init:          { position: 'absolute', top: 110, left: 142 },
+  init:          { position: 'absolute', top: 76, left: 235 },
   melee:         { position: 'absolute', top: 183, left: 70 },
   missile:       { position: 'absolute', top: 195, left: 70 },
   meleeDamage:   { position: 'absolute', top: 183, left: 95 },
   missileDamage: { position: 'absolute', top: 195, left: 95 },
 
-  reflex:    { position: 'absolute', top: 35, left: 235 },
-  fortitude: { position: 'absolute', top: 35, left: 265 },
-  will:      { position: 'absolute', top: 69, left: 235 },
+  reflex:    { position: 'absolute', top: 45, left: 254 },
+  fortitude: { position: 'absolute', top: 51, left: 235 },
+  will:      { position: 'absolute', top: 51, left: 270 },
 
-  speed:            { position: 'absolute', top: 69,  left: 265 },
-  wealth:           { position: 'absolute', top: 319, left: 25,  width: 80  },
+  speed:            { position: 'absolute', top: 76,  left: 270 },
+  wealth:           { position: 'absolute', top: 318, left: 25,  width: 80  },
   languages:        { position: 'absolute', top: 120, left: 217, width: 70  },
   birthAugur:       { position: 'absolute', top: 175, left: 217, width: 70  },
   weapon:           { position: 'absolute', top: 240, left: 28,  width: 100 },
@@ -218,6 +219,7 @@ const landscapeStyles = StyleSheet.create({
 
   name:       { position: 'absolute', top: 97,  left: 40  },
   gender:     { position: 'absolute', top: 97,  left: 200 },
+  genotype:   { position: 'absolute', top: 127,  left: 40  },
   alignment:  { position: 'absolute', top: 127, left: 40  },
   occupation: { position: 'absolute', top: 155, left: 40  },
   critDie:    { position: 'absolute', top: 127, left: 160 },
@@ -387,7 +389,7 @@ export const generateRandomCharacter = (options = {}) => {
     gender:       gender,
     alignment:    alignment,
     occupation:   profession.role,
-    race:         species,
+    genotype:     species,
     weapon:       weaponName,
     weaponDamage: weaponDamage,
     equipment:    equipment,
@@ -432,6 +434,7 @@ const Character = ({ character, position }) => (
   <View style={[styles.characterContainer, position]}>
     <Text style={[styles.text, styles.name]}>{character.name}</Text>
     <Text style={[styles.text, styles.gender]}>{character.gender}</Text>
+    <Text style={[styles.text, styles.genotype]}>{character.genotype}</Text>
     <Text style={[styles.text, styles.alignment]}>{character.alignment}</Text>
     <Text style={[styles.text, styles.occupation]}>{character.occupation}</Text>
     <Text style={[styles.text, styles.critDie]}>{character.critDie}</Text>
@@ -457,17 +460,17 @@ const Character = ({ character, position }) => (
 
     <Text style={[styles.largeText, styles.ac]}>{character.ac}</Text>
     <Text style={[styles.largeText, styles.hp]}>{character.hp}</Text>
-    <Text style={[styles.text,       styles.init]}>{character.init >= 0 ? '+' : ''}{character.init}</Text>
+    <Text style={[styles.largeTextWhite, styles.init]}>{character.init >= 0 ? '+' : ''}{character.init}</Text>
     <Text style={[styles.mediumText, styles.melee]}>{character.melee >= 0 ? '+' : ''}{character.melee}</Text>
     <Text style={[styles.mediumText, styles.missile]}>{character.missile >= 0 ? '+' : ''}{character.missile}</Text>
     <Text style={[styles.mediumText, styles.meleeDamage]}>{character.meleeDamage >= 0 ? '+' : ''}{character.meleeDamage}</Text>
     <Text style={[styles.mediumText, styles.missileDamage]}>{character.missileDamage >= 0 ? '+' : ''}{character.missileDamage}</Text>
 
-    <Text style={[styles.largeText,      styles.reflex]}>{character.reflex >= 0 ? '+' : ''}{character.reflex}</Text>
-    <Text style={[styles.largeTextWhite, styles.fortitude]}>{character.fortitude >= 0 ? '+' : ''}{character.fortitude}</Text>
-    <Text style={[styles.largeTextWhite, styles.will]}>{character.will >= 0 ? '+' : ''}{character.will}</Text>
+    <Text style={[styles.largeTextWhite, styles.reflex]}>{character.reflex >= 0 ? '+' : ''}{character.reflex}</Text>
+    <Text style={[styles.largeText, styles.fortitude]}>{character.fortitude >= 0 ? '+' : ''}{character.fortitude}</Text>
+    <Text style={[styles.largeText, styles.will]}>{character.will >= 0 ? '+' : ''}{character.will}</Text>
 
-    <Text style={[styles.largeText,  styles.speed]}>{character.speed + "'"}</Text>
+    <Text style={[styles.largeTextWhite,  styles.speed]}>{character.speed + "'"}</Text>
     <Text style={[styles.smallText,  styles.wealth]}>{character.wealth}</Text>
     <Text style={[styles.smallText,  styles.languages]}>{character.languages}</Text>
     <Text style={[styles.smallText,  styles.birthAugur]}>{character.birthAugur}</Text>
@@ -489,6 +492,7 @@ const LandscapeCharacter = ({ character, position }) => (
   <View style={[landscapeStyles.characterContainer, position]}>
     <Text style={[landscapeStyles.text, landscapeStyles.name]}>{character.name}</Text>
     <Text style={[landscapeStyles.text, landscapeStyles.gender]}>{character.gender}</Text>
+    <Text style={[landscapeStyles.text, landscapeStyles.genotype]}>{character.genotype}</Text>
     <Text style={[landscapeStyles.text, landscapeStyles.alignment]}>{character.alignment}</Text>
     <Text style={[landscapeStyles.text, landscapeStyles.occupation]}>{character.occupation}</Text>
     <Text style={[landscapeStyles.text, landscapeStyles.critDie]}>{character.critDie}</Text>
