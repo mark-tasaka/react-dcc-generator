@@ -168,7 +168,7 @@ const styles = StyleSheet.create({
   equipment:        { position: 'absolute', top: 315, left: 28,  width: 115 },
   maxTechLevel:     { position: 'absolute', top: 93,  left: 155 },
   physicalDescription:            { position: 'absolute', top: 238, left: 175, width: 100 },
-  message:          { position: 'absolute', bottom: 40, left: 125, width: 145 },
+  message:          { position: 'absolute', top: 307, left: 175, width: 100 },
 });
 
 // Landscape styles
