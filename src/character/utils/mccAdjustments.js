@@ -146,12 +146,199 @@ export const getArmourFumbleDie = (item) => {
 };
 
 // ── Physical Description ──────────────────────────────────────────────────
-// TODO: implement once getMutantAppearance(), getManimalType(), getPlantient()
-// are available in separate files.
 
+// Private helpers — not exported
+
+const getMutantAppearance = () => {
+  const appearance = [
+    { mutation: 'Skin colour: bright red' },
+    { mutation: 'Skin colour: snow white' },
+    { mutation: 'Skin colour: lemon yellow' },
+    { mutation: 'Skin colour: purple' },
+    { mutation: 'Skin colour: green' },
+    { mutation: 'Skin colour: translucent' },
+    { mutation: 'Skin texture: is mottled' },
+    { mutation: 'Skin texture: is reptilian' },
+    { mutation: 'Skin texture: is chitinous' },
+    { mutation: 'Skin texture: is rocky' },
+    { mutation: 'Skin texture: is metallic' },
+    { mutation: 'Skin texture: is invisible' },
+    { mutation: 'Eyes: have slitted pupils' },
+    { mutation: 'Eyes: have no pupils' },
+    { mutation: 'Eyes: glow in the dark' },
+    { mutation: 'Eyes: are a single eye' },
+    { mutation: 'Eyes: have compound insect eyes' },
+    { mutation: 'Eyes: are covered by semi-transparent skin' },
+    { mutation: 'Mouth: is fanged' },
+    { mutation: 'Mouth: a featureless slit' },
+    { mutation: 'Mouth: a beak or bill' },              // typo fixed: 'break' → 'beak'
+    { mutation: 'Mouth: is insectoid' },
+    { mutation: 'Mouth: located in belly' },
+    { mutation: 'Mouth: absent, replaced by porous skin' },
+    { mutation: 'Head: is larger than normal' },
+    { mutation: 'Head: is smaller than normal' },
+    { mutation: 'Head: has craggy brow and ridged skull' },
+    { mutation: 'Head: has small horns' },
+    { mutation: 'Head: has antennae' },                 // typo fixed: 'antennaw' → 'antennae'
+    { mutation: 'Head: retreats into body' },
+    { mutation: 'Hair: stands on end' },
+    { mutation: "Hair: grows into a lion's mane" },
+    { mutation: 'Hair: grows over entire body' },
+    { mutation: 'Hair: drips oil' },
+    { mutation: 'Hair: is made of organic metal' },
+    { mutation: 'Hair: is comprised of small leaves' },
+    { mutation: 'Hands: have no nails' },
+    { mutation: 'Hands: have only three fingers' },
+    { mutation: 'Hands: have six fingers' },
+    { mutation: 'Hands: are prehensile claws' },
+    { mutation: 'Hands: are comprised of tentacles' },
+    { mutation: 'Hands: absent, replaced with tentacle fingers' },
+    { mutation: 'Feet: are overlarge and padded' },
+    { mutation: 'Feet: have 12 toes' },
+    { mutation: 'Feet: have claws' },
+    { mutation: 'Feet: are bird talons' },
+    { mutation: 'Feet: are hooves' },
+    { mutation: 'Feet: absent, replaced with cilia clumps' },
+    { mutation: 'Body: has a tail' },
+    { mutation: 'Body: has four arms' },
+    { mutation: 'Body: has four legs' },
+    { mutation: 'Body: has ridged back' },
+    { mutation: 'Body: has symbiotic twin in stomach' },
+    { mutation: 'Body: is segmented like a worm' },
+    { mutation: 'Form: is tripedal' },
+    { mutation: 'Form: is quadrapedal' },
+    { mutation: 'Form: is serpentine' },
+    { mutation: 'Form: is insectoid' },
+    { mutation: 'Form: is globular' },
+    { mutation: 'Form: is a condensed ball of plasma that must inhabit clothes to maintain form' },
+  ];
+  return appearance[Math.floor(Math.random() * 60)];
+};
+
+const getPlantient = () => {
+  const subType = [
+    { features: 'Deciduous: maple' },       // typo fixed: 'Decisuous' → 'Deciduous' (all five)
+    { features: 'Deciduous: oak' },
+    { features: 'Deciduous: sycamore' },
+    { features: 'Deciduous: buckeye' },
+    { features: 'Deciduous: chestnut' },
+    { features: 'Conifer: cedar' },
+    { features: 'Conifer: larch' },
+    { features: 'Conifer: fir' },
+    { features: 'Conifer: pine' },
+    { features: 'Conifer: spruce' },
+    { features: 'Conifer: yew' },
+    { features: 'Fruit-Bearing: apple' },
+    { features: 'Fruit-Bearing: pear' },
+    { features: 'Fruit-Bearing: peach' },
+    { features: 'Fruit-Bearing: cherry' },
+    { features: 'Fruit-Bearing: plum' },
+    { features: 'Fruit-Bearing: banana' },
+    { features: 'Fern: horsetail' },
+    { features: 'Fern: whisk fern' },
+    { features: 'Fern: marratoid' },
+    { features: 'Vine: ivy' },
+    { features: 'Vine: honeysuckle' },
+    { features: 'Vine: arrowroot' },
+    { features: 'Vine: morning glory' },
+    { features: 'Vine: grape' },
+    { features: 'Vine: sweet pea' },
+    { features: 'Shrub: sagebrush' },
+    { features: 'Shrub: hibiscus' },
+    { features: 'Shrub: blackberry' },
+    { features: 'Shrub: huckleberry' },
+    { features: 'Shrub: sumac' },
+    { features: 'Shrub: yucca' },
+    { features: 'Tropical: palm' },
+    { features: 'Tropical: coconut' },
+    { features: 'Tropical: bamboo' },
+    { features: 'Tropical: teak' },
+    { features: 'Cacti: barrel' },
+    { features: 'Cacti: beavertail' },
+    { features: 'Cacti: aloe' },
+    { features: 'Cacti: prickly pear' },
+    { features: 'Mosses: green moss' },
+    { features: 'Mosses: liverwort' },
+    { features: 'Mosses: hornwort' },
+    { features: 'Fungi: mushroom' },
+    { features: 'Fungi: toadstool' },
+    { features: 'Fungi: fungus' },
+    { features: 'Fungi: mold' },
+  ];
+  return subType[Math.floor(Math.random() * 47)];
+};
+
+const getManimalType = () => {
+  const subType = [
+    { features: 'Primate: gorilla' },
+    { features: 'Primate: chimpanzee' },
+    { features: 'Primate: orangutan' },
+    { features: 'Primate: gibbon' },
+    { features: 'Canine: dog' },
+    { features: 'Canine: wolf' },
+    { features: 'Canine: coyote' },
+    { features: 'Canine: fox' },
+    { features: 'Feline: lion' },
+    { features: 'Feline: tiger' },
+    { features: 'Feline: cheetah' },
+    { features: 'Feline: panther' },
+    { features: 'Ursine: brown bear' },
+    { features: 'Ursine: grizzly bear' },
+    { features: 'Ursine: polar bear' },
+    { features: 'Bovine: cow' },
+    { features: 'Bovine: bison' },
+    { features: 'Bovine: buffalo' },
+    { features: 'Bovine: antelope' },
+    { features: 'Bovine: yak' },
+    { features: 'Suidae: pig' },
+    { features: 'Suidae: hog' },
+    { features: 'Suidae: warthog' },                   // typo fixed: 'wartog' → 'warthog'
+    { features: 'Rodentia: mouse' },
+    { features: 'Rodentia: rat' },
+    { features: 'Rodentia: squirrel' },
+    { features: 'Rodentia: porcupine' },
+    { features: 'Rodentia: beaver' },
+    { features: 'Rodentia: rabbit' },
+    { features: 'Amphibia: frog' },
+    { features: 'Amphibia: toad' },
+    { features: 'Amphibia: salamander' },
+    { features: 'Avian: hawk' },
+    { features: 'Avian: eagle' },
+    { features: 'Avian: crow' },
+    { features: 'Avian: owl' },
+    { features: 'Avian: vulture' },
+    { features: 'Avian: seagull' },
+    { features: 'Insecta: roach' },
+    { features: 'Insecta: ant' },
+    { features: 'Insecta: fly' },
+    { features: 'Insecta: grasshopper' },
+    { features: 'Insecta: beetle' },
+    { features: 'Insecta: moth' },
+  ];
+  return subType[Math.floor(Math.random() * 44)];
+};
+
+// Roll 0-29.  On 28-29 a second trait is appended (separated by \n for PDF).
+// Pure Strain Human returns '' — no physical quirk generated.
 export const getPhysicalDescription = (character) => {
-  const appearanceRoll = Math.floor(Math.random() * 30); // eslint-disable-line no-unused-vars
-  return '';
+  const appearanceRoll = Math.floor(Math.random() * 30);
+  let appearance = '';
+
+  if (character === 'Mutant' && appearanceRoll <= 27) {
+    appearance = getMutantAppearance().mutation;
+  } else if (character === 'Mutant' && appearanceRoll >= 28) {
+    appearance = getMutantAppearance().mutation + '\n' + getMutantAppearance().mutation;
+  } else if (character === 'Manimal' && appearanceRoll <= 27) {
+    appearance = getManimalType().features;
+  } else if (character === 'Manimal' && appearanceRoll >= 28) {
+    appearance = getManimalType().features + '\n' + getMutantAppearance().mutation;
+  } else if (character === 'Plantient' && appearanceRoll <= 28) {
+    appearance = getPlantient().features;
+  } else if (character === 'Plantient' && appearanceRoll >= 29) {
+    appearance = getManimalType().features + '\n' + getMutantAppearance().mutation;
+  }
+
+  return appearance;
 };
 
 // ── Max Tech Level ────────────────────────────────────────────────────────

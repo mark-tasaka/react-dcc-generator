@@ -41,6 +41,7 @@ import {
   getBaseLanguages,
   getBonusLanguages,
   getMaxTechLevel,
+  getPhysicalDescription,
 } from './mccAdjustments.js';
 
 Font.register({
@@ -290,7 +291,7 @@ const resolveGenotype = (option) => {
 export const generateRandomCharacter = (options = {}) => {
   const {
     alignment:    alignmentOption    = 1,
-    genotype:     genotypeOption     = 1,   
+    genotype:     genotypeOption     = 1,
     gender:       genderOption       = 1,
     abilityScore: abilityScoreOption = 1,
     hitPoints:    hitPointsOption    = 1,
@@ -301,8 +302,13 @@ export const generateRandomCharacter = (options = {}) => {
   const rollDice = (sides) => Math.floor(Math.random() * sides) + 1;
 
   // ── Species & Profession ──────────────────────────────────────────────
-  const species    = resolveGenotype(genotypeOption);   
+  const species    = resolveGenotype(genotypeOption);
   const profession = getProfession();
+
+  // ── Physical Description ──────────────────────────────────────────────
+  // Returns a trait string for Mutant / Manimal / Plantient; '' for PSH.
+  // A roll of 28-29 appends a second trait separated by \n.
+  const physicalDescription = getPhysicalDescription(species);
 
   // ── Weapon: use profession weapon when available, else random ─────────
   let weaponName, weaponDamage;
@@ -430,6 +436,7 @@ export const generateRandomCharacter = (options = {}) => {
     birthAugurData: birthAugur,
     wealth:        '',
     languages:     languages,
+    physicalDescription: physicalDescription,
     notes:         '',
     maxTechLevel:  maxTechLevel,
     message:       message,
@@ -492,7 +499,7 @@ const Character = ({ character, position }) => (
     <Text style={[styles.smallText,  styles.armourACBonus]}>{character.armourACBonus}</Text>
     <Text style={[styles.smallText,  styles.armourFumbleBase]}>{character.armourFumbleBase}</Text>
     <Text style={[styles.text,       styles.maxTechLevel]}>{character.maxTechLevel}</Text>
-    <Text style={[styles.smallText,  styles.notes]}>{character.notes}</Text>
+    <Text style={[styles.smallText,  styles.notes]}>{character.physicalDescription}</Text>
     <Text style={[styles.xSmallText, styles.message]}>{character.message}</Text>
   </View>
 );
@@ -550,7 +557,7 @@ const LandscapeCharacter = ({ character, position }) => (
     <Text style={[landscapeStyles.smallText,  landscapeStyles.armourACBonus]}>{character.armourACBonus}</Text>
     <Text style={[landscapeStyles.smallText,  landscapeStyles.armourFumbleBase]}>{character.armourFumbleBase}</Text>
     <Text style={[landscapeStyles.smallText,  landscapeStyles.maxTechLevel]}>{character.maxTechLevel}</Text>
-    <Text style={[landscapeStyles.smallText,  landscapeStyles.notes]}>{character.notes}</Text>
+    <Text style={[landscapeStyles.smallText,  landscapeStyles.notes]}>{character.physicalDescription}</Text>
     <Text style={[landscapeStyles.xSmallText, landscapeStyles.message]}>{character.message}</Text>
   </View>
 );
