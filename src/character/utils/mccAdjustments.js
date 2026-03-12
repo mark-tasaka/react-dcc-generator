@@ -217,7 +217,7 @@ const getMutantAppearance = () => {
 
 const getPlantient = () => {
   const subType = [
-    { features: 'Deciduous: maple' },       // typo fixed: 'Decisuous' → 'Deciduous' (all five)
+    { features: 'Deciduous: maple' },      
     { features: 'Deciduous: oak' },
     { features: 'Deciduous: sycamore' },
     { features: 'Deciduous: buckeye' },

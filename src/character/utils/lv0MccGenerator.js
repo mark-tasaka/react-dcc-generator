@@ -167,7 +167,7 @@ const styles = StyleSheet.create({
   armourFumbleBase: { position: 'absolute', top: 285, left: 120 },
   equipment:        { position: 'absolute', top: 315, left: 28,  width: 115 },
   maxTechLevel:     { position: 'absolute', top: 93,  left: 155 },
-  notes:            { position: 'absolute', top: 303, left: 125, width: 155 },
+  physicalDescription:            { position: 'absolute', top: 238, left: 175, width: 100 },
   message:          { position: 'absolute', bottom: 40, left: 125, width: 145 },
 });
 
@@ -263,7 +263,7 @@ const landscapeStyles = StyleSheet.create({
   armourFumbleBase: { position: 'absolute', top: 343, left: 200 },
   equipment:        { position: 'absolute', top: 378, left: 165, width: 190 },
   maxTechLevel:     { position: 'absolute', top: 343, left: 165 },
-  notes:            { position: 'absolute', top: 440, left: 165, width: 190 },
+  physicalDescription:            { position: 'absolute', top: 440, left: 165, width: 190 },
   message:          { position: 'absolute', top: 488, left: 165, width: 190 },
 });
 
@@ -437,7 +437,6 @@ export const generateRandomCharacter = (options = {}) => {
     wealth:        '',
     languages:     languages,
     physicalDescription: physicalDescription,
-    notes:         '',
     maxTechLevel:  maxTechLevel,
     message:       message,
     armourFumbleBase: armourFumbleBase,
@@ -499,7 +498,7 @@ const Character = ({ character, position }) => (
     <Text style={[styles.smallText,  styles.armourACBonus]}>{character.armourACBonus}</Text>
     <Text style={[styles.smallText,  styles.armourFumbleBase]}>{character.armourFumbleBase}</Text>
     <Text style={[styles.text,       styles.maxTechLevel]}>{character.maxTechLevel}</Text>
-    <Text style={[styles.smallText,  styles.notes]}>{character.physicalDescription}</Text>
+    <Text style={[styles.smallText,  styles.physicalDescription]}>{character.physicalDescription}</Text>
     <Text style={[styles.xSmallText, styles.message]}>{character.message}</Text>
   </View>
 );
@@ -557,7 +556,7 @@ const LandscapeCharacter = ({ character, position }) => (
     <Text style={[landscapeStyles.smallText,  landscapeStyles.armourACBonus]}>{character.armourACBonus}</Text>
     <Text style={[landscapeStyles.smallText,  landscapeStyles.armourFumbleBase]}>{character.armourFumbleBase}</Text>
     <Text style={[landscapeStyles.smallText,  landscapeStyles.maxTechLevel]}>{character.maxTechLevel}</Text>
-    <Text style={[landscapeStyles.smallText,  landscapeStyles.notes]}>{character.physicalDescription}</Text>
+    <Text style={[landscapeStyles.smallText,  landscapeStyles.physicalDescription]}>{character.physicalDescription}</Text>
     <Text style={[landscapeStyles.xSmallText, landscapeStyles.message]}>{character.message}</Text>
   </View>
 );
