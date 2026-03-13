@@ -306,33 +306,41 @@ export const generateRandomCharacter = (options = {}) => {
   const profession = getProfession();
 
   // ── Physical Description ──────────────────────────────────────────────
-  // Returns a trait string for Mutant / Manimal / Plantient; '' for PSH.
-  // A roll of 28-29 appends a second trait separated by \n.
   const physicalDescription = getPhysicalDescription(species);
 
-  // ── Weapon: use profession weapon when available, else random ─────────
-  let weaponName, weaponDamage;
+  // ── Weapon ────────────────────────────────────────────────────────────
+  // Primary: profession weapon when available, else random.
+  // Secondary: Flint dagger is always added as a second weapon.
+  let primaryWeaponName, primaryWeaponDamage;
   if (profession.weapon) {
-    weaponName   = profession.weapon;
-    weaponDamage = profession.damage;
+    primaryWeaponName   = profession.weapon;
+    primaryWeaponDamage = profession.damage;
   } else {
-    const randomWeapon = addRandomWeapon();
-    weaponName   = randomWeapon.weapon;
-    weaponDamage = randomWeapon.damage;
+    const randomWeapon  = addRandomWeapon();
+    primaryWeaponName   = randomWeapon.weapon;
+    primaryWeaponDamage = randomWeapon.damage;
   }
 
+  const weaponName   = `${primaryWeaponName}\nFlint dagger`;
+  const weaponDamage = `${primaryWeaponDamage}\n1d4`;
+
   // ── Equipment ─────────────────────────────────────────────────────────
+  // Profession equipment + random item + Waterskin (always issued).
   const extraItem      = addItem();
-  const equipmentParts = [profession.equipment, extraItem.item].filter(Boolean);
-  const equipment      = equipmentParts.join(', ');
+  const equipmentParts = [
+    profession.equipment,
+    extraItem.item,
+    'Waterskin',
+  ].filter(Boolean);
+  const equipment = equipmentParts.join(', ');
 
   // ── Armour ────────────────────────────────────────────────────────────
   const armourItem       = getMccArmourRoll();
   const armourName       = getMccArmour(armourItem);
   const armourACBonusStr = getArmourACBonusString(armourItem);
   const acBonus          = getArmourACBonus(armourItem);
-  const armourFumbleBase = getArmourFumbleDie(armourItem);   // '' when no armour
-  const fumbleBase       = armourFumbleBase || 'd4';         // d4 default for calculation only
+  const armourFumbleBase = getArmourFumbleDie(armourItem);
+  const fumbleBase       = armourFumbleBase || 'd4';
 
   // ── Name ──────────────────────────────────────────────────────────────
   const gender          = getGender(genderOption);

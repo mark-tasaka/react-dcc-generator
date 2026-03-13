@@ -44,13 +44,12 @@ export const getProfession = () => {
 
 const weaponData = [
   { id: 1, weapon: 'Bone club',          damage: '1d6' },
-  { id: 2, weapon: 'Flint dagger',       damage: '1d4' },
-  { id: 3, weapon: 'Stone axe',          damage: '1d7' },
-  { id: 4, weapon: 'Stone-tipped spear', damage: '1d6' },
-  { id: 5, weapon: 'Wooden club',        damage: '1d5' },
-  { id: 6, weapon: 'Blowgun & 12 darts', damage: '1d3' },
-  { id: 7, weapon: 'Bow & 12 arrows',    damage: '1d6' },
-  { id: 8, weapon: 'Leather sling',      damage: '1d4' },
+  { id: 2, weapon: 'Stone axe',          damage: '1d7' },
+  { id: 3, weapon: 'Stone-tipped spear', damage: '1d6' },
+  { id: 4, weapon: 'Wooden club',        damage: '1d5' },
+  { id: 5, weapon: 'Blowgun & 12 darts', damage: '1d3' },
+  { id: 6, weapon: 'Bow & 12 arrows',    damage: '1d6' },
+  { id: 7, weapon: 'Leather sling',      damage: '1d4' },
 ];
 
 export const addRandomWeapon = () => {
