@@ -1,4 +1,9 @@
-// mccAdjustments.js
+export const addSign = (modifier) => {
+  if (modifier > 0)  return `+${modifier}`;
+  if (modifier === 0) return '';
+  return `${modifier}`;   // negative numbers already include '-' via template literal
+};
+
 
 // ── Genotype ──────────────────────────────────────────────────────────────
 

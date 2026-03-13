@@ -42,6 +42,7 @@ import {
   getBonusLanguages,
   getMaxTechLevel,
   getPhysicalDescription,
+  addSign,
 } from './mccAdjustments.js';
 
 Font.register({
@@ -129,6 +130,7 @@ const styles = StyleSheet.create({
   occupation: { position: 'absolute', top: 48,  left: 175 },
   critDie:    { position: 'absolute', top: 93,  left: 46  },
   fumble:     { position: 'absolute', top: 93,  left: 190 },
+  artifactCheck:     { position: 'absolute', top: 93,  left: 100 },
 
   str:  { position: 'absolute', top: 116, right: 135 },
   agi:  { position: 'absolute', top: 131, right: 135 },
@@ -225,6 +227,7 @@ const landscapeStyles = StyleSheet.create({
   occupation: { position: 'absolute', top: 155, left: 40  },
   critDie:    { position: 'absolute', top: 127, left: 160 },
   fumble:     { position: 'absolute', top: 127, left: 230 },
+  artifactCheck: { position: 'absolute', top: 127,  left: 70 },
 
   str:  { position: 'absolute', top: 307, left: 75, width: 25 },
   agi:  { position: 'absolute', top: 326, left: 75, width: 25 },
@@ -449,6 +452,7 @@ export const generateRandomCharacter = (options = {}) => {
     message:       message,
     armourFumbleBase: armourFumbleBase,
     armourACBonus: armourACBonusStr,
+    artifactCheck: '1d20' + addSign(intMod),
   };
 };
 
@@ -464,6 +468,7 @@ const Character = ({ character, position }) => (
     <Text style={[styles.text, styles.occupation]}>{character.occupation}</Text>
     <Text style={[styles.text, styles.critDie]}>{character.critDie}</Text>
     <Text style={[styles.text, styles.fumble]}>{character.fumble}</Text>
+    <Text style={[styles.text, styles.artifactCheck]}>{character.artifactCheck}</Text>
 
     <Text style={[styles.mediumText, styles.str]}>{character.stats.str.value}</Text>
     <Text style={[styles.mediumText, styles.strMod]}>({character.stats.str.modifier >= 0 ? '+' : ''}{character.stats.str.modifier})</Text>
@@ -522,6 +527,7 @@ const LandscapeCharacter = ({ character, position }) => (
     <Text style={[landscapeStyles.text, landscapeStyles.occupation]}>{character.occupation}</Text>
     <Text style={[landscapeStyles.text, landscapeStyles.critDie]}>{character.critDie}</Text>
     <Text style={[landscapeStyles.text, landscapeStyles.fumble]}>{character.fumble}</Text>
+    <Text style={[landscapeStyles.text, landscapeStyles.artifactCheck]}>{character.artifactCheck}</Text>
 
     <Text style={[landscapeStyles.text, landscapeStyles.str]}>{character.stats.str.value}</Text>
     <Text style={[landscapeStyles.text, landscapeStyles.strMod]}>({character.stats.str.modifier >= 0 ? '+' : ''}{character.stats.str.modifier})</Text>
@@ -552,6 +558,7 @@ const LandscapeCharacter = ({ character, position }) => (
     <Text style={[landscapeStyles.largeText,      landscapeStyles.reflex]}>{character.reflex >= 0 ? '+' : ''}{character.reflex}</Text>
     <Text style={[landscapeStyles.largeTextWhite, landscapeStyles.fortitude]}>{character.fortitude >= 0 ? '+' : ''}{character.fortitude}</Text>
     <Text style={[landscapeStyles.largeTextWhite, landscapeStyles.will]}>{character.will >= 0 ? '+' : ''}{character.will}</Text>
+
 
     <Text style={[landscapeStyles.largeText,  landscapeStyles.speed]}>{character.speed + "'"}</Text>
     <Text style={[landscapeStyles.smallText,  landscapeStyles.wealth]}>{character.wealth}</Text>
