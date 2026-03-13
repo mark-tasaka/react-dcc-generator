@@ -225,10 +225,10 @@ const landscapeStyles = StyleSheet.create({
   gender:     { position: 'absolute', top: 107,  left: 170 },
   genotype:   { position: 'absolute', top: 127,  left: 40  },
   alignment:  { position: 'absolute', top: 127, left: 40  },
-  occupation: { position: 'absolute', top: 107, left: 220  },
-  critDie:    { position: 'absolute', top: 127, left: 160 },
-  fumble:     { position: 'absolute', top: 127, left: 230 },
-  artifactCheck: { position: 'absolute', top: 127,  left: 70 },
+  occupation: { position: 'absolute', top: 107, left: 200  },
+  critDie:    { position: 'absolute', top: 163, left: 55 },
+  fumble:     { position: 'absolute', top: 163, left: 239 },
+  artifactCheck: { position: 'absolute', top: 163,  left: 120 },
 
   str:  { position: 'absolute', top: 307, left: 75, width: 25 },
   agi:  { position: 'absolute', top: 326, left: 75, width: 25 },
@@ -267,7 +267,7 @@ const landscapeStyles = StyleSheet.create({
   armourACBonus:    { position: 'absolute', top: 343, left: 200 },
   armourFumbleBase: { position: 'absolute', top: 343, left: 200 },
   equipment:        { position: 'absolute', top: 378, left: 165, width: 190 },
-  maxTechLevel:     { position: 'absolute', top: 343, left: 165 },
+  maxTechLevel:     { position: 'absolute', top: 163, left: 188 },
   physicalDescription:            { position: 'absolute', top: 440, left: 165, width: 190 },
   message:          { position: 'absolute', top: 488, left: 165, width: 190 },
 });
