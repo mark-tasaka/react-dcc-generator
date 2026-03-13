@@ -223,9 +223,9 @@ const landscapeStyles = StyleSheet.create({
 
   name:       { position: 'absolute', top: 107,  left: 50  },
   gender:     { position: 'absolute', top: 107,  left: 170 },
-  genotype:   { position: 'absolute', top: 127,  left: 40  },
-  alignment:  { position: 'absolute', top: 127, left: 40  },
-  occupation: { position: 'absolute', top: 107, left: 200  },
+  genotype:   { position: 'absolute', top: 135,  left: 50  },
+  alignment:  { position: 'absolute', top: 135, left: 155  },
+  occupation: { position: 'absolute', top: 107, left: 225  },
   critDie:    { position: 'absolute', top: 163, left: 55 },
   fumble:     { position: 'absolute', top: 163, left: 239 },
   artifactCheck: { position: 'absolute', top: 163,  left: 120 },
