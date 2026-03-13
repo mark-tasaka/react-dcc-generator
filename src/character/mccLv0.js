@@ -53,7 +53,7 @@ const MccLv0 = () => {                    // ← this line was missing
       const url = URL.createObjectURL(pdfBlob);
       const link = document.createElement('a');
       link.href = url;
-      link.download = 'dcc-zero-level-characters.pdf';
+      link.download = 'mcc-zero-level-characters.pdf';
       document.body.appendChild(link);
       link.click();
       document.body.removeChild(link);

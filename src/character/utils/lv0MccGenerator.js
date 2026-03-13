@@ -45,19 +45,34 @@ import {
   addSign,
 } from './mccAdjustments.js';
 
+
 Font.register({
-  family: 'Roboto Mono',
+  family: 'Monospace',
   fonts: [
     {
-      src: 'https://fonts.gstatic.com/s/robotomono/v23/L0xuDF4xlVMF-BfR8bXMIhJHg45mwgGEFl0_3vrtROW4.woff2',
+      src: `${process.env.PUBLIC_URL}/fonts/Roboto-Regular.ttf`,
       fontWeight: 'normal',
     },
     {
-      src: 'https://fonts.gstatic.com/s/robotomono/v23/L0xuDF4xlVMF-BfR8bXMIhJHg45mwgGEFl0_Xvs_ROW4.woff2',
+      src: `${process.env.PUBLIC_URL}/fonts/Roboto-Bold.ttf`,
       fontWeight: 'bold',
     }
   ]
 });
+
+// Font.register({
+//   family: 'Monospace',
+//   fonts: [
+//     {
+//       src: `${process.env.PUBLIC_URL}/fonts/JetBrainsMono-Medium.ttf`,
+//       fontWeight: 'normal',
+//     },
+//     {
+//       src: `${process.env.PUBLIC_URL}/fonts/JetBrainsMono-Bold.ttf`,
+//       fontWeight: 'bold',
+//     }
+//   ]
+// });
 
 // Complete PDF Styles
 const styles = StyleSheet.create({
@@ -96,8 +111,9 @@ const styles = StyleSheet.create({
   },
   mediumText: {
     fontSize: 11,
-    color: 'black',
+    color: 'red',
     fontWeight: 'bold',
+    fontFamily: 'Monospace',
   },
   largeText: {
     fontSize: 11,
