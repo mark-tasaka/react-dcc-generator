@@ -198,7 +198,7 @@ const landscapeStyles = StyleSheet.create({
   rightHalf: { top: '0%', left: '50%' },
 
   text: {
-    fontSize: 12,
+    fontSize: 11,
     color: 'black',
     fontWeight: 'bold',
   },
@@ -221,11 +221,11 @@ const landscapeStyles = StyleSheet.create({
     color: 'black',
   },
 
-  name:       { position: 'absolute', top: 97,  left: 40  },
-  gender:     { position: 'absolute', top: 97,  left: 200 },
+  name:       { position: 'absolute', top: 107,  left: 50  },
+  gender:     { position: 'absolute', top: 107,  left: 170 },
   genotype:   { position: 'absolute', top: 127,  left: 40  },
   alignment:  { position: 'absolute', top: 127, left: 40  },
-  occupation: { position: 'absolute', top: 155, left: 40  },
+  occupation: { position: 'absolute', top: 107, left: 220  },
   critDie:    { position: 'absolute', top: 127, left: 160 },
   fumble:     { position: 'absolute', top: 127, left: 230 },
   artifactCheck: { position: 'absolute', top: 127,  left: 70 },
