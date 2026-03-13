@@ -104,13 +104,13 @@ const styles = StyleSheet.create({
     color: 'black',
     fontWeight: 'bold',
   },
-  textTest: {
-    fontSize: 8,
-    color: 'red',
-    fontWeight: 'bold',
-  },
   mediumText: {
     fontSize: 11,
+    color: 'black',
+    fontWeight: 'bold',
+  },
+  monoText: {
+    fontSize: 10,
     color: 'red',
     fontWeight: 'bold',
     fontFamily: 'Monospace',
@@ -500,23 +500,23 @@ const Character = ({ character, position }) => (
     <Text style={[styles.text, styles.fumble]}>{character.fumble}</Text>
     <Text style={[styles.text, styles.artifactCheck]}>{character.artifactCheck}</Text>
 
-    <Text style={[styles.mediumText, styles.str]}>{character.stats.str.value}</Text>
-    <Text style={[styles.mediumText, styles.strMod]}>({character.stats.str.modifier >= 0 ? '+' : ''}{character.stats.str.modifier})</Text>
+    <Text style={[styles.monoText, styles.str]}>{character.stats.str.value}</Text>
+    <Text style={[styles.monoText, styles.strMod]}>({character.stats.str.modifier >= 0 ? '+' : ''}{character.stats.str.modifier})</Text>
 
-    <Text style={[styles.mediumText, styles.agi]}>{character.stats.agi.value}</Text>
-    <Text style={[styles.mediumText, styles.agiMod]}>({character.stats.agi.modifier >= 0 ? '+' : ''}{character.stats.agi.modifier})</Text>
+    <Text style={[styles.monoText, styles.agi]}>{character.stats.agi.value}</Text>
+    <Text style={[styles.monoText, styles.agiMod]}>({character.stats.agi.modifier >= 0 ? '+' : ''}{character.stats.agi.modifier})</Text>
 
-    <Text style={[styles.mediumText, styles.sta]}>{character.stats.sta.value}</Text>
-    <Text style={[styles.mediumText, styles.staMod]}>({character.stats.sta.modifier >= 0 ? '+' : ''}{character.stats.sta.modifier})</Text>
+    <Text style={[styles.monoText, styles.sta]}>{character.stats.sta.value}</Text>
+    <Text style={[styles.monoText, styles.staMod]}>({character.stats.sta.modifier >= 0 ? '+' : ''}{character.stats.sta.modifier})</Text>
 
-    <Text style={[styles.mediumText, styles.per]}>{character.stats.per.value}</Text>
-    <Text style={[styles.mediumText, styles.perMod]}>({character.stats.per.modifier >= 0 ? '+' : ''}{character.stats.per.modifier})</Text>
+    <Text style={[styles.monoText, styles.per]}>{character.stats.per.value}</Text>
+    <Text style={[styles.monoText, styles.perMod]}>({character.stats.per.modifier >= 0 ? '+' : ''}{character.stats.per.modifier})</Text>
 
-    <Text style={[styles.mediumText, styles.int]}>{character.stats.int.value}</Text>
-    <Text style={[styles.mediumText, styles.intMod]}>({character.stats.int.modifier >= 0 ? '+' : ''}{character.stats.int.modifier})</Text>
+    <Text style={[styles.monoText, styles.int]}>{character.stats.int.value}</Text>
+    <Text style={[styles.monoText, styles.intMod]}>({character.stats.int.modifier >= 0 ? '+' : ''}{character.stats.int.modifier})</Text>
 
-    <Text style={[styles.mediumText, styles.luck]}>{character.stats.luck.value}</Text>
-    <Text style={[styles.mediumText, styles.luckMod]}>({character.stats.luck.modifier >= 0 ? '+' : ''}{character.stats.luck.modifier})</Text>
+    <Text style={[styles.monoText, styles.luck]}>{character.stats.luck.value}</Text>
+    <Text style={[styles.monoText, styles.luckMod]}>({character.stats.luck.modifier >= 0 ? '+' : ''}{character.stats.luck.modifier})</Text>
 
     <Text style={[styles.largeText, styles.ac]}>{character.ac}</Text>
     <Text style={[styles.largeText, styles.hp]}>{character.hp}</Text>
