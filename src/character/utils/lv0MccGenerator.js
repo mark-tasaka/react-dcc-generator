@@ -203,7 +203,7 @@ const landscapeStyles = StyleSheet.create({
     fontWeight: 'bold',
   },
   testText: {
-    fontSize: 14,
+    fontSize: 10,
     color: 'red',
     fontWeight: 'bold',
   },
@@ -267,7 +267,7 @@ const landscapeStyles = StyleSheet.create({
   wealth:           { position: 'absolute', top: 460, left: 30,  width: 110 },
   languages:        { position: 'absolute', top: 490, left: 30,  width: 110 },
   birthAugur:       { position: 'absolute', top: 202, left: 260, width: 100 },
-  weapon:           { position: 'absolute', top: 288, left: 165 },
+  weapon:           { position: 'absolute', top: 350, left: 50 },
   weaponDamage:     { position: 'absolute', top: 288, left: 310 },
   armour:           { position: 'absolute', top: 343, left: 165 },
   armourACBonus:    { position: 'absolute', top: 343, left: 200 },
@@ -572,7 +572,7 @@ const LandscapeCharacter = ({ character, position }) => (
 
 
     <Text style={[landscapeStyles.largeTextWhite,  landscapeStyles.speed]}>{character.speed + "'"}</Text>
-    <Text style={[landscapeStyles.smallText,  landscapeStyles.wealth]}>{character.wealth}</Text>
+    <Text style={[landscapeStyles.text,  landscapeStyles.wealth]}>{character.wealth}</Text>
     <Text style={[landscapeStyles.smallText,  landscapeStyles.languages]}>{character.languages}</Text>
     <Text style={[landscapeStyles.smallText,  landscapeStyles.birthAugur]}>{character.birthAugur}</Text>
     <Text style={[landscapeStyles.smallText,  landscapeStyles.weapon]}>{character.weapon}</Text>
