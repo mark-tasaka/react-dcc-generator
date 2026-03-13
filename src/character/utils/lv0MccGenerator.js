@@ -202,6 +202,11 @@ const landscapeStyles = StyleSheet.create({
     color: 'black',
     fontWeight: 'bold',
   },
+  testText: {
+    fontSize: 14,
+    color: 'red',
+    fontWeight: 'bold',
+  },
   largeText: {
     fontSize: 14,
     color: 'black',
@@ -212,15 +217,10 @@ const landscapeStyles = StyleSheet.create({
     color: 'white',
     fontWeight: 'bold',
   },
-  xLargeText: {
-    fontSize: 15,
-    color: 'black',
-    fontWeight: 'bold',
-  },
   smallText: {
     fontSize: 10,
     color: 'black',
-    color: 'bold',
+    fontWeight: 'bold',
   },
   xSmallText: {
     fontSize: 7,
@@ -243,25 +243,25 @@ const landscapeStyles = StyleSheet.create({
   int:  { position: 'absolute', top: 388, left: 75, width: 25 },
   luck: { position: 'absolute', top: 408, left: 75, width: 25 },
 
-  strMod:  { position: 'absolute', top: 307, left: 107, width: 35 },
-  agiMod:  { position: 'absolute', top: 326, left: 107, width: 35 },
-  staMod:  { position: 'absolute', top: 346, left: 107, width: 35 },
-  perMod:  { position: 'absolute', top: 367, left: 107, width: 35 },
-  intMod:  { position: 'absolute', top: 388, left: 107, width: 35 },
-  luckMod: { position: 'absolute', top: 408, left: 107, width: 35 },
+  strMod:  { position: 'absolute', top: 307, left: 107 },
+  agiMod:  { position: 'absolute', top: 326, left: 107 },
+  staMod:  { position: 'absolute', top: 346, left: 107 },
+  perMod:  { position: 'absolute', top: 367, left: 107 },
+  intMod:  { position: 'absolute', top: 388, left: 107 },
+  luckMod: { position: 'absolute', top: 408, left: 107 },
 
   ac:            { position: 'absolute', top: 195, right: 264 },
   hp:            { position: 'absolute', top: 232, left: 120  },
-  init:          { position: 'absolute', top: 195, left: 185 },
-  melee:         { position: 'absolute', top: 219, left: 175, width: 35 },
-  missile:       { position: 'absolute', top: 237, left: 175, width: 35 },
-  meleeDamage:   { position: 'absolute', top: 219, left: 198, width: 35 },
-  missileDamage: { position: 'absolute', top: 237, left: 198, width: 35 },
+  init:          { position: 'absolute', top: 141, left: 294 },
+  melee:         { position: 'absolute', top: 278, left: 82 },
+  missile:       { position: 'absolute', top: 294, left: 82 },
+  meleeDamage:   { position: 'absolute', top: 278, left: 113 },
+  missileDamage: { position: 'absolute', top: 294, left: 113 },
 
   reflex:    { position: 'absolute', top: 100, left: 300 },
   fortitude: { position: 'absolute', top: 100, left: 340 },
   will:      { position: 'absolute', top: 140, left: 300 },
-  actionDie:      { position: 'absolute', top: 160, left: 300 },
+  actionDie:      { position: 'absolute', top: 151, left: 312 },
 
   speed:            { position: 'absolute', top: 140, left: 345 },
   wealth:           { position: 'absolute', top: 460, left: 30,  width: 110 },
@@ -559,7 +559,7 @@ const LandscapeCharacter = ({ character, position }) => (
 
     <Text style={[landscapeStyles.largeText, landscapeStyles.ac]}>{character.ac}</Text>
     <Text style={[landscapeStyles.largeText, landscapeStyles.hp]}>{character.hp}</Text>
-    <Text style={[landscapeStyles.text, landscapeStyles.init]}>{character.init >= 0 ? '+' : ''}{character.init}</Text>
+    <Text style={[landscapeStyles.testText, landscapeStyles.init]}>{character.init >= 0 ? '+' : ''}{character.init}</Text>
     <Text style={[landscapeStyles.text, landscapeStyles.melee]}>{character.melee >= 0 ? '+' : ''}{character.melee}</Text>
     <Text style={[landscapeStyles.text, landscapeStyles.missile]}>{character.missile >= 0 ? '+' : ''}{character.missile}</Text>
     <Text style={[landscapeStyles.text, landscapeStyles.meleeDamage]}>{character.meleeDamage >= 0 ? '+' : ''}{character.meleeDamage}</Text>
