@@ -212,6 +212,11 @@ const landscapeStyles = StyleSheet.create({
     color: 'white',
     fontWeight: 'bold',
   },
+  xLargeText: {
+    fontSize: 15,
+    color: 'black',
+    fontWeight: 'bold',
+  },
   smallText: {
     fontSize: 10,
     color: 'black',
@@ -245,8 +250,8 @@ const landscapeStyles = StyleSheet.create({
   intMod:  { position: 'absolute', top: 388, left: 107, width: 35 },
   luckMod: { position: 'absolute', top: 408, left: 107, width: 35 },
 
-  ac:            { position: 'absolute', top: 210, right: 293 },
-  hp:            { position: 'absolute', top: 253, left: 46  },
+  ac:            { position: 'absolute', top: 195, right: 264 },
+  hp:            { position: 'absolute', top: 232, left: 120  },
   init:          { position: 'absolute', top: 195, left: 185 },
   melee:         { position: 'absolute', top: 219, left: 175, width: 35 },
   missile:       { position: 'absolute', top: 237, left: 175, width: 35 },
@@ -552,8 +557,8 @@ const LandscapeCharacter = ({ character, position }) => (
     <Text style={[landscapeStyles.text, landscapeStyles.luck]}>{character.stats.luck.value}</Text>
     <Text style={[landscapeStyles.text, landscapeStyles.luckMod]}>({character.stats.luck.modifier >= 0 ? '+' : ''}{character.stats.luck.modifier})</Text>
 
-    <Text style={[landscapeStyles.text, landscapeStyles.ac]}>{character.ac}</Text>
-    <Text style={[landscapeStyles.text, landscapeStyles.hp]}>{character.hp}</Text>
+    <Text style={[landscapeStyles.largeText, landscapeStyles.ac]}>{character.ac}</Text>
+    <Text style={[landscapeStyles.largeText, landscapeStyles.hp]}>{character.hp}</Text>
     <Text style={[landscapeStyles.text, landscapeStyles.init]}>{character.init >= 0 ? '+' : ''}{character.init}</Text>
     <Text style={[landscapeStyles.text, landscapeStyles.melee]}>{character.melee >= 0 ? '+' : ''}{character.melee}</Text>
     <Text style={[landscapeStyles.text, landscapeStyles.missile]}>{character.missile >= 0 ? '+' : ''}{character.missile}</Text>
@@ -576,7 +581,7 @@ const LandscapeCharacter = ({ character, position }) => (
     <Text style={[landscapeStyles.smallText,  landscapeStyles.armour]}>{character.armour}</Text>
     <Text style={[landscapeStyles.smallText,  landscapeStyles.armourACBonus]}>{character.armourACBonus}</Text>
     <Text style={[landscapeStyles.smallText,  landscapeStyles.armourFumbleBase]}>{character.armourFumbleBase}</Text>
-    <Text style={[landscapeStyles.smallText,  landscapeStyles.maxTechLevel]}>{character.maxTechLevel}</Text>
+    <Text style={[landscapeStyles.text,  landscapeStyles.maxTechLevel]}>{character.maxTechLevel}</Text>
     <Text style={[landscapeStyles.smallText,  landscapeStyles.physicalDescription]}>{character.physicalDescription}</Text>
     <Text style={[landscapeStyles.xSmallText, landscapeStyles.message]}>{character.message}</Text>
   </View>
