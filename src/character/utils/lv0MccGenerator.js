@@ -215,6 +215,7 @@ const landscapeStyles = StyleSheet.create({
   smallText: {
     fontSize: 10,
     color: 'black',
+    color: 'bold',
   },
   xSmallText: {
     fontSize: 7,
@@ -224,8 +225,8 @@ const landscapeStyles = StyleSheet.create({
   name:       { position: 'absolute', top: 107,  left: 50  },
   gender:     { position: 'absolute', top: 107,  left: 170 },
   genotype:   { position: 'absolute', top: 135,  left: 50  },
-  alignment:  { position: 'absolute', top: 135, left: 155  },
-  occupation: { position: 'absolute', top: 107, left: 225  },
+  alignment:  { position: 'absolute', top: 135, left: 153  },
+  occupation: { position: 'absolute', top: 107, left: 222  },
   critDie:    { position: 'absolute', top: 163, left: 55 },
   fumble:     { position: 'absolute', top: 163, left: 239 },
   artifactCheck: { position: 'absolute', top: 163,  left: 120 },
@@ -526,8 +527,8 @@ const LandscapeCharacter = ({ character, position }) => (
   <View style={[landscapeStyles.characterContainer, position]}>
     <Text style={[landscapeStyles.text, landscapeStyles.name]}>{character.name}</Text>
     <Text style={[landscapeStyles.text, landscapeStyles.gender]}>{character.gender}</Text>
-    <Text style={[landscapeStyles.text, landscapeStyles.genotype]}>{character.genotype}</Text>
-    <Text style={[landscapeStyles.text, landscapeStyles.alignment]}>{character.alignment}</Text>
+    <Text style={[landscapeStyles.smallText, landscapeStyles.genotype]}>{character.genotype}</Text>
+    <Text style={[landscapeStyles.smallText, landscapeStyles.alignment]}>{character.alignment}</Text>
     <Text style={[landscapeStyles.text, landscapeStyles.occupation]}>{character.occupation}</Text>
     <Text style={[landscapeStyles.text, landscapeStyles.critDie]}>{character.critDie}</Text>
     <Text style={[landscapeStyles.text, landscapeStyles.fumble]}>{character.fumble}</Text>
