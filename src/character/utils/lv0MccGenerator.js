@@ -202,6 +202,11 @@ const landscapeStyles = StyleSheet.create({
     color: 'black',
     fontWeight: 'bold',
   },
+  mediumText: {
+    fontSize: 10,
+    color: 'black',
+    fontWeight: 'bold',
+  },
   testText: {
     fontSize: 10,
     color: 'red',
@@ -532,8 +537,8 @@ const LandscapeCharacter = ({ character, position }) => (
   <View style={[landscapeStyles.characterContainer, position]}>
     <Text style={[landscapeStyles.text, landscapeStyles.name]}>{character.name}</Text>
     <Text style={[landscapeStyles.text, landscapeStyles.gender]}>{character.gender}</Text>
-    <Text style={[landscapeStyles.smallText, landscapeStyles.genotype]}>{character.genotype}</Text>
-    <Text style={[landscapeStyles.smallText, landscapeStyles.alignment]}>{character.alignment}</Text>
+    <Text style={[landscapeStyles.mediumText, landscapeStyles.genotype]}>{character.genotype}</Text>
+    <Text style={[landscapeStyles.mediumText, landscapeStyles.alignment]}>{character.alignment}</Text>
     <Text style={[landscapeStyles.text, landscapeStyles.occupation]}>{character.occupation}</Text>
     <Text style={[landscapeStyles.text, landscapeStyles.critDie]}>{character.critDie}</Text>
     <Text style={[landscapeStyles.text, landscapeStyles.fumble]}>{character.fumble}</Text>
