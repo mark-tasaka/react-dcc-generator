@@ -157,6 +157,7 @@ const styles = StyleSheet.create({
   reflex:    { position: 'absolute', top: 45, left: 254 },
   fortitude: { position: 'absolute', top: 51, left: 235 },
   will:      { position: 'absolute', top: 51, left: 270 },
+  actionDie:      { position: 'absolute', top: 81, left: 249 },
 
   speed:            { position: 'absolute', top: 76,  left: 270 },
   wealth:           { position: 'absolute', top: 318, left: 25,  width: 80  },
@@ -254,6 +255,7 @@ const landscapeStyles = StyleSheet.create({
   reflex:    { position: 'absolute', top: 100, left: 300 },
   fortitude: { position: 'absolute', top: 100, left: 340 },
   will:      { position: 'absolute', top: 140, left: 300 },
+  actionDie:      { position: 'absolute', top: 160, left: 300 },
 
   speed:            { position: 'absolute', top: 140, left: 345 },
   wealth:           { position: 'absolute', top: 460, left: 30,  width: 110 },
@@ -453,6 +455,7 @@ export const generateRandomCharacter = (options = {}) => {
     armourFumbleBase: armourFumbleBase,
     armourACBonus: armourACBonusStr,
     artifactCheck: '1d20' + addSign(intMod),
+    actionDie: 'd20',
   };
 };
 
@@ -499,6 +502,7 @@ const Character = ({ character, position }) => (
     <Text style={[styles.largeTextWhite, styles.reflex]}>{character.reflex >= 0 ? '+' : ''}{character.reflex}</Text>
     <Text style={[styles.largeText, styles.fortitude]}>{character.fortitude >= 0 ? '+' : ''}{character.fortitude}</Text>
     <Text style={[styles.largeText, styles.will]}>{character.will >= 0 ? '+' : ''}{character.will}</Text>
+    <Text style={[styles.largeText, styles.actionDie]}>{character.actionDie}</Text>
 
     <Text style={[styles.largeTextWhite,  styles.speed]}>{character.speed + "'"}</Text>
     <Text style={[styles.smallText,  styles.wealth]}>{character.wealth}</Text>
@@ -558,6 +562,7 @@ const LandscapeCharacter = ({ character, position }) => (
     <Text style={[landscapeStyles.largeText,      landscapeStyles.reflex]}>{character.reflex >= 0 ? '+' : ''}{character.reflex}</Text>
     <Text style={[landscapeStyles.largeTextWhite, landscapeStyles.fortitude]}>{character.fortitude >= 0 ? '+' : ''}{character.fortitude}</Text>
     <Text style={[landscapeStyles.largeTextWhite, landscapeStyles.will]}>{character.will >= 0 ? '+' : ''}{character.will}</Text>
+    <Text style={[landscapeStyles.largeText, landscapeStyles.actionDie]}>{character.actionDie}</Text>
 
 
     <Text style={[landscapeStyles.largeText,  landscapeStyles.speed]}>{character.speed + "'"}</Text>
