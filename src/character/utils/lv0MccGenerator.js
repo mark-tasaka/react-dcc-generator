@@ -48,9 +48,6 @@ import {
 } from './mccAdjustments.js';
 
 
-// ── FIXED: prefix with window.location.origin to give React PDF an absolute
-//    URL it can parse with new URL(). Without this, the root-relative path
-//    that webpack returns (/static/media/…) causes "Unknown font format".
 Font.register({
   family: 'Monospace',
   fonts: [
@@ -133,19 +130,19 @@ const styles = StyleSheet.create({
   fumble:     { position: 'absolute', top: 93,  left: 190 },
   artifactCheck:     { position: 'absolute', top: 93,  left: 100 },
 
-  str:  { position: 'absolute', top: 116, right: 135 },
-  agi:  { position: 'absolute', top: 131, right: 135 },
-  sta:  { position: 'absolute', top: 147, right: 135 },
-  per:  { position: 'absolute', top: 162, right: 135 },
-  int:  { position: 'absolute', top: 177, right: 135 },
-  luck: { position: 'absolute', top: 193, right: 135 },
+  str:  { position: 'absolute', top: 116, right: 138 },
+  agi:  { position: 'absolute', top: 131, right: 138 },
+  sta:  { position: 'absolute', top: 147, right: 138 },
+  per:  { position: 'absolute', top: 162, right: 138 },
+  int:  { position: 'absolute', top: 177, right: 138 },
+  luck: { position: 'absolute', top: 193, right: 138 },
 
-  strMod:  { position: 'absolute', top: 116, left: 175 },
-  agiMod:  { position: 'absolute', top: 131, left: 175 },
-  staMod:  { position: 'absolute', top: 147, left: 175 },
-  perMod:  { position: 'absolute', top: 162, left: 175 },
-  intMod:  { position: 'absolute', top: 177, left: 175 },
-  luckMod: { position: 'absolute', top: 193, left: 175 },
+  strMod:  { position: 'absolute', top: 116, left: 170 },
+  agiMod:  { position: 'absolute', top: 131, left: 170 },
+  staMod:  { position: 'absolute', top: 147, left: 170 },
+  perMod:  { position: 'absolute', top: 162, left: 170 },
+  intMod:  { position: 'absolute', top: 177, left: 170 },
+  luckMod: { position: 'absolute', top: 193, left: 170 },
 
   ac:            { position: 'absolute', top: 115, right: 196 },
   hp:            { position: 'absolute', top: 144, right: 200 },
@@ -503,10 +500,10 @@ const Character = ({ character, position }) => (
     <Text style={[styles.largeText, styles.ac]}>{character.ac}</Text>
     <Text style={[styles.largeText, styles.hp]}>{character.hp}</Text>
     <Text style={[styles.largeTextWhite, styles.init]}>{character.init >= 0 ? '+' : ''}{character.init}</Text>
-    <Text style={[styles.mediumText, styles.melee]}>{character.melee >= 0 ? '+' : ''}{character.melee}</Text>
-    <Text style={[styles.mediumText, styles.missile]}>{character.missile >= 0 ? '+' : ''}{character.missile}</Text>
-    <Text style={[styles.mediumText, styles.meleeDamage]}>{character.meleeDamage >= 0 ? '+' : ''}{character.meleeDamage}</Text>
-    <Text style={[styles.mediumText, styles.missileDamage]}>{character.missileDamage >= 0 ? '+' : ''}{character.missileDamage}</Text>
+    <Text style={[styles.monoText, styles.melee]}>{character.melee >= 0 ? '+' : ''}{character.melee}</Text>
+    <Text style={[styles.monoText, styles.missile]}>{character.missile >= 0 ? '+' : ''}{character.missile}</Text>
+    <Text style={[styles.monoText, styles.meleeDamage]}>{character.meleeDamage >= 0 ? '+' : ''}{character.meleeDamage}</Text>
+    <Text style={[styles.monoText, styles.missileDamage]}>{character.missileDamage >= 0 ? '+' : ''}{character.missileDamage}</Text>
 
     <Text style={[styles.largeTextWhite, styles.reflex]}>{character.reflex >= 0 ? '+' : ''}{character.reflex}</Text>
     <Text style={[styles.largeText, styles.fortitude]}>{character.fortitude >= 0 ? '+' : ''}{character.fortitude}</Text>
