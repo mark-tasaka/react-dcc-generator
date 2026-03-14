@@ -199,6 +199,12 @@ const landscapeStyles = StyleSheet.create({
     color: 'black',
     fontWeight: 'bold',
   },
+  monoText: {
+    fontSize: 13,
+    fontWeight: 'bold',
+    color: 'black',
+    fontFamily: 'Monospace',
+  },
   mediumText: {
     fontSize: 10,
     color: 'black',
@@ -538,23 +544,23 @@ const LandscapeCharacter = ({ character, position }) => (
     <Text style={[landscapeStyles.text, landscapeStyles.fumble]}>{character.fumble}</Text>
     <Text style={[landscapeStyles.text, landscapeStyles.artifactCheck]}>{character.artifactCheck}</Text>
 
-    <Text style={[landscapeStyles.text, landscapeStyles.str]}>{character.stats.str.value}</Text>
-    <Text style={[landscapeStyles.text, landscapeStyles.strMod]}>({character.stats.str.modifier >= 0 ? '+' : ''}{character.stats.str.modifier})</Text>
+    <Text style={[landscapeStyles.monoText, landscapeStyles.str]}>{character.stats.str.value}</Text>
+    <Text style={[landscapeStyles.monoText, landscapeStyles.strMod]}>({character.stats.str.modifier >= 0 ? '+' : ''}{character.stats.str.modifier})</Text>
 
-    <Text style={[landscapeStyles.text, landscapeStyles.agi]}>{character.stats.agi.value}</Text>
-    <Text style={[landscapeStyles.text, landscapeStyles.agiMod]}>({character.stats.agi.modifier >= 0 ? '+' : ''}{character.stats.agi.modifier})</Text>
+    <Text style={[landscapeStyles.monoText, landscapeStyles.agi]}>{character.stats.agi.value}</Text>
+    <Text style={[landscapeStyles.monoText, landscapeStyles.agiMod]}>({character.stats.agi.modifier >= 0 ? '+' : ''}{character.stats.agi.modifier})</Text>
 
-    <Text style={[landscapeStyles.text, landscapeStyles.sta]}>{character.stats.sta.value}</Text>
-    <Text style={[landscapeStyles.text, landscapeStyles.staMod]}>({character.stats.sta.modifier >= 0 ? '+' : ''}{character.stats.sta.modifier})</Text>
+    <Text style={[landscapeStyles.monoText, landscapeStyles.sta]}>{character.stats.sta.value}</Text>
+    <Text style={[landscapeStyles.monoText, landscapeStyles.staMod]}>({character.stats.sta.modifier >= 0 ? '+' : ''}{character.stats.sta.modifier})</Text>
 
-    <Text style={[landscapeStyles.text, landscapeStyles.per]}>{character.stats.per.value}</Text>
-    <Text style={[landscapeStyles.text, landscapeStyles.perMod]}>({character.stats.per.modifier >= 0 ? '+' : ''}{character.stats.per.modifier})</Text>
+    <Text style={[landscapeStyles.monoText, landscapeStyles.per]}>{character.stats.per.value}</Text>
+    <Text style={[landscapeStyles.monoText, landscapeStyles.perMod]}>({character.stats.per.modifier >= 0 ? '+' : ''}{character.stats.per.modifier})</Text>
 
-    <Text style={[landscapeStyles.text, landscapeStyles.int]}>{character.stats.int.value}</Text>
-    <Text style={[landscapeStyles.text, landscapeStyles.intMod]}>({character.stats.int.modifier >= 0 ? '+' : ''}{character.stats.int.modifier})</Text>
+    <Text style={[landscapeStyles.monoText, landscapeStyles.int]}>{character.stats.int.value}</Text>
+    <Text style={[landscapeStyles.monoText, landscapeStyles.intMod]}>({character.stats.int.modifier >= 0 ? '+' : ''}{character.stats.int.modifier})</Text>
 
-    <Text style={[landscapeStyles.text, landscapeStyles.luck]}>{character.stats.luck.value}</Text>
-    <Text style={[landscapeStyles.text, landscapeStyles.luckMod]}>({character.stats.luck.modifier >= 0 ? '+' : ''}{character.stats.luck.modifier})</Text>
+    <Text style={[landscapeStyles.monoText, landscapeStyles.luck]}>{character.stats.luck.value}</Text>
+    <Text style={[landscapeStyles.monoText, landscapeStyles.luckMod]}>({character.stats.luck.modifier >= 0 ? '+' : ''}{character.stats.luck.modifier})</Text>
 
     <Text style={[landscapeStyles.largeText, landscapeStyles.ac]}>{character.ac}</Text>
     <Text style={[landscapeStyles.largeText, landscapeStyles.hp]}>{character.hp}</Text>
