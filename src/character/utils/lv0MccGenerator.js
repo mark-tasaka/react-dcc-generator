@@ -93,7 +93,6 @@ const styles = StyleSheet.create({
   },
   monoText: {
     fontSize: 10,
-    color: 'red',
     fontWeight: 'bold',
     fontFamily: 'Monospace',
   },
@@ -147,10 +146,10 @@ const styles = StyleSheet.create({
   ac:            { position: 'absolute', top: 115, right: 196 },
   hp:            { position: 'absolute', top: 144, right: 200 },
   init:          { position: 'absolute', top: 76, left: 235 },
-  melee:         { position: 'absolute', top: 183, left: 70 },
-  missile:       { position: 'absolute', top: 195, left: 70 },
-  meleeDamage:   { position: 'absolute', top: 183, left: 95 },
-  missileDamage: { position: 'absolute', top: 195, left: 95 },
+  melee:         { position: 'absolute', top: 182, left: 67 },
+  missile:       { position: 'absolute', top: 194, left: 67 },
+  meleeDamage:   { position: 'absolute', top: 183, left: 92 },
+  missileDamage: { position: 'absolute', top: 194, left: 92 },
 
   reflex:    { position: 'absolute', top: 45, left: 254 },
   fortitude: { position: 'absolute', top: 51, left: 235 },
