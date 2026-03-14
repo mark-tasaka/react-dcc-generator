@@ -1,6 +1,8 @@
 import { Document, Page, Text, View, StyleSheet, Image, Font } from '@react-pdf/renderer';
 import characterSheetBg from '../img/lvZeroMccCharacterSheet.jpg';
 import characterSheetLn from '../img/lvZeroMccCharacterSheetLandscape.jpg';
+import RobotoRegular from '../../fonts/RobotoMono-Regular.ttf';
+import RobotoBold    from '../../fonts/RobotoMono-Bold.ttf';
 import {
   getMccBirthAugur,
   getSpeed,
@@ -46,33 +48,16 @@ import {
 } from './mccAdjustments.js';
 
 
+// ── FIXED: prefix with window.location.origin to give React PDF an absolute
+//    URL it can parse with new URL(). Without this, the root-relative path
+//    that webpack returns (/static/media/…) causes "Unknown font format".
 Font.register({
   family: 'Monospace',
   fonts: [
-    {
-      src: `${process.env.PUBLIC_URL}/fonts/Roboto-Regular.ttf`,
-      fontWeight: 'normal',
-    },
-    {
-      src: `${process.env.PUBLIC_URL}/fonts/Roboto-Bold.ttf`,
-      fontWeight: 'bold',
-    }
+    { src: `${window.location.origin}${RobotoRegular}`, fontWeight: 'normal' },
+    { src: `${window.location.origin}${RobotoBold}`,    fontWeight: 'bold'   }
   ]
 });
-
-// Font.register({
-//   family: 'Monospace',
-//   fonts: [
-//     {
-//       src: `${process.env.PUBLIC_URL}/fonts/JetBrainsMono-Medium.ttf`,
-//       fontWeight: 'normal',
-//     },
-//     {
-//       src: `${process.env.PUBLIC_URL}/fonts/JetBrainsMono-Bold.ttf`,
-//       fontWeight: 'bold',
-//     }
-//   ]
-// });
 
 // Complete PDF Styles
 const styles = StyleSheet.create({
@@ -186,7 +171,7 @@ const styles = StyleSheet.create({
   armourFumbleBase: { position: 'absolute', top: 285, left: 120 },
   equipment:        { position: 'absolute', top: 315, left: 28,  width: 115 },
   maxTechLevel:     { position: 'absolute', top: 93,  left: 155 },
-  physicalDescription:            { position: 'absolute', top: 238, left: 175, width: 100 },
+  physicalDescription: { position: 'absolute', top: 238, left: 175, width: 100 },
   message:          { position: 'absolute', top: 307, left: 175, width: 100 },
 });
 
@@ -295,7 +280,7 @@ const landscapeStyles = StyleSheet.create({
   armourFumbleBase: { position: 'absolute', top: 408, left: 140 },
   equipment:        { position: 'absolute', top: 445, left: 32, width: 140 },
   maxTechLevel:     { position: 'absolute', top: 163, left: 188 },
-  physicalDescription:            { position: 'absolute', top: 440, left: 165, width: 190 },
+  physicalDescription: { position: 'absolute', top: 440, left: 165, width: 190 },
   message:          { position: 'absolute', top: 488, left: 165, width: 190 },
 });
 
@@ -341,8 +326,6 @@ export const generateRandomCharacter = (options = {}) => {
   const physicalDescription = getPhysicalDescription(species);
 
   // ── Weapon ────────────────────────────────────────────────────────────
-  // Primary: profession weapon when available, else random.
-  // Secondary: Flint dagger is always added as a second weapon.
   let primaryWeaponName, primaryWeaponDamage;
   if (profession.weapon) {
     primaryWeaponName   = profession.weapon;
@@ -357,7 +340,6 @@ export const generateRandomCharacter = (options = {}) => {
   const weaponDamage = `${primaryWeaponDamage}\n1d4`;
 
   // ── Equipment ─────────────────────────────────────────────────────────
-  // Profession equipment + random item + Waterskin (always issued).
   const extraItem      = addItem();
   const equipmentParts = [
     profession.equipment,
@@ -590,7 +572,6 @@ const LandscapeCharacter = ({ character, position }) => (
     <Text style={[landscapeStyles.largeText, landscapeStyles.fortitude]}>{character.fortitude >= 0 ? '+' : ''}{character.fortitude}</Text>
     <Text style={[landscapeStyles.largeText, landscapeStyles.will]}>{character.will >= 0 ? '+' : ''}{character.will}</Text>
     <Text style={[landscapeStyles.largeText, landscapeStyles.actionDie]}>{character.actionDie}</Text>
-
 
     <Text style={[landscapeStyles.largeTextWhite,  landscapeStyles.speed]}>{character.speed + "'"}</Text>
     <Text style={[landscapeStyles.text,  landscapeStyles.wealth]}>{character.wealth}</Text>
