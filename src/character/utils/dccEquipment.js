@@ -51,11 +51,11 @@ export const generateEquipment = (selectedOccupation) => {
     // Handle special cases for specific occupation IDs
     if (selectedOccupation.id === 92) {
         // Wainwright - (with special contents
-        return selectedOccupation.tradeGood + ' ' + getRandomElement(PUSHCART_ITEMS) + ', ' + randomEquipment;
+        return selectedOccupation.tradeGood + getRandomElement(PUSHCART_ITEMS) + ', ' + randomEquipment;
     }
     else if (selectedOccupation.id >= 48 && selectedOccupation.id <= 56) {
         // Farmers - Livestock (farm animals)
-        return selectedOccupation.tradeGood + ' ' + getRandomElement(FARM_ANIMALS) + '), ' + randomEquipment;
+        return selectedOccupation.tradeGood + getRandomElement(FARM_ANIMALS) + '), ' + randomEquipment;
     }
     
     // Handle regular trade goods

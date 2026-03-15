@@ -149,11 +149,11 @@ variableWidthText: {
   // Combat stats - Convert right positioning to left for container compatibility
   ac: { position: 'absolute', top: 122, right: 230}, 
   hp: { position: 'absolute', top: 155, left: 32 },
-  init: { position: 'absolute', top: 110, left: 142},
-  melee: { position: 'absolute', top: 130, left: 132, width: 30 },
-  missile: { position: 'absolute', top: 142, left: 132, width: 30 },
-  meleeDamage: { position: 'absolute', top: 130, left: 152, width: 30 },
-  missileDamage: { position: 'absolute', top: 142, left: 152, width: 30 },
+  init: { position: 'absolute', top: 108, left: 142},
+  melee: { position: 'absolute', top: 128, left: 132},
+  missile: { position: 'absolute', top: 140, left: 132 },
+  meleeDamage: { position: 'absolute', top: 128, left: 152 },
+  missileDamage: { position: 'absolute', top: 140, left: 152 },
   
   // Saves - Convert right positioning to left for container compatibility
   reflex: { position: 'absolute', top: 35, left: 235 },    // Converted from right: 65
@@ -462,11 +462,11 @@ const Character = ({ character, position }) => (
     {/* Combat Stats */}
     <Text style={[styles.text, styles.ac]}>{character.ac}</Text>
     <Text style={[styles.text, styles.hp]}>{character.hp}</Text>
-    <Text style={[styles.text, styles.init]}>{character.init >= 0 ? '+' : ''}{character.init}</Text>
-    <Text style={[styles.variableWidthText, styles.melee]}>{character.melee >= 0 ? '+' : ''}{character.melee}</Text>
-    <Text style={[styles.variableWidthText, styles.missile]}>{character.missile >= 0 ? '+' : ''}{character.missile}</Text>
-    <Text style={[styles.variableWidthText, styles.meleeDamage]}>{character.meleeDamage >= 0 ? '+' : ''}{character.meleeDamage}</Text>
-    <Text style={[styles.variableWidthText, styles.missileDamage]}>{character.missileDamage >= 0 ? '+' : ''}{character.missileDamage}</Text>
+    <Text style={[styles.monoText, styles.init]}>{character.init >= 0 ? '+' : ''}{character.init}</Text>
+    <Text style={[styles.monoText, styles.melee]}>{character.melee >= 0 ? '+' : ''}{character.melee}</Text>
+    <Text style={[styles.monoText, styles.missile]}>{character.missile >= 0 ? '+' : ''}{character.missile}</Text>
+    <Text style={[styles.monoText, styles.meleeDamage]}>{character.meleeDamage >= 0 ? '+' : ''}{character.meleeDamage}</Text>
+    <Text style={[styles.monoText, styles.missileDamage]}>{character.missileDamage >= 0 ? '+' : ''}{character.missileDamage}</Text>
     
     {/* Saves */}
     <Text style={[styles.largeText, styles.reflex]}>{character.reflex >= 0 ? '+' : ''}{character.reflex}</Text>
