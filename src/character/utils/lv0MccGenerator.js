@@ -450,7 +450,7 @@ export const generateRandomCharacter = (options = {}) => {
       luck: { value: luck, modifier: luckMod }
     },
     hp:            hp,
-    ac:            String(baseAC + acBonus) + ' (' + baseAC + ')',
+    ac:            String(baseAC + acBonus) + '(' + baseAC + ')',
     init:          init,
     melee:         melee,
     meleeDamage:   meleeDmg,
@@ -508,8 +508,8 @@ const Character = ({ character, position }) => (
     <Text style={[styles.monoText, styles.luck]}>{character.stats.luck.value}</Text>
     <Text style={[styles.monoText, styles.luckMod]}>({character.stats.luck.modifier >= 0 ? '+' : ''}{character.stats.luck.modifier})</Text>
 
-    <Text style={[styles.largeText, styles.ac]}>{character.ac}</Text>
-    <Text style={[styles.largeText, styles.hp]}>{character.hp}</Text>
+    <Text style={[styles.monoText, styles.ac]}>{character.ac}</Text>
+    <Text style={[styles.monoText, styles.hp]}>{character.hp}</Text>
     <Text style={[styles.largeTextWhite, styles.init]}>{character.init >= 0 ? '+' : ''}{character.init}</Text>
     <Text style={[styles.monoText, styles.melee]}>{character.melee >= 0 ? '+' : ''}{character.melee}</Text>
     <Text style={[styles.monoText, styles.missile]}>{character.missile >= 0 ? '+' : ''}{character.missile}</Text>
