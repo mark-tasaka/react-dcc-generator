@@ -102,26 +102,14 @@ const styles = StyleSheet.create({
   xSmallText: {
     fontSize: 6,
     color: 'black',
-  },// Add these new text styles
-rightAlignText: {
-  fontSize: 10,
-  color: 'black',
-  fontWeight: 'bold',
-  textAlign: 'right',
-},
+  },
 monoText: {
   fontSize: 10,
   color: 'black',
   fontWeight: 'bold',
   fontFamily: 'Monospace',
 },
-variableWidthText: {
-  fontSize: 10,
-  color: 'black',
-  fontWeight: 'bold',
-  width: 30, // Set a width for the modifier field
-},
-  
+
   // Position styles for form fields
   name: { position: 'absolute', top: 32, left: 30 },
   gender: { position: 'absolute', top: 32, left: 155 },
@@ -226,19 +214,7 @@ monoText: {
   fontWeight: 'bold',
   fontFamily: 'Monospace',
 },
-rightAlignText: {
-  fontSize: 12,
-  color: 'black',
-  fontWeight: 'bold',
-  textAlign: 'right',
-},
-variableWidthText: {
-  fontSize: 12,
-  color: 'black',
-  fontWeight: 'bold',
-  width: 35,
-},
-  
+
   // Position styles for landscape layout (you'll need to adjust these based on your landscape background)
   name: { position: 'absolute', top: 97, left: 40 },
   gender: { position: 'absolute', top: 97, left: 200 },
@@ -262,13 +238,13 @@ variableWidthText: {
   luckMod: { position: 'absolute', top: 408, left: 103 },
     
   // Combat stats (adjust these for landscape layout)
-  ac: { position: 'absolute', top: 210, right: 293 }, 
-  hp: { position: 'absolute', top: 253, left: 46 },
-  init: { position: 'absolute', top: 195, left: 185 },
-  melee: { position: 'absolute', top: 219, left: 175 },
-  missile: { position: 'absolute', top: 237, left: 175 },
-  meleeDamage: { position: 'absolute', top: 219, left: 198 },
-  missileDamage: { position: 'absolute', top: 237, left: 198 },
+  ac: { position: 'absolute', top: 208, right: 293 }, 
+  hp: { position: 'absolute', top: 250, left: 46 },
+  init: { position: 'absolute', top: 193, left: 185 },
+  melee: { position: 'absolute', top: 218, left: 175 },
+  missile: { position: 'absolute', top: 235, left: 175 },
+  meleeDamage: { position: 'absolute', top: 218, left: 198 },
+  missileDamage: { position: 'absolute', top: 235, left: 198 },
   
   // Saves (adjust for landscape)
   reflex: { position: 'absolute', top: 100, left: 300 },
@@ -407,7 +383,7 @@ export const generateRandomCharacter = (options = {}) => {
       luck: { value: luck, modifier: luckMod }
     },
     hp: hp,
-    ac: ac + getACBonusArmour(selectedOccupation.id) + ' (' + ac + ')',
+    ac: ac + getACBonusArmour(selectedOccupation.id) + '(' + ac + ')',
     init: init,
     melee: melee,
     meleeDamage: meleeDamage,
@@ -522,13 +498,13 @@ const LandscapeCharacter = ({ character, position }) => (
     <Text style={[landscapeStyles.monoText, landscapeStyles.luckMod]}>({character.stats.luck.modifier >= 0 ? '+' : ''}{character.stats.luck.modifier})</Text>
     
     {/* Combat Stats */}
-    <Text style={[landscapeStyles.text, landscapeStyles.ac]}>{character.ac}</Text>
-    <Text style={[landscapeStyles.text, landscapeStyles.hp]}>{character.hp}</Text>
-    <Text style={[landscapeStyles.text, landscapeStyles.init]}>{character.init >= 0 ? '+' : ''}{character.init}</Text>
-    <Text style={[landscapeStyles.variableWidthText, landscapeStyles.melee]}>{character.melee >= 0 ? '+' : ''}{character.melee}</Text>
-    <Text style={[landscapeStyles.variableWidthText, landscapeStyles.missile]}>{character.missile >= 0 ? '+' : ''}{character.missile}</Text>
-    <Text style={[landscapeStyles.variableWidthText, landscapeStyles.meleeDamage]}>{character.meleeDamage >= 0 ? '+' : ''}{character.meleeDamage}</Text>
-    <Text style={[landscapeStyles.variableWidthText, landscapeStyles.missileDamage]}>{character.missileDamage >= 0 ? '+' : ''}{character.missileDamage}</Text>
+    <Text style={[landscapeStyles.monoText, landscapeStyles.ac]}>{character.ac}</Text>
+    <Text style={[landscapeStyles.monoText, landscapeStyles.hp]}>{character.hp}</Text>
+    <Text style={[landscapeStyles.monoText, landscapeStyles.init]}>{character.init >= 0 ? '+' : ''}{character.init}</Text>
+    <Text style={[landscapeStyles.monoText, landscapeStyles.melee]}>{character.melee >= 0 ? '+' : ''}{character.melee}</Text>
+    <Text style={[landscapeStyles.monoText, landscapeStyles.missile]}>{character.missile >= 0 ? '+' : ''}{character.missile}</Text>
+    <Text style={[landscapeStyles.monoText, landscapeStyles.meleeDamage]}>{character.meleeDamage >= 0 ? '+' : ''}{character.meleeDamage}</Text>
+    <Text style={[landscapeStyles.monoText, landscapeStyles.missileDamage]}>{character.missileDamage >= 0 ? '+' : ''}{character.missileDamage}</Text>
     
     {/* Saves */}
     <Text style={[landscapeStyles.largeText, landscapeStyles.reflex]}>{character.reflex >= 0 ? '+' : ''}{character.reflex}</Text>
