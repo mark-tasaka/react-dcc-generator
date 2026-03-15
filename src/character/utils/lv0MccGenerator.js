@@ -279,17 +279,17 @@ const landscapeStyles = StyleSheet.create({
 
   speed:            { position: 'absolute', top: 141, left: 339 },
   wealth:           { position: 'absolute', top: 460, left: 30,  width: 110 },
-  languages:        { position: 'absolute', top: 490, left: 30,  width: 110 },
+  languages:        { position: 'absolute', top: 200, left: 270,  width: 90 },
   birthAugur:       { position: 'absolute', top: 266, left: 270, width: 90 },
   weapon:           { position: 'absolute', top: 350, left: 32 },
   weaponDamage:     { position: 'absolute', top: 350, left: 140 },
   armour:           { position: 'absolute', top: 408, left: 32 },
   armourACBonus:    { position: 'absolute', top: 408, left: 118 },
-  armourFumbleBase: { position: 'absolute', top: 408, left: 140 },
+  armourFumbleBase: { position: 'absolute', top: 408, left: 144 },
   equipment:        { position: 'absolute', top: 445, left: 32, width: 140 },
   maxTechLevel:     { position: 'absolute', top: 163, left: 188 },
-  physicalDescription: { position: 'absolute', top: 440, left: 165, width: 190 },
-  message:          { position: 'absolute', top: 488, left: 165, width: 190 },
+  physicalDescription: { position: 'absolute', top: 350, left: 216, width: 140 },
+  message:          { position: 'absolute', top: 435, left: 216, width: 140 },
 });
 
 // Helper: random name origin index when "Random" (100) is selected
