@@ -135,8 +135,8 @@ monoText: {
   luckMod: { position: 'absolute', top: 279, left: 78 },
   
   // Combat stats - Convert right positioning to left for container compatibility
-  ac: { position: 'absolute', top: 122, right: 230}, 
-  hp: { position: 'absolute', top: 155, left: 32 },
+  ac: { position: 'absolute', top: 120, right: 228}, 
+  hp: { position: 'absolute', top: 153, left: 32 },
   init: { position: 'absolute', top: 108, left: 142},
   melee: { position: 'absolute', top: 128, left: 132},
   missile: { position: 'absolute', top: 140, left: 132 },
@@ -442,8 +442,8 @@ const Character = ({ character, position }) => (
     <Text style={[styles.monoText, styles.luckMod]}>({character.stats.luck.modifier >= 0 ? '+' : ''}{character.stats.luck.modifier})</Text>
     
     {/* Combat Stats */}
-    <Text style={[styles.text, styles.ac]}>{character.ac}</Text>
-    <Text style={[styles.text, styles.hp]}>{character.hp}</Text>
+    <Text style={[styles.monoText, styles.ac]}>{character.ac}</Text>
+    <Text style={[styles.monoText, styles.hp]}>{character.hp}</Text>
     <Text style={[styles.monoText, styles.init]}>{character.init >= 0 ? '+' : ''}{character.init}</Text>
     <Text style={[styles.monoText, styles.melee]}>{character.melee >= 0 ? '+' : ''}{character.melee}</Text>
     <Text style={[styles.monoText, styles.missile]}>{character.missile >= 0 ? '+' : ''}{character.missile}</Text>
