@@ -205,6 +205,12 @@ const landscapeStyles = StyleSheet.create({
     color: 'black',
     fontFamily: 'Monospace',
   },
+  monoSmallText: {
+    fontSize: 12,
+    fontWeight: 'bold',
+    color: 'black',
+    fontFamily: 'Monospace',
+  },
   mediumText: {
     fontSize: 10,
     color: 'black',
@@ -241,7 +247,7 @@ const landscapeStyles = StyleSheet.create({
   alignment:  { position: 'absolute', top: 135, left: 153  },
   occupation: { position: 'absolute', top: 107, left: 222  },
   critDie:    { position: 'absolute', top: 163, left: 55 },
-  fumble:     { position: 'absolute', top: 163, left: 239 },
+  fumble:     { position: 'absolute', top: 163, left: 241 },
   artifactCheck: { position: 'absolute', top: 163,  left: 120 },
 
   str:  { position: 'absolute', top: 193, right: 185 },
@@ -262,9 +268,9 @@ const landscapeStyles = StyleSheet.create({
   hp:            { position: 'absolute', top: 232, left: 120  },
   init:          { position: 'absolute', top: 141, left: 294 },
   melee:         { position: 'absolute', top: 278, left: 82 },
-  missile:       { position: 'absolute', top: 294, left: 82 },
+  missile:       { position: 'absolute', top: 292, left: 82 },
   meleeDamage:   { position: 'absolute', top: 278, left: 113 },
-  missileDamage: { position: 'absolute', top: 294, left: 113 },
+  missileDamage: { position: 'absolute', top: 292, left: 113 },
 
   reflex:    { position: 'absolute', top: 105, left: 318 },
   fortitude: { position: 'absolute', top: 112, left: 295 },
@@ -565,10 +571,10 @@ const LandscapeCharacter = ({ character, position }) => (
     <Text style={[landscapeStyles.largeText, landscapeStyles.ac]}>{character.ac}</Text>
     <Text style={[landscapeStyles.largeText, landscapeStyles.hp]}>{character.hp}</Text>
     <Text style={[landscapeStyles.largeTextWhite, landscapeStyles.init]}>{character.init >= 0 ? '+' : ''}{character.init}</Text>
-    <Text style={[landscapeStyles.text, landscapeStyles.melee]}>{character.melee >= 0 ? '+' : ''}{character.melee}</Text>
-    <Text style={[landscapeStyles.text, landscapeStyles.missile]}>{character.missile >= 0 ? '+' : ''}{character.missile}</Text>
-    <Text style={[landscapeStyles.text, landscapeStyles.meleeDamage]}>{character.meleeDamage >= 0 ? '+' : ''}{character.meleeDamage}</Text>
-    <Text style={[landscapeStyles.text, landscapeStyles.missileDamage]}>{character.missileDamage >= 0 ? '+' : ''}{character.missileDamage}</Text>
+    <Text style={[landscapeStyles.monoSmallText, landscapeStyles.melee]}>{character.melee >= 0 ? '+' : ''}{character.melee}</Text>
+    <Text style={[landscapeStyles.monoSmallText, landscapeStyles.missile]}>{character.missile >= 0 ? '+' : ''}{character.missile}</Text>
+    <Text style={[landscapeStyles.monoSmallText, landscapeStyles.meleeDamage]}>{character.meleeDamage >= 0 ? '+' : ''}{character.meleeDamage}</Text>
+    <Text style={[landscapeStyles.monoSmallText, landscapeStyles.missileDamage]}>{character.missileDamage >= 0 ? '+' : ''}{character.missileDamage}</Text>
 
     <Text style={[landscapeStyles.largeTextWhite, landscapeStyles.reflex]}>{character.reflex >= 0 ? '+' : ''}{character.reflex}</Text>
     <Text style={[landscapeStyles.largeText, landscapeStyles.fortitude]}>{character.fortitude >= 0 ? '+' : ''}{character.fortitude}</Text>
