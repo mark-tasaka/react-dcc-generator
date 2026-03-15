@@ -264,8 +264,8 @@ const landscapeStyles = StyleSheet.create({
   intMod:  { position: 'absolute', top: 269, left: 215 },
   luckMod: { position: 'absolute', top: 289, left: 215 },
 
-  ac:            { position: 'absolute', top: 195, right: 264 },
-  hp:            { position: 'absolute', top: 232, left: 120  },
+  ac:            { position: 'absolute', top: 192, right: 264 },
+  hp:            { position: 'absolute', top: 230, left: 120  },
   init:          { position: 'absolute', top: 141, left: 294 },
   melee:         { position: 'absolute', top: 278, left: 82 },
   missile:       { position: 'absolute', top: 292, left: 82 },
@@ -568,8 +568,8 @@ const LandscapeCharacter = ({ character, position }) => (
     <Text style={[landscapeStyles.monoText, landscapeStyles.luck]}>{character.stats.luck.value}</Text>
     <Text style={[landscapeStyles.monoText, landscapeStyles.luckMod]}>({character.stats.luck.modifier >= 0 ? '+' : ''}{character.stats.luck.modifier})</Text>
 
-    <Text style={[landscapeStyles.largeText, landscapeStyles.ac]}>{character.ac}</Text>
-    <Text style={[landscapeStyles.largeText, landscapeStyles.hp]}>{character.hp}</Text>
+    <Text style={[landscapeStyles.monoText, landscapeStyles.ac]}>{character.ac}</Text>
+    <Text style={[landscapeStyles.monoText, landscapeStyles.hp]}>{character.hp}</Text>
     <Text style={[landscapeStyles.largeTextWhite, landscapeStyles.init]}>{character.init >= 0 ? '+' : ''}{character.init}</Text>
     <Text style={[landscapeStyles.monoSmallText, landscapeStyles.melee]}>{character.melee >= 0 ? '+' : ''}{character.melee}</Text>
     <Text style={[landscapeStyles.monoSmallText, landscapeStyles.missile]}>{character.missile >= 0 ? '+' : ''}{character.missile}</Text>
