@@ -1,6 +1,8 @@
 import { Document, Page, Text, View, StyleSheet, Image, Font } from '@react-pdf/renderer';
 import characterSheetBg from '../img/lvZeroCharacterSheet.jpg';
 import characterSheetLn from '../img/lvZeroCharacterSheetLandscape.jpg';
+import RobotoRegular from '../../fonts/RobotoMono-Regular.ttf';
+import RobotoBold    from '../../fonts/RobotoMono-Bold.ttf';
 import { 
   occupations, 
   getArmour, 
@@ -38,19 +40,15 @@ import { getAlignment } from './alignment.js';
 import { getGender, getNameGender } from './characterGender.js';
 import { getName, getNameDescript } from './nameSelect.js';
 
+
 Font.register({
-  family: 'Roboto Mono',
+  family: 'Monospace',
   fonts: [
-    {
-      src: 'https://fonts.gstatic.com/s/robotomono/v23/L0xuDF4xlVMF-BfR8bXMIhJHg45mwgGEFl0_3vrtROW4.woff2',
-      fontWeight: 'normal',
-    },
-    {
-      src: 'https://fonts.gstatic.com/s/robotomono/v23/L0xuDF4xlVMF-BfR8bXMIhJHg45mwgGEFl0_Xvs_ROW4.woff2',
-      fontWeight: 'bold',
-    }
+    { src: `${window.location.origin}${RobotoRegular}`, fontWeight: 'normal' },
+    { src: `${window.location.origin}${RobotoBold}`,    fontWeight: 'bold'   }
   ]
 });
+
 // Complete PDF Styles
 const styles = StyleSheet.create({
   page: {
@@ -111,6 +109,12 @@ rightAlignText: {
   fontWeight: 'bold',
   textAlign: 'right',
 },
+monoText: {
+  fontSize: 10,
+  color: 'black',
+  fontWeight: 'bold',
+  fontFamily: 'Monospace',
+},
 variableWidthText: {
   fontSize: 10,
   color: 'black',
@@ -127,20 +131,20 @@ variableWidthText: {
   fumble: { position: 'absolute', top: 57, left: 180 },
   
   // Stats positioning - VALUES (right-aligned)
-  str: { position: 'absolute', top: 199, left: 52, width: 25 },
-  agi: { position: 'absolute', top: 215, left: 52, width: 25 },
-  sta: { position: 'absolute', top: 231, left: 52, width: 25 },
-  per: { position: 'absolute', top: 246, left: 52, width: 25 },
-  int: { position: 'absolute', top: 263, left: 52, width: 25 },
-  luck: { position: 'absolute', top: 279, left: 52, width: 25 },
+  str: { position: 'absolute', top: 199, right: 230 },
+  agi: { position: 'absolute', top: 215, right: 230 },
+  sta: { position: 'absolute', top: 231, right: 230 },
+  per: { position: 'absolute', top: 246, right: 230 },
+  int: { position: 'absolute', top: 263, right: 230 },
+  luck: { position: 'absolute', top: 279, right: 230 },
 
   // Stats positioning - MODIFIERS (variable width)
-  strMod: { position: 'absolute', top: 199, left: 82, width: 30 },
-  agiMod: { position: 'absolute', top: 215, left: 82, width: 30 },
-  staMod: { position: 'absolute', top: 231, left: 82, width: 30 },
-  perMod: { position: 'absolute', top: 246, left: 82, width: 30 },
-  intMod: { position: 'absolute', top: 263, left: 82, width: 30 },
-  luckMod: { position: 'absolute', top: 279, left: 82, width: 30 },
+  strMod: { position: 'absolute', top: 199, left: 78 },
+  agiMod: { position: 'absolute', top: 215, left: 78 },
+  staMod: { position: 'absolute', top: 231, left: 78 },
+  perMod: { position: 'absolute', top: 246, left: 78 },
+  intMod: { position: 'absolute', top: 263, left: 78 },
+  luckMod: { position: 'absolute', top: 279, left: 78 },
   
   // Combat stats - Convert right positioning to left for container compatibility
   ac: { position: 'absolute', top: 122, right: 230}, 
@@ -437,23 +441,23 @@ const Character = ({ character, position }) => (
     <Text style={[styles.text, styles.fumble]}>{character.fumble}</Text>
     
     {/* Stats - Values and Modifiers separated */}
-    <Text style={[styles.rightAlignText, styles.str]}>{character.stats.str.value}</Text>
-    <Text style={[styles.variableWidthText, styles.strMod]}>({character.stats.str.modifier >= 0 ? '+' : ''}{character.stats.str.modifier})</Text>
+    <Text style={[styles.monoText, styles.str]}>{character.stats.str.value}</Text>
+    <Text style={[styles.monoText, styles.strMod]}>({character.stats.str.modifier >= 0 ? '+' : ''}{character.stats.str.modifier})</Text>
     
-    <Text style={[styles.rightAlignText, styles.agi]}>{character.stats.agi.value}</Text>
-    <Text style={[styles.variableWidthText, styles.agiMod]}>({character.stats.agi.modifier >= 0 ? '+' : ''}{character.stats.agi.modifier})</Text>
+    <Text style={[styles.monoText, styles.agi]}>{character.stats.agi.value}</Text>
+    <Text style={[styles.monoText, styles.agiMod]}>({character.stats.agi.modifier >= 0 ? '+' : ''}{character.stats.agi.modifier})</Text>
     
-    <Text style={[styles.rightAlignText, styles.sta]}>{character.stats.sta.value}</Text>
-    <Text style={[styles.variableWidthText, styles.staMod]}>({character.stats.sta.modifier >= 0 ? '+' : ''}{character.stats.sta.modifier})</Text>
+    <Text style={[styles.monoText, styles.sta]}>{character.stats.sta.value}</Text>
+    <Text style={[styles.monoText, styles.staMod]}>({character.stats.sta.modifier >= 0 ? '+' : ''}{character.stats.sta.modifier})</Text>
     
-    <Text style={[styles.rightAlignText, styles.per]}>{character.stats.per.value}</Text>
-    <Text style={[styles.variableWidthText, styles.perMod]}>({character.stats.per.modifier >= 0 ? '+' : ''}{character.stats.per.modifier})</Text>
+    <Text style={[styles.monoText, styles.per]}>{character.stats.per.value}</Text>
+    <Text style={[styles.monoText, styles.perMod]}>({character.stats.per.modifier >= 0 ? '+' : ''}{character.stats.per.modifier})</Text>
     
-    <Text style={[styles.rightAlignText, styles.int]}>{character.stats.int.value}</Text>
-    <Text style={[styles.variableWidthText, styles.intMod]}>({character.stats.int.modifier >= 0 ? '+' : ''}{character.stats.int.modifier})</Text>
+    <Text style={[styles.monoText, styles.int]}>{character.stats.int.value}</Text>
+    <Text style={[styles.monoText, styles.intMod]}>({character.stats.int.modifier >= 0 ? '+' : ''}{character.stats.int.modifier})</Text>
     
-    <Text style={[styles.rightAlignText, styles.luck]}>{character.stats.luck.value}</Text>
-    <Text style={[styles.variableWidthText, styles.luckMod]}>({character.stats.luck.modifier >= 0 ? '+' : ''}{character.stats.luck.modifier})</Text>
+    <Text style={[styles.monoText, styles.luck]}>{character.stats.luck.value}</Text>
+    <Text style={[styles.monoText, styles.luckMod]}>({character.stats.luck.modifier >= 0 ? '+' : ''}{character.stats.luck.modifier})</Text>
     
     {/* Combat Stats */}
     <Text style={[styles.text, styles.ac]}>{character.ac}</Text>
