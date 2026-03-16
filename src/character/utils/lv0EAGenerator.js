@@ -81,7 +81,7 @@ const styles = StyleSheet.create({
     fontWeight: 'bold',
   },
   largeText: {
-    fontSize: 12,
+    fontSize: 13,
     color: 'black',
     fontWeight: 'bold',
   },
@@ -98,12 +98,18 @@ const styles = StyleSheet.create({
     fontSize: 6,
     color: 'black',
   },
-monoText: {
-  fontSize: 11,
-  color: 'black',
-  fontWeight: 'bold',
-  fontFamily: 'Monospace',
-},
+  monoText: {
+    fontSize: 11,
+    color: 'black',
+    fontWeight: 'bold',
+    fontFamily: 'Monospace',
+  },
+  monoLargeText: {
+    fontSize: 14,
+    color: 'black',
+    fontWeight: 'bold',
+    fontFamily: 'Monospace',
+  },
 
   // Position styles for form fields
   name: { position: 'absolute', top: 39, left: 27 },
@@ -116,35 +122,35 @@ monoText: {
   // Stats positioning
   str: { position: 'absolute', top: 200, right: 225 },
   agi: { position: 'absolute', top: 215, right: 225 },
-  sta: { position: 'absolute', top: 231, right: 225 },
-  per: { position: 'absolute', top: 246, right: 225 },
-  int: { position: 'absolute', top: 263, right: 225 },
-  luck: { position: 'absolute', top: 279, right: 225 },
+  sta: { position: 'absolute', top: 233, right: 225 },
+  per: { position: 'absolute', top: 250, right: 225 },
+  int: { position: 'absolute', top: 266, right: 225 },
+  luck: { position: 'absolute', top: 282, right: 225 },
 
   // Stats positioning - MODIFIERS 
   strMod: { position: 'absolute', top: 200, left: 83 },
   agiMod: { position: 'absolute', top: 215, left: 83 },
-  staMod: { position: 'absolute', top: 231, left: 83 },
-  perMod: { position: 'absolute', top: 246, left: 83 },
-  intMod: { position: 'absolute', top: 263, left: 83 },
-  luckMod: { position: 'absolute', top: 279, left: 83 },
+  staMod: { position: 'absolute', top: 233, left: 83 },
+  perMod: { position: 'absolute', top: 250, left: 83 },
+  intMod: { position: 'absolute', top: 266, left: 83 },
+  luckMod: { position: 'absolute', top: 282, left: 83 },
   
   // Combat stats - Convert right positioning to left for container compatibility
-  ac: { position: 'absolute', top: 120, right: 228}, 
-  hp: { position: 'absolute', top: 153, left: 32 },
-  init: { position: 'absolute', top: 108, left: 142},
-  melee: { position: 'absolute', top: 128, left: 132},
-  missile: { position: 'absolute', top: 140, left: 132 },
-  meleeDamage: { position: 'absolute', top: 128, left: 152 },
-  missileDamage: { position: 'absolute', top: 140, left: 152 },
+  ac: { position: 'absolute', top: 122, right: 222}, 
+  hp: { position: 'absolute', top: 156, left: 67 },
+  init: { position: 'absolute', top: 115, left: 156},
+  melee: { position: 'absolute', top: 140, left: 148},
+  missile: { position: 'absolute', top: 155, left: 148 },
+  meleeDamage: { position: 'absolute', top: 140, left: 166 },
+  missileDamage: { position: 'absolute', top: 155, left: 166 },
   
   // Saves - Convert right positioning to left for container compatibility
-  reflex: { position: 'absolute', top: 35, left: 235 },    // Converted from right: 65
-  fortitude: { position: 'absolute', top: 35, left: 265 }, // Converted from right: 35
-  will: { position: 'absolute', top: 69, left: 235 },      // Converted from right: 65
+  reflex: { position: 'absolute', top: 38, left: 240 },    // Converted from right: 65
+  fortitude: { position: 'absolute', top: 38, left: 270 }, // Converted from right: 35
+  will: { position: 'absolute', top: 76, left: 240 },      // Converted from right: 65
   
   // Other fields - Convert right positioning to left for container compatibility
-  speed: { position: 'absolute', top: 69, left: 265 },     // Converted from right: 30
+  speed: { position: 'absolute', top: 79, left: 270 },     // Converted from right: 30
   wealth: { position: 'absolute', top: 319, left: 25, width: 80 },
   languages: { position: 'absolute', top: 345, left: 25, width: 80  },
   birthAugur: { position: 'absolute', top: 120, left: 203, width: 80 },
@@ -441,9 +447,9 @@ const Character = ({ character, position }) => (
     <Text style={[styles.monoText, styles.missileDamage]}>{character.missileDamage >= 0 ? '+' : ''}{character.missileDamage}</Text>
     
     {/* Saves */}
-    <Text style={[styles.largeText, styles.reflex]}>{character.reflex >= 0 ? '+' : ''}{character.reflex}</Text>
-    <Text style={[styles.largeText, styles.fortitude]}>{character.fortitude >= 0 ? '+' : ''}{character.fortitude}</Text>
-    <Text style={[styles.largeText, styles.will]}>{character.will >= 0 ? '+' : ''}{character.will}</Text>
+    <Text style={[styles.monoLargeText, styles.reflex]}>{character.reflex >= 0 ? '+' : ''}{character.reflex}</Text>
+    <Text style={[styles.monoLargeText, styles.fortitude]}>{character.fortitude >= 0 ? '+' : ''}{character.fortitude}</Text>
+    <Text style={[styles.monoLargeText, styles.will]}>{character.will >= 0 ? '+' : ''}{character.will}</Text>
     
     {/* Other */}
     <Text style={[styles.largeText, styles.speed]}>{character.speed + "'"}</Text>
