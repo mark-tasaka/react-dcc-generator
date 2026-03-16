@@ -1,10 +1,12 @@
 import React, { useState } from 'react';
 import DccLv0 from './character/dccLv0';
 import MccLv0 from './character/mccLv0';
+import EALv0 from './character/eaLv0';
 
 const HomePage = () => {
   const [isDccOpen, setIsDccOpen] = useState(true);   // DCC open by default
   const [isMccOpen, setIsMccOpen] = useState(false);  // MCC closed by default
+  const [isEaOpen, setIsEaOpen] = useState(false);   // EA closed by default
 
   return (
     <div className="home-page">
@@ -77,6 +79,22 @@ const HomePage = () => {
 
             <div className={`accordion-content${isMccOpen ? ' accordion-content--open' : ''}`}>
               <MccLv0 />
+            </div>
+          </div>
+
+          {/* ── EA Accordion ── */}
+          <div className="accordion">
+            <button
+              className="accordion-toggle"
+              onClick={() => setIsEaOpen(prev => !prev)}
+              aria-expanded={isEaOpen}
+            >
+              <span className="accordion-icon">{isEaOpen ? '−' : '+'}</span>
+              <span className="accordion-label">Eastern Adventures Level 0 Character Generator</span>
+            </button>
+
+            <div className={`accordion-content${isEaOpen ? ' accordion-content--open' : ''}`}>
+              <EALv0 />
             </div>
           </div>
 
