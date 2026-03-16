@@ -105,7 +105,7 @@ const styles = StyleSheet.create({
     fontFamily: 'Monospace',
   },
   monoLargeText: {
-    fontSize: 14,
+    fontSize: 15,
     color: 'black',
     fontWeight: 'bold',
     fontFamily: 'Monospace',
@@ -145,20 +145,20 @@ const styles = StyleSheet.create({
   missileDamage: { position: 'absolute', top: 155, left: 166 },
   
   // Saves - Convert right positioning to left for container compatibility
-  reflex: { position: 'absolute', top: 38, left: 240 },    // Converted from right: 65
-  fortitude: { position: 'absolute', top: 38, left: 270 }, // Converted from right: 35
-  will: { position: 'absolute', top: 76, left: 240 },      // Converted from right: 65
+  reflex: { position: 'absolute', top: 38, left: 240 },    
+  fortitude: { position: 'absolute', top: 38, left: 270 }, 
+  will: { position: 'absolute', top: 76, left: 240 },      
   
   // Other fields - Convert right positioning to left for container compatibility
   speed: { position: 'absolute', top: 79, left: 270 },     // Converted from right: 30
-  wealth: { position: 'absolute', top: 319, left: 25, width: 80 },
-  languages: { position: 'absolute', top: 345, left: 25, width: 80  },
-  birthAugur: { position: 'absolute', top: 120, left: 203, width: 80 },
-  weapon: { position: 'absolute', top: 183, left: 125 },
-  weaponDamage: { position: 'absolute', top: 183, left: 240 }, 
-  armour: { position: 'absolute', top: 230, left: 125 },
-  equipment: { position: 'absolute', top: 256, left: 125 },
-  notes: { position: 'absolute', top: 303, left: 125 , width: 155},
+  wealth: { position: 'absolute', top: 324, left: 30, width: 80 },
+  languages: { position: 'absolute', top: 351, left: 30, width: 90  },
+  birthAugur: { position: 'absolute', top: 128, left: 198, width: 90 },
+  weapon: { position: 'absolute', top: 189, left: 128 },
+  weaponDamage: { position: 'absolute', top: 189, left: 260 }, 
+  armour: { position: 'absolute', top: 238, left: 128 },
+  equipment: { position: 'absolute', top: 264, left: 128, width: 165 },
+  notes: { position: 'absolute', top: 306, left: 125 , width: 165},
   message: { position: 'absolute', bottom: 40, left: 125 , width: 145},
 });
 
