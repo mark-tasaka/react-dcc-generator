@@ -71,9 +71,9 @@ const styles = StyleSheet.create({
   },
   // Adjusted positioning to better align with the background
   topLeft: { top: '0%', left: '0%' },
-  topRight: { top: '0%', left: '50%' },
-  bottomLeft: { top: '50%', left: '0%' },
-  bottomRight: { top: '50%', left: '50%' },
+  topRight: { top: '0%', left: '48%' },
+  bottomLeft: { top: '48%', left: '0%' },
+  bottomRight: { top: '48%', left: '48%' },
   
   text: {
     fontSize: 10,
@@ -83,11 +83,6 @@ const styles = StyleSheet.create({
   largeText: {
     fontSize: 12,
     color: 'black',
-    fontWeight: 'bold',
-  },
-  largeTextWhite: {
-    fontSize: 12,
-    color: 'white',
     fontWeight: 'bold',
   },
   testText: {
@@ -193,11 +188,6 @@ const landscapeStyles = StyleSheet.create({
   largeText: {
     fontSize: 14,
     color: 'black',
-    fontWeight: 'bold',
-  },
-  largeTextWhite: {
-    fontSize: 14,
-    color: 'white',
     fontWeight: 'bold',
   },
   smallText: {
@@ -452,8 +442,8 @@ const Character = ({ character, position }) => (
     
     {/* Saves */}
     <Text style={[styles.largeText, styles.reflex]}>{character.reflex >= 0 ? '+' : ''}{character.reflex}</Text>
-    <Text style={[styles.largeTextWhite, styles.fortitude]}>{character.fortitude >= 0 ? '+' : ''}{character.fortitude}</Text>
-    <Text style={[styles.largeTextWhite, styles.will]}>{character.will >= 0 ? '+' : ''}{character.will}</Text>
+    <Text style={[styles.largeText, styles.fortitude]}>{character.fortitude >= 0 ? '+' : ''}{character.fortitude}</Text>
+    <Text style={[styles.largeText, styles.will]}>{character.will >= 0 ? '+' : ''}{character.will}</Text>
     
     {/* Other */}
     <Text style={[styles.largeText, styles.speed]}>{character.speed + "'"}</Text>
@@ -508,8 +498,8 @@ const LandscapeCharacter = ({ character, position }) => (
     
     {/* Saves */}
     <Text style={[landscapeStyles.largeText, landscapeStyles.reflex]}>{character.reflex >= 0 ? '+' : ''}{character.reflex}</Text>
-    <Text style={[landscapeStyles.largeTextWhite, landscapeStyles.fortitude]}>{character.fortitude >= 0 ? '+' : ''}{character.fortitude}</Text>
-    <Text style={[landscapeStyles.largeTextWhite, landscapeStyles.will]}>{character.will >= 0 ? '+' : ''}{character.will}</Text>
+    <Text style={[landscapeStyles.largeText, landscapeStyles.fortitude]}>{character.fortitude >= 0 ? '+' : ''}{character.fortitude}</Text>
+    <Text style={[landscapeStyles.largeText, landscapeStyles.will]}>{character.will >= 0 ? '+' : ''}{character.will}</Text>
     
     {/* Other */}
     <Text style={[landscapeStyles.largeText, landscapeStyles.speed]}>{character.speed + "'"}</Text>
