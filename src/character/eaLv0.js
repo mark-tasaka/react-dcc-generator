@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { pdf } from '@react-pdf/renderer';
 import { Buffer } from 'buffer';
-import { generateFourCharacters, generateTwoCharacters, CharacterSheetDocument, CharacterSheetLandscapeDocument } from './utils/lv0DccGenerator';
+import { generateFourCharacters, generateTwoCharacters, CharacterSheetDocument, CharacterSheetLandscapeDocument } from './utils/lv0EAGenerator';
 import './generator.css';
 
 window.Buffer = Buffer;
@@ -66,7 +66,7 @@ const DccEALv0 = () => {
   return (
     <div className="generator-form-wrapper">
 
-      <h2 className="dcc-generator-title">DCC EA Level Zero Character Generator</h2>
+      <h2 className="dcc-generator-title-ea">DCC EA Level Zero Character Generator</h2>
 
       {/* Character Generation Options */}
       <div className="form-container">

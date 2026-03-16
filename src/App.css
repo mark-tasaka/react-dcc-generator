@@ -88,7 +88,8 @@
 
 /* ── Generator h2 title (shared styles) ── */
 .dcc-generator-title,
-.dcc-generator-title-mcc {
+.dcc-generator-title-mcc,
+.dcc-generator-title-ea {
   font-family: 'Playfair Display', serif;
   font-size: 42px;
   color: #ffffff;
@@ -104,6 +105,14 @@
                -4px -4px 0px #3D5FA0,
                4px -4px 0px #3D5FA0,
                -4px 4px 0px #3D5FA0;
+}
+
+/* ── EA variant overrides the text-shadow colour ── */
+.dcc-generator-title-ea {
+  text-shadow: 4px 4px 0px #1B2D5E,
+               -4px -4px 0px #1B2D5E,
+               4px -4px 0px #1B2D5E,
+               -4px 4px 0px #1B2D5E;
 }
 
 /* ── Section title image ── */

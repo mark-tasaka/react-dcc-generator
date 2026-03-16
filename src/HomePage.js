@@ -90,7 +90,7 @@ const HomePage = () => {
               aria-expanded={isEaOpen}
             >
               <span className="accordion-icon">{isEaOpen ? '−' : '+'}</span>
-              <span className="accordion-label">Eastern Adventures Level 0 Character Generator</span>
+              <span className="accordion-label">DCC Eastern Adventures Level 0 Character Generator</span>
             </button>
 
             <div className={`accordion-content${isEaOpen ? ' accordion-content--open' : ''}`}>
