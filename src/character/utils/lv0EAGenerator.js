@@ -8,7 +8,7 @@ import {
   getArmour, 
   getACBonusArmour,
   getOccupationNumber,
-  getOccupationFumbleDie } from './dccOccupations.js';
+  getOccupationFumbleDie } from './eaOccupation.js';
 import { generateEquipment, generateWealth } from './dccEquipment.js';
 import { getLanguages, formatLanguages } from './dccLanguages.js';
 import { 
