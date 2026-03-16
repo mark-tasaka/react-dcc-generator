@@ -52,7 +52,7 @@ const DccEALv0 = () => {
       const url = URL.createObjectURL(pdfBlob);
       const link = document.createElement('a');
       link.href = url;
-      link.download = 'dcc-zero-level-characters.pdf';
+      link.download = 'dcc-ea-zero-level-characters.pdf';
       document.body.appendChild(link);
       link.click();
       document.body.removeChild(link);

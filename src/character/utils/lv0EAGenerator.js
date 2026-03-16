@@ -99,35 +99,35 @@ const styles = StyleSheet.create({
     color: 'black',
   },
 monoText: {
-  fontSize: 10,
+  fontSize: 11,
   color: 'black',
   fontWeight: 'bold',
   fontFamily: 'Monospace',
 },
 
   // Position styles for form fields
-  name: { position: 'absolute', top: 32, left: 30 },
-  gender: { position: 'absolute', top: 32, left: 155 },
-  alignment: { position: 'absolute', top: 57, left: 30 },
-  occupation: { position: 'absolute', top: 80, left: 30 },
-  critDie: { position: 'absolute', top: 57, left: 125 },
-  fumble: { position: 'absolute', top: 57, left: 180 },
+  name: { position: 'absolute', top: 39, left: 27 },
+  gender: { position: 'absolute', top: 39, left: 150 },
+  alignment: { position: 'absolute', top: 64, left: 27 },
+  occupation: { position: 'absolute', top: 90, left: 27 },
+  critDie: { position: 'absolute', top: 64, left: 143 },
+  fumble: { position: 'absolute', top: 64, left: 195 },
   
-  // Stats positioning - VALUES (right-aligned)
-  str: { position: 'absolute', top: 199, right: 230 },
-  agi: { position: 'absolute', top: 215, right: 230 },
-  sta: { position: 'absolute', top: 231, right: 230 },
-  per: { position: 'absolute', top: 246, right: 230 },
-  int: { position: 'absolute', top: 263, right: 230 },
-  luck: { position: 'absolute', top: 279, right: 230 },
+  // Stats positioning
+  str: { position: 'absolute', top: 200, right: 225 },
+  agi: { position: 'absolute', top: 215, right: 225 },
+  sta: { position: 'absolute', top: 231, right: 225 },
+  per: { position: 'absolute', top: 246, right: 225 },
+  int: { position: 'absolute', top: 263, right: 225 },
+  luck: { position: 'absolute', top: 279, right: 225 },
 
-  // Stats positioning - MODIFIERS (variable width)
-  strMod: { position: 'absolute', top: 199, left: 78 },
-  agiMod: { position: 'absolute', top: 215, left: 78 },
-  staMod: { position: 'absolute', top: 231, left: 78 },
-  perMod: { position: 'absolute', top: 246, left: 78 },
-  intMod: { position: 'absolute', top: 263, left: 78 },
-  luckMod: { position: 'absolute', top: 279, left: 78 },
+  // Stats positioning - MODIFIERS 
+  strMod: { position: 'absolute', top: 200, left: 83 },
+  agiMod: { position: 'absolute', top: 215, left: 83 },
+  staMod: { position: 'absolute', top: 231, left: 83 },
+  perMod: { position: 'absolute', top: 246, left: 83 },
+  intMod: { position: 'absolute', top: 263, left: 83 },
+  luckMod: { position: 'absolute', top: 279, left: 83 },
   
   // Combat stats - Convert right positioning to left for container compatibility
   ac: { position: 'absolute', top: 120, right: 228}, 
