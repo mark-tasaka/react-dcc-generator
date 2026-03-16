@@ -29,7 +29,12 @@
   text-shadow: 4px 4px 0px #b83bb3,
                -4px -4px 0px #b83bb3,
                4px -4px 0px #b83bb3,
-               -4px 4px 0px #b83bb3;
+               -4px 4px 0px #b83bb3,
+                /* Cardinals  ← these fill the gaps */
+                4px  0px 0px #b83bb3,
+              -4px  0px 0px #b83bb3,
+                0px  4px 0px #b83bb3, 
+                0px -4px 0px #b83bb3;
 }
 
 /* ── Buttons ── */

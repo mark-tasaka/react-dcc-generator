@@ -93,10 +93,20 @@
   font-family: 'Playfair Display', serif;
   font-size: 42px;
   color: #ffffff;
-  text-shadow: 4px 4px 0px #b83bb3,
-               -4px -4px 0px #b83bb3,
-               4px -4px 0px #b83bb3,
-               -4px 4px 0px #b83bb3;
+}
+
+.dcc-generator-title {
+  text-shadow: 
+    /* Diagonals */
+    4px  4px 0px #b83bb3,
+   -4px -4px 0px #b83bb3,
+    4px -4px 0px #b83bb3,
+   -4px  4px 0px #b83bb3,
+    /* Cardinals  ← these fill the gaps */
+    4px  0px 0px #b83bb3,
+   -4px  0px 0px #b83bb3,
+    0px  4px 0px #b83bb3,
+    0px -4px 0px #b83bb3;
 }
 
 /* ── MCC variant overrides the text-shadow colour ── */
@@ -104,25 +114,36 @@
   text-shadow: 4px 4px 0px #3D5FA0,
                -4px -4px 0px #3D5FA0,
                4px -4px 0px #3D5FA0,
-               -4px 4px 0px #3D5FA0;
+               -4px 4px 0px #3D5FA0,
+                /* Cardinals  ← these fill the gaps */
+                4px  0px 0px #3D5FA0,
+              -4px  0px 0px #3D5FA0,
+                0px  4px 0px #3D5FA0,
+                0px -4px 0px #3D5FA0;
 }
 
 /* ── EA variant overrides the text-shadow colour ── */
 .dcc-generator-title-ea {
-  text-shadow: 4px 4px 0px #1B2D5E,
-               -4px -4px 0px #1B2D5E,
-               4px -4px 0px #1B2D5E,
-               -4px 4px 0px #1B2D5E;
+  text-shadow: 4px 4px 0px #7B6BA8,
+               -4px -4px 0px #7B6BA8,
+               4px -4px 0px #7B6BA8,
+               -4px 4px 0px #7B6BA8,
+                /* Cardinals  ← these fill the gaps */
+                4px  0px 0px #7B6BA8,
+              -4px  0px 0px #7B6BA8,
+                0px  4px 0px #7B6BA8,
+                0px -4px 0px #7B6BA8;
+
 }
 
 /* ── Section title image ── */
-.home-section-title-img {
+/* .home-section-title-img {
   display: block;
   width: 100%;
   max-width: 700px;
   height: auto;
   margin: 0 auto;
-}
+} */
 
 /* ── Description paragraphs wrapper ── */
 .home-descriptions {
@@ -237,9 +258,6 @@
     font-size: 14px;
   }
 
-  .home-section-title-img {
-    max-width: 100%;
-  }
 
   .dcc-generator-title {
     font-size: 26px;
