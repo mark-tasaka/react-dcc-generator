@@ -35,10 +35,11 @@ import {
 import {
     rollAbilityScores,
 } from './abilityScoreGen.js';
-import { getNotes, dieRollMethodText, hitPointsMethodText } from './dccNotes.js';
+import {  dieRollMethodText, hitPointsMethodText } from './dccNotes.js';
 import { getAlignment } from './alignment.js';
 import { getGender, getNameGender } from './characterGender.js';
 import { getName, getNameDescript } from './nameSelect.js';
+import { getNotes } from './eaAdditions.js';
 
 
 Font.register({
