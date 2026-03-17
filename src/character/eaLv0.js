@@ -256,9 +256,9 @@ const DccEALv0 = () => {
             <option value={1}>All</option>
             <option value={2}>Humans</option>
             <option value={3}>Demi-Humans</option>
-            <option value={4}>Dwarves</option>
-            <option value={5}>Elves</option>
-            <option value={6}>Halflings</option>
+            <option value={4}>Kitsune</option>
+            <option value={5}>Koropokuru</option>
+            <option value={6}>Tengu</option>
             <option value={7}>With Armour</option>
           </select>
         </div>
