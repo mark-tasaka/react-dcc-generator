@@ -10,7 +10,7 @@ import {
   getOccupationNumber,
   getOccupationFumbleDie } from './eaOccupation.js';
 import { generateWealth } from './dccEquipment.js';
-import { getLanguages, formatLanguages } from './dccLanguages.js';
+import { getLanguages, formatLanguages } from './eaLanguages.js';
 import { 
   getBirthAugur,
   getSpeed, 
