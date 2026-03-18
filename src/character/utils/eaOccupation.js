@@ -146,5 +146,6 @@ export const getACBonusArmour = (select) => {
 export const getOccupationFumbleDie = (select) => {
   if (select === 32)  return "d12"; 
   if (select === 34)  return "d8";  
-  if (select === 92) return "d8";  
+  if (select === 92) return "d8";
+  return "d4";  
 };
