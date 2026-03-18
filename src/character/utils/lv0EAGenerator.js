@@ -213,9 +213,9 @@ monoText: {
 },
 
   // Position styles for landscape layout (you'll need to adjust these based on your landscape background)
-  name: { position: 'absolute', top: 97, left: 40 },
-  gender: { position: 'absolute', top: 97, left: 200 },
-  alignment: { position: 'absolute', top: 127, left: 40 },
+  name: { position: 'absolute', top: 89, left: 22 },
+  gender: { position: 'absolute', top: 89, left: 185 },
+  alignment: { position: 'absolute', top: 122, left: 22 },
   occupation: { position: 'absolute', top: 155, left: 40 },
   critDie: { position: 'absolute', top: 127, left: 160 },
   fumble: { position: 'absolute', top: 127, left: 230 },
