@@ -216,9 +216,9 @@ monoText: {
   name: { position: 'absolute', top: 89, left: 22 },
   gender: { position: 'absolute', top: 89, left: 185 },
   alignment: { position: 'absolute', top: 122, left: 22 },
-  occupation: { position: 'absolute', top: 155, left: 40 },
-  critDie: { position: 'absolute', top: 127, left: 160 },
-  fumble: { position: 'absolute', top: 127, left: 230 },
+  occupation: { position: 'absolute', top: 156, left: 22 },
+  critDie: { position: 'absolute', top: 122, left: 160 },
+  fumble: { position: 'absolute', top: 122, left: 236 },
   
   str: { position: 'absolute', top: 307, right: 295 },
   agi: { position: 'absolute', top: 326, right: 295 },
