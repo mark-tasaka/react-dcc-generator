@@ -206,7 +206,7 @@ const landscapeStyles = StyleSheet.create({
     color: 'black',
   },
 monoText: {
-  fontSize: 12,
+  fontSize: 14,
   color: 'black',
   fontWeight: 'bold',
   fontFamily: 'Monospace',
@@ -235,8 +235,8 @@ monoText: {
   luckMod: { position: 'absolute', top: 408, left: 103 },
     
   // Combat stats (adjust these for landscape layout)
-  ac: { position: 'absolute', top: 208, right: 293 }, 
-  hp: { position: 'absolute', top: 250, left: 46 },
+  ac: { position: 'absolute', top: 196, right: 293 }, 
+  hp: { position: 'absolute', top: 242, left: 83 },
   init: { position: 'absolute', top: 193, left: 185 },
   melee: { position: 'absolute', top: 218, left: 175 },
   missile: { position: 'absolute', top: 235, left: 175 },
