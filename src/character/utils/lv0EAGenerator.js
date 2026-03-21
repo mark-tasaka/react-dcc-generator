@@ -236,12 +236,12 @@ monoText: {
     
   // Combat stats (adjust these for landscape layout)
   ac: { position: 'absolute', top: 196, right: 293 }, 
-  hp: { position: 'absolute', top: 242, left: 83 },
-  init: { position: 'absolute', top: 193, left: 185 },
-  melee: { position: 'absolute', top: 218, left: 175 },
-  missile: { position: 'absolute', top: 235, left: 175 },
-  meleeDamage: { position: 'absolute', top: 218, left: 198 },
-  missileDamage: { position: 'absolute', top: 235, left: 198 },
+  hp: { position: 'absolute', top: 238, left: 83 },
+  init: { position: 'absolute', top: 185, left: 190 },
+  melee: { position: 'absolute', top: 220, left: 183 },
+  missile: { position: 'absolute', top: 240, left: 183 },
+  meleeDamage: { position: 'absolute', top: 220, left: 206 },
+  missileDamage: { position: 'absolute', top: 240, left: 206 },
   
   // Saves (adjust for landscape)
   reflex: { position: 'absolute', top: 100, left: 300 },
