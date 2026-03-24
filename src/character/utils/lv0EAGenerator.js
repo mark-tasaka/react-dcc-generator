@@ -227,18 +227,18 @@ monoTextLarge: {
   fumble: { position: 'absolute', top: 122, left: 236 },
   
   str: { position: 'absolute', top: 298, right: 298 },
-  agi: { position: 'absolute', top: 326, right: 298 },
-  sta: { position: 'absolute', top: 346, right: 298 },
-  per: { position: 'absolute', top: 367, right: 298 },
-  int: { position: 'absolute', top: 388, right: 298 },
-  luck: { position: 'absolute', top: 408, right: 298 },
+  agi: { position: 'absolute', top: 319, right: 298 },
+  sta: { position: 'absolute', top: 340, right: 298 },
+  per: { position: 'absolute', top: 361, right: 298 },
+  int: { position: 'absolute', top: 383, right: 298 },
+  luck: { position: 'absolute', top: 405, right: 298 },
 
   strMod: { position: 'absolute', top: 298, left: 100 },
-  agiMod: { position: 'absolute', top: 326, left: 103 },
-  staMod: { position: 'absolute', top: 346, left: 103 },
-  perMod: { position: 'absolute', top: 367, left: 103 },
-  intMod: { position: 'absolute', top: 388, left: 103 },
-  luckMod: { position: 'absolute', top: 408, left: 103 },
+  agiMod: { position: 'absolute', top: 319, left: 100 },
+  staMod: { position: 'absolute', top: 340, left: 100 },
+  perMod: { position: 'absolute', top: 361, left: 100 },
+  intMod: { position: 'absolute', top: 383, left: 100 },
+  luckMod: { position: 'absolute', top: 405, left: 100 },
     
   // Combat stats (adjust these for landscape layout)
   ac: { position: 'absolute', top: 196, right: 293 }, 
