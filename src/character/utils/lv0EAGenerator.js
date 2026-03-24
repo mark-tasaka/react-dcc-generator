@@ -226,14 +226,14 @@ monoTextLarge: {
   critDie: { position: 'absolute', top: 122, left: 160 },
   fumble: { position: 'absolute', top: 122, left: 236 },
   
-  str: { position: 'absolute', top: 300, right: 300 },
-  agi: { position: 'absolute', top: 326, right: 295 },
-  sta: { position: 'absolute', top: 346, right: 295 },
-  per: { position: 'absolute', top: 367, right: 295 },
-  int: { position: 'absolute', top: 388, right: 295 },
-  luck: { position: 'absolute', top: 408, right: 295 },
+  str: { position: 'absolute', top: 298, right: 298 },
+  agi: { position: 'absolute', top: 326, right: 298 },
+  sta: { position: 'absolute', top: 346, right: 298 },
+  per: { position: 'absolute', top: 367, right: 298 },
+  int: { position: 'absolute', top: 388, right: 298 },
+  luck: { position: 'absolute', top: 408, right: 298 },
 
-  strMod: { position: 'absolute', top: 307, left: 103 },
+  strMod: { position: 'absolute', top: 298, left: 100 },
   agiMod: { position: 'absolute', top: 326, left: 103 },
   staMod: { position: 'absolute', top: 346, left: 103 },
   perMod: { position: 'absolute', top: 367, left: 103 },
@@ -483,7 +483,7 @@ const LandscapeCharacter = ({ character, position }) => (
     
     {/* Stats - Values and Modifiers separated */}
     <Text style={[landscapeStyles.monoTextLarge, landscapeStyles.str]}>{character.stats.str.value}</Text>
-    <Text style={[landscapeStyles.monoText, landscapeStyles.strMod]}>({character.stats.str.modifier >= 0 ? '+' : ''}{character.stats.str.modifier})</Text>
+    <Text style={[landscapeStyles.monoTextLarge, landscapeStyles.strMod]}>({character.stats.str.modifier >= 0 ? '+' : ''}{character.stats.str.modifier})</Text>
     
     <Text style={[landscapeStyles.monoTextLarge, landscapeStyles.agi]}>{character.stats.agi.value}</Text>
     <Text style={[landscapeStyles.monoTextLarge, landscapeStyles.agiMod]}>({character.stats.agi.modifier >= 0 ? '+' : ''}{character.stats.agi.modifier})</Text>
