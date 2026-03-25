@@ -256,8 +256,8 @@ monoTextLarge: {
   
   // Other fields (adjust for landscape)
   speed: { position: 'absolute', top: 140, left: 345 },
-  wealth: { position: 'absolute', top: 460, left: 30, width: 110 },
-  languages: { position: 'absolute', top: 490, left: 30, width: 110 },
+  wealth: { position: 'absolute', top: 460, left: 35, width: 110 },
+  languages: { position: 'absolute', top: 496, left: 35, width: 110 },
   birthAugur: { position: 'absolute', top: 202, left: 260, width: 100 },
   weapon: { position: 'absolute', top: 288, left: 165 },
   weaponDamage: { position: 'absolute', top: 288, left: 310 }, 
