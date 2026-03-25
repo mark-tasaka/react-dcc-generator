@@ -2,11 +2,13 @@ import React, { useState } from 'react';
 import DccLv0 from './character/dccLv0';
 import MccLv0 from './character/mccLv0';
 import EALv0 from './character/eaLv0';
+import EoeLv0 from './character/eoeLv0';
 
 const HomePage = () => {
   const [isDccOpen, setIsDccOpen] = useState(true);   // DCC open by default
   const [isMccOpen, setIsMccOpen] = useState(false);  // MCC closed by default
   const [isEaOpen, setIsEaOpen] = useState(false);   // EA closed by default
+  const [isEoeOpen, setIsEoeOpen] = useState(false);   // EOE closed by default
 
   return (
     <div className="home-page">
@@ -97,6 +99,23 @@ const HomePage = () => {
               <EALv0 />
             </div>
           </div>
+
+          {/* ── Empire of the East Accordion ── */}
+          <div className="accordion">
+            <button
+              className="accordion-toggle"
+              onClick={() => setIsEoeOpen(prev => !prev)}
+              aria-expanded={isEoeOpen}
+            >
+              <span className="accordion-icon">{isEoeOpen ? '−' : '+'}</span>
+              <span className="accordion-label">DCC Empire of the East Level 0 Character Generator</span>
+            </button>
+
+            <div className={`accordion-content${isEoeOpen ? ' accordion-content--open' : ''}`}>
+              <EoeLv0 />
+            </div>
+          </div>
+
 
         </div>
       </div>
