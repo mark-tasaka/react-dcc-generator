@@ -217,6 +217,12 @@ monoTextLarge: {
   fontWeight: 'bold',
   fontFamily: 'Monospace',
 },
+monoTextXLarge: {
+  fontSize: 18,
+  color: 'black',
+  fontWeight: 'bold',
+  fontFamily: 'Monospace',
+},
 
   // Position styles for landscape layout (you'll need to adjust these based on your landscape background)
   name: { position: 'absolute', top: 89, left: 22 },
@@ -250,19 +256,19 @@ monoTextLarge: {
   missileDamage: { position: 'absolute', top: 240, left: 206 },
   
   // Saves (adjust for landscape)
-  reflex: { position: 'absolute', top: 100, left: 300 },
-  fortitude: { position: 'absolute', top: 100, left: 340 },
+  reflex: { position: 'absolute', top: 90, left: 300 },
+  fortitude: { position: 'absolute', top: 90, left: 340 },
   will: { position: 'absolute', top: 140, left: 300 },
   
   // Other fields (adjust for landscape)
   speed: { position: 'absolute', top: 140, left: 345 },
   wealth: { position: 'absolute', top: 460, left: 35, width: 110 },
   languages: { position: 'absolute', top: 496, left: 35, width: 110 },
-  birthAugur: { position: 'absolute', top: 202, left: 260, width: 100 },
-  weapon: { position: 'absolute', top: 288, left: 165 },
-  weaponDamage: { position: 'absolute', top: 288, left: 310 }, 
-  armour: { position: 'absolute', top: 343, left: 165 },
-  equipment: { position: 'absolute', top: 378, left: 165, width: 190 },
+  birthAugur: { position: 'absolute', top: 205, left: 255, width: 110 },
+  weapon: { position: 'absolute', top: 284, left: 162 },
+  weaponDamage: { position: 'absolute', top: 284, left: 326 }, 
+  armour: { position: 'absolute', top: 347, left: 162 },
+  equipment: { position: 'absolute', top: 385, left: 162, width: 190 },
   notes: { position: 'absolute', top: 440, left: 165, width: 190 },
   message: { position: 'absolute', top: 488,  left: 165, width: 190 },
 });
@@ -510,9 +516,9 @@ const LandscapeCharacter = ({ character, position }) => (
     <Text style={[landscapeStyles.monoText, landscapeStyles.missileDamage]}>{character.missileDamage >= 0 ? '+' : ''}{character.missileDamage}</Text>
     
     {/* Saves */}
-    <Text style={[landscapeStyles.monoTextLarge, landscapeStyles.reflex]}>{character.reflex >= 0 ? '+' : ''}{character.reflex}</Text>
-    <Text style={[landscapeStyles.monoTextLarge, landscapeStyles.fortitude]}>{character.fortitude >= 0 ? '+' : ''}{character.fortitude}</Text>
-    <Text style={[landscapeStyles.monoTextLarge, landscapeStyles.will]}>{character.will >= 0 ? '+' : ''}{character.will}</Text>
+    <Text style={[landscapeStyles.monoTextXLarge, landscapeStyles.reflex]}>{character.reflex >= 0 ? '+' : ''}{character.reflex}</Text>
+    <Text style={[landscapeStyles.monoTextXLarge, landscapeStyles.fortitude]}>{character.fortitude >= 0 ? '+' : ''}{character.fortitude}</Text>
+    <Text style={[landscapeStyles.monoTextXLarge, landscapeStyles.will]}>{character.will >= 0 ? '+' : ''}{character.will}</Text>
     
     {/* Other */}
     <Text style={[landscapeStyles.largeText, landscapeStyles.speed]}>{character.speed + "'"}</Text>
