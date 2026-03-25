@@ -256,12 +256,12 @@ monoTextXLarge: {
   missileDamage: { position: 'absolute', top: 240, left: 206 },
   
   // Saves (adjust for landscape)
-  reflex: { position: 'absolute', top: 90, left: 300 },
-  fortitude: { position: 'absolute', top: 90, left: 340 },
-  will: { position: 'absolute', top: 140, left: 300 },
+  reflex: { position: 'absolute', top: 87, left: 302 },
+  fortitude: { position: 'absolute', top: 87, left: 342 },
+  will: { position: 'absolute', top: 136, left: 302 },
   
   // Other fields (adjust for landscape)
-  speed: { position: 'absolute', top: 140, left: 345 },
+  speed: { position: 'absolute', top: 142, left: 346 },
   wealth: { position: 'absolute', top: 460, left: 35, width: 110 },
   languages: { position: 'absolute', top: 496, left: 35, width: 110 },
   birthAugur: { position: 'absolute', top: 205, left: 255, width: 110 },
