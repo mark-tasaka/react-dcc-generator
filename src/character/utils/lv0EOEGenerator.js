@@ -1,6 +1,6 @@
 import { Document, Page, Text, View, StyleSheet, Image, Font } from '@react-pdf/renderer';
-import characterSheetBg from '../img/lvZeroCharacterSheet.jpg';
-import characterSheetLn from '../img/lvZeroCharacterSheetLandscape.jpg';
+import characterSheetBg from '../img/lvZeroEOECharacterSheet.jpg';
+import characterSheetLn from '../img/lvZeroEOECharacterSheetLandscape.jpg';
 import RobotoRegular from '../../fonts/RobotoMono-Regular.ttf';
 import RobotoBold    from '../../fonts/RobotoMono-Bold.ttf';
 import { 
