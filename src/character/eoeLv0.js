@@ -6,7 +6,7 @@ import './generator.css';
 
 window.Buffer = Buffer;
 
-const DccLv0 = () => {
+const EoELv0 = () => {
   const defaultFormValues = {
     givenName: 100,
     surname: 100,
@@ -297,4 +297,4 @@ const DccLv0 = () => {
   );
 };
 
-export default DccLv0;
+export default EoELv0;
