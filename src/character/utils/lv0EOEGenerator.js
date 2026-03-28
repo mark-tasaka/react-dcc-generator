@@ -7,7 +7,6 @@ import {
   occupations, 
   getArmour, 
   getACBonusArmour,
-  getOccupationNumber,
   getOccupationFumbleDie } from './dccOccupations.js';
 import { generateEquipment, generateWealth } from './dccEquipment.js';
 import { getLanguages, formatLanguages } from './dccLanguages.js';
@@ -48,6 +47,42 @@ Font.register({
     { src: `${window.location.origin}${RobotoBold}`,    fontWeight: 'bold'   }
   ]
 });
+
+// Weighted random occupation selection (mirrors the EoE occupation table distribution)
+const getOccupationNumber = () => {
+  const roll = Math.floor(Math.random() * 100); // 0–99
+
+  if (roll <= 10) return roll;        // 0–10  → ids  0–10 (Baker → Cooper)
+  if (roll <= 22)  return 11;         // 11–22 → id  11 (Dispossessed Peasant)
+  if (roll === 23) return 12;         // 23    → id  12 (Draper)
+  if (roll === 24) return 13;         // 24    → id  13 (Falconer)
+  if (roll <= 46)  return 14;         // 25–46 → id  14 (Farmer)
+  if (roll === 47) return 15;         // 47    → id  15 (Fishmonger)
+  if (roll === 48) return 16;         // 48    → id  16 (Furrier)
+  if (roll === 49) return 17;         // 49    → id  17 (Goldsmith)
+  if (roll === 50) return 18;         // 50    → id  18 (Grifter)
+  if (roll === 51) return 19;         // 51    → id  19 (Grocer)
+  if (roll === 52) return 20;         // 52    → id  20 (Groomsman)
+  if (roll === 53) return 21;         // 53    → id  21 (Hayward)
+  if (roll === 54) return 22;         // 54    → id  22 (Hunter)
+  if (roll <= 59)  return 23;         // 55–59 → id  23 (Indentured Servant)
+  if (roll === 60) return 24;         // 60    → id  24 (Locksmith)
+  if (roll <= 71)  return 25;         // 61–71 → id  25 (Merchant)
+  if (roll === 72) return 26;         // 72    → id  26 (Miller)
+  if (roll === 73) return 27;         // 73    → id  27 (Minstrel)
+  if (roll <= 85)  return 28;         // 74–85 → id  28 (Plowman)
+  if (roll === 86) return 29;         // 86    → id  29 (Reeve)
+  if (roll === 87) return 30;         // 87    → id  30 (Scribe)
+  if (roll === 88) return 31;         // 88    → id  31 (Silversmith)
+  if (roll === 89) return 32;         // 89    → id  32 (Stonemason)
+  if (roll === 90) return 33;         // 90    → id  33 (Tailor)
+  if (roll === 91) return 34;         // 91    → id  34 (Tinker)
+  if (roll === 92) return 35;         // 92    → id  35 (Trapper)
+  if (roll === 93) return 36;         // 93    → id  36 (Traveling Salesman)
+  if (roll <= 97)  return 37;         // 94–97 → id  37 (Vagrant)
+  if (roll === 98) return 38;         // 98    → id  38 (Weaver)
+  return 39;                          // 99    → id  39 (Woodcutter)
+};
 
 // Complete PDF Styles
 const styles = StyleSheet.create({
@@ -272,14 +307,13 @@ export const generateRandomCharacter = (options = {}) => {
     gender: genderOption = 1,
     abilityScore: abilityScoreOption = 1,
     hitPoints: hitPointsOption = 1,
-    occupations: occupationsOption = 1,
     givenName: givenNameOption = 100,
     surname: surnameOption = 100
   } = options;
 
   const rollDice = (sides) => Math.floor(Math.random() * sides) + 1;
 
-  const selectedOccupation = occupations[getOccupationNumber(occupationsOption)];
+  const selectedOccupation = occupations[getOccupationNumber()];
   const gender = getGender(genderOption); 
   const nameGenderIndex = getNameGender(gender);
 
@@ -347,7 +381,7 @@ export const generateRandomCharacter = (options = {}) => {
   const critDie = formatCritDie(luckMod, luckySign);
   const fumble = getOccupationFumbleDie(selectedOccupation.id) + formatFumbleDie(luckMod, luckySign);
 
-  const alignment = getAlignment(alignmentOption); // Use selected alignment option
+  const alignment = getAlignment(alignmentOption);
   const notes = getNotes(selectedOccupation.id);
   const equipment = generateEquipment(selectedOccupation);
   const armour = getArmour(selectedOccupation.id);
@@ -355,7 +389,7 @@ export const generateRandomCharacter = (options = {}) => {
 
   
   return {
-    name: characterName, // Use the generated name from getName function
+    name: characterName,
     gender: gender,
     alignment: alignment,
     occupation: selectedOccupation.name,
