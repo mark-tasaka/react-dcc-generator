@@ -3,6 +3,8 @@ import characterSheetBg from '../img/lvZeroMccCharacterSheet.jpg';
 import characterSheetLn from '../img/lvZeroMccCharacterSheetLandscape.jpg';
 import RobotoRegular from '../../fonts/RobotoMono-Regular.ttf';
 import RobotoBold    from '../../fonts/RobotoMono-Bold.ttf';
+import InterBold     from '../../fonts/Inter-Bold.otf';    
+import InterBlack    from '../../fonts/Inter-Black.otf';  
 import {
   getMccBirthAugur,
   getSpeed,
@@ -56,6 +58,14 @@ Font.register({
   ]
 });
 
+Font.register({
+  family: 'Inter',
+  fonts: [
+    { src: `${window.location.origin}${InterBold}`,  fontWeight: 'bold' },
+    { src: `${window.location.origin}${InterBlack}`, fontWeight: 900    }
+  ]
+});
+
 // Complete PDF Styles
 const styles = StyleSheet.create({
   page: {
@@ -85,11 +95,13 @@ const styles = StyleSheet.create({
     fontSize: 8,
     color: 'black',
     fontWeight: 'bold',
+    fontFamily: 'Inter',  
   },
   mediumText: {
     fontSize: 11,
     color: 'black',
     fontWeight: 'bold',
+    fontFamily: 'Inter',  
   },
   monoText: {
     fontSize: 10,
@@ -100,24 +112,29 @@ const styles = StyleSheet.create({
     fontSize: 11,
     color: 'black',
     fontWeight: 'bold',
+    fontFamily: 'Inter',  
   },
   largeTextWhite: {
     fontSize: 11,
     color: 'white',
     fontWeight: 'bold',
+    fontFamily: 'Inter',  
   },
   testText: {
     fontSize: 10,
     color: 'red',
     fontWeight: 'bold',
+    fontFamily: 'Inter',  
   },
   smallText: {
     fontSize: 8,
     color: 'black',
+    fontFamily: 'Inter',  
   },
   xSmallText: {
     fontSize: 6,
     color: 'black',
+    fontFamily: 'Inter',  
   },
 
   name:       { position: 'absolute', top: 48,  left: 42  },
@@ -198,6 +215,7 @@ const landscapeStyles = StyleSheet.create({
     fontSize: 11,
     color: 'black',
     fontWeight: 'bold',
+    fontFamily: 'Inter',  
   },
   monoText: {
     fontSize: 14,
@@ -215,30 +233,36 @@ const landscapeStyles = StyleSheet.create({
     fontSize: 10,
     color: 'black',
     fontWeight: 'bold',
+    fontFamily: 'Inter',  
   },
   testText: {
     fontSize: 10,
     color: 'red',
     fontWeight: 'bold',
+    fontFamily: 'Inter',  
   },
   largeText: {
     fontSize: 14,
     color: 'black',
     fontWeight: 'bold',
+    fontFamily: 'Inter',  
   },
   largeTextWhite: {
     fontSize: 14,
     color: 'white',
     fontWeight: 'bold',
+    fontFamily: 'Inter',  
   },
   smallText: {
     fontSize: 9,
     color: 'black',
     fontWeight: 'bold',
+    fontFamily: 'Inter',  
   },
   xSmallText: {
     fontSize: 7,
     color: 'black',
+    fontFamily: 'Inter',  
   },
 
   name:       { position: 'absolute', top: 107,  left: 50  },

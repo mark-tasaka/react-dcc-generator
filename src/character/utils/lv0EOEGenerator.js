@@ -3,6 +3,8 @@ import characterSheetBg from '../img/lvZeroEOECharacterSheet.jpg';
 import characterSheetLn from '../img/lvZeroEOECharacterSheetLandscape.jpg';
 import RobotoRegular from '../../fonts/RobotoMono-Regular.ttf';
 import RobotoBold    from '../../fonts/RobotoMono-Bold.ttf';
+import InterBold     from '../../fonts/Inter-Bold.otf';    
+import InterBlack    from '../../fonts/Inter-Black.otf';  
 import { 
   occupations, 
   getArmour, 
@@ -45,6 +47,14 @@ Font.register({
   fonts: [
     { src: `${window.location.origin}${RobotoRegular}`, fontWeight: 'normal' },
     { src: `${window.location.origin}${RobotoBold}`,    fontWeight: 'bold'   }
+  ]
+});
+
+Font.register({
+  family: 'Inter',
+  fonts: [
+    { src: `${window.location.origin}${InterBold}`,  fontWeight: 'bold' },
+    { src: `${window.location.origin}${InterBlack}`, fontWeight: 900    }
   ]
 });
 
@@ -114,24 +124,29 @@ const styles = StyleSheet.create({
     fontSize: 10,
     color: 'black',
     fontWeight: 'bold',
+    fontFamily: 'Inter',     
   },
   largeText: {
     fontSize: 12,
     color: 'black',
     fontWeight: 'bold',
+    fontFamily: 'Inter',     
   },
   testText: {
     fontSize: 10,
     color: 'red',
     fontWeight: 'bold',
+    fontFamily: 'Inter',     
   },
   smallText: {
     fontSize: 8,
     color: 'black',
+    fontFamily: 'Inter',     
   },
   xSmallText: {
     fontSize: 6,
     color: 'black',
+    fontFamily: 'Inter',     
   },
 monoText: {
   fontSize: 10,
@@ -219,19 +234,23 @@ const landscapeStyles = StyleSheet.create({
     fontSize: 12,
     color: 'black',
     fontWeight: 'bold',
+    fontFamily: 'Inter',     
   },
   largeText: {
     fontSize: 14,
     color: 'black',
     fontWeight: 'bold',
+    fontFamily: 'Inter',     
   },
   smallText: {
     fontSize: 10,
     color: 'black',
+    fontFamily: 'Inter',     
   },
   xSmallText: {
     fontSize: 7,
     color: 'black',
+    fontFamily: 'Inter',     
   },
 monoText: {
   fontSize: 12,
