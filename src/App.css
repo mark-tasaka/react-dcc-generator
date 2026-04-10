@@ -89,7 +89,8 @@
 /* ── Generator h2 title (shared styles) ── */
 .dcc-generator-title,
 .dcc-generator-title-mcc,
-.dcc-generator-title-ea {
+.dcc-generator-title-ea,
+.dcc-generator-title-eoe {
   font-family: 'Playfair Display', serif;
   font-size: 42px;
   color: #ffffff;
@@ -133,6 +134,19 @@
               -4px  0px 0px #7B6BA8,
                 0px  4px 0px #7B6BA8,
                 0px -4px 0px #7B6BA8;
+
+}
+
+.dcc-generator-title-eoe {
+  text-shadow: 4px 4px 0px #9B7EC8,
+               -4px -4px 0px #9B7EC8,
+               4px -4px 0px #9B7EC8,
+               -4px 4px 0px #9B7EC8,
+                /* Cardinals  ← these fill the gaps */
+                4px  0px 0px #9B7EC8,
+              -4px  0px 0px #9B7EC8,
+                0px  4px 0px #9B7EC8,
+                0px -4px 0px #9B7EC8;
 
 }
 

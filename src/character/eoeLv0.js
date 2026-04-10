@@ -71,7 +71,7 @@ const EoELv0 = () => {
         className="lv0-generator-img"
       /></h2> */}
       
-      <h2 className="dcc-generator-title">Empire of the East Level Zero Character Generator</h2>
+      <h2 className="dcc-generator-title-eoe">Empire of the East Level Zero Character Generator</h2>
 
       {/* Character Generation Options */}
       <div className="form-container">
