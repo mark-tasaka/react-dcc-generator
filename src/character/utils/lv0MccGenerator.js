@@ -18,7 +18,7 @@ import {
   missileAttackLuckSign,
   meleeDamageLuckSign,
   missileDamageLuckSign,
-} from './mccLuckySign.js';
+} from './mcc/mccLuckySign.js';
 import {
   minHitPoints,
   formatCritDie,
@@ -29,7 +29,7 @@ import {
   rollAbilityScores,
 } from './abilityScoreGen.js';
 import { dieRollMethodText, hitPointsMethodText } from './dccNotes.js';
-import { getArchaicAlignment } from './archaicAlignment.js';
+import { getArchaicAlignment } from './mcc/archaicAlignment.js';
 import { getGender, getNameGender } from './characterGender.js';
 import { getName, getNameDescript } from './nameSelect.js';
 import {
@@ -47,7 +47,7 @@ import {
   getMaxTechLevel,
   getPhysicalDescription,
   addSign,
-} from './mccAdjustments.js';
+} from './mcc/mccAdjustments.js';
 
 
 Font.register({
