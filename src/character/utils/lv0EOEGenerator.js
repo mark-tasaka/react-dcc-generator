@@ -10,7 +10,7 @@ import {                                    // ← replaces dccOccupations impor
   getOccupationNumber,                      // ← moved from local function
   getBirdType,                              // ← new
   getCartContents,                          // ← new
-} from './eoeOccupations.js';
+} from './eoe/eoeOccupations.js';
 import { generateEquipment, generateWealth } from './dccEquipment.js';
 import { getLanguages, formatLanguages } from './dccLanguages.js';
 import { 
