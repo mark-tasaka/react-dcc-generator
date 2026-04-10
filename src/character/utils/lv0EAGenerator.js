@@ -10,9 +10,9 @@ import {
   getArmour, 
   getACBonusArmour,
   getOccupationNumber,
-  getOccupationFumbleDie } from './eaOccupation.js';
+  getOccupationFumbleDie } from './ea/eaOccupation.js';
 import { generateWealth } from './dccEquipment.js';
-import { getLanguages, formatLanguages } from './eaLanguages.js';
+import { getLanguages, formatLanguages } from './ea/eaLanguages.js';
 import { 
   getBirthAugur,
   getSpeed, 
@@ -41,7 +41,7 @@ import {  dieRollMethodText, hitPointsMethodText } from './dccNotes.js';
 import { getAlignment } from './alignment.js';
 import { getGender, getNameGender } from './characterGender.js';
 import { getName, getNameDescript } from './nameSelect.js';
-import { getNotes, generateEquipment } from './eaAdditions.js';
+import { getNotes, generateEquipment } from './ea/eaAdditions.js';
 
 
 Font.register({

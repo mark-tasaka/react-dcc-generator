@@ -1,4 +1,4 @@
-import { getRandomEquipment } from './dccEquipment.js';
+import { getRandomEquipment } from '../dccEquipment.js';
 
 export function getNotes(select) {
   if (select >= 0 && select <= 9) {
