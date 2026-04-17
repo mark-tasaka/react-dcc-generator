@@ -1,0 +1,289 @@
+/* src/inc/Footer.css */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap');
+
+/* =====================================================
+   Footer Shell
+   ===================================================== */
+.footer {
+  background-color: #1A1A2E;
+  width: 100%;
+}
+
+.footer-container {
+  max-width: 1200px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 40px 24px;
+  box-sizing: border-box;
+}
+
+/* =====================================================
+   Three-Column Grid — Desktop Default (≥ 769px)
+   
+   grid-template-areas gives each column a named slot,
+   making responsive overrides easier to reason about.
+   ===================================================== */
+.footer-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-areas: "nav logo info";
+  gap: 32px;
+  align-items: start;       /* columns align to their tops */
+}
+
+.footer-col--nav  { grid-area: nav;  }
+.footer-col--logo { grid-area: logo; }
+.footer-col--info { grid-area: info; }
+
+/* =====================================================
+   Column 1 — Navigation
+   ===================================================== */
+.footer-col--nav {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.footer-nav-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;   /* vertical stack on desktop */
+  gap: 10px;
+}
+
+.footer-nav-link {
+  font-family: 'Inter', sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  color: #D0C8E0;
+  text-decoration: none;
+  white-space: nowrap;
+  transition: color 0.2s ease;
+}
+
+.footer-nav-link:hover {
+  color: #ffffff;
+}
+
+.footer-nav-link--active {
+  color: #ffffff !important;
+  font-weight: 700;
+}
+
+/* =====================================================
+   Column 2 — Logo
+   ===================================================== */
+.footer-col--logo {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+.footer-logo-img {
+  max-width: 180px;
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* =====================================================
+   Column 3 — Info + Social
+   ===================================================== */
+.footer-col--info {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 12px;
+}
+
+.footer-text {
+  font-family: 'Inter', sans-serif;
+  font-size: 13px;
+  font-weight: 400;
+  color: #D0C8E0;
+  line-height: 1.6;
+  margin: 0;
+}
+
+/* ── Social icons row ── */
+.footer-social {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 16px;
+  margin-top: 4px;
+}
+
+.footer-social-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  transition: opacity 0.2s ease;
+}
+
+.footer-social-icon:hover {
+  opacity: 0.70;
+}
+
+.footer-social-img {
+  width: 20px;
+  height: 20px;
+  object-fit: contain;
+  display: block;
+}
+
+/* =====================================================
+   Responsive — Tablet (max 1024px)
+   ===================================================== */
+@media (max-width: 1024px) {
+  .footer-container {
+    padding: 36px 20px;
+  }
+
+  .footer-grid {
+    gap: 24px;
+  }
+
+  .footer-logo-img {
+    max-width: 160px;
+  }
+}
+
+/* =====================================================
+   Responsive — Two-Column Layout (max 768px)
+   
+   ┌──────────────────────────────┐
+   │   nav  (spans both columns)  │
+   ├───────────────┬──────────────┤
+   │     logo      │     info     │
+   └───────────────┴──────────────┘
+   ===================================================== */
+@media (max-width: 768px) {
+  .footer-container {
+    padding: 32px 16px;
+  }
+
+  .footer-grid {
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto auto;
+    grid-template-areas:
+      "nav  nav"
+      "logo info";
+    gap: 24px 16px;
+  }
+
+  /* Nav spans full width — links become a centred horizontal row */
+  .footer-col--nav {
+    align-items: center;
+  }
+
+  .footer-nav-list {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px 20px;
+  }
+
+  /* Logo — centred in its half-width cell */
+  .footer-col--logo {
+    justify-content: center;
+    align-items: flex-start;
+  }
+
+  .footer-logo-img {
+    max-width: 150px;
+  }
+}
+
+/* =====================================================
+   Responsive — Single-Column Layout (max 480px)
+   
+   ┌──────────────┐
+   │     nav      │
+   ├──────────────┤
+   │     logo     │
+   ├──────────────┤
+   │     info     │
+   └──────────────┘
+   ===================================================== */
+@media (max-width: 480px) {
+  .footer-container {
+    padding: 28px 12px;
+  }
+
+  .footer-grid {
+    grid-template-columns: 1fr;
+    grid-template-areas:
+      "nav"
+      "logo"
+      "info";
+    gap: 24px;
+  }
+
+  /* Centre all columns */
+  .footer-col--nav {
+    align-items: center;
+  }
+
+  .footer-nav-list {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 8px 14px;
+  }
+
+  .footer-col--logo {
+    justify-content: center;
+    align-items: center;
+  }
+
+  .footer-logo-img {
+    max-width: 140px;
+  }
+
+  .footer-col--info {
+    align-items: center;
+    text-align: center;
+  }
+
+  .footer-social {
+    justify-content: center;
+  }
+
+  .footer-text {
+    font-size: 12px;
+  }
+}
+
+/* =====================================================
+   Responsive — Extra Small (max 360px)
+   ===================================================== */
+@media (max-width: 360px) {
+  .footer-nav-list {
+    gap: 6px 10px;
+  }
+
+  .footer-nav-link {
+    font-size: 12px;
+  }
+
+  .footer-logo-img {
+    max-width: 120px;
+  }
+
+  .footer-text {
+    font-size: 11px;
+  }
+
+  .footer-social {
+    gap: 12px;
+  }
+
+  .footer-social-img {
+    width: 18px;
+    height: 18px;
+  }
+}
