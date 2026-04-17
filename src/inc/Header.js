@@ -38,11 +38,27 @@ const NavLinks = () => (
         Updates
       </NavLink>
     </li>
+
+    {/* ── External link — opens in a new tab ── */}
     <li>
-      <NavLink to="/portal"
-        className={({ isActive }) => isActive ? 'nav-link nav-link--active' : 'nav-link'}>
+      <a
+        href="https://oldschooladventures.org/"
+        target="_blank"
+        rel="noopener noreferrer"
+        className="nav-link"
+      >
         Portal
-      </NavLink>
+      </a>
+    </li>
+
+    {/* ── Email link ── */}
+    <li>
+      <a
+        href="mailto:dccfanforlife@gmail.com"
+        className="nav-link"
+      >
+        Contact
+      </a>
     </li>
   </ul>
 );
