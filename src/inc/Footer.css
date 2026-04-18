@@ -201,7 +201,7 @@
 
   /* Logo */
   .footer-col--logo {
-    justify-content: flex-start;
+    justify-content: center;
     align-items: center;
   }
 
