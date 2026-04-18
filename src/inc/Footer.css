@@ -84,7 +84,8 @@
 }
 
 .footer-logo-img {
-  max-width: 200px;         
+  max-width: 200px;  
+  min-width: 160px;        
   width: 100%;
   height: auto;
   display: block;
@@ -150,10 +151,6 @@
 
   .footer-grid {
     gap: 24px;
-  }
-
-  .footer-logo-img {
-    max-width: 130px;
   }
 
   .footer-nav-list {
