@@ -38,7 +38,7 @@
 .footer-col--nav {
   display: flex;
   flex-direction: column;
-  align-items: flex-end;
+  align-items: flex-start;
 }
 
 .footer-nav-list {
@@ -47,12 +47,12 @@
   padding: 0;
 
   display: grid;
-  grid-template-columns: auto auto;
+  grid-template-columns: auto auto auto;  /* ← was auto auto; now 3 columns      */
   grid-auto-flow: column;
-  grid-template-rows: repeat(3, auto);
-  column-gap: 56px;           /* ← was 32px; increase gap between col 1 & col 2 */
+  grid-template-rows: repeat(2, auto);    /* ← was repeat(3); 2 rows × 3 cols    */
+  column-gap: 40px;
   row-gap: 6px;
-  justify-items: start;       /* ← left-aligns each li within its grid cell      */
+  justify-items: start;
 }
 
 .footer-nav-link {
@@ -158,6 +158,9 @@
 
   .footer-nav-list {
     column-gap: 40px;
+    grid-template-columns: auto auto;     /* ← back to 2 columns                 */
+    grid-template-rows: repeat(3, auto);  /* ← 3 rows × 2 cols = 6 items         */
+    column-gap: 32px;
   }
 }
 
