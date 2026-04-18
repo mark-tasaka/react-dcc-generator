@@ -25,35 +25,39 @@
   grid-template-columns: 1fr 1fr 1fr;
   grid-template-areas: "nav logo info";
   gap: 32px;
-  align-items: stretch;     /* ← all columns share the same height      */
-}                           /*   so margin-top:auto can reach the bottom */
+  align-items: stretch;
+}
 
 .footer-col--nav  { grid-area: nav;  }
 .footer-col--logo { grid-area: logo; }
 .footer-col--info { grid-area: info; }
 
 /* =====================================================
-   Column 1 — Navigation  (left-aligned)
+   Column 1 — Navigation  (two-column nav sub-grid)
    ===================================================== */
 .footer-col--nav {
   display: flex;
   flex-direction: column;
-  align-items: flex-start;   
+  align-items: flex-end;
 }
 
 .footer-nav-list {
   list-style: none;
   margin: 0;
   padding: 0;
-  display: flex;
-  flex-direction: column;
-  align-items: flex-end;    /* ← right-aligns each <li>                  */
-  gap: 6px;
+
+  /* ── Two-column sub-grid for the nav links ── */
+  display: grid;
+  grid-template-columns: auto auto; /* two auto-width columns              */
+  grid-auto-flow: column;           /* fill col 1 top→bottom, then col 2   */
+  grid-template-rows: repeat(3, auto); /* 3 rows → 3 links per column      */
+  column-gap: 32px;                 /* space between the two link columns  */
+  row-gap: 6px;
 }
 
 .footer-nav-link {
   font-family: 'Inter', sans-serif;
-  font-size: 14px;
+  font-size: 18px;
   font-weight: 400;
   color: #D0C8E0;
   text-decoration: none;
@@ -66,33 +70,33 @@
 }
 
 .footer-nav-link--active {
-  color: #ffffff !important;
+  color: #ffffff;
   font-weight: 700;
 }
 
 /* =====================================================
-   Column 2 — Logo  (centered horizontally & vertically)
+   Column 2 — Logo  (centered, reduced size)
    ===================================================== */
 .footer-col--logo {
   display: flex;
-  justify-content: center;  /* ← vertical centering  (main axis = column) */
-  align-items: center;      /* ← horizontal centering (cross axis)         */
+  justify-content: center;
+  align-items: center;
 }
 
 .footer-logo-img {
-  max-width: 240px;
+  max-width: 200px;         
   width: 100%;
   height: auto;
   display: block;
 }
 
 /* =====================================================
-   Column 3 — Info + Social  (left-aligned, social pinned to bottom)
+   Column 3 — Info + Social  (social right-aligned)
    ===================================================== */
 .footer-col--info {
   display: flex;
   flex-direction: column;
-  align-items: flex-start;    /* ← left-aligns paragraphs & social row     */
+  align-items: flex-start;
   gap: 12px;
 }
 
@@ -103,18 +107,19 @@
   color: #D0C8E0;
   line-height: 1.6;
   margin: 0;
-  text-align: left;       
+  text-align: left;
 }
 
-/* ── Social icons row ── */
+/* ── Social icons row — right-aligned, pinned to bottom ── */
 .footer-social {
   display: flex;
   flex-direction: row;
   align-items: center;
+  justify-content: flex-end;  /* ← right-aligns the icon group             */
+  width: 100%;                /* ← must fill the column to push right      */
   gap: 16px;
-  margin-top: auto;         /* ← absorbs remaining space → pins icons     */
-}                           /*   to the bottom of the column, level with  */
-                            /*   the last nav link (Contact)               */
+  margin-top: auto;           /* ← pins row to bottom, level with Contact  */
+}
 
 .footer-social-icon {
   display: flex;
@@ -148,7 +153,11 @@
   }
 
   .footer-logo-img {
-    max-width: 160px;
+    max-width: 130px;
+  }
+
+  .footer-nav-list {
+    column-gap: 24px;
   }
 }
 
@@ -176,12 +185,13 @@
     align-items: stretch;
   }
 
-  /* Nav spans full width — centred horizontal row */
+  /* Nav spans full width — collapse back to a single horizontal row */
   .footer-col--nav {
     align-items: center;
   }
 
   .footer-nav-list {
+    display: flex;            /* ← back to flex for the centred row        */
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: center;
@@ -189,17 +199,17 @@
     gap: 10px 20px;
   }
 
-  /* Logo — centred in its half-width cell */
+  /* Logo */
   .footer-col--logo {
     justify-content: flex-start;
     align-items: center;
   }
 
   .footer-logo-img {
-    max-width: 150px;
+    max-width: 130px;
   }
 
-  /* Info — centred in its half-width cell */
+  /* Info */
   .footer-col--info {
     align-items: flex-start;
   }
@@ -209,20 +219,13 @@
   }
 
   .footer-social {
+    justify-content: flex-start; /* left-align on tablet two-col layout */
     margin-top: auto;
   }
 }
 
 /* =====================================================
    Responsive — Single-Column Layout (max 480px)
-
-   ┌──────────────┐
-   │     nav      │
-   ├──────────────┤
-   │     logo     │
-   ├──────────────┤
-   │     info     │
-   └──────────────┘
    ===================================================== */
 @media (max-width: 480px) {
   .footer-container {
@@ -239,12 +242,12 @@
     align-items: center;
   }
 
-  /* Centre all columns */
   .footer-col--nav {
     align-items: center;
   }
 
   .footer-nav-list {
+    display: flex;
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: center;
@@ -258,7 +261,7 @@
   }
 
   .footer-logo-img {
-    max-width: 140px;
+    max-width: 120px;
   }
 
   .footer-col--info {
@@ -272,7 +275,7 @@
 
   .footer-social {
     justify-content: center;
-    margin-top: 0;          /* no pinning needed in single-column flow */
+    margin-top: 0;
   }
 }
 
@@ -289,7 +292,7 @@
   }
 
   .footer-logo-img {
-    max-width: 120px;
+    max-width: 100px;
   }
 
   .footer-text {
