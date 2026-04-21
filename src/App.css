@@ -175,6 +175,126 @@
 }
 
 /* =====================================================
+   Resources Page
+   ===================================================== */
+
+.resources-page {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 24px 80px;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.resources-page-title {
+  font-size: 48px;
+  font-weight: 700;
+  color: #ffffff;
+  text-align: center;
+}
+
+.resources-description {
+  font-size: 16px;
+  line-height: 1.7;
+  color: #ffffff;
+}
+
+/* ── Image grid ── */
+.resource-covers {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+  margin-top: 8px;
+}
+
+.resource-cover {
+  text-decoration: none;
+  color: inherit;
+  cursor: pointer;
+}
+
+.resource-content-container {
+  position: relative;
+}
+
+/* overflow: hidden clips the scale transform */
+.resource-image-wrap {
+  overflow: hidden;
+  border-radius: 6px;
+  position: relative;
+}
+
+.resource-image {
+  width: 100%;
+  position: relative;
+}
+
+/* Dark overlay — mirrors Portfolio.css .cover-image::before */
+.resource-image::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-color: rgba(0, 0, 0, 0);
+  transition: background-color 0.3s ease;
+  z-index: 1;
+}
+
+.resource-cover:hover .resource-image::before {
+  background-color: rgba(0, 0, 0, 0.3);
+}
+
+/* Scale on hover — mirrors Portfolio.css .cover-img */
+.resource-img {
+  width: 100%;
+  height: auto;
+  display: block;
+  transition: transform 0.3s ease;
+}
+
+.resource-cover:hover .resource-img {
+  transform: scale(1.05);
+}
+
+.resource-details-wrap {
+  padding: 12px 0 4px;
+}
+
+.resource-item-title {
+  font-size: 15px;
+  font-weight: 600;
+  color: #ffffff;
+  text-align: center;
+  transition: color 0.3s ease;
+}
+
+@media (hover: hover) {
+  .resource-cover:hover .resource-item-title {
+    color: #C09EE0;
+  }
+}
+
+/* ── Responsive ── */
+@media (max-width: 900px) {
+  .resource-covers {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+  }
+}
+
+@media (max-width: 500px) {
+  .resource-covers {
+    grid-template-columns: 1fr;
+  }
+
+  .resources-page-title {
+    font-size: 32px;
+  }
+}
+
+/* =====================================================
    Accordion
    ===================================================== */
 
