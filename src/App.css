@@ -150,6 +150,24 @@
 
 }
 
+.resources-section-title {
+  font-family: 'Playfair Display', serif;
+  font-size: 62px;
+  color: #ffffff;
+  text-align: center;                        /* ← centered */
+  margin: 0 0 12px 0;                        /* ← reset browser default, 12px below */
+  text-shadow: 4px 4px 0px #b83bb3,
+               -4px -4px 0px #b83bb3,
+               4px -4px 0px #b83bb3,
+               -4px 4px 0px #b83bb3,
+                /* Cardinals  ← these fill the gaps */
+                4px  0px 0px #b83bb3,
+              -4px  0px 0px #b83bb3,
+                0px  4px 0px #b83bb3, 
+                0px -4px 0px #b83bb3;
+}
+
+
 /* ── Section title image ── */
 /* .home-section-title-img {
   display: block;
@@ -197,9 +215,10 @@
 }
 
 .resources-description {
-  font-size: 16px;
+  font-size: 18px;
   line-height: 1.7;
   color: #ffffff;
+  text-align: left;
 }
 
 /* ── Image grid ── */

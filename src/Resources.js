@@ -57,7 +57,7 @@ const Resources = () => {
       <main className="main-content">
         <div className="resources-page">
 
-          <h1 className="resources-page-title">Resources</h1>
+          <h1 className="resources-section-title">Resources</h1>
 
           <p className="resources-description">
             The following links are Dungeon Crawl Classics modules and an OSR system
