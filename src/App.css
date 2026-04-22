@@ -374,6 +374,10 @@
   .dcc-generator-title {
     font-size: 34px;
   }
+  
+  .resources-section-title {
+    font-size: 56px;
+  }
 }
 
 /* ── Responsive ── */
@@ -417,6 +421,10 @@
   .accordion-icon {
     left: 16px;
   }
+  
+  .resources-section-title {
+    font-size: 48px;
+  }
 }
 
 @media (max-width: 480px) {
@@ -458,5 +466,9 @@
 
   .resources-page-title {
     font-size: 32px;
+  }
+  
+  .resources-section-title {
+    font-size: 42px;
   }
 }
