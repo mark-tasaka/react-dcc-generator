@@ -168,14 +168,6 @@
 }
 
 
-/* ── Section title image ── */
-/* .home-section-title-img {
-  display: block;
-  width: 100%;
-  max-width: 700px;
-  height: auto;
-  margin: 0 auto;
-} */
 
 /* ── Description paragraphs wrapper ── */
 .home-descriptions {
@@ -273,10 +265,6 @@
   display: block;
   object-fit: cover;    
   transition: transform 0.3s ease;
-}
-
-.resource-cover:hover .resource-img {
-  transform: scale(1.05);
 }
 
 .resource-details-wrap {
