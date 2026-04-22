@@ -297,24 +297,6 @@
   }
 }
 
-/* ── Responsive ── */
-@media (max-width: 900px) {
-  .resource-covers {
-    grid-template-columns: repeat(2, 1fr);
-    gap: 36px;
-  }
-}
-
-@media (max-width: 500px) {
-  .resource-covers {
-    grid-template-columns: 1fr;
-  }
-
-  .resources-page-title {
-    font-size: 32px;
-  }
-}
-
 /* =====================================================
    Accordion
    ===================================================== */
@@ -394,6 +376,15 @@
   }
 }
 
+/* ── Responsive ── */
+@media (max-width: 900px) {
+  .resource-covers {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 36px;
+  }
+}
+
+
 @media (max-width: 768px) {
   .home-page {
     padding: 0 16px;
@@ -459,5 +450,13 @@
   .accordion-icon {
     left: 12px;
     font-size: 18px;
+  }
+  
+  .resource-covers {
+    grid-template-columns: 1fr;
+  }
+
+  .resources-page-title {
+    font-size: 32px;
   }
 }
