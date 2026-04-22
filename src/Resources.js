@@ -17,37 +17,37 @@ const Resources = () => {
       id: 1,
       title: 'DCC Eastern Adventures',
       image: dccEasternAdventures,
-      link: 'https://www.drivethrurpg.com/product/PRODUCT_ID',
+      link: 'https://www.drivethrurpg.com/en/product/405979/dungeon-crawl-classics-eastern-adventures',
     },
     {
       id: 2,
       title: 'Fantastic Adventures and the Disgruntled Gong Farmer',
       image: gongFarmer,
-      link: 'https://www.drivethrurpg.com/product/PRODUCT_ID',
+      link: 'https://www.drivethrurpg.com/en/product/272669/fantastic-adventures-and-the-disgruntled-gong-farmer',
     },
     {
       id: 3,
       title: "Beneath the Giant's Head",
       image: giantsHead,
-      link: 'https://www.drivethrurpg.com/product/PRODUCT_ID',
+      link: 'https://www.drivethrurpg.com/en/product/354193/beneath-the-giant-s-head',
     },
     {
       id: 4,
       title: 'The Cat and the Resurrection',
       image: catRes,
-      link: 'https://www.drivethrurpg.com/product/PRODUCT_ID',
+      link: 'https://www.drivethrurpg.com/en/product/368551/the-cat-and-the-resurrection',
     },
     {
       id: 5,
       title: "Murt's Miscalculation",
       image: murtMis,
-      link: 'https://www.drivethrurpg.com/product/PRODUCT_ID',
+      link: 'https://www.drivethrurpg.com/en/product/373808/murt-s-miscalculation',
     },
     {
       id: 6,
       title: 'White Box Eastern Adventures',
       image: whiteBox,
-      link: 'https://www.drivethrurpg.com/product/PRODUCT_ID',
+      link: 'https://www.drivethrurpg.com/en/product/268199/white-box-eastern-adventures',
     },
   ];
 
