@@ -286,6 +286,98 @@
 }
 
 /* =====================================================
+   Contact Form
+   ===================================================== */
+
+/* Honeypot — hidden from humans, visible to bots */
+.contact-honeypot {
+  position: absolute;
+  left: -9999px;
+  top: -9999px;
+  width: 1px;
+  height: 1px;
+  opacity: 0;
+  tab-index: -1;
+}
+
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  max-width: 600px;
+  width: 100%;
+}
+
+.contact-field {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.contact-label {
+  font-size: 14px;
+  font-weight: 600;
+  color: #C09EE0;
+}
+
+.contact-input,
+.contact-textarea {
+  background-color: #3A3A5A;
+  border: 1px solid #6A5A8A;
+  border-radius: 6px;
+  color: #ffffff;
+  font-size: 15px;
+  padding: 10px 14px;
+  outline: none;
+  resize: vertical;
+  font-family: inherit;
+  transition: border-color 0.2s ease;
+}
+
+.contact-input:focus,
+.contact-textarea:focus {
+  border-color: #C09EE0;
+}
+
+.contact-input::placeholder,
+.contact-textarea::placeholder {
+  color: #8A8AAA;
+}
+
+.contact-submit {
+  align-self: flex-start;
+  background-color: #8B3FA8;
+  border: none;
+  border-radius: 6px;
+  color: #ffffff;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: 600;
+  padding: 12px 32px;
+  transition: background-color 0.2s ease;
+}
+
+.contact-submit:hover:not(:disabled) {
+  background-color: #8058B0;
+}
+
+.contact-submit:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.contact-success {
+  color: #90EE90;
+  font-size: 16px;
+  font-weight: 600;
+}
+
+.contact-error {
+  color: #FF8080;
+  font-size: 14px;
+}
+
+/* =====================================================
    Accordion
    ===================================================== */
 
