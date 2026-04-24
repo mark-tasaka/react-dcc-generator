@@ -3,7 +3,7 @@ import DccLv0 from './character/dccLv0';
 import MccLv0 from './character/mccLv0';
 import EALv0 from './character/eaLv0';
 import EoeLv0 from './character/eoeLv0';
-import ContactForm from './ContactForm';   
+import ObfuscatedEmail from './ObfuscatedEmail'; 
 
 const HomePage = () => {
   const [isDccOpen, setIsDccOpen] = useState(true);   // DCC open by default
@@ -15,26 +15,14 @@ const HomePage = () => {
     <div className="home-page">
 
       {/* ── Intro paragraph ── */}
-      {/* <p className="home-intro">
+      <p className="home-intro">
         Welcome to Goodman Games PDF Character Generators, a fan-created website dedicated to Goodman
         Games' Dungeon Crawl Classics genre of old-school role-playing games. This website builds on
         earlier DCC character generators I designed, featuring the ability to randomly generate
         characters as PDF character sheets. If you have any questions or would like to reach out,
         please contact me at{' '}
-        <a href="mailto:dccfanforlife@gmail.com" className="home-intro-link">
-          dccfanforlife@gmail.com
-        </a>.
-      </p> */}
-            <p className="home-intro">
-        Welcome to Goodman Games PDF Character Generators, a fan-created website dedicated to Goodman
-        Games' Dungeon Crawl Classics genre of old-school role-playing games. This website builds on
-        earlier DCC character generators I designed, featuring the ability to randomly generate
-        characters as PDF character sheets. If you have any questions or would like to reach out,
-        please use the contact form below.     {/* ← updated text */}
+        <ObfuscatedEmail className="home-intro-link" />.
       </p>
-
-      {/* ── Contact Form ── */}
-      <ContactForm />    
 
       {/* ── Level 0 section ── */}
       <div className="home-section">
