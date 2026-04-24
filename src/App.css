@@ -303,6 +303,8 @@
   font-weight: 700;
   color: #ffffff;
   margin: 0;
+  display: flex;
+  justify-content: flex-start;
 }
 
 @media (hover: hover) {
