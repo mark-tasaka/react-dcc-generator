@@ -4,7 +4,8 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import './App.css';
 import HomePage  from './HomePage';
 import Resources from './Resources';
-import Classes   from './Classes';      
+import Classes   from './Classes';  
+import Updates   from './Updates';      
 import Header    from './inc/Header';
 import Hero      from './inc/Hero';
 import Footer    from './inc/Footer';
@@ -34,6 +35,11 @@ function App() {
 
         {/* Resources — self-contained, owns its own Header + Footer, no Hero */}
         <Route path="/resources" element={<Resources />} />
+
+        
+        {/* Updates — self-contained, owns its own Header + Footer, no Hero */}
+        <Route path="/updates" element={<Updates />} /> 
+
       </Routes>
     </Router>
   );
