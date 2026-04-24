@@ -4,6 +4,7 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import './App.css';
 import HomePage  from './HomePage';
 import Resources from './Resources';
+import Classes   from './Classes';      
 import Header    from './inc/Header';
 import Hero      from './inc/Hero';
 import Footer    from './inc/Footer';
@@ -26,6 +27,10 @@ function App() {
       <Routes>
         {/* Home — full shell with Hero */}
         <Route path="/" element={<AppShell><HomePage /></AppShell>} />
+
+        
+        {/* Classes — self-contained, owns its own Header + Footer, no Hero */}
+        <Route path="/classes" element={<Classes />} /> 
 
         {/* Resources — self-contained, owns its own Header + Footer, no Hero */}
         <Route path="/resources" element={<Resources />} />

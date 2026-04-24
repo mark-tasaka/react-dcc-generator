@@ -150,7 +150,8 @@
 
 }
 
-.resources-section-title {
+.resources-section-title,
+.classes-section-title {
   font-family: 'Playfair Display', serif;
   font-size: 62px;
   color: #ffffff;
@@ -279,6 +280,15 @@
   transition: color 0.3s ease;
 }
 
+.classes-link {
+  color: #C09EE0;
+  text-decoration: underline;
+}
+
+.classes-link:hover {
+  color: #ffffff;
+}
+
 @media (hover: hover) {
   .resource-cover:hover .resource-item-title {
     color: #C09EE0;
@@ -363,7 +373,8 @@
     font-size: 34px;
   }
   
-  .resources-section-title {
+  .resources-section-title,
+  .classes-section-title {
     font-size: 56px;
   }
 }
@@ -410,7 +421,8 @@
     left: 16px;
   }
   
-  .resources-section-title {
+  .resources-section-title,
+  .classes-section-title {
     font-size: 48px;
   }
 }
@@ -456,7 +468,8 @@
     font-size: 32px;
   }
   
-  .resources-section-title {
+  .resources-section-title,
+  .classes-section-title {
     font-size: 42px;
   }
 }
