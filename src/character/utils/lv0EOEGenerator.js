@@ -139,8 +139,8 @@ const styles = StyleSheet.create({
   intMod:  { position: 'absolute', top: 260, left: 86 },
   luckMod: { position: 'absolute', top: 275, left: 86 },
   
-  ac:            { position: 'absolute', top: 120, right: 228 }, 
-  hp:            { position: 'absolute', top: 153, left: 32   },
+  ac:            { position: 'absolute', top: 125, left: 52 }, 
+  hp:            { position: 'absolute', top: 156, left: 55   },
   init:          { position: 'absolute', top: 108, left: 142  },
   melee:         { position: 'absolute', top: 128, left: 132  },
   missile:       { position: 'absolute', top: 140, left: 132  },
