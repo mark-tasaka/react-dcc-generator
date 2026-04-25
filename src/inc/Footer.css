@@ -48,7 +48,7 @@
 
   display: grid;
   grid-template-columns: auto auto auto;  /* ← was auto auto; now 3 columns      */
-  grid-auto-flow: column;
+  /* grid-auto-flow: column; */
   grid-template-rows: repeat(2, auto);    /* ← was repeat(3); 2 rows × 3 cols    */
   column-gap: 40px;
   row-gap: 6px;
