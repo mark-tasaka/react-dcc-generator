@@ -36,7 +36,7 @@ import {
 import {
     rollAbilityScores,
 } from './abilityScoreGen.js';
-import { getNotes, dieRollMethodText, hitPointsMethodText } from './dccNotes.js';
+import { dieRollMethodText, hitPointsMethodText } from './dccNotes.js';
 import { getAlignment } from './alignment.js';
 import { getGender, getNameGender } from './characterGender.js';
 import { getName, getNameDescript } from './nameSelect.js';
@@ -141,17 +141,17 @@ const styles = StyleSheet.create({
   
   ac:            { position: 'absolute', top: 125, left: 52 }, 
   hp:            { position: 'absolute', top: 156, left: 55   },
-  init:          { position: 'absolute', top: 112, left: 148  },
-  melee:         { position: 'absolute', top: 128, left: 132  },
-  missile:       { position: 'absolute', top: 140, left: 132  },
-  meleeDamage:   { position: 'absolute', top: 128, left: 152  },
-  missileDamage: { position: 'absolute', top: 140, left: 152  },
+  init:          { position: 'absolute', top: 115, left: 152  },
+  melee:         { position: 'absolute', top: 134, left: 146  },
+  missile:       { position: 'absolute', top: 147, left: 146  },
+  meleeDamage:   { position: 'absolute', top: 134, left: 163  },
+  missileDamage: { position: 'absolute', top: 147, left: 163  },
   
-  reflex:    { position: 'absolute', top: 35, left: 235 },
-  fortitude: { position: 'absolute', top: 35, left: 265 },
-  will:      { position: 'absolute', top: 69, left: 235 },
+  reflex:    { position: 'absolute', top: 40, left: 244 },
+  fortitude: { position: 'absolute', top: 40, left: 266 },
+  will:      { position: 'absolute', top: 69, left: 244 },
   
-  speed:      { position: 'absolute', top: 69,  left: 265              },
+  speed:      { position: 'absolute', top: 69,  left: 267              },
   wealth:     { position: 'absolute', top: 319, left: 25,  width: 80  },
   languages:  { position: 'absolute', top: 345, left: 25,  width: 80  },
   birthAugur: { position: 'absolute', top: 120, left: 203, width: 80  },
@@ -159,7 +159,6 @@ const styles = StyleSheet.create({
   weaponDamage:     { position: 'absolute', top: 183, left: 240              }, 
   armour:           { position: 'absolute', top: 230, left: 125              },
   equipment:        { position: 'absolute', top: 256, left: 125              },
-  notes:            { position: 'absolute', top: 303, left: 125, width: 155  },
   message:          { position: 'absolute', bottom: 40, left: 125, width: 145 },
 });
 
@@ -256,7 +255,6 @@ const landscapeStyles = StyleSheet.create({
   weaponDamage:     { position: 'absolute', top: 288, left: 310              }, 
   armour:           { position: 'absolute', top: 343, left: 165              },
   equipment:        { position: 'absolute', top: 378, left: 165, width: 190 },
-  notes:            { position: 'absolute', top: 440, left: 165, width: 190 },
   message:          { position: 'absolute', top: 488, left: 165, width: 190 },
 });
 
@@ -359,7 +357,6 @@ export const generateRandomCharacter = (options = {}) => {
 
   // ── Alignment, equipment, notes ───────────────────────────────────────
   const alignment = getAlignment(alignmentOption);
-  const notes     = getNotes(selectedOccupation.id);
   const equipment = generateEquipment(modifiedOccupation);     // ← uses modified trade good
   const message   = dieRollMethodText(abilityScoreOption) + hitPointsMethodText(hitPointsOption) + nameDescript;
 
@@ -405,7 +402,6 @@ export const generateRandomCharacter = (options = {}) => {
       alignment,
       int
     )),
-    notes:   notes,
     message: message,
   };
 };
@@ -460,7 +456,6 @@ const Character = ({ character, position }) => (
     <Text style={[styles.smallText,  styles.weaponDamage]}>{character.weaponDamage}</Text>
     <Text style={[styles.smallText,  styles.equipment]}>{character.equipment}</Text>
     <Text style={[styles.smallText,  styles.armour]}>{character.armour}</Text>
-    <Text style={[styles.smallText,  styles.notes]}>{character.notes}</Text>
     <Text style={[styles.xSmallText, styles.message]}>{character.message}</Text>
   </View>
 );
@@ -514,7 +509,6 @@ const LandscapeCharacter = ({ character, position }) => (
     <Text style={[landscapeStyles.smallText,  landscapeStyles.weaponDamage]}>{character.weaponDamage}</Text>
     <Text style={[landscapeStyles.smallText,  landscapeStyles.equipment]}>{character.equipment}</Text>
     <Text style={[landscapeStyles.smallText,  landscapeStyles.armour]}>{character.armour}</Text>
-    <Text style={[landscapeStyles.smallText,  landscapeStyles.notes]}>{character.notes}</Text>
     <Text style={[landscapeStyles.xSmallText, landscapeStyles.message]}>{character.message}</Text>
   </View>
 );
