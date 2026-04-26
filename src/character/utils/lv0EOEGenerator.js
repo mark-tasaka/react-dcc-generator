@@ -12,7 +12,7 @@ import {                                    // ← replaces dccOccupations impor
   getCartContents,                          // ← new
 } from './eoe/eoeOccupations.js';
 import { generateEquipment, generateWealth } from './dccEquipment.js';
-import { getLanguages, formatLanguages } from './dccLanguages.js';
+import { getLanguages } from './eoe/eoeLanguages.js';
 import { 
   getBirthAugur,
   getSpeed, 
@@ -365,7 +365,6 @@ export const generateRandomCharacter = (options = {}) => {
     gender:       gender,
     alignment:    alignment,
     occupation:   selectedOccupation.name,
-    race:         selectedOccupation.race,
     weapon:       selectedOccupation.weapon,
     weaponDamage: selectedOccupation.damage,
     equipment:    equipment,
@@ -394,14 +393,11 @@ export const generateRandomCharacter = (options = {}) => {
     birthAugur:    `${birthAugur.name}: ${birthAugur.effect}`,
     birthAugurData: birthAugur,
     wealth:        generateWealth(selectedOccupation),
-    languages:     formatLanguages(getLanguages(
+    languages:     getLanguages(
       intMod,
       luckMod,
-      luckySign,
-      selectedOccupation.race,
-      alignment,
-      int
-    )),
+      luckySign
+    ),
     message: message,
   };
 };
