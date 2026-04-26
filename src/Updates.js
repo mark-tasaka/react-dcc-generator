@@ -15,7 +15,7 @@ const Updates = () => {
 
           {/* ── Update Entry ── */}
           <div className="updates-entry">
-            <p className="updates-date">April 24, 2026</p>
+            <p className="updates-date">April 26, 2026</p>
             <p className="resources-description">
               Welcome to the launch of Goodman Games PDF Character Generators, which
               produces random generator characters in PDF format. This website builds

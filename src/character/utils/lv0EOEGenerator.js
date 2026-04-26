@@ -90,7 +90,7 @@ const styles = StyleSheet.create({
     fontFamily: 'Inter',     
   },
   largeText: {
-    fontSize: 12,
+    fontSize: 11,
     color: 'black',
     fontWeight: 'bold',
     fontFamily: 'Inter',     
@@ -141,7 +141,7 @@ const styles = StyleSheet.create({
   
   ac:            { position: 'absolute', top: 125, left: 52 }, 
   hp:            { position: 'absolute', top: 156, left: 55   },
-  init:          { position: 'absolute', top: 108, left: 142  },
+  init:          { position: 'absolute', top: 112, left: 148  },
   melee:         { position: 'absolute', top: 128, left: 132  },
   missile:       { position: 'absolute', top: 140, left: 132  },
   meleeDamage:   { position: 'absolute', top: 128, left: 152  },
@@ -448,11 +448,11 @@ const Character = ({ character, position }) => (
     <Text style={[styles.monoText, styles.meleeDamage]}>{character.meleeDamage >= 0 ? '+' : ''}{character.meleeDamage}</Text>
     <Text style={[styles.monoText, styles.missileDamage]}>{character.missileDamage >= 0 ? '+' : ''}{character.missileDamage}</Text>
     
-    <Text style={[styles.largeText, styles.reflex]}>{character.reflex >= 0 ? '+' : ''}{character.reflex}</Text>
-    <Text style={[styles.largeText, styles.fortitude]}>{character.fortitude >= 0 ? '+' : ''}{character.fortitude}</Text>
-    <Text style={[styles.largeText, styles.will]}>{character.will >= 0 ? '+' : ''}{character.will}</Text>
+    <Text style={[styles.monoText, styles.reflex]}>{character.reflex >= 0 ? '+' : ''}{character.reflex}</Text>
+    <Text style={[styles.monoText, styles.fortitude]}>{character.fortitude >= 0 ? '+' : ''}{character.fortitude}</Text>
+    <Text style={[styles.monoText, styles.will]}>{character.will >= 0 ? '+' : ''}{character.will}</Text>
     
-    <Text style={[styles.largeText,  styles.speed]}>{character.speed + "'"}</Text>
+    <Text style={[styles.monoText,  styles.speed]}>{character.speed + "'"}</Text>
     <Text style={[styles.smallText,  styles.wealth]}>{character.wealth}</Text>
     <Text style={[styles.smallText,  styles.languages]}>{character.languages}</Text>
     <Text style={[styles.smallText,  styles.birthAugur]}>{character.birthAugur}</Text>
