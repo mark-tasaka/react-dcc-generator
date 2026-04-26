@@ -9,9 +9,10 @@ import {                                    // ← replaces dccOccupations impor
   occupations,
   getOccupationNumber,                      // ← moved from local function
   getBirdType,                              // ← new
-  getCartContents,                          // ← new
+  getCartContents,   
+  generateWealth,                       // ← new
 } from './eoe/eoeOccupations.js';
-import { generateEquipment, generateWealth } from './dccEquipment.js';
+import { generateEquipment} from './dccEquipment.js';
 import { getLanguages } from './eoe/eoeLanguages.js';
 import { 
   getBirthAugur,
@@ -248,8 +249,8 @@ const landscapeStyles = StyleSheet.create({
   will:      { position: 'absolute', top: 140, left: 300 },
   
   speed:      { position: 'absolute', top: 140, left: 345              },
-  wealth:     { position: 'absolute', top: 460, left: 30,  width: 110 },
-  languages:  { position: 'absolute', top: 490, left: 30,  width: 110 },
+  wealth:     { position: 'absolute', top: 465, left: 60,  width: 110 },
+  languages:  { position: 'absolute', top: 500, left: 50,  width: 110 },
   birthAugur: { position: 'absolute', top: 202, left: 260, width: 100 },
   weapon:           { position: 'absolute', top: 288, left: 165              },
   weaponDamage:     { position: 'absolute', top: 288, left: 310              }, 
@@ -392,7 +393,7 @@ export const generateRandomCharacter = (options = {}) => {
     speed:         speed,
     birthAugur:    `${birthAugur.name}: ${birthAugur.effect}`,
     birthAugurData: birthAugur,
-    wealth:        generateWealth(selectedOccupation),
+    wealth:        generateWealth() + ' cp',
     languages:     getLanguages(
       intMod,
       luckMod,

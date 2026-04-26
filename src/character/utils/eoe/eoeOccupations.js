@@ -103,3 +103,10 @@ export const getOccupationNumber = () => {
   if (roll === 98) return 38;         // 98    → id  38 (Weaver)
   return 39;                          // 99    → id  39 (Woodcutter)
 };
+
+
+export const generateWealth = () => {
+    const rollDice = (sides) => Math.floor(Math.random() * sides) + 1;
+    let copper = rollDice(12) + rollDice(12) + rollDice(12) + rollDice(12) + rollDice(12);
+    return copper;
+};
