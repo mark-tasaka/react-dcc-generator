@@ -153,14 +153,14 @@ const styles = StyleSheet.create({
   will:      { position: 'absolute', top: 69, left: 244 },
   
   speed:      { position: 'absolute', top: 69,  left: 267              },
-  wealth:     { position: 'absolute', top: 319, left: 25,  width: 80  },
-  languages:  { position: 'absolute', top: 345, left: 25,  width: 80  },
+  wealth:     { position: 'absolute', top: 320, left: 58,  width: 80  },
+  languages:  { position: 'absolute', top: 355, left: 40,  width: 80  },
   birthAugur: { position: 'absolute', top: 120, left: 203, width: 80  },
-  weapon:           { position: 'absolute', top: 183, left: 125              },
-  weaponDamage:     { position: 'absolute', top: 183, left: 240              }, 
+  weapon:           { position: 'absolute', top: 198, left: 130              },
+  weaponDamage:     { position: 'absolute', top: 198, left: 250              }, 
   armour:           { position: 'absolute', top: 230, left: 125              },
-  equipment:        { position: 'absolute', top: 256, left: 125              },
-  message:          { position: 'absolute', bottom: 40, left: 125, width: 145 },
+  equipment:        { position: 'absolute', top: 262, left: 130 , width: 145  },
+  message:          { position: 'absolute', bottom: 70, left: 140, width: 145 },
 });
 
 // Landscape styles
@@ -447,7 +447,7 @@ const Character = ({ character, position }) => (
     
     <Text style={[styles.monoText,  styles.speed]}>{character.speed + "'"}</Text>
     <Text style={[styles.smallText,  styles.wealth]}>{character.wealth}</Text>
-    <Text style={[styles.smallText,  styles.languages]}>{character.languages}</Text>
+    <Text style={[styles.xSmallText,  styles.languages]}>{character.languages}</Text>
     <Text style={[styles.smallText,  styles.birthAugur]}>{character.birthAugur}</Text>
     <Text style={[styles.smallText,  styles.weapon]}>{character.weapon}</Text>
     <Text style={[styles.smallText,  styles.weaponDamage]}>{character.weaponDamage}</Text>
