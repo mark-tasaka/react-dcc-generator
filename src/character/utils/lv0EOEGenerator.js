@@ -160,7 +160,7 @@ const styles = StyleSheet.create({
   weaponDamage:     { position: 'absolute', top: 198, left: 250              }, 
   armour:           { position: 'absolute', top: 230, left: 125              },
   equipment:        { position: 'absolute', top: 262, left: 130 , width: 145  },
-  message:          { position: 'absolute', bottom: 70, left: 140, width: 145 },
+  message:          { position: 'absolute', top: 310, left: 140, width: 145 },
 });
 
 // Landscape styles
@@ -214,27 +214,33 @@ const landscapeStyles = StyleSheet.create({
     fontWeight: 'bold',
     fontFamily: 'Monospace',
   },
+  monoTextLrg: {
+    fontSize: 14,
+    color: 'black',
+    fontWeight: 'bold',
+    fontFamily: 'Monospace',
+  },
 
-  name:       { position: 'absolute', top: 97,  left: 40  },
-  gender:     { position: 'absolute', top: 97,  left: 200 },
-  alignment:  { position: 'absolute', top: 127, left: 40  },
-  occupation: { position: 'absolute', top: 155, left: 40  },
-  critDie:    { position: 'absolute', top: 127, left: 160 },
-  fumble:     { position: 'absolute', top: 127, left: 230 },
+  name:       { position: 'absolute', top: 104,  left: 40  },
+  gender:     { position: 'absolute', top: 104,  left: 190 },
+  alignment:  { position: 'absolute', top: 131, left: 40  },
+  occupation: { position: 'absolute', top: 163, left: 40  },
+  critDie:    { position: 'absolute', top: 131, left: 170 },
+  fumble:     { position: 'absolute', top: 131, left: 235 },
   
-  str:  { position: 'absolute', top: 307, right: 295 },
-  agi:  { position: 'absolute', top: 326, right: 295 },
-  sta:  { position: 'absolute', top: 346, right: 295 },
-  per:  { position: 'absolute', top: 367, right: 295 },
-  int:  { position: 'absolute', top: 388, right: 295 },
-  luck: { position: 'absolute', top: 408, right: 295 },
+  str:  { position: 'absolute', top: 296, right: 288 },
+  agi:  { position: 'absolute', top: 314, right: 288},
+  sta:  { position: 'absolute', top: 330, right: 288},
+  per:  { position: 'absolute', top: 367, right: 288},
+  int:  { position: 'absolute', top: 388, right: 288 },
+  luck: { position: 'absolute', top: 408, right: 288 },
 
-  strMod:  { position: 'absolute', top: 307, left: 103 },
-  agiMod:  { position: 'absolute', top: 326, left: 103 },
-  staMod:  { position: 'absolute', top: 346, left: 103 },
-  perMod:  { position: 'absolute', top: 367, left: 103 },
-  intMod:  { position: 'absolute', top: 388, left: 103 },
-  luckMod: { position: 'absolute', top: 408, left: 103 },
+  strMod:  { position: 'absolute', top: 296, left: 110 },
+  agiMod:  { position: 'absolute', top: 314, left: 110 },
+  staMod:  { position: 'absolute', top: 330, left: 110 },
+  perMod:  { position: 'absolute', top: 367, left: 110 },
+  intMod:  { position: 'absolute', top: 388, left: 110 },
+  luckMod: { position: 'absolute', top: 408, left: 110 },
     
   ac:            { position: 'absolute', top: 208, right: 293 }, 
   hp:            { position: 'absolute', top: 250, left: 46   },
@@ -468,23 +474,23 @@ const LandscapeCharacter = ({ character, position }) => (
     <Text style={[landscapeStyles.text, landscapeStyles.critDie]}>{character.critDie}</Text>
     <Text style={[landscapeStyles.text, landscapeStyles.fumble]}>{character.fumble}</Text>
     
-    <Text style={[landscapeStyles.monoText, landscapeStyles.str]}>{character.stats.str.value}</Text>
-    <Text style={[landscapeStyles.monoText, landscapeStyles.strMod]}>({character.stats.str.modifier >= 0 ? '+' : ''}{character.stats.str.modifier})</Text>
+    <Text style={[landscapeStyles.monoTextLrg, landscapeStyles.str]}>{character.stats.str.value}</Text>
+    <Text style={[landscapeStyles.monoTextLrg, landscapeStyles.strMod]}>({character.stats.str.modifier >= 0 ? '+' : ''}{character.stats.str.modifier})</Text>
     
-    <Text style={[landscapeStyles.monoText, landscapeStyles.agi]}>{character.stats.agi.value}</Text>
-    <Text style={[landscapeStyles.monoText, landscapeStyles.agiMod]}>({character.stats.agi.modifier >= 0 ? '+' : ''}{character.stats.agi.modifier})</Text>
+    <Text style={[landscapeStyles.monoTextLrg, landscapeStyles.agi]}>{character.stats.agi.value}</Text>
+    <Text style={[landscapeStyles.monoTextLrg, landscapeStyles.agiMod]}>({character.stats.agi.modifier >= 0 ? '+' : ''}{character.stats.agi.modifier})</Text>
     
-    <Text style={[landscapeStyles.monoText, landscapeStyles.sta]}>{character.stats.sta.value}</Text>
-    <Text style={[landscapeStyles.monoText, landscapeStyles.staMod]}>({character.stats.sta.modifier >= 0 ? '+' : ''}{character.stats.sta.modifier})</Text>
+    <Text style={[landscapeStyles.monoTextLrg, landscapeStyles.sta]}>{character.stats.sta.value}</Text>
+    <Text style={[landscapeStyles.monoTextLrg, landscapeStyles.staMod]}>({character.stats.sta.modifier >= 0 ? '+' : ''}{character.stats.sta.modifier})</Text>
     
-    <Text style={[landscapeStyles.monoText, landscapeStyles.per]}>{character.stats.per.value}</Text>
-    <Text style={[landscapeStyles.monoText, landscapeStyles.perMod]}>({character.stats.per.modifier >= 0 ? '+' : ''}{character.stats.per.modifier})</Text>
+    <Text style={[landscapeStyles.monoTextLrg, landscapeStyles.per]}>{character.stats.per.value}</Text>
+    <Text style={[landscapeStyles.monoTextLrg, landscapeStyles.perMod]}>({character.stats.per.modifier >= 0 ? '+' : ''}{character.stats.per.modifier})</Text>
     
-    <Text style={[landscapeStyles.monoText, landscapeStyles.int]}>{character.stats.int.value}</Text>
-    <Text style={[landscapeStyles.monoText, landscapeStyles.intMod]}>({character.stats.int.modifier >= 0 ? '+' : ''}{character.stats.int.modifier})</Text>
+    <Text style={[landscapeStyles.monoTextLrg, landscapeStyles.int]}>{character.stats.int.value}</Text>
+    <Text style={[landscapeStyles.monoTextLrg, landscapeStyles.intMod]}>({character.stats.int.modifier >= 0 ? '+' : ''}{character.stats.int.modifier})</Text>
     
-    <Text style={[landscapeStyles.monoText, landscapeStyles.luck]}>{character.stats.luck.value}</Text>
-    <Text style={[landscapeStyles.monoText, landscapeStyles.luckMod]}>({character.stats.luck.modifier >= 0 ? '+' : ''}{character.stats.luck.modifier})</Text>
+    <Text style={[landscapeStyles.monoTextLrg, landscapeStyles.luck]}>{character.stats.luck.value}</Text>
+    <Text style={[landscapeStyles.monoTextLrg, landscapeStyles.luckMod]}>({character.stats.luck.modifier >= 0 ? '+' : ''}{character.stats.luck.modifier})</Text>
     
     <Text style={[landscapeStyles.monoText, landscapeStyles.ac]}>{character.ac}</Text>
     <Text style={[landscapeStyles.monoText, landscapeStyles.hp]}>{character.hp}</Text>
