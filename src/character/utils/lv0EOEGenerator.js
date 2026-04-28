@@ -155,7 +155,7 @@ const styles = StyleSheet.create({
   speed:      { position: 'absolute', top: 69,  left: 267              },
   wealth:     { position: 'absolute', top: 320, left: 58,  width: 80  },
   languages:  { position: 'absolute', top: 355, left: 40,  width: 80  },
-  birthAugur: { position: 'absolute', top: 120, left: 203, width: 80  },
+  birthAugur: { position: 'absolute', top: 126, left: 203, width: 80  },
   weapon:           { position: 'absolute', top: 198, left: 130              },
   weaponDamage:     { position: 'absolute', top: 198, left: 250              }, 
   armour:           { position: 'absolute', top: 230, left: 125              },
