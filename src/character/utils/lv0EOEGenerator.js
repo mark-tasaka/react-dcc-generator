@@ -204,7 +204,7 @@ const landscapeStyles = StyleSheet.create({
     fontFamily: 'Inter',     
   },
   xSmallText: {
-    fontSize: 7,
+    fontSize: 9,
     color: 'black',
     fontFamily: 'Inter',     
   },
@@ -243,26 +243,26 @@ const landscapeStyles = StyleSheet.create({
   luckMod: { position: 'absolute', top: 394, left: 110 },
     
   ac:            { position: 'absolute', top: 208, right: 286 }, 
-  hp:            { position: 'absolute', top: 245, left: 56   },
+  hp:            { position: 'absolute', top: 245, left: 65   },
   init:          { position: 'absolute', top: 194, left: 195  },
   melee:         { position: 'absolute', top: 218, left: 182  },
   missile:       { position: 'absolute', top: 235, left: 182  },
   meleeDamage:   { position: 'absolute', top: 218, left: 205  },
   missileDamage: { position: 'absolute', top: 235, left: 205  },
   
-  reflex:    { position: 'absolute', top: 103, left: 305 },
+  reflex:    { position: 'absolute', top: 103, left: 306 },
   fortitude: { position: 'absolute', top: 103, left: 335 },
-  will:      { position: 'absolute', top: 139, left: 305 },
+  will:      { position: 'absolute', top: 139, left: 306 },
   
   speed:      { position: 'absolute', top: 140, left: 338              },
-  wealth:     { position: 'absolute', top: 450, left: 65,  width: 110 },
-  languages:  { position: 'absolute', top: 493, left: 52,  width: 110 },
+  wealth:     { position: 'absolute', top: 450, left: 70,  width: 40 },
+  languages:  { position: 'absolute', top: 493, left: 53,  width: 110 },
   birthAugur: { position: 'absolute', top: 208, left: 256, width: 100 },
-  weapon:           { position: 'absolute', top: 288, left: 165              },
-  weaponDamage:     { position: 'absolute', top: 288, left: 310              }, 
+  weapon:           { position: 'absolute', top: 300, left: 165              },
+  weaponDamage:     { position: 'absolute', top: 300, left: 310              }, 
   armour:           { position: 'absolute', top: 343, left: 165              },
-  equipment:        { position: 'absolute', top: 378, left: 165, width: 190 },
-  message:          { position: 'absolute', top: 488, left: 165, width: 190 },
+  equipment:        { position: 'absolute', top: 378, left: 165, width: 185 },
+  message:          { position: 'absolute', top: 440, left: 178, width: 180 },
 });
 
 // ── Helper: random name origin when "Random" (100) is selected ────────────
