@@ -254,10 +254,10 @@ const landscapeStyles = StyleSheet.create({
   fortitude: { position: 'absolute', top: 103, left: 335 },
   will:      { position: 'absolute', top: 139, left: 305 },
   
-  speed:      { position: 'absolute', top: 140, left: 345              },
-  wealth:     { position: 'absolute', top: 465, left: 60,  width: 110 },
-  languages:  { position: 'absolute', top: 500, left: 50,  width: 110 },
-  birthAugur: { position: 'absolute', top: 202, left: 260, width: 100 },
+  speed:      { position: 'absolute', top: 140, left: 338              },
+  wealth:     { position: 'absolute', top: 450, left: 65,  width: 110 },
+  languages:  { position: 'absolute', top: 493, left: 52,  width: 110 },
+  birthAugur: { position: 'absolute', top: 208, left: 256, width: 100 },
   weapon:           { position: 'absolute', top: 288, left: 165              },
   weaponDamage:     { position: 'absolute', top: 288, left: 310              }, 
   armour:           { position: 'absolute', top: 343, left: 165              },
@@ -500,17 +500,17 @@ const LandscapeCharacter = ({ character, position }) => (
     <Text style={[landscapeStyles.monoText, landscapeStyles.meleeDamage]}>{character.meleeDamage >= 0 ? '+' : ''}{character.meleeDamage}</Text>
     <Text style={[landscapeStyles.monoText, landscapeStyles.missileDamage]}>{character.missileDamage >= 0 ? '+' : ''}{character.missileDamage}</Text>
     
-    <Text style={[landscapeStyles.largeText, landscapeStyles.reflex]}>{character.reflex >= 0 ? '+' : ''}{character.reflex}</Text>
-    <Text style={[landscapeStyles.largeText, landscapeStyles.fortitude]}>{character.fortitude >= 0 ? '+' : ''}{character.fortitude}</Text>
-    <Text style={[landscapeStyles.largeText, landscapeStyles.will]}>{character.will >= 0 ? '+' : ''}{character.will}</Text>
+    <Text style={[landscapeStyles.monoText, landscapeStyles.reflex]}>{character.reflex >= 0 ? '+' : ''}{character.reflex}</Text>
+    <Text style={[landscapeStyles.monoText, landscapeStyles.fortitude]}>{character.fortitude >= 0 ? '+' : ''}{character.fortitude}</Text>
+    <Text style={[landscapeStyles.monoText, landscapeStyles.will]}>{character.will >= 0 ? '+' : ''}{character.will}</Text>
     
-    <Text style={[landscapeStyles.largeText,  landscapeStyles.speed]}>{character.speed + "'"}</Text>
+    <Text style={[landscapeStyles.text,  landscapeStyles.speed]}>{character.speed + "'"}</Text>
     <Text style={[landscapeStyles.smallText,  landscapeStyles.wealth]}>{character.wealth}</Text>
-    <Text style={[landscapeStyles.smallText,  landscapeStyles.languages]}>{character.languages}</Text>
+    <Text style={[landscapeStyles.xSmallText,  landscapeStyles.languages]}>{character.languages}</Text>
     <Text style={[landscapeStyles.smallText,  landscapeStyles.birthAugur]}>{character.birthAugur}</Text>
-    <Text style={[landscapeStyles.smallText,  landscapeStyles.weapon]}>{character.weapon}</Text>
-    <Text style={[landscapeStyles.smallText,  landscapeStyles.weaponDamage]}>{character.weaponDamage}</Text>
-    <Text style={[landscapeStyles.smallText,  landscapeStyles.equipment]}>{character.equipment}</Text>
+    <Text style={[landscapeStyles.xSmallText,  landscapeStyles.weapon]}>{character.weapon}</Text>
+    <Text style={[landscapeStyles.xSmallText,  landscapeStyles.weaponDamage]}>{character.weaponDamage}</Text>
+    <Text style={[landscapeStyles.xSmallText,  landscapeStyles.equipment]}>{character.equipment}</Text>
     <Text style={[landscapeStyles.smallText,  landscapeStyles.armour]}>{character.armour}</Text>
     <Text style={[landscapeStyles.xSmallText, landscapeStyles.message]}>{character.message}</Text>
   </View>
