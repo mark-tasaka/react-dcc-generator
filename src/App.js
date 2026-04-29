@@ -10,7 +10,6 @@ import Header    from './inc/Header';
 import Hero      from './inc/Hero';
 import Footer    from './inc/Footer';
 
-/* Reusable shell for routes that need Header + Hero + Footer */
 const AppShell = ({ children }) => (
   <div className="App">
     <Header />
@@ -24,22 +23,12 @@ const AppShell = ({ children }) => (
 
 function App() {
   return (
-    <Router>
+    <Router basename="/dccpdf">
       <Routes>
-        {/* Home — full shell with Hero */}
         <Route path="/" element={<AppShell><HomePage /></AppShell>} />
-
-        
-        {/* Classes — self-contained, owns its own Header + Footer, no Hero */}
         <Route path="/classes" element={<Classes />} /> 
-
-        {/* Resources — self-contained, owns its own Header + Footer, no Hero */}
         <Route path="/resources" element={<Resources />} />
-
-        
-        {/* Updates — self-contained, owns its own Header + Footer, no Hero */}
         <Route path="/updates" element={<Updates />} /> 
-
       </Routes>
     </Router>
   );

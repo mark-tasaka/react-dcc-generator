@@ -1,6 +1,7 @@
 {
   "name": "dcc-generator",
-  "version": "0.1.0",
+  "homepage": "https://oldschooladventures.org/dccpdf",
+  "version": "1.0.0",
   "private": true,
   "dependencies": {
     "@react-pdf/renderer": "^4.3.1",
